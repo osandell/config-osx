@@ -1,0 +1,335 @@
+
+;; !  | mandatory - this modifier HAS to be pressed for binding to be valid
+;; !! | mandatory command + control + optional + shift (hyper)
+;; #  | optional - binding will be valid also if a specified modifier is pressed simultaniously
+;;    | For example: ':#Ca :b' will bind a to b if a is pressed alone, or if a is pressed together with Command
+;; ## | optional any - binding will be valid also if any modifier is pressed simultaniously
+;; C  | left_command
+;; T  | left_control
+;; O  | left_option
+;; S  | left_shift
+;; F  | fn
+;; Q  | right_command
+;; W  | right_control
+;; E  | right_option
+;; R  | right_shift
+;; P  | caps_lock
+;; 
+;; Example how to map both ALONE and DOUBLE to the same button with custom delay setting:
+;;   {:des "Esc to ALONE: Esc | DOUBLE: Caps Lock"
+;;       :rules [
+;;             [:##escape [:caps_lock  ["escape_twice" 0]] ["escape_twice" 1]]
+;;             [:##escape ["escape_twice" 1] ["escape_twice" 0]
+;;             {:delayed {:invoked :escape ["escape_twice" 0]] :canceled ["escape_twice" 0]} :params {:delay 400} }]]}
+
+;; Define different kinds of keyboards
+{
+:devices {
+      ;; Internal MacBook Pro 16" 2021 keyboard
+      :kb-macbook [{:vendor_id 1452, :product_id 832 }]
+
+      ;; Logitech K860 Ergo keyboard
+      :kb-logitech-k860 [{:vendor_id 1133, :product_id 45913 }]
+}
+
+;; Make key bindings valid only in specified applications
+:applications {
+      :chrome ["com.google.Chrome"]
+      :edge ["com.microsoft.edgemac"]
+      :remote-desktop ["com.microsoft.rdc.macos"]
+      :slack ["com.tinyspeck.slackmacgap"]
+      :vscode ["com.microsoft.VSCode"]
+}
+
+:profiles  {:Default {:default true :sim 50 :delay 500 :alone 500 :held 500}}
+
+:main [
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Bindings for specific keyboards
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+      ; MacBook Pro internal keyboard
+      {:des "Function to Left Command"
+            :rules [:kb-macbook [:##fn :left_command]]}
+      {:des "Left Control to Function"
+            :rules [:kb-macbook [:##left_control :fn]]}
+      {:des "Left Option to Function"
+            :rules [:kb-macbook [:##left_option :fn]]}
+      {:des "Left Command to Left Option"
+            :rules [:kb-macbook[:##left_command :left_option]]}
+      {:des "Right Command to Right Option"
+            :rules [:kb-macbook[:##right_command :right_option]]}
+      {:des "Right Option to Right Command"
+            :rules [:kb-macbook[:right_option :right_command]]}
+      {:des "Function + ^ to Page Up"
+            :rules[:kb-macbook[:!F##close_bracket :page_up]]}
+      {:des "Function + ' to Page Down"
+            :rules[:kb-macbook[:!F##backslash :page_down]]}
+
+      ; Logitech K860
+      {:des "Left Control to Command"
+            :rules[:kb-logitech-k860[:##left_control :left_command]]}
+      {:des "Left Option to Function"
+            :rules[:kb-logitech-k860[:##left_option :fn]]}
+      {:des "Left Command to Left Option"
+            :rules[:kb-logitech-k860[:##left_command :left_option]]}
+      {:des "Right Command to Right Option"
+            :rules[:kb-logitech-k860[:##right_command :right_option]]}
+      {:des "Right Option to Right Command"
+            :rules[:kb-logitech-k860[:##right_option :right_command]]}
+      {:des "Media key with 3 squares to mission control"
+            :rules[:kb-logitech-k860[:!Cup_arrow :!Tup_arrow]]}
+      {:des "Show desktop media key (require changing hotkey in mac system settings). Not supposed to work when
+            Caps Lock is active so that we can use the f11 key in Chrome debug tool."
+            :rules[:kb-logitech-k860[:f11 :!TSOd]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Media Control
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Left Control + Left to rewind media" :rules
+            [[:!Tleft_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]
+            [:!TWh "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]]
+      }
+      {:des "Left Control + right to fast forward media" :rules
+            [[:!Tright_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]
+            [:!TWl "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]]
+      }
+
+      {:des "Right Shift + Caps Lock to play / pause media"
+      :rules [[:!Rcaps_lock "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Focus To-Do
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Left Control + Left Shift + p to play / pause | skip in Focus-to-do"
+            :rules [[:!TSp nil nil {:alone "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"
+            :held "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"}]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Notification center
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Left Control + Left Shift + c to close all notifications | snooze 1 notification"
+            :rules[[:!TSc nil nil {:alone "osascript ~/dev/osandell/scripts-osx/notification-center/close-notifications.scpt"
+            :held "osascript ~/dev/osandell/scripts-osx/notification-center/snooze-notification.scpt"}]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Remote Desktop
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Make modifier keys work properly on remote desktop"
+            :rules [:remote-desktop[:left_command :left_control] [:left_control :left_command]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Google Chrome
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Left Control + plus-key to duplicate tab"
+            :rules [:chrome[:!Thyphen "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.scpt"]]}
+            
+      {:des "Left Control + e to mark text (only useful in Notion)"
+            :rules [:chrome[:!Te :!Ce]]}
+            
+      {:des "Left Control + r to hard reload"
+            :rules [:chrome[:!Tr :!CSr]]}
+            
+      {:des "Right Option + Right Shift + t to open Toggl tab"
+            :rules [:chrome[:!ERt "osascript ~/dev/osandell/scripts-osx/chrome/toggl.scpt"]]}
+
+      {:des "Right Option + Right Shift + n to open Notion tab"
+            :rules [:chrome[:!ERn "osascript ~/dev/osandell/scripts-osx/chrome/notion.scpt"]]}
+
+      {:des "Right Option + Right Shift + j to open Jira tab"
+            :rules [:chrome[:!ERj "osascript ~/dev/osandell/scripts-osx/chrome/jira.scpt"]]}
+
+      {:des "Right Option + Right Shift + b to open Bitbucket tab"
+            :rules [:chrome[:!ERb "osascript ~/dev/osandell/scripts-osx/chrome/bitbucket.scpt"]]}
+
+      {:des "Right Option + Right Shift + a to open Azure tab"
+            :rules [:chrome[:!ERa "osascript ~/dev/osandell/scripts-osx/chrome/azure.scpt"]]}
+
+      {:des "Right Option + Right Shift + c to open calendar tab"
+            :rules [:chrome[:!ERc "osascript ~/dev/osandell/scripts-osx/chrome/calendar.scpt"]]}
+
+      {:des "Right Option + Right Shift + m to open mail tab"
+            :rules [:chrome[:!ERm "osascript ~/dev/osandell/scripts-osx/chrome/mail.scpt"]]}
+
+      {:des "Left Control + Å to switch to prev developer pane"
+            :rules [:chrome[:!Topen_bracket :!Copen_bracket]]}
+   
+      ;; This was tricky to do on a Swedish keyboard because there is no ]. It
+      ;; works with the ¨ key, but it gets stuck if there is an input in a pane.
+      ;; Moreover I've remapped that key to / so it didn't work for me anyway.
+      ;; What I did was to remap the < key to ] with Ukelele. After that i could
+      ;; use Karabiner to remap Left Control + (my) / to the newly mapped ] key.
+      ;; In the future if I need to do something similar I have an idea to remap
+      ;; the number keys on the keypad to missing keys with Ukelele. For example
+      ;; mapping 1 to [. After that I can remap the numpad 1 key to the normal 1
+      ;; key in karabiner. And lastly I can map some hotkey of choice to the
+      ;; newly mapped [ key (previous numpad 1). This way I can still the numpad
+      ;; as normal and also get a set of missing keys for use with hotkey
+      ;; mappings.
+      {:des "Left Control + ¨ to switch to next developer pane"
+            :rules [:chrome[:!Tclose_bracket :!Cgrave_accent_and_tilde]]}
+
+      {:des "Left Control + i to toggle inspector"
+            :rules [:chrome[:!Ti :!CEi]]}
+
+      {:des "Left Control + m to toggle desktop / mobile"
+            :rules [:chrome[:!Tm :!CSm]]}
+
+      {:des "Left Control + c to toggle element inspector"
+            :rules [:chrome[:!Tc :!CSc]]}
+
+      {:des "Right Option + Right Shift + d to focus dev tools"
+            :rules [:chrome[:!ERd [:!CSc :!CSc]]]}
+
+      {:des "Right Option + Right Shift + v to focus viewport"
+            :rules [:chrome[:!ERv [:!Cl :!COdown_arrow]]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Slack
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Right Option + Right Shift + g to open Grebban workspace"
+            :rules [:slack[:!ERg :!C1]]}
+
+      {:des "Right Option + Right Shift + r to open Royal workspace"
+            :rules [:slack[:!ERr :!C2]]}
+
+      {:des "Right Option + Right Shift + f to find thread"
+            :rules [:slack[:!ERf :!Ck]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; VSCode
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Right Control + r to run last used terminal command"
+            :rules [:vscode[:!Wr nil nil {:alone "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.scpt"
+            :held "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.scpt"}]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Application switching
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Left Control + 1 to activate Google Chrome Grebban"
+            :rules [[:!T1 "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"]]}
+
+      {:des "Left Control + 2 to activate VSCode"
+            :rules [[:!T2 "osascript -e 'tell application \"Visual Studio Code\" to activate'"]]}
+
+      {:des "Left Control + 3 to activate Google Chrome Incognito"
+            :rules [[:!T3 "osascript -e 'tell application \"Google Chrome Incognito\" to activate'"]]}
+
+      {:des "Left Control + 4 to activate Slack"
+            :rules [[:!T4 "osascript -e 'tell application \"Slack\" to activate'"]]}
+
+      {:des "Left Control + 5 to activate Fork"
+            :rules [[:!T5 "osascript -e 'tell application \"Fork\" to activate'"]]}
+
+      {:des "Left Control + 8 to activate iTerm"
+            :rules [[:!T8 "osascript -e 'tell application \"iTerm\" to activate'"]]}
+
+      {:des "Left Control + 9 to activate Google Chrome Personal"
+            :rules [[:!T9 "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]]}
+
+      {:des "Left Control + 0 to activate Google Chrome YouTube"
+            :rules [[:!T0 "osascript -e 'tell application \"Google Chrome YouTube\" to activate'"]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Misc
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "< to Right Control if holding, to tab when pressed alone"
+            :rules [[:##grave_accent_and_tilde :right_control nil {:alone :tab}]]}
+      {:des "Map the number keys to F1, F2, etc.. when Caps Lock is active or Option is pressed"
+            :rules [[:!P1 :f1] [:!O1 :f1] [:!E1 :f1] [:!P2 :f2] [:!O2 :f2] [:!E2 :f2] [:!P3 :f3] [:!O3 :f3] [:!E3 :f3]
+            [:!P4 :f4] [:!O4 :f4] [:!E4 :f4] [:!P5 :f5] [:!O5 :f5] [:!E5 :f5] [:!P6 :f6] [:!O6 :f6] [:!E6 :f6]
+            [:!P7 :f7] [:!O7 :f7] [:!E7 :f7] [:!P8 :f8] [:!O8 :f8] [:!E8 :f8] [:!P9 :f9] [:!O9 :f9] [:!E9 :f9]
+            [:!P0 :f10] [:!O0 :f10] [:!E0 :f10] [:!Phyphen :f11] [:!Ohyphen :f11] [:!Ehyphen :f11]
+            [:!Pequal_sign :f12] [:!Oequal_sign :f12] [:!Eequal_sign :f12]]}
+      {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
+            :rules [[:##caps_lock :left_control nil {:alone :escape}]]}
+      {:des "Esc to Caps Lock"
+            :rules [[:##escape :caps_lock]]}
+      {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"
+            :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]}
+      {:des "Option + Shift + j/k to Shift + down/up arrow - To highlight lines more easily in combination with above hotkeys"
+            :rules [[:!SOj :!Sdown_arrow] [:!SOk :!Sup_arrow]]}
+      {:des "Right Control + b to go to beginning of the content of the line"
+            :rules [[:!Wb :home]]}
+      {:des "Right Control + e to go to end of the line"
+            :rules [[:!We :end]]}
+      {:des "Left Control + d to delete"
+            :rules [[:!Td :delete_forward]]}
+      {:des "Left Control + y to copy"
+            :rules [[:!Ty :!Cc]]}
+      {:des "Left Control + z to undo"
+            :rules [[:!Tz :!Cz]]}
+      {:des "Left Control + Space to step to the right"
+            :rules [[:!Tspacebar :right_arrow]]}
+      {:des "Right Control to add a space to the right of the cursor"
+            :rules [[:!Wspacebar [:spacebar :left_arrow]]]}
+      {:des "§ to Delete"
+            :rules [[:##non_us_backslash :delete_forward]]}
+      {:des "Windows style redo"
+            :rules [[:!Cy :!SCz]]}
+      {:des "Windows style alt-tab app switching"
+            :rules [[:!O##tab :!Ctab]]}
+      {:des "Within app window switching with Function + Tab"
+            :rules [[:!Ftab :!SOWtab]]}
+      {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)"
+            :rules [[:!SOslash :slash]]}
+      {:des "Make enter unblocked when holding Left Shift + Left Option"
+            :rules [[:!SOreturn_or_enter :return_or_enter]]}
+      {:des "Show Launchpad with Command-Tab"
+            :rules [[:!C##tab :!Otab]]}
+      {:des "Move tabs left / right with Left Control + h / l"
+            :rules [[:!Th :!COleft_arrow], [:!Tl :!COright_arrow]]}
+      {:des "New tab with Left Control + t"
+            :rules [[:!Tt :!Ct]]}
+      {:des "Close tab with Left Control + w"
+            :rules [[:!Tw :!Cw]]}
+      {:des "Left Shift + Left Option + d to print today's date" :rules
+            [[:!SOd "osascript -e '
+            set {year:yr, month:mn, day:dy} to (current date)
+            set dateString to (yr as text) & \"-\" & pad(mn as integer) & \"-\" & pad(dy)
+
+            on pad(v)
+                  return text -2 thru -1 of ((v + 100) as text)
+            end pad
+
+            tell application \"System Events\"
+                  keystroke dateString
+            end tell
+            '"]]}
+      {:des "Right Control + h / j / k / l to arrow keys"
+            :rules [[:!W##h :left_arrow] [:!W##j :down_arrow] [:!W##k :up_arrow] [:!W##l :right_arrow]]}
+      {:des "Function + m to minimize window"
+            :rules [[:!Fm :!Cm]]}
+      {:des "Function + f to go to fullscreen"
+            :rules [[:!Ff "osascript -e '
+            tell application \"System Events\"
+                  tell (first process where it is frontmost)
+                        if value of attribute \"AXFullScreen\" of window 1 = false then
+                              set value of attribute \"AXFullScreen\" of window 1 to true
+                        else
+                              set value of attribute \"AXFullScreen\" of window 1 to false
+                        end if
+                  end tell
+            end tell
+            '"]]}
+      {:des "Left Control + Left Shift + h / l to move between screens"
+            :rules [[:!TSh :!Cleft_arrow] [:!TSl :!Cright_arrow]]}
+      {:des "Option + å to Shift + '+' key in order for ? hotkey to work in Vimium"
+            :rules [[:!Oopen_bracket :!Shyphen] [:!Eopen_bracket :!Shyphen]]}
+      {:des "¨ to Shift + '7' key in order for / hotkey to work in Vimium"
+            :rules [[:close_bracket :!S7]]}
+      {:des "Left Control + p to Paste"
+            :rules [[:!Tp :!Cv]]}
+      {:des "Left Command + m to click minimize button (fix: normal hotkey doesn't work with every app, for example VSCode)"
+            :rules [[:!Cm "osascript -e '
+            tell application \"System Events\"
+                  click (first button whose subrole is \"AXMinimizeButton\") of (first window whose subrole is \"AXStandardWindow\") of (first process whose frontmost is true)
+            end tell
+            '"]]}
+      {:des "Left Control + Left Shift + m to swap mapping Middle Mouse Button to Minimize Window"
+            :rules [[:!TSm "osascript ~/dev/osandell/scripts-osx/config-middle-mouse/config-middle-mouse.scpt"]]}
+      {:des "long press Left Control + Left Shift + Backspace to empty recycle bin"
+            :rules [[:!TSdelete_or_backspace nil nil {
+            :held "osascript -e 'tell application \"Finder\" to empty trash'"}]]}
+]}
