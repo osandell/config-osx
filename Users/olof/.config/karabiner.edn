@@ -184,6 +184,9 @@
       {:des "Right Option + Right Shift + v to focus viewport"
             :rules [:chrome[:!ERv [:!Cl :!COdown_arrow]]]}
 
+      {:des "Left Control + Tab to alternate between 2 tabs (need Recent Tabs extension)"
+            :rules [:chrome[:!Ttab :!Tq]]}
+
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Slack
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

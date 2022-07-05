@@ -760,6 +760,25 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Left Control + Tab to alternate between 2 tabs (need Recent Tabs extension)",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "tab",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "q",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Right Option + Right Shift + g to open Grebban workspace",
         "manipulators" : [ {
           "from" : {
