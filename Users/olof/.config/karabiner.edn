@@ -322,8 +322,8 @@
             :rules [[:!Oopen_bracket :!Shyphen] [:!Eopen_bracket :!Shyphen]]}
       {:des "¨ to Shift + '7' key in order for / hotkey to work in Vimium"
             :rules [[:close_bracket :!S7]]}
-      {:des "Left Control + p to Paste"
-            :rules [[:!Tp :!Cv]]}
+      {:des "Left Control + A / Ö / Å / Ä to select all / copy / cut / paste"
+            :rules [[:!Ta :!Ca] [:!Tsemicolon :!Cc] [:!Topen_bracket :!Cx] [:!Tquote :!Cv]]}
       {:des "Left Command + m to click minimize button (fix: normal hotkey doesn't work with every app, for example VSCode)"
             :rules [[:!Cm "osascript -e '
             tell application \"System Events\"
