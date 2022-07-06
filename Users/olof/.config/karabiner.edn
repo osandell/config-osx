@@ -335,4 +335,6 @@
       {:des "long press Left Control + Left Shift + Backspace to empty recycle bin"
             :rules [[:!TSdelete_or_backspace nil nil {
             :held "osascript -e 'tell application \"Finder\" to empty trash'"}]]}
+      {:des "Left Control + Backspace to delete a word at a time instead of Option + Backspace"
+            :rules [[:!Tdelete_or_backspace :!Odelete_or_backspace] [:!Odelete_or_backspace :delete_or_backspace]]}
 ]}
