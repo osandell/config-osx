@@ -51,8 +51,8 @@
       ; MacBook Pro internal keyboard
       {:des "Left Control to Left Command"
             :rules [:kb-macbook [:##left_control :left_command]]}
-      {:des "Left Option to Function"
-            :rules [:kb-macbook [:##left_option :fn]]}
+      {:des "Left Option to Spotlight Search"
+            :rules [:kb-macbook [:##left_option :!Cspacebar]]}
       {:des "Left Command to Left Option"
             :rules [:kb-macbook[:##left_command :left_option]]}
       {:des "Right Command to Right Option"
