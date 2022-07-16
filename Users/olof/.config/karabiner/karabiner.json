@@ -13,28 +13,7 @@
         "basic.to_if_held_down_threshold_milliseconds" : 500
       },
       "rules" : [ {
-        "description" : "Function to Left Command",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "fn",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "left_command"
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1452,
-              "product_id" : 832
-            } ],
-            "type" : "device_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Control to Function",
+        "description" : "Left Control to Left Command",
         "manipulators" : [ {
           "from" : {
             "key_code" : "left_control",
@@ -43,7 +22,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "fn"
+            "key_code" : "left_command"
           } ],
           "conditions" : [ {
             "identifiers" : [ {

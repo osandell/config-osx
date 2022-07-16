@@ -49,10 +49,8 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
       ; MacBook Pro internal keyboard
-      {:des "Function to Left Command"
-            :rules [:kb-macbook [:##fn :left_command]]}
-      {:des "Left Control to Function"
-            :rules [:kb-macbook [:##left_control :fn]]}
+      {:des "Left Control to Left Command"
+            :rules [:kb-macbook [:##left_control :left_command]]}
       {:des "Left Option to Function"
             :rules [:kb-macbook [:##left_option :fn]]}
       {:des "Left Command to Left Option"
