@@ -53,11 +53,12 @@
             :rules[:kb-macbook[:!F##close_bracket :page_up]]}
       {:des "Function + ' to Page Down"
             :rules[:kb-macbook[:!F##backslash :page_down]]}
+      {:des "FN to Left Command"
+            :rules [:kb-macbook[:##fn :left_command]]}
+      {:des "Left Control to FN"
+            :rules [:kb-macbook[:##left_control :fn]]}
 
       ; Logitech K860
-      ; TODO: find another key to map to fn
-;      {:des "Left Option to Function"
- ;           :rules[:kb-logitech-k860[:##left_option :fn]]}
       {:des "Media key with 3 squares to mission control"
             :rules[:kb-logitech-k860[:!Cup_arrow :!Tup_arrow]]}
       {:des "Show desktop media key (require changing hotkey in mac system settings). Not supposed to work when
@@ -222,8 +223,6 @@
             :rules [[:##right_command :right_option]]}
       {:des "Left Command to Left Option"
             :rules[[:##left_command :left_option]]}
-      {:des "Left Control to Left Command"
-            :rules [[:##left_control :left_command]]}
       {:des "Left Option to FN if holding, to Spotlight Search if pressed alone"
             :rules [[:##left_option :fn nil {:alone :!Cspacebar}]]}
       {:des "Right Option to Right Command"
