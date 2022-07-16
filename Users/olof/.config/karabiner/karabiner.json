@@ -795,8 +795,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Option to Spotlight Search",
+        "description" : "Left Option to FN if holding, to Spotlight Search if pressed alone",
         "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "spacebar",
+            "modifiers" : [ "left_command" ]
+          } ],
           "from" : {
             "key_code" : "left_option",
             "modifiers" : {
@@ -804,8 +808,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "spacebar",
-            "modifiers" : [ "left_command" ]
+            "key_code" : "fn"
           } ],
           "type" : "basic"
         } ]

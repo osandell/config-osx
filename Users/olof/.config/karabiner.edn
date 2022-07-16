@@ -224,8 +224,8 @@
             :rules[[:##left_command :left_option]]}
       {:des "Left Control to Left Command"
             :rules [[:##left_control :left_command]]}
-      {:des "Left Option to Spotlight Search"
-            :rules [[:##left_option :!Cspacebar]]}
+      {:des "Left Option to FN if holding, to Spotlight Search if pressed alone"
+            :rules [[:##left_option :fn nil {:alone :!Cspacebar}]]}
       {:des "Right Option to Right Command"
             :rules[[:##right_option :right_command]]}
       {:des "< to Right Control if holding, to tab when pressed alone"
