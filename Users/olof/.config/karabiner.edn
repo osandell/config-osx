@@ -48,33 +48,16 @@
       ;; Bindings for specific keyboards
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-      ; MacBook Pro internal keyboard
-      {:des "Left Control to Left Command"
-            :rules [:kb-macbook [:##left_control :left_command]]}
-      {:des "Left Option to Spotlight Search"
-            :rules [:kb-macbook [:##left_option :!Cspacebar]]}
-      {:des "Left Command to Left Option"
-            :rules [:kb-macbook[:##left_command :left_option]]}
-      {:des "Right Command to Right Option"
-            :rules [:kb-macbook[:##right_command :right_option]]}
-      {:des "Right Option to Right Command"
-            :rules [:kb-macbook[:right_option :right_command]]}
+      ; MacBook Pro internal keyboard    
       {:des "Function + ^ to Page Up"
             :rules[:kb-macbook[:!F##close_bracket :page_up]]}
       {:des "Function + ' to Page Down"
             :rules[:kb-macbook[:!F##backslash :page_down]]}
 
       ; Logitech K860
-      {:des "Left Control to Command"
-            :rules[:kb-logitech-k860[:##left_control :left_command]]}
-      {:des "Left Option to Function"
-            :rules[:kb-logitech-k860[:##left_option :fn]]}
-      {:des "Left Command to Left Option"
-            :rules[:kb-logitech-k860[:##left_command :left_option]]}
-      {:des "Right Command to Right Option"
-            :rules[:kb-logitech-k860[:##right_command :right_option]]}
-      {:des "Right Option to Right Command"
-            :rules[:kb-logitech-k860[:##right_option :right_command]]}
+      ; TODO: find another key to map to fn
+;      {:des "Left Option to Function"
+ ;           :rules[:kb-logitech-k860[:##left_option :fn]]}
       {:des "Media key with 3 squares to mission control"
             :rules[:kb-logitech-k860[:!Cup_arrow :!Tup_arrow]]}
       {:des "Show desktop media key (require changing hotkey in mac system settings). Not supposed to work when
@@ -235,6 +218,16 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Right Command to Right Option"
+            :rules [[:##right_command :right_option]]}
+      {:des "Left Command to Left Option"
+            :rules[[:##left_command :left_option]]}
+      {:des "Left Control to Left Command"
+            :rules [[:##left_control :left_command]]}
+      {:des "Left Option to Spotlight Search"
+            :rules [[:##left_option :!Cspacebar]]}
+      {:des "Right Option to Right Command"
+            :rules[[:##right_option :right_command]]}
       {:des "< to Right Control if holding, to tab when pressed alone"
             :rules [[:##grave_accent_and_tilde :right_control nil {:alone :tab}]]}
       {:des "Map the number keys to F1, F2, etc.. when Caps Lock is active or Option is pressed"
