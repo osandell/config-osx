@@ -1,0 +1,321 @@
+{
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.formatOnSave": true,
+    "security.workspace.trust.enabled": false,
+    "files.insertFinalNewline": true,
+    "editor.fontFamily": "Cascadia Code",
+    "editor.renderWhitespace": "all",
+    "gitlens.advanced.messages": {
+      "suppressGitMissingWarning": true
+    },
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Default Light+",
+    // get rid of 'abc' search suggstions
+    "editor.suggest.showWords": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "terminal.integrated.scrollback": 10000,
+    // Highlight search patterns
+    "vim.hlsearch": true,
+    "vim.smartRelativeLine": true,
+    "vim.gdefault": false,
+    "vim.sneak": true,
+    "vim.easymotion": true,
+    "vim.leader": "<Space>",
+    "vim.useSystemClipboard": true,
+    "vim.surround": true,
+    "vim.useCtrlKeys": false,
+    // "vim.mouseSelectionGoesIntoVisualMode": false,
+    // Prevent leaving insert mode when copying text with command-c
+    "vim.handleKeys": {
+      "<D-c>": false
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["J"],
+        "after": ["5", "j"]
+      },
+      {
+        "before": ["K"],
+        "after": ["5", "k"]
+      },
+      // Copy to the 0 registry instead of default clipboard when pressing d
+      {
+        "before": ["d"],
+        "after": ["\"", "0", "d"]
+      },
+      {
+        "before": ["D"],
+        "after": ["\"", "0", "D"]
+      },
+      // Copy to default clipboard
+      {
+        "before": ["<Leader>", "d"],
+        "after": ["d"]
+      },
+      {
+        "before": ["<Leader>", "D"],
+        "after": ["D"]
+      },
+      {
+        "before": ["c"],
+        "after": ["\"", "0", "c"]
+      },
+      {
+        "before": ["<Leader>", "c"],
+        "after": ["c"]
+      },
+      {
+        "before": ["x"],
+        "after": ["\"", "0", "x"]
+      },
+      {
+        "before": ["<Leader>", "x"],
+        "after": ["x"]
+      },
+      // Concatinate lines
+      {
+        "before": ["<Leader>", "j"],
+        "after": ["J"]
+      },
+      // reverse ; and ,
+      {
+        "before": [","],
+        "after": [";"]
+      },
+      {
+        "before": [";"],
+        "after": [","]
+      },
+      // Go to left window pane
+      {
+        "before": ["<C-h>"],
+        "after": ["<C-w>", "h"]
+      },
+      // Go to terminal pane
+      {
+        "before": ["<C-j>"],
+        "after": ["<C-w>", "j"]
+      },
+      // Go up to editor from terminal
+      {
+        "before": ["<C-k>"],
+        "after": ["<C-w>", "k"]
+      },
+      // Go right to editor from left pane
+      {
+        "before": ["<C-l>"],
+        "after": ["<C-w>", "l"]
+      },
+      {
+        "before": ["<Leader>", "t", "t"],
+        "commands": [":tabnew"]
+      },
+      {
+        "before": ["<Leader>", "t", "n"],
+        "commands": [":tabnext"]
+      },
+      {
+        "before": ["<Leader>", "t", "p"],
+        "commands": [":tabprev"]
+      },
+      {
+        "before": ["<Leader>", "t", "o"],
+        "commands": [":tabo"]
+      },
+      // Clear last search highlighting
+      {
+        "before": ["<Leader>", "/"],
+        "commands": [":noh"]
+      },
+      {
+        "before": ["leader", "w"],
+        "commands": ["workbench.action.files.save"]
+      },
+      {
+        "before": ["leader", "q"],
+        "commands": ["workbench.action.closeActiveEditor"]
+      },
+      {
+        "before": ["<Leader>", "p"],
+        "commands": ["workbench.action.showCommands"]
+      },
+      {
+        "before": ["<Leader>", "t"],
+        "commands": ["workbench.action.gotoSymbol"]
+      },
+      {
+        "before": ["<Leader>", "e"],
+        "commands": ["workbench.view.explorer"]
+      },
+      {
+        "before": ["<Leader>", "f"],
+        "commands": ["workbench.action.findInFiles"]
+      },
+      // Show source control pane
+      {
+        "before": ["<Leader>", "g"],
+        "commands": ["workbench.view.scm"]
+      },
+      {
+        "before": ["<Leader>", "b"],
+        "commands": ["workbench.action.toggleSidebarVisibility"]
+      },
+      // New line without going to insert mode
+      {
+        "before": ["<Leader>", "o"],
+        "after": ["o", "<Esc>"]
+      },
+      {
+        "before": ["<Leader>", "O"],
+        "after": ["O", "<Esc>"]
+      },
+      {
+        "before": ["<Leader>", "G"],
+        "commands": ["editor.action.revealDefinition"]
+      },
+      // Use u / C-r will be same as ctrl-z / ctrl-y
+      {
+        "before": ["u"],
+        "commands": ["undo"]
+      },
+      {
+        "before": ["C-r"],
+        "commands": ["redo"]
+      },
+      // Log to console (javascript)
+      {
+        "before": ["<leader>", "L"],
+        "after": ["y", "i", "w", "<Esc>", "o", "<Esc>"],
+        "commands": [
+          {
+            "command": "editor.action.insertSnippet",
+            "args": {
+              "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
+            }
+          },
+          {
+            "command": "workbench.action.files.save"
+          }
+        ]
+      },
+      {
+        "before": ["<leader>", "l", "i", "w"],
+        "after": ["y", "i", "w", "<Esc>", "o"],
+        "commands": [
+          {
+            "command": "editor.action.insertSnippet",
+            "args": {
+              "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
+            }
+          }
+        ]
+      },
+      {
+        "before": ["<leader>", "l", "i", "B"],
+        "after": ["y", "i", "B", "<Esc>", "o"],
+        "commands": [
+          {
+            "command": "editor.action.insertSnippet",
+            "args": {
+              "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
+            }
+          }
+        ]
+      },
+      {
+        "before": ["<leader>", "l", "l"],
+        "after": ["0", "w", "y", "t", ";", "<Esc>", "o"],
+        "commands": [
+          {
+            "command": "editor.action.insertSnippet",
+            "args": {
+              "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
+            }
+          }
+        ]
+      }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+      // Copy to the 0 registry instead of default clipboard when pressing d
+      {
+        "before": ["d"],
+        "after": ["\"", "0", "d"]
+      },
+      // Copy to default clipboard
+      {
+        "before": ["<Leader>", "d"],
+        "after": ["d"]
+      },
+      {
+        "before": ["c"],
+        "after": ["\"", "0", "c"]
+      },
+      {
+        "before": ["<Leader>", "c"],
+        "after": ["c"]
+      },
+      {
+        "before": ["x"],
+        "after": ["\"", "0", "x"]
+      },
+      {
+        "before": ["<Leader>", "x"],
+        "after": ["x"]
+      },
+      // Copy to the 0 registry when pasting and collect what to paste from the
+      // default clipboard
+      {
+        "before": ["p"],
+        "after": ["\"", "0", "d", "P"]
+      },
+      // Go to insert mode when pressing i
+      {
+        "before": ["i"],
+        "after": ["<Esc>", "i"]
+      }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+      // Go to terminal pane
+      {
+        "before": ["<C-j>"],
+        "after": ["<Esc>", "<C-w>", "j"]
+      }
+    ],
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": ["#8FBCBB", "#000"],
+    "vim.statusBarColors.insert": ["#BF616A", "#000"],
+    "vim.statusBarColors.visual": ["#B48EAD", "#000"],
+    "vim.statusBarColors.visualline": ["#B48EAD", "#000"],
+    "vim.statusBarColors.visualblock": ["#A3BE8C", "#000"],
+    "vim.statusBarColors.replace": "#D08770",
+    "vim.statusBarColors.commandlineinprogress": "#007ACC",
+    "vim.statusBarColors.searchinprogressmode": "#007ACC",
+    "vim.statusBarColors.easymotionmode": "#007ACC",
+    "vim.statusBarColors.easymotioninputmode": "#007ACC",
+    "vim.statusBarColors.surroundinputmode": "#007ACC",
+    "workbench.colorCustomizations": {
+      "statusBar.background": "#BF616A",
+      "statusBar.noFolderBackground": "#BF616A",
+      "statusBar.debuggingBackground": "#BF616A",
+      "statusBar.foreground": "#000",
+      "statusBar.debuggingForeground": "#000"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabCompletion": "on",
+    "tabnine.experimentalAutoImports": true,
+    "git-graph.repository.commits.fetchAvatars": true,
+    "[markdown]": {
+      "editor.formatOnSave": false
+    },
+    "git.enableSmartCommit": true,
+    "[ahk]": {
+      "editor.defaultFormatter": "cweijan.vscode-autohotkey-plus"
+    },
+    "editor.fontSize": 15,
+
+    "code-runner.runInTerminal": true,
+}
