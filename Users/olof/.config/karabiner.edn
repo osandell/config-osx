@@ -39,6 +39,7 @@
       :remote-desktop ["com.microsoft.rdc.macos"]
       :slack ["com.tinyspeck.slackmacgap"]
       :vscode ["com.microsoft.VSCode"]
+      :parallels ["com.parallels"]
 }
 
 :profiles  {:Default {:default true :sim 50 :delay 500 :alone 500 :held 500}}
@@ -54,7 +55,7 @@
       {:des "Function + ' to Page Down"
             :rules[:kb-macbook[:!F##backslash :page_down]]}
       {:des "FN to Left Command"
-            :rules [:kb-macbook[:##fn :left_command]]}
+            :rules [:kb-macbook :!parallels[:##fn :left_command]]}
       {:des "Left Control to FN"
             :rules [:kb-macbook[:##left_control :fn]]}
 
@@ -99,6 +100,50 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Make modifier keys work properly on remote desktop"
             :rules [:remote-desktop[:left_command :left_control] [:left_control :left_command]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Parallels Desktop
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Tweak modifier keys to work smoothly on Window"
+            :rules [:parallels[:left_option :left_command] 
+                   [:##fn :left_control]
+                   [:left_command :right_option]
+                   [:##Rright_command :!Sleft_control]
+                   ]}
+
+      {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
+            :rules [:parallels[:##caps_lock :!Tleft_command nil {:alone :escape}]]}
+
+      {:des "Left Control + A / Ö / Å / Ä to select all / copy / cut / paste"
+            :rules [:parallels [:!TCa :!Ta] 
+                  [:!TCsemicolon :!Tc] 
+                  [:!TCopen_bracket :!Tx]
+                  [:!TCquote :!Tv]]}
+
+      {:des "Left Control + S to Control + S"
+            :rules [:parallels [:!TCs :!Ts] [:!TCSs :!TSs]]}
+
+      {:des "Left Control + d to delete"
+            :rules [:parallels[:!TCd :delete_forward][:!TSCd :!Sdelete_forward]]}
+
+      {:des "Tweak VSCode Command Palette hotkey not to trigger project screen hotkey"
+            :rules [:parallels[:!TCp :!TSCp]]}
+
+      ; For some reason this was unusually tricky, not sure why I had to
+      ; split it in 2 different rules.
+      {:des "Left Shift + Left Command to Shift + Ctrl + Command (Win)"
+            :rules [:parallels [:!Eleft_shift :!SCleft_control] [:!Sleft_command :!SCleft_control]]}
+
+      {:des "Left Command + up / down to Left Ctrl + Command (Win) + Up / Down"
+            :rules [:parallels [:!Eup_arrow :!CTup_arrow] [:!Edown_arrow :!CTdown_arrow]]}
+
+      {:des "Make exceptions for Rectangle hotkeys to resize window"
+            :rules [:kb-macbook :parallels
+            [:!TSleft_arrow :!CSleft_arrow]
+            [:!TSright_arrow :!CSright_arrow]
+            [:!TSup_arrow :!CSup_arrow]
+            [:!TSdown_arrow :!CSdown_arrow]
+            [:!TSreturn_or_enter :!CSreturn_or_enter]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Google Chrome
@@ -216,15 +261,14 @@
             :rules [[:!T0 "osascript -e 'tell application \"Google Chrome YouTube\" to activate'"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Right Command to Right Option"
             :rules [[:##right_command :right_option]]}
       {:des "Left Command to Left Option"
-            :rules[[:##left_command :left_option]]}
+            :rules [:!parallels[:##left_command :left_option]]}
       {:des "Left Option to FN if holding, to Spotlight Search if pressed alone"
-            :rules [[:##left_option :fn nil {:alone :!Cspacebar}]]}
+            :rules [:!parallels[:##left_option :fn nil {:alone :!Cspacebar}]]}
       {:des "Right Option to Right Command"
             :rules[[:##right_option :right_command]]}
       {:des "< to Right Control if holding, to tab when pressed alone"
@@ -236,7 +280,7 @@
             [:!P0 :f10] [:!O0 :f10] [:!E0 :f10] [:!Phyphen :f11] [:!Ohyphen :f11] [:!Ehyphen :f11]
             [:!Pequal_sign :f12] [:!Oequal_sign :f12] [:!Eequal_sign :f12]]}
       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
-            :rules [[:##caps_lock :left_control nil {:alone :escape}]]}
+            :rules [:!parallels[:##caps_lock :left_control nil {:alone :escape}]]}
       {:des "Esc to Caps Lock"
             :rules [[:##escape :caps_lock]]}
       {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"

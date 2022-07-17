@@ -69,11 +69,8 @@
             "key_code" : "left_command"
           } ],
           "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1452,
-              "product_id" : 832
-            } ],
-            "type" : "device_if"
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "com.parallels" ]
           } ],
           "type" : "basic"
         } ]
@@ -261,6 +258,471 @@
           "conditions" : [ {
             "type" : "frontmost_application_if",
             "bundle_identifiers" : [ "com.microsoft.rdc.macos" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Tweak modifier keys to work smoothly on Window",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_option"
+          },
+          "to" : [ {
+            "key_code" : "left_command"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "fn",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_control"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_command"
+          },
+          "to" : [ {
+            "key_code" : "right_option"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_command",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_control",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Caps Lock to Left Control if holding, Esc if pressed alone",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "escape"
+          } ],
+          "from" : {
+            "key_code" : "caps_lock",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_command",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "escape"
+          } ],
+          "from" : {
+            "key_code" : "caps_lock",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_control"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + A / Ö / Å / Ä to select all / copy / cut / paste",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "a",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "c",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "open_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "x",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "v",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "a",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "c",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "open_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "x",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "v",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + S to Control + S",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "s",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "s",
+            "modifiers" : [ "left_control", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + d to delete",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_forward"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_forward",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_forward"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Tweak VSCode Command Palette hotkey not to trigger project screen hotkey",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "p",
+            "modifiers" : [ "left_command", "left_control", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Shift + Left Command to Shift + Ctrl + Command (Win)",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_shift",
+            "modifiers" : {
+              "mandatory" : [ "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_control",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_command",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_control",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Command + up / down to Left Ctrl + Command (Win) + Up / Down",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "up_arrow",
+            "modifiers" : {
+              "mandatory" : [ "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_command", "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "down_arrow",
+            "modifiers" : {
+              "mandatory" : [ "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_command", "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Make exceptions for Rectangle hotkeys to resize window",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "up_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "down_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "return_or_enter",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.parallels" ]
           } ],
           "type" : "basic"
         } ]
@@ -820,6 +1282,10 @@
           "to" : [ {
             "key_code" : "left_option"
           } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "com.parallels" ]
+          } ],
           "type" : "basic"
         } ]
       }, {
@@ -837,6 +1303,10 @@
           },
           "to" : [ {
             "key_code" : "fn"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "com.parallels" ]
           } ],
           "type" : "basic"
         } ]
@@ -1271,23 +1741,6 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Caps Lock to Left Control if holding, Esc if pressed alone",
-        "manipulators" : [ {
-          "to_if_alone" : [ {
-            "key_code" : "escape"
-          } ],
-          "from" : {
-            "key_code" : "caps_lock",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "left_control"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "Esc to Caps Lock",
         "manipulators" : [ {
           "from" : {
@@ -1380,20 +1833,6 @@
           },
           "to" : [ {
             "key_code" : "end"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Control + d to delete",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "d",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "delete_forward"
           } ],
           "type" : "basic"
         } ]
@@ -1775,57 +2214,6 @@
           "to" : [ {
             "key_code" : "7",
             "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Control + A / Ö / Å / Ä to select all / copy / cut / paste",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "a",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "a",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "semicolon",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "c",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "open_bracket",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "x",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "quote",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "v",
-            "modifiers" : [ "left_command" ]
           } ],
           "type" : "basic"
         } ]
