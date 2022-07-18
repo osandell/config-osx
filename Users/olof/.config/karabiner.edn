@@ -65,6 +65,8 @@
       {:des "Show desktop media key (require changing hotkey in mac system settings). Not supposed to work when
             Caps Lock is active so that we can use the f11 key in Chrome debug tool."
             :rules[:kb-logitech-k860[:f11 :!TSOd]]}
+      {:des "Left Control to Left Command"
+            :rules [:kb-logitech-k860 :!parallels[:##left_control :left_command]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Media Control
