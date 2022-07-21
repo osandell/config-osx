@@ -1151,7 +1151,7 @@
             "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.scpt"
           } ],
           "from" : {
-            "key_code" : "r",
+            "key_code" : "p",
             "modifiers" : {
               "mandatory" : [ "right_control" ]
             }
@@ -1159,6 +1159,36 @@
           "conditions" : [ {
             "type" : "frontmost_application_if",
             "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Control + . to console log without variable",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "q",
+            "modifiers" : [ "left_shift", "right_option" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Control + - to console log with variable",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "w",
+            "modifiers" : [ "left_shift", "right_option" ]
           } ],
           "type" : "basic"
         } ]

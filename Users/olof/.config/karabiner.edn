@@ -232,8 +232,15 @@
       ;; VSCode
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Right Control + r to run last used terminal command"
-            :rules [:vscode[:!Wr nil nil {:alone "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.scpt"
+            :rules [:vscode[:!Wp nil nil {:alone "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.scpt"
             :held "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.scpt"}]]}
+
+      ; For the following 2 definitions to work I've also mapped ° and ˝ to
+      ; melodies in VSCode VIM.
+      {:des "Right Control + . to console log without variable"
+            :rules [[:!Tperiod :!SEq]]}
+      {:des "Right Control + - to console log with variable"
+            :rules [[:!Tslash :!SEw]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching

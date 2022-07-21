@@ -314,5 +314,15 @@
   {
     "key": "shift+cmd+p",
     "command": "-workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.quickInputBack",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack",
+    "when": "canNavigateBack"
   }
 ]

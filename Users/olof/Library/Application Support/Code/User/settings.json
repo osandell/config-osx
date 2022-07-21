@@ -149,15 +149,15 @@
       "before": ["u"],
       "commands": ["undo"]
     },
-    {
-      "before": ["C-r"],
-      "commands": ["redo"]
-    },
+    // {
+    //   "before": ["C-r"],
+    //   "commands": ["redo"]
+    // },
 
-    // Log to console (javascript)
+    // Log to console without variable (javascript)
     {
-      "before": ["<leader>", "l"],
-      "after": ["0", "d", "w", "d", "d", "O", "<Esc>", "o", "<Esc>"],
+      "before": ["˝"],
+      "after": ["d", "d", "O", "<Esc>", "o", "<Esc>"],
       "commands": [
         {
           "command": "editor.action.insertSnippet",
@@ -170,9 +170,10 @@
         }
       ]
     },
+    // Log to console with variable (javascript)
     {
-      "before": ["<leader>", "L"],
-      "after": ["0", "d", "w", "d", "d", "O", "<Esc>", "o", "<Esc>"],
+      "before": ["°"],
+      "after": ["d", "d", "O", "<Esc>", "o", "<Esc>"],
       "commands": [
         {
           "command": "editor.action.insertSnippet",
@@ -185,6 +186,7 @@
         }
       ]
     },
+    // Log word to console (javascript)
     {
       "before": ["<leader>", "w"],
       "after": ["y", "i", "w", "<Esc>", "o"],
@@ -280,6 +282,39 @@
     {
       "before": ["<C-j>"],
       "after": ["<Esc>", "5", "j", "i"]
+    },
+
+    // Log to console without variable (javascript)
+    {
+      "before": ["˝"],
+      "after": ["<Esc>", "d", "d", "O", "<Esc>", "o", "<Esc>"],
+      "commands": [
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
+          }
+        },
+        {
+          "command": "workbench.action.files.save"
+        }
+      ]
+    },
+    // Log to console with variable (javascript)
+    {
+      "before": ["°"],
+      "after": ["<Esc>", "d", "d", "O", "<Esc>", "o", "<Esc>"],
+      "commands": [
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m\\n\", 'color: white; background: black; font-weight: bold');"
+          }
+        },
+        {
+          "command": "workbench.action.files.save"
+        }
+      ]
     }
   ],
 
