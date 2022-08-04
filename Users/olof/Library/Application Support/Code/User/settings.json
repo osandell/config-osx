@@ -328,5 +328,6 @@
   "[markdown]": {
     "editor.formatOnSave": false
   },
-  "git.enableSmartCommit": true
+  "git.enableSmartCommit": true,
+  "editor.inlineSuggest.enabled": true
 }

@@ -237,9 +237,9 @@
 
       ; For the following 2 definitions to work I've also mapped ° and ˝ to
       ; melodies in VSCode VIM.
-      {:des "Right Control + . to console log without variable"
+      {:des "Left Control + . to console log without variable"
             :rules [[:!Tperiod :!SEq]]}
-      {:des "Right Control + - to console log with variable"
+      {:des "Left Control + - to console log with variable"
             :rules [[:!Tslash :!SEw]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
