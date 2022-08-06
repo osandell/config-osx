@@ -251,8 +251,8 @@
       {:des "Left Control + 2 to activate VSCode"
             :rules [[:!T2 "osascript -e 'tell application \"Visual Studio Code\" to activate'"]]}
 
-      {:des "Left Control + 3 to activate Google Chrome Incognito"
-            :rules [[:!T3 "osascript -e 'tell application \"Google Chrome Incognito\" to activate'"]]}
+      {:des "Left Control + 3 to activate Google Chrome Dev"
+            :rules [[:!T3 "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
 
       {:des "Left Control + 4 to activate Slack"
             :rules [[:!T4 "osascript -e 'tell application \"Slack\" to activate'"]]}
