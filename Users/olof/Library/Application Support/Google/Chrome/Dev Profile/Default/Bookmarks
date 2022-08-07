@@ -1,5 +1,5 @@
 {
-   "checksum": "bc4026220632eb952c3f3eec7d486c9f",
+   "checksum": "47db460897e640a48f0d93061eb8f385",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -44,9 +44,16 @@
             "name": "aaa - Sök på Google",
             "type": "url",
             "url": "https://www.google.com/search?q=aaa&rlz=1C5CHFA_enSE970SE970&oq=aaa&aqs=chrome..69i57j0i512l3j46i175i199i512j0i512l5.534j0j15&sourceid=chrome&ie=UTF-8"
+         }, {
+            "date_added": "13304377316169142",
+            "guid": "e6e0837d-8c7d-470b-b061-27de39041443",
+            "id": "22",
+            "name": "aaa - Sök på Google",
+            "type": "url",
+            "url": "https://www.google.com/search?q=aaa&rlz=1C5CHFA_enSE970SE970&oq=aaa&aqs=chrome..69i57j0i512l3j46i175i199i512j0i512l5.534j0j15&sourceid=chrome&ie=UTF-8"
          } ],
          "date_added": "13304357303342643",
-         "date_modified": "13304377227899046",
+         "date_modified": "13304377316169142",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",

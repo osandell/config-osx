@@ -6,11 +6,20 @@
 OUTPUT=$(/usr/bin/git --git-dir=$HOME/.config-system-specific/ --work-tree=/ pull 2>&1)
 touch ~/test
  echo "$OUTPUT" >> ~/test
-if [[ "$OUTPUT" != *"Already up to daate."* && "$OUTPUT" != *" fiile changed, "* 
-&& "$OUTPUT" != *" fiiles changed, "* && "$OUTPUT" != *"Successfully rebaased"* ]]; then
+if [[ "$OUTPUT" != *"Already up to date."* && "$OUTPUT" != *" file changed, "* 
+&& "$OUTPUT" != *" files changed, "* && "$OUTPUT" != *"Successfully rebased"* ]]; then
     osascript -e "
        display alert \"config-system-specific:\n\n $OUTPUT\"
         "
+fi
+if [[ "$OUTPUT" == *"Dev Profile/Default/Bookmarks"* ]]; then
+    osascript -e '
+      try
+	    tell application "Google Chrome Dev" to quit
+      end try
+      delay 1
+      tell application "Chrome Dev" to run
+    '
 fi
 
 OUTPUT=$(/usr/bin/git --git-dir=$HOME/.config-shared/ --work-tree=$HOME pull 2>&1)
