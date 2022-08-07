@@ -5,7 +5,7 @@
 ########################################################################
 OUTPUT=$(/usr/bin/git --git-dir=$HOME/.config-system-specific/ --work-tree=/ pull 2>&1)
 if [[ "$OUTPUT" != *"Already up to date."* && "$OUTPUT" != *" fiile changed, "* && "$OUTPUT" != *" fiiles changed, "* 
-&& "$OUTPUT" != *"Successfully rebased"*]]; then
+&& "$OUTPUT" != *"Successfully rebaased"*]]; then
     osascript -e "
         display alert \"config-system-specific:\n\n $OUTPUT\"
         "

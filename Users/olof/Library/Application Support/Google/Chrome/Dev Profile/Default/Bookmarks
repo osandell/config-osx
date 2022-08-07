@@ -1,5 +1,5 @@
 {
-   "checksum": "20c8c89932b1ba4aedaca5d3d780fef9",
+   "checksum": "3d55b837ddcd390a0908a8aee31a2996",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -27,34 +27,6 @@
             "date_added": "13304373546526908",
             "guid": "6c48ac1c-1477-46f0-9043-3838ab562c53",
             "id": "13",
-            "name": "asdf - Sök på Google",
-            "type": "url",
-            "url": "https://www.google.com/search?q=asdf&rlz=1C5CHFA_enSE970SE970&oq=asdf&aqs=chrome..69i57j0i512j46i512l3j0i512j46i512j0i512l3.373j0j15&sourceid=chrome&ie=UTF-8"
-         }, {
-            "date_added": "13304373813520993",
-            "guid": "e8ac452c-1ef4-4f33-bc20-8f36108901c8",
-            "id": "14",
-            "name": "asdf - Sök på Google",
-            "type": "url",
-            "url": "https://www.google.com/search?q=asdf&rlz=1C5CHFA_enSE970SE970&oq=asdf&aqs=chrome..69i57j0i512j46i512l3j0i512j46i512j0i512l3.373j0j15&sourceid=chrome&ie=UTF-8"
-         }, {
-            "date_added": "13304373892169946",
-            "guid": "b1c01b6f-03bc-4940-b062-cce09e524f29",
-            "id": "15",
-            "name": "asdf - Sök på Google",
-            "type": "url",
-            "url": "https://www.google.com/search?q=asdf&rlz=1C5CHFA_enSE970SE970&oq=asdf&aqs=chrome..69i57j0i512j46i512l3j0i512j46i512j0i512l3.373j0j15&sourceid=chrome&ie=UTF-8"
-         }, {
-            "date_added": "13304374949095078",
-            "guid": "db754c6f-aaef-42dd-bd68-577e9f9ea230",
-            "id": "17",
-            "name": "asdf - Sök på Google",
-            "type": "url",
-            "url": "https://www.google.com/search?q=asdf&rlz=1C5CHFA_enSE970SE970&oq=asdf&aqs=chrome..69i57j0i512j46i512l3j0i512j46i512j0i512l3.373j0j15&sourceid=chrome&ie=UTF-8"
-         }, {
-            "date_added": "13304375142461279",
-            "guid": "78f034b2-7e1e-4f73-bbad-f021bef3d71f",
-            "id": "18",
             "name": "asdf - Sök på Google",
             "type": "url",
             "url": "https://www.google.com/search?q=asdf&rlz=1C5CHFA_enSE970SE970&oq=asdf&aqs=chrome..69i57j0i512j46i512l3j0i512j46i512j0i512l3.373j0j15&sourceid=chrome&ie=UTF-8"
