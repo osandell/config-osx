@@ -2,9 +2,6 @@
 
 hasBookmarksOnlyBeenModified () {
   CHROME_INSTANCES=( Dev Personal YouTube Music Incognito )
-  echo "$1"
-
-  
   for i in "${CHROME_INSTANCES[@]}"
     do
       if [[ "$1" == *"Changes not staged for commit:
@@ -23,15 +20,13 @@ hasBookmarksOnlyBeenModified
 
 [ ! -f /usr/local/bin/switchaudiosource ] && /usr/local/bin/brew install switchaudio-osx
 OUTPUT=$(/usr/bin/git --git-dir=/Users/olof/.config-system-specific/ --work-tree=/ status)
- touch ~/test
-echo "$OUTPUT" >> ~/test
 if [[ "$OUTPUT" != *"nothing to commit"* || "$OUTPUT" != *"Your branch is up to date with"* ]]; then
   hasBookmarksOnlyBeenModified "$OUTPUT"
   HAS_BOOKMARKS_ONLY_BEEN_MODIFIED=$?
   if [[ $HAS_BOOKMARKS_ONLY_BEEN_MODIFIED == 1 ]]; then
-    /usr/bin/git --git-dir=$HOME/.config-system-specific/ --work-tree=/ add -u
-    /usr/bin/git --git-dir=$HOME/.config-system-specific/ --work-tree=/ commit -m "chrome: update bookmarks"
-    /usr/bin/git --git-dir=$HOME/.config-system-specific/ --work-tree=/ push
+    /usr/bin/git --git-dir=/Users/olof/.config-system-specific/ --work-tree=/ add -u
+    /usr/bin/git --git-dir=/Users/olof/.config-system-specific/ --work-tree=/ commit -m "chrome: update bookmarks"
+    /usr/bin/git --git-dir=/Users/olof/.config-system-specific/ --work-tree=/ push
   else
     /usr/local/bin/switchaudiosource -s "Högtalare i MacBook Pro"
     osascript -e '
@@ -41,7 +36,7 @@ if [[ "$OUTPUT" != *"nothing to commit"* || "$OUTPUT" != *"Your branch is up to 
   fi
 fi
 
-OUTPUT=$(/usr/bin/git --git-dir=$HOME/.config-shared/ --work-tree=$HOME status)
+OUTPUT=$(/usr/bin/git --git-dir=/Users/olof/.config-shared/ --work-tree=/Users/olof/ status)
 if [[ "$OUTPUT" != *"nothing to commit"* || "$OUTPUT" != *"Your branch is up to date with"* ]]; then
   /usr/local/bin/switchaudiosource -s "Högtalare i MacBook Pro"
   osascript -e '
