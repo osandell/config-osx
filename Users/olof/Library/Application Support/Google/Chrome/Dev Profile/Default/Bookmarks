@@ -1,5 +1,5 @@
 {
-   "checksum": "aea1512fe778ecb8686779751fe2ec55",
+   "checksum": "00ae094a6aa07abc77536a25f0a9933d",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -24,15 +24,29 @@
             "type": "url",
             "url": "https://www.google.com/search?q=aaa&rlz=1C5CHFA_enSE970SE970&oq=aaa&aqs=chrome..69i57j0i512l3j46i175i199i512j0i512l5.534j0j15&sourceid=chrome&ie=UTF-8"
          }, {
-            "date_added": "13304365572426530",
-            "guid": "87f16263-9041-46b6-a2e4-72908b80bad3",
-            "id": "11",
-            "name": "Populate an array with list of directories existing in a given path in Bash - Stack Overflow",
+            "date_added": "13304373546526908",
+            "guid": "6c48ac1c-1477-46f0-9043-3838ab562c53",
+            "id": "13",
+            "name": "asdf - Sök på Google",
             "type": "url",
-            "url": "https://stackoverflow.com/questions/52275988/populate-an-array-with-list-of-directories-existing-in-a-given-path-in-bash"
+            "url": "https://www.google.com/search?q=asdf&rlz=1C5CHFA_enSE970SE970&oq=asdf&aqs=chrome..69i57j0i512j46i512l3j0i512j46i512j0i512l3.373j0j15&sourceid=chrome&ie=UTF-8"
+         }, {
+            "date_added": "13304373813520993",
+            "guid": "e8ac452c-1ef4-4f33-bc20-8f36108901c8",
+            "id": "14",
+            "name": "asdf - Sök på Google",
+            "type": "url",
+            "url": "https://www.google.com/search?q=asdf&rlz=1C5CHFA_enSE970SE970&oq=asdf&aqs=chrome..69i57j0i512j46i512l3j0i512j46i512j0i512l3.373j0j15&sourceid=chrome&ie=UTF-8"
+         }, {
+            "date_added": "13304373892169946",
+            "guid": "b1c01b6f-03bc-4940-b062-cce09e524f29",
+            "id": "15",
+            "name": "asdf - Sök på Google",
+            "type": "url",
+            "url": "https://www.google.com/search?q=asdf&rlz=1C5CHFA_enSE970SE970&oq=asdf&aqs=chrome..69i57j0i512j46i512l3j0i512j46i512j0i512l3.373j0j15&sourceid=chrome&ie=UTF-8"
          } ],
          "date_added": "13304357303342643",
-         "date_modified": "13304365572426530",
+         "date_modified": "13304373988467692",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
