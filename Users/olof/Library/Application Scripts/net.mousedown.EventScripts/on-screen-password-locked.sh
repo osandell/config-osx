@@ -20,6 +20,8 @@ hasBookmarksOnlyBeenModified
 
 [ ! -f /usr/local/bin/switchaudiosource ] && /usr/local/bin/brew install switchaudio-osx
 OUTPUT=$(/usr/bin/git --git-dir=/Users/olof/.config-system-specific/ --work-tree=/ status)
+ touch ~/test
+echo "$OUTPUT" >> ~/test
 if [[ "$OUTPUT" != *"nothing to commit"* || "$OUTPUT" != *"Your branch is up to date with"* ]]; then
   hasBookmarksOnlyBeenModified "$OUTPUT"
   HAS_BOOKMARKS_ONLY_BEEN_MODIFIED=$?
