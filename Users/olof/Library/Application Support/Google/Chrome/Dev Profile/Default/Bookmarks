@@ -1,31 +1,87 @@
 {
-   "checksum": "305b945b3b9002ab42b40a2903c11647",
+   "checksum": "86a692f97616c7b3ccc3d225f7c16807",
    "roots": {
       "bookmark_bar": {
          "children": [ {
-            "date_added": "13304357605388133",
-            "guid": "78b2dfe6-931b-4feb-92ae-39ff27722289",
-            "id": "6",
-            "name": "ljk - Sök på Google",
+            "date_added": "13301097428000000",
+            "guid": "050f38b0-389d-43d6-9328-1ef5d55bac62",
+            "id": "26",
+            "name": "localhost:3000",
             "type": "url",
-            "url": "https://www.google.com/search?q=ljk&rlz=1C5CHFA_enSE970SE970&oq=ljk&aqs=chrome..69i57j0i512j0i10i433j0i10l2j0i10i131i433j46i10i175i199j0i10l3.864j0j7&sourceid=chrome&ie=UTF-8"
+            "url": "http://localhost:3000/"
          }, {
-            "date_added": "13304359378222952",
-            "guid": "07e6fec5-17aa-420f-89f1-aeca964a3564",
-            "id": "9",
-            "name": "aaa - Sök på Google",
+            "date_added": "13301139953000000",
+            "guid": "5059754b-9f22-4d11-86d7-b9aec4a3e5f6",
+            "id": "27",
+            "name": "localhost:3001",
             "type": "url",
-            "url": "https://www.google.com/search?q=aaa&rlz=1C5CHFA_enSE970SE970&oq=aaa&aqs=chrome..69i57j0i512l3j46i175i199i512j0i512l5.534j0j15&sourceid=chrome&ie=UTF-8"
+            "url": "http://localhost:3001/"
          }, {
-            "date_added": "13304378567205948",
-            "guid": "848ad560-23cb-4244-ac5c-dd26f14555c5",
-            "id": "11",
-            "name": "ljk - Sök på Google",
+            "date_added": "13301419648000000",
+            "guid": "af441f35-8a8f-44a1-84a6-5ab5e7f150ed",
+            "id": "28",
+            "name": "RD",
             "type": "url",
-            "url": "https://www.google.com/search?q=ljk&rlz=1C5CHFA_enSE970SE970&oq=ljk&aqs=chrome..69i57j0i512j0i10i433j0i10l2j0i10i131i433j46i10i175i199j0i10l3.864j0j7&sourceid=chrome&ie=UTF-8"
+            "url": "https://royaldesign.se/"
+         }, {
+            "date_added": "13301174697000000",
+            "guid": "02bcec24-8c99-430a-a418-fc827e5465c3",
+            "id": "29",
+            "name": "R21",
+            "type": "url",
+            "url": "https://www.rum21.se/"
+         }, {
+            "date_added": "13301138077000000",
+            "guid": "4c0cbba0-9ac7-4568-a9d3-c0e89316e8ab",
+            "id": "30",
+            "name": "RD5",
+            "type": "url",
+            "url": "https://royalweb-dev-5.azurewebsites.net/"
+         }, {
+            "date_added": "13301499284000000",
+            "guid": "4af79f10-3b88-4f02-be34-2b0db45f20bd",
+            "id": "31",
+            "name": "RD7",
+            "type": "url",
+            "url": "https://royalweb-dev-7.azurewebsites.net/"
+         }, {
+            "date_added": "13301139323000000",
+            "guid": "7881d6a0-21ce-4f5c-b0f1-fa6a974d8ff8",
+            "id": "32",
+            "name": "RD Stage SE",
+            "type": "url",
+            "url": "https://royalweb-se-stage.azurewebsites.net/"
+         }, {
+            "date_added": "13301151336000000",
+            "guid": "025ca211-615d-4776-85ac-6346635ee212",
+            "id": "33",
+            "name": "RD-SE",
+            "type": "url",
+            "url": "https://royalweb-se-prod-deploy.azurewebsites.net/"
+         }, {
+            "date_added": "13302894803000000",
+            "guid": "0a42252f-d2c9-46e4-9f27-742c01998f87",
+            "id": "34",
+            "name": "RD-DK",
+            "type": "url",
+            "url": "https://royalweb-dk-prod-deploy.azurewebsites.net/"
+         }, {
+            "date_added": "13301151495000000",
+            "guid": "ccc1e041-43a1-4d0f-acc2-3bb99bd5588d",
+            "id": "35",
+            "name": "R21-SE",
+            "type": "url",
+            "url": "https://r21web-se-prod-deploy.azurewebsites.net/"
+         }, {
+            "date_added": "13301414960000000",
+            "guid": "a891d56d-1d0b-43a1-8e16-ff64e96f22e3",
+            "id": "36",
+            "name": "R21-DK",
+            "type": "url",
+            "url": "https://r21web-dk-prod-deploy.azurewebsites.net/"
          } ],
          "date_added": "13304357303342643",
-         "date_modified": "13304378567205948",
+         "date_modified": "0",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
