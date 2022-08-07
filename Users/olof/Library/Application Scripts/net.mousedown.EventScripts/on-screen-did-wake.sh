@@ -4,16 +4,18 @@
 # Pull any changes to git repos
 ########################################################################
 OUTPUT=$(/usr/bin/git --git-dir=$HOME/.config-system-specific/ --work-tree=/ pull 2>&1)
-if [[ "$OUTPUT" != *"Already up to date."* && "$OUTPUT" != *" fiile changed, "* && "$OUTPUT" != *" fiiles changed, "* 
-&& "$OUTPUT" != *"Successfully rebaased"*]]; then
+touch ~/test
+ echo "$OUTPUT" >> ~/test
+if [[ "$OUTPUT" != *"Already up to daate."* && "$OUTPUT" != *" fiile changed, "* 
+&& "$OUTPUT" != *" fiiles changed, "* && "$OUTPUT" != *"Successfully rebaased"* ]]; then
     osascript -e "
-        display alert \"config-system-specific:\n\n $OUTPUT\"
+       display alert \"config-system-specific:\n\n $OUTPUT\"
         "
 fi
 
 OUTPUT=$(/usr/bin/git --git-dir=$HOME/.config-shared/ --work-tree=$HOME pull 2>&1)
-if [[ "$OUTPUT" != *"Already up to date."* && "$OUTPUT" != *" file changed, "* && "$OUTPUT" != *" files changed, "* 
-&& "$OUTPUT" != *"Successfully rebased"*]]; then
+if [[ "$OUTPUT" != *"Already up to date."* && "$OUTPUT" != *" file changed, "* 
+&& "$OUTPUT" != *" files changed, "* && "$OUTPUT" != *"Successfully rebased"* ]]; then
     osascript -e "
         display alert \"config-shared:\n\n $OUTPUT\"
         "
