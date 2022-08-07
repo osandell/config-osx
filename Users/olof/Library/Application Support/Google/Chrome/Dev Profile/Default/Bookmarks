@@ -1,5 +1,5 @@
 {
-   "checksum": "b2572e3add93aeb3367226e0a1d9696e",
+   "checksum": "eb9b9690c7f13dbd12962e684cd5c214",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -16,27 +16,6 @@
             "name": "aaa - Sök på Google",
             "type": "url",
             "url": "https://www.google.com/search?q=aaa&rlz=1C5CHFA_enSE970SE970&oq=aaa&aqs=chrome..69i57j0i512l3j46i175i199i512j0i512l5.534j0j15&sourceid=chrome&ie=UTF-8"
-         }, {
-            "date_added": "13304359449560269",
-            "guid": "654ebc28-d24b-4b8d-ad78-cd870bb7b0fd",
-            "id": "10",
-            "name": "aaa - Sök på Google",
-            "type": "url",
-            "url": "https://www.google.com/search?q=aaa&rlz=1C5CHFA_enSE970SE970&oq=aaa&aqs=chrome..69i57j0i512l3j46i175i199i512j0i512l5.534j0j15&sourceid=chrome&ie=UTF-8"
-         }, {
-            "date_added": "13304373546526908",
-            "guid": "6c48ac1c-1477-46f0-9043-3838ab562c53",
-            "id": "13",
-            "name": "asdf - Sök på Google",
-            "type": "url",
-            "url": "https://www.google.com/search?q=asdf&rlz=1C5CHFA_enSE970SE970&oq=asdf&aqs=chrome..69i57j0i512j46i512l3j0i512j46i512j0i512l3.373j0j15&sourceid=chrome&ie=UTF-8"
-         }, {
-            "date_added": "13304375919602241",
-            "guid": "d5480de4-45a3-419a-bd18-cb3fc15c7dd0",
-            "id": "18",
-            "name": "asdf - Sök på Google",
-            "type": "url",
-            "url": "https://www.google.com/search?q=asdf&rlz=1C5CHFA_enSE970SE970&oq=asdf&aqs=chrome..69i57j0i512j46i512l3j0i512j46i512j0i512l3.373j0j15&sourceid=chrome&ie=UTF-8"
          } ],
          "date_added": "13304357303342643",
          "date_modified": "13304377227899046",
