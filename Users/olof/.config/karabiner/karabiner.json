@@ -164,7 +164,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.applescript"
           } ],
           "type" : "basic"
         }, {
@@ -175,7 +175,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.applescript"
           } ],
           "type" : "basic"
         } ]
@@ -189,7 +189,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.applescript"
           } ],
           "type" : "basic"
         }, {
@@ -200,7 +200,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.applescript"
           } ],
           "type" : "basic"
         } ]
@@ -214,7 +214,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.applescript"
           } ],
           "type" : "basic"
         } ]
@@ -222,10 +222,10 @@
         "description" : "Left Control + Left Shift + p to play / pause | skip in Focus-to-do",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.applescript"
           } ],
           "to_if_held_down" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.applescript"
           } ],
           "from" : {
             "key_code" : "p",
@@ -239,10 +239,10 @@
         "description" : "Left Control + Left Shift + c to close all notifications | snooze 1 notification",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/notification-center/close-notifications.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/notification-center/close-notifications.applescript"
           } ],
           "to_if_held_down" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/notification-center/snooze-notification.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/notification-center/snooze-notification.applescript"
           } ],
           "from" : {
             "key_code" : "c",
@@ -754,7 +754,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.applescript"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -810,7 +810,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/toggl.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/toggl.applescript"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -828,7 +828,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/notion.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/notion.applescript"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -846,7 +846,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/jira.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/jira.applescript"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -864,7 +864,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/bitbucket.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/bitbucket.applescript"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -882,7 +882,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/azure.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/azure.applescript"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -900,7 +900,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/calendar.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/calendar.applescript"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -918,7 +918,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/mail.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/mail.applescript"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -1145,10 +1145,10 @@
         "description" : "Right Control + r to run last used terminal command",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.applescript"
           } ],
           "to_if_held_down" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.applescript"
           } ],
           "from" : {
             "key_code" : "p",
@@ -2289,7 +2289,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/config-middle-mouse/config-middle-mouse.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/config-middle-mouse/config-middle-mouse.applescript"
           } ],
           "type" : "basic"
         } ]

@@ -72,30 +72,30 @@
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Left Control + Left to rewind media" :rules
-            [[:!Tleft_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]
-            [:!TWh "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]]
+            [[:!Tleft_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.applescript"]
+            [:!TWh "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.applescript"]]
       }
       {:des "Left Control + right to fast forward media" :rules
-            [[:!Tright_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]
-            [:!TWl "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]]
+            [[:!Tright_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.applescript"]
+            [:!TWl "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.applescript"]]
       }
 
       {:des "Right Shift + Caps Lock to play / pause media"
-      :rules [[:!Rcaps_lock "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"]]}
+      :rules [[:!Rcaps_lock "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.applescript"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Focus To-Do
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Left Control + Left Shift + p to play / pause | skip in Focus-to-do"
-            :rules [[:!TSp nil nil {:alone "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"
-            :held "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"}]]}
+            :rules [[:!TSp nil nil {:alone "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.applescript"
+            :held "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.applescript"}]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Notification center
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Left Control + Left Shift + c to close all notifications | snooze 1 notification"
-            :rules[[:!TSc nil nil {:alone "osascript ~/dev/osandell/scripts-osx/notification-center/close-notifications.scpt"
-            :held "osascript ~/dev/osandell/scripts-osx/notification-center/snooze-notification.scpt"}]]}
+            :rules[[:!TSc nil nil {:alone "osascript ~/dev/osandell/scripts-osx/notification-center/close-notifications.applescript"
+            :held "osascript ~/dev/osandell/scripts-osx/notification-center/snooze-notification.applescript"}]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Remote Desktop
@@ -151,7 +151,7 @@
       ;; Google Chrome
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Left Control + plus-key to duplicate tab"
-            :rules [:chrome[:!Thyphen "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.scpt"]]}
+            :rules [:chrome[:!Thyphen "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.applescript"]]}
             
       {:des "Left Control + e to mark text (only useful in Notion)"
             :rules [:chrome[:!Te :!Ce]]}
@@ -160,25 +160,25 @@
             :rules [:chrome[:!Tr :!CSr]]}
             
       {:des "Right Option + Right Shift + t to open Toggl tab"
-            :rules [:chrome[:!ERt "osascript ~/dev/osandell/scripts-osx/chrome/toggl.scpt"]]}
+            :rules [:chrome[:!ERt "osascript ~/dev/osandell/scripts-osx/chrome/toggl.applescript"]]}
 
       {:des "Right Option + Right Shift + n to open Notion tab"
-            :rules [:chrome[:!ERn "osascript ~/dev/osandell/scripts-osx/chrome/notion.scpt"]]}
+            :rules [:chrome[:!ERn "osascript ~/dev/osandell/scripts-osx/chrome/notion.applescript"]]}
 
       {:des "Right Option + Right Shift + j to open Jira tab"
-            :rules [:chrome[:!ERj "osascript ~/dev/osandell/scripts-osx/chrome/jira.scpt"]]}
+            :rules [:chrome[:!ERj "osascript ~/dev/osandell/scripts-osx/chrome/jira.applescript"]]}
 
       {:des "Right Option + Right Shift + b to open Bitbucket tab"
-            :rules [:chrome[:!ERb "osascript ~/dev/osandell/scripts-osx/chrome/bitbucket.scpt"]]}
+            :rules [:chrome[:!ERb "osascript ~/dev/osandell/scripts-osx/chrome/bitbucket.applescript"]]}
 
       {:des "Right Option + Right Shift + a to open Azure tab"
-            :rules [:chrome[:!ERa "osascript ~/dev/osandell/scripts-osx/chrome/azure.scpt"]]}
+            :rules [:chrome[:!ERa "osascript ~/dev/osandell/scripts-osx/chrome/azure.applescript"]]}
 
       {:des "Right Option + Right Shift + c to open calendar tab"
-            :rules [:chrome[:!ERc "osascript ~/dev/osandell/scripts-osx/chrome/calendar.scpt"]]}
+            :rules [:chrome[:!ERc "osascript ~/dev/osandell/scripts-osx/chrome/calendar.applescript"]]}
 
       {:des "Right Option + Right Shift + m to open mail tab"
-            :rules [:chrome[:!ERm "osascript ~/dev/osandell/scripts-osx/chrome/mail.scpt"]]}
+            :rules [:chrome[:!ERm "osascript ~/dev/osandell/scripts-osx/chrome/mail.applescript"]]}
 
       {:des "Left Control + Å to switch to prev developer pane"
             :rules [:chrome[:!Topen_bracket :!Copen_bracket]]}
@@ -232,8 +232,8 @@
       ;; VSCode
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Right Control + r to run last used terminal command"
-            :rules [:vscode[:!Wp nil nil {:alone "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.scpt"
-            :held "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.scpt"}]]}
+            :rules [:vscode[:!Wp nil nil {:alone "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.applescript"
+            :held "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.applescript"}]]}
 
       ; For the following 2 definitions to work I've also mapped ° and ˝ to
       ; melodies in VSCode VIM.
@@ -374,7 +374,7 @@
             end tell
             '"]]}
       {:des "Left Control + Left Shift + m to swap mapping Middle Mouse Button to Minimize Window"
-            :rules [[:!TSm "osascript ~/dev/osandell/scripts-osx/config-middle-mouse/config-middle-mouse.scpt"]]}
+            :rules [[:!TSm "osascript ~/dev/osandell/scripts-osx/config-middle-mouse/config-middle-mouse.applescript"]]}
       {:des "long press Left Control + Left Shift + Backspace to empty recycle bin"
             :rules [[:!TSdelete_or_backspace nil nil {
             :held "osascript -e 'tell application \"Finder\" to empty trash'"}]]}
