@@ -1,0 +1,40 @@
+{
+   "checksum": "f5233ed0a16c9f40566f65d8cc5a2545",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13304357605388133",
+            "guid": "78b2dfe6-931b-4feb-92ae-39ff27722289",
+            "id": "6",
+            "name": "ljk - Sök på Google",
+            "type": "url",
+            "url": "https://www.google.com/search?q=ljk&rlz=1C5CHFA_enSE970SE970&oq=ljk&aqs=chrome..69i57j0i512j0i10i433j0i10l2j0i10i131i433j46i10i175i199j0i10l3.864j0j7&sourceid=chrome&ie=UTF-8"
+         } ],
+         "date_added": "13304357303342643",
+         "date_modified": "13304357605388133",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bokmärkesfältet",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13304357303342645",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Övriga bokmärken",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13304357303342650",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Bokmärken i mobilen",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

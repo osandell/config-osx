@@ -1,0 +1,40 @@
+{
+   "checksum": "4fc00bd5aa72372a3c2cff799da72922",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13302524148606835",
+            "guid": "bf45043f-5732-482c-9527-a32522e98512",
+            "id": "5",
+            "name": "",
+            "type": "url",
+            "url": "https://www.youtube.com/feed/subscriptions"
+         } ],
+         "date_added": "13302523554648182",
+         "date_modified": "13302524148606835",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bokmärkesfältet",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13302523554648189",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Övriga bokmärken",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13302523554648239",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Bokmärken i mobilen",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

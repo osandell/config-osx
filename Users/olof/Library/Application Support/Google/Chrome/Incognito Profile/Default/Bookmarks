@@ -1,0 +1,110 @@
+{
+   "checksum": "8f524e87b8e6f83695ddca88232b911f",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13301097428404410",
+            "guid": "5b3e176e-6900-4a5c-9769-e90f52139628",
+            "id": "5",
+            "name": "localhost:3000",
+            "type": "url",
+            "url": "http://localhost:3000/"
+         }, {
+            "date_added": "13301139953667670",
+            "guid": "1006a498-dba5-4525-8ae5-045fd970e125",
+            "id": "9",
+            "name": "localhost:3001",
+            "type": "url",
+            "url": "http://localhost:3001/"
+         }, {
+            "date_added": "13301419648969576",
+            "guid": "e95fe7f6-6fcf-4954-85d0-39c6158f2cd0",
+            "id": "20",
+            "name": "RD",
+            "type": "url",
+            "url": "https://royaldesign.se/"
+         }, {
+            "date_added": "13301174697827874",
+            "guid": "15e91c52-f5c7-4fb6-97a1-58d70801751f",
+            "id": "16",
+            "name": "R21",
+            "type": "url",
+            "url": "https://www.rum21.se/"
+         }, {
+            "date_added": "13301138077255097",
+            "guid": "f8449455-4d24-4368-ae48-09a1d0a3b44c",
+            "id": "7",
+            "name": "RD5",
+            "type": "url",
+            "url": "https://royalweb-dev-5.azurewebsites.net/"
+         }, {
+            "date_added": "13301499284281121",
+            "guid": "490ae919-8b3b-43ac-ab71-0f261c5f483c",
+            "id": "22",
+            "name": "RD7",
+            "type": "url",
+            "url": "https://royalweb-dev-7.azurewebsites.net/"
+         }, {
+            "date_added": "13301139323032434",
+            "guid": "acec4fcf-ad36-4e4f-8687-b27422e2075f",
+            "id": "8",
+            "name": "RD Stage SE",
+            "type": "url",
+            "url": "https://royalweb-se-stage.azurewebsites.net/"
+         }, {
+            "date_added": "13301151336634512",
+            "guid": "b73b67c9-3573-41a7-918a-992f397fbc63",
+            "id": "11",
+            "name": "RD-SE",
+            "type": "url",
+            "url": "https://royalweb-se-prod-deploy.azurewebsites.net/"
+         }, {
+            "date_added": "13302894803644559",
+            "guid": "2f57cbe5-a4f5-469f-8bab-884933c1eb90",
+            "id": "26",
+            "name": "RD-DK",
+            "type": "url",
+            "url": "https://royalweb-dk-prod-deploy.azurewebsites.net/"
+         }, {
+            "date_added": "13301151495204395",
+            "guid": "03dcd54e-0091-4fa4-97e9-670a233dbe0a",
+            "id": "12",
+            "name": "R21-SE",
+            "type": "url",
+            "url": "https://r21web-se-prod-deploy.azurewebsites.net/"
+         }, {
+            "date_added": "13301414960074842",
+            "guid": "596f2cb3-c799-4d1e-9461-16735fba40c4",
+            "id": "18",
+            "name": "R21-DK",
+            "type": "url",
+            "url": "https://r21web-dk-prod-deploy.azurewebsites.net/"
+         } ],
+         "date_added": "13301097411053792",
+         "date_modified": "13302894803644559",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bokmärkesfältet",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13301097411053796",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Övriga bokmärken",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13301097411053798",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Bokmärken i mobilen",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
