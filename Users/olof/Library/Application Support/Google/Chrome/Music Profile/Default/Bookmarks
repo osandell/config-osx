@@ -1,18 +1,11 @@
 {
-   "checksum": "9edb1d7f0b11e0657e6d938b07d1d4cd",
+   "checksum": "f2a188ddb87608ff856af92127f980a9",
    "roots": {
       "bookmark_bar": {
          "children": [ {
             "date_added": "13304536540398539",
             "guid": "fb884894-e7c6-4628-9f45-e29d7154c752",
             "id": "20",
-            "name": "lofi hip hop radio - beats to relax/study to - YouTube",
-            "type": "url",
-            "url": "https://www.youtube.com/watch?v=jfKfPfyJRdk"
-         }, {
-            "date_added": "13304537086810746",
-            "guid": "96d13b4a-7e1d-41ad-b3c0-6ed093069f72",
-            "id": "22",
             "name": "lofi hip hop radio - beats to relax/study to - YouTube",
             "type": "url",
             "url": "https://www.youtube.com/watch?v=jfKfPfyJRdk"

@@ -2,7 +2,6 @@
 
 hasBookmarksOnlyBeenModified () {
   CHROME_INSTANCES=( Dev Personal YouTube Music Incognito )
-    echo "xxxxx${1}xxxxx"
   for i in "${CHROME_INSTANCES[@]}"
     do
       if [[ "$1" == *"Changes not staged for commit:
