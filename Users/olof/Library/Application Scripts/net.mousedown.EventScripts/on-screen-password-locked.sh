@@ -2,12 +2,13 @@
 
 hasBookmarksOnlyBeenModified () {
   CHROME_INSTANCES=( Dev Personal YouTube Music Incognito )
+    echo "xxxxx${1}xxxxx"
   for i in "${CHROME_INSTANCES[@]}"
     do
       if [[ "$1" == *"Changes not staged for commit:
   (use \"git add <file>...\" to update what will be committed)
   (use \"git restore <file>...\" to discard changes in working directory)
-	modified:   Users/olof/Library/Application Support/Google/Chrome/Dev Profile/Default/Bookmarks
+	modified:   Library/Application Support/Google/Chrome/${i} Profile/Default/Bookmarks
 
 no changes added to commit"* ]]; then
         return 1
