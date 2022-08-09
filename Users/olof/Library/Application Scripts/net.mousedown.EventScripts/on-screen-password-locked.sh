@@ -7,7 +7,7 @@ hasBookmarksOnlyBeenModified () {
       if [[ "$1" == *"Changes not staged for commit:
   (use \"git add <file>...\" to update what will be committed)
   (use \"git restore <file>...\" to discard changes in working directory)
-	modified:   Library/Application Support/Google/Chrome/${i} Profile/Default/Bookmarks
+	modified:   Users/olof/Library/Application Support/Google/Chrome/${i} Profile/Default/Bookmarks
 
 no changes added to commit"* ]]; then
         return 1
