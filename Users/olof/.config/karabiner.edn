@@ -232,7 +232,7 @@
       ;; VSCode
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Right Control + r to run last used terminal command"
-            :rules [:vscode[:!Wp nil nil {:alone "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.applescript"
+            :rules [:vscode[:!Wr nil nil {:alone "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.applescript"
             :held "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.applescript"}]]}
 
       ; For the following 2 definitions to work I've also mapped ° and ˝ to

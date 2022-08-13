@@ -1151,7 +1151,7 @@
             "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.applescript"
           } ],
           "from" : {
-            "key_code" : "p",
+            "key_code" : "r",
             "modifiers" : {
               "mandatory" : [ "right_control" ]
             }
