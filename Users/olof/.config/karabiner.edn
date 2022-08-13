@@ -180,23 +180,22 @@
       {:des "Right Option + Right Shift + m to open mail tab"
             :rules [:chrome[:!ERm "osascript ~/dev/osandell/scripts-osx/chrome/mail.applescript"]]}
 
-      {:des "Left Control + Å to switch to prev developer pane"
-            :rules [:chrome[:!Topen_bracket :!Copen_bracket]]}
+      {:des "Left Control + . to switch to prev developer pane"
+            :rules [:chrome[:!Tperiod :!Copen_bracket]]}
    
-      ;; This was tricky to do on a Swedish keyboard because there is no ]. It
-      ;; works with the ¨ key, but it gets stuck if there is an input in a pane.
-      ;; Moreover I've remapped that key to / so it didn't work for me anyway.
-      ;; What I did was to remap the < key to ] with Ukelele. After that i could
-      ;; use Karabiner to remap Left Control + (my) / to the newly mapped ] key.
-      ;; In the future if I need to do something similar I have an idea to remap
+      ;; This was tricky to do on a Swedish keyboard because there is no ],
+      ;; which is required for switching to the next dev pane in Chrome. What I
+      ;; did was to remap the < key to ] with Ukelele. After that I could use
+      ;; Karabiner to remap Left Control + Right Arrow to the newly mapped ] key. In
+      ;; the future if I need to do something similar I have an idea to remap
       ;; the number keys on the keypad to missing keys with Ukelele. For example
       ;; mapping 1 to [. After that I can remap the numpad 1 key to the normal 1
       ;; key in karabiner. And lastly I can map some hotkey of choice to the
       ;; newly mapped [ key (previous numpad 1). This way I can still the numpad
       ;; as normal and also get a set of missing keys for use with hotkey
       ;; mappings.
-      {:des "Left Control + ¨ to switch to next developer pane"
-            :rules [:chrome[:!Tclose_bracket :!Cgrave_accent_and_tilde]]}
+      {:des "Left Control + - to switch to next developer pane"
+            :rules [:chrome[:!Tslash :!Cgrave_accent_and_tilde]]}
 
       {:des "Left Control + i to toggle inspector"
             :rules [:chrome[:!Ti :!CEi]]}
@@ -215,6 +214,9 @@
 
       {:des "Left Control + Tab to alternate between 2 tabs (need Recent Tabs extension)"
             :rules [:chrome[:!Ttab :!Tq]]}
+
+      {:des "Left Command + Left Shift + J to switch javascrtipt on / off"
+            :rules [:chrome[:!SCj [:!SO1 :!Cr]]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Slack
