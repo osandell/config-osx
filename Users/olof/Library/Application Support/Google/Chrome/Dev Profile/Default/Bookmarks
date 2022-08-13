@@ -1,5 +1,5 @@
 {
-   "checksum": "86a692f97616c7b3ccc3d225f7c16807",
+   "checksum": "6ee5c09268170e6db4f1bc3098641b9c",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -79,9 +79,16 @@
             "name": "R21-DK",
             "type": "url",
             "url": "https://r21web-dk-prod-deploy.azurewebsites.net/"
+         }, {
+            "date_added": "13304887271323578",
+            "guid": "26ad8539-e175-4eb3-a538-0555f723fa3c",
+            "id": "38",
+            "name": "Emotion – Styled Components",
+            "type": "url",
+            "url": "https://emotion.sh/docs/styled"
          } ],
          "date_added": "13304357303342643",
-         "date_modified": "0",
+         "date_modified": "13304887271323578",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
