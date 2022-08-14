@@ -329,5 +329,6 @@
     "editor.formatOnSave": false
   },
   "git.enableSmartCommit": true,
-  "editor.inlineSuggest.enabled": true
+  "editor.inlineSuggest.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false
 }
