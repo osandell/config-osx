@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Test sleeping 5s so we hopefully get internet
+sleep 5
+
 ########################################################################
 # Pull any changes to git repos
 ########################################################################
