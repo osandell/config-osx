@@ -1197,6 +1197,10 @@
             "key_code" : "q",
             "modifiers" : [ "left_shift", "right_option" ]
           } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          } ],
           "type" : "basic"
         } ]
       }, {
@@ -1211,6 +1215,24 @@
           "to" : [ {
             "key_code" : "w",
             "modifiers" : [ "left_shift", "right_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter"
+          },
+          "to" : [ {
+            "key_code" : "return_or_enter"
+          }, {
+            "shell_command" : "\n                  osascript -e 'delay 1\n\n                  tell application \"Fork\" to activate\n\n                  tell application \"iTerm\" to activate\n\n                  delay 0.6\n\n                  tell application \"Fork\" to activate\n\n                  tell application \"System Events\" to keystroke \"0\" using command down\n\n                  tell application \"iTerm\" to activate'\n                  "
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
           } ],
           "type" : "basic"
         } ]
@@ -1277,7 +1299,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + 2 ALONE: activate VSCode | DOUBLE: activate Fork",
+        "description" : "Left Control + 2 ALONE: activate VSCode | DOUBLE: activate iTerm and Fork",
         "manipulators" : [ {
           "from" : {
             "key_code" : "2",
@@ -1286,7 +1308,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Fork\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Fork\" to activate\ndelay 0.5\ntell application \"iTerm\" to activate'"
           }, {
             "set_variable" : {
               "name" : "lctrl_2_twice",
@@ -1339,7 +1361,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + 3 ALONE: activate Google Chrome Dev | DOUBLE: activate Slack",
+        "description" : "Left Control + 3 ALONE: activate Google Chrome Dev | DOUBLE: activate Google Chrome Personal",
         "manipulators" : [ {
           "from" : {
             "key_code" : "3",
@@ -1348,7 +1370,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Slack\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Google Chrome Personal\" to activate'"
           }, {
             "set_variable" : {
               "name" : "lctrl_3_twice",
@@ -1401,7 +1423,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + 4 ALONE: activate Google Chrome Dev | DOUBLE: activate iTerm",
+        "description" : "Left Control + 4 ALONE: activate Slack | DOUBLE: activate Google Chrome Music",
         "manipulators" : [ {
           "from" : {
             "key_code" : "4",
@@ -1410,7 +1432,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"iTerm\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Google Chrome Music\" to activate'"
           }, {
             "set_variable" : {
               "name" : "lctrl_4_twice",
@@ -1426,7 +1448,7 @@
         }, {
           "to_delayed_action" : {
             "to_if_invoked" : [ {
-              "shell_command" : "osascript -e 'tell application \"Google Chrome Personal\" to activate'"
+              "shell_command" : "osascript -e 'tell application \"Slack\" to activate'"
             }, {
               "set_variable" : {
                 "name" : "lctrl_4_twice",

@@ -36,10 +36,11 @@
 :applications {
       :chrome ["com.google.Chrome"]
       :edge ["com.microsoft.edgemac"]
+      :iterm ["com.googlecode.iterm2"]
+      :parallels ["com.parallels"]
       :remote-desktop ["com.microsoft.rdc.macos"]
       :slack ["com.tinyspeck.slackmacgap"]
       :vscode ["com.microsoft.VSCode"]
-      :parallels ["com.parallels"]
 }
 
 :profiles  {:Default {:default true :sim 50 :delay 500 :alone 500 :held 500}}
@@ -240,9 +241,23 @@
       ; For the following 2 definitions to work I've also mapped ° and ˝ to
       ; melodies in VSCode VIM.
       {:des "Left Control + . to console log without variable"
-            :rules [[:!Tperiod :!SEq]]}
+            :rules [:vscode[:!Tperiod :!SEq]]}
       {:des "Left Control + - to console log with variable"
-            :rules [[:!Tslash :!SEw]]}
+            :rules [:vscode[:!Tslash :!SEw]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; iTerm
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Left Control + - to console log with variable"
+            :rules [:iterm[:return_or_enter [:return_or_enter "
+                  osascript -e 'delay 1\n
+                  tell application \"Fork\" to activate\n
+                  tell application \"iTerm\" to activate\n
+                  delay 0.6\n
+                  tell application \"Fork\" to activate\n
+                  tell application \"System Events\" to keystroke \"0\" using command down\n
+                  tell application \"iTerm\" to activate'
+                  "]]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching
@@ -253,23 +268,23 @@
             [:!T1 ["lctrl_1_twice" 1] ["lctrl_1_twice" 0]
             {:delayed {:invoked ["osascript -e 'tell application \"Google Chrome Grebban\" to activate'" ["lctrl_1_twice" 0]] :canceled ["lctrl_3_twice" 0]} :params {:delay 200} }]]}
 
-      {:des "Left Control + 2 ALONE: activate VSCode | DOUBLE: activate Fork"
+      {:des "Left Control + 2 ALONE: activate VSCode | DOUBLE: activate iTerm and Fork"
             :rules [
-            [:!T2 ["osascript -e 'tell application \"Fork\" to activate'" ["lctrl_2_twice" 0]] ["lctrl_2_twice" 1]]
+            [:!T2 ["osascript -e 'tell application \"Fork\" to activate\ndelay 0.5\ntell application \"iTerm\" to activate'" ["lctrl_2_twice" 0]] ["lctrl_2_twice" 1]]
             [:!T2 ["lctrl_2_twice" 1] ["lctrl_2_twice" 0]
             {:delayed {:invoked ["osascript -e 'tell application \"Code\" to activate'" ["lctrl_2_twice" 0]] :canceled ["lctrl_2_twice" 0]} :params {:delay 200} }]]}
 
-      {:des "Left Control + 3 ALONE: activate Google Chrome Dev | DOUBLE: activate Slack"
+      {:des "Left Control + 3 ALONE: activate Google Chrome Dev | DOUBLE: activate Google Chrome Personal"
             :rules [
-            [:!T3 ["osascript -e 'tell application \"Slack\" to activate'" ["lctrl_3_twice" 0]] ["lctrl_3_twice" 1]]
+            [:!T3 ["osascript -e 'tell application \"Google Chrome Personal\" to activate'" ["lctrl_3_twice" 0]] ["lctrl_3_twice" 1]]
             [:!T3 ["lctrl_3_twice" 1] ["lctrl_3_twice" 0]
             {:delayed {:invoked ["osascript -e 'tell application \"Google Chrome Dev\" to activate'" ["lctrl_3_twice" 0]] :canceled ["lctrl_3_twice" 0]} :params {:delay 200} }]]}
 
-      {:des "Left Control + 4 ALONE: activate Google Chrome Dev | DOUBLE: activate iTerm"
+      {:des "Left Control + 4 ALONE: activate Slack | DOUBLE: activate Google Chrome Music"
             :rules [
-            [:!T4 ["osascript -e 'tell application \"iTerm\" to activate'" ["lctrl_4_twice" 0]] ["lctrl_4_twice" 1]]
+            [:!T4 ["osascript -e 'tell application \"Google Chrome Music\" to activate'" ["lctrl_4_twice" 0]] ["lctrl_4_twice" 1]]
             [:!T4 ["lctrl_4_twice" 1] ["lctrl_4_twice" 0]
-            {:delayed {:invoked ["osascript -e 'tell application \"Google Chrome Personal\" to activate'" ["lctrl_4_twice" 0]] :canceled ["lctrl_4_twice" 0]} :params {:delay 200} }]]}
+            {:delayed {:invoked ["osascript -e 'tell application \"Slack\" to activate'" ["lctrl_4_twice" 0]] :canceled ["lctrl_4_twice" 0]} :params {:delay 200} }]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
