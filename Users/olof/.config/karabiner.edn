@@ -247,30 +247,29 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + 1 to activate Google Chrome Grebban"
-            :rules [[:!T1 "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"]]}
-
-      {:des "Left Control + 2 to activate VSCode"
-            :rules [[:!T2 "osascript -e 'tell application \"Visual Studio Code\" to activate'"]]}
-
-      {:des "Left Control + 3 to activate Google Chrome Dev"
-            :rules [[:!T3 "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
-
-      {:des "Left Control + 4 ALONE: activate Google Chrome Dev | DOUBLE: activate Slack"
+       {:des "Left Control + 1 ALONE: activate Google Chrome Grebban | DOUBLE: activate Google Chrome YouTube"
             :rules [
-            [:!T4 ["osascript -e 'tell application \"Slack\" to activate'" ["lctrl_3_twice" 0]] ["lctrl_3_twice" 1]]
-            [:!T4 ["lctrl_3_twice" 1] ["lctrl_3_twice" 0]
-            {:delayed {:invoked ["osascript -e 'tell application \"Google Chrome Personal\" to activate'" ["lctrl_3_twice" 0]] :canceled ["lctrl_3_twice" 0]} :params {:delay 200} }]]}
+            [:!T1 ["osascript -e 'tell application \"Google Chrome YouTube\" to activate'" ["lctrl_1_twice" 0]] ["lctrl_1_twice" 1]]
+            [:!T1 ["lctrl_1_twice" 1] ["lctrl_1_twice" 0]
+            {:delayed {:invoked ["osascript -e 'tell application \"Google Chrome Grebban\" to activate'" ["lctrl_1_twice" 0]] :canceled ["lctrl_3_twice" 0]} :params {:delay 200} }]]}
 
-      {:des "Left Control + 5 to activate Fork"
-            :rules [[:!T5 "osascript -e 'tell application \"Fork\" to activate'"]]}
+      {:des "Left Control + 2 ALONE: activate VSCode | DOUBLE: activate Fork"
+            :rules [
+            [:!T2 ["osascript -e 'tell application \"Fork\" to activate'" ["lctrl_2_twice" 0]] ["lctrl_2_twice" 1]]
+            [:!T2 ["lctrl_2_twice" 1] ["lctrl_2_twice" 0]
+            {:delayed {:invoked ["osascript -e 'tell application \"Code\" to activate'" ["lctrl_2_twice" 0]] :canceled ["lctrl_2_twice" 0]} :params {:delay 200} }]]}
 
-      {:des "Left Control + 8 to activate iTerm"
-            :rules [[:!T8 "osascript -e 'tell application \"iTerm\" to activate'"]]}
+      {:des "Left Control + 3 ALONE: activate Google Chrome Dev | DOUBLE: activate Slack"
+            :rules [
+            [:!T3 ["osascript -e 'tell application \"Slack\" to activate'" ["lctrl_3_twice" 0]] ["lctrl_3_twice" 1]]
+            [:!T3 ["lctrl_3_twice" 1] ["lctrl_3_twice" 0]
+            {:delayed {:invoked ["osascript -e 'tell application \"Google Chrome Dev\" to activate'" ["lctrl_3_twice" 0]] :canceled ["lctrl_3_twice" 0]} :params {:delay 200} }]]}
 
-
-      {:des "Left Control + 0 to activate Google Chrome YouTube"
-            :rules [[:!T0 "osascript -e 'tell application \"Google Chrome YouTube\" to activate'"]]}
+      {:des "Left Control + 4 ALONE: activate Google Chrome Dev | DOUBLE: activate iTerm"
+            :rules [
+            [:!T4 ["osascript -e 'tell application \"iTerm\" to activate'" ["lctrl_4_twice" 0]] ["lctrl_4_twice" 1]]
+            [:!T4 ["lctrl_4_twice" 1] ["lctrl_4_twice" 0]
+            {:delayed {:invoked ["osascript -e 'tell application \"Google Chrome Personal\" to activate'" ["lctrl_4_twice" 0]] :canceled ["lctrl_4_twice" 0]} :params {:delay 200} }]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc

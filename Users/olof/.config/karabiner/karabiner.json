@@ -1215,7 +1215,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + 1 to activate Google Chrome Grebban",
+        "description" : "Left Control + 1 ALONE: activate Google Chrome Grebban | DOUBLE: activate Google Chrome YouTube",
         "manipulators" : [ {
           "from" : {
             "key_code" : "1",
@@ -1224,12 +1224,60 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Google Chrome YouTube\" to activate'"
+          }, {
+            "set_variable" : {
+              "name" : "lctrl_1_twice",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "lctrl_1_twice",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "shell_command" : "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"
+            }, {
+              "set_variable" : {
+                "name" : "lctrl_1_twice",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "lctrl_3_twice",
+                "value" : 0
+              }
+            } ]
+          },
+          "parameters" : {
+            "basic.to_delayed_action_delay_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "1",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "lctrl_1_twice",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "lctrl_1_twice",
+            "value" : 0,
+            "type" : "variable_if"
           } ],
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + 2 to activate VSCode",
+        "description" : "Left Control + 2 ALONE: activate VSCode | DOUBLE: activate Fork",
         "manipulators" : [ {
           "from" : {
             "key_code" : "2",
@@ -1238,29 +1286,63 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Visual Studio Code\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Fork\" to activate'"
+          }, {
+            "set_variable" : {
+              "name" : "lctrl_2_twice",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "lctrl_2_twice",
+            "value" : 1,
+            "type" : "variable_if"
           } ],
           "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Control + 3 to activate Google Chrome Dev",
-        "manipulators" : [ {
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "shell_command" : "osascript -e 'tell application \"Code\" to activate'"
+            }, {
+              "set_variable" : {
+                "name" : "lctrl_2_twice",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "lctrl_2_twice",
+                "value" : 0
+              }
+            } ]
+          },
+          "parameters" : {
+            "basic.to_delayed_action_delay_milliseconds" : 200
+          },
           "from" : {
-            "key_code" : "3",
+            "key_code" : "2",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Google Chrome Dev\" to activate'"
+            "set_variable" : {
+              "name" : "lctrl_2_twice",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "lctrl_2_twice",
+            "value" : 0,
+            "type" : "variable_if"
           } ],
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + 4 ALONE: activate Google Chrome Dev | DOUBLE: activate Slack",
+        "description" : "Left Control + 3 ALONE: activate Google Chrome Dev | DOUBLE: activate Slack",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "4",
+            "key_code" : "3",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
@@ -1282,7 +1364,7 @@
         }, {
           "to_delayed_action" : {
             "to_if_invoked" : [ {
-              "shell_command" : "osascript -e 'tell application \"Google Chrome Personal\" to activate'"
+              "shell_command" : "osascript -e 'tell application \"Google Chrome Dev\" to activate'"
             }, {
               "set_variable" : {
                 "name" : "lctrl_3_twice",
@@ -1300,7 +1382,7 @@
             "basic.to_delayed_action_delay_milliseconds" : 200
           },
           "from" : {
-            "key_code" : "4",
+            "key_code" : "3",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
@@ -1319,44 +1401,64 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + 5 to activate Fork",
+        "description" : "Left Control + 4 ALONE: activate Google Chrome Dev | DOUBLE: activate iTerm",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "5",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Fork\" to activate'"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Control + 8 to activate iTerm",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "8",
+            "key_code" : "4",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"iTerm\" to activate'"
+          }, {
+            "set_variable" : {
+              "name" : "lctrl_4_twice",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "lctrl_4_twice",
+            "value" : 1,
+            "type" : "variable_if"
           } ],
           "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Control + 0 to activate Google Chrome YouTube",
-        "manipulators" : [ {
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "shell_command" : "osascript -e 'tell application \"Google Chrome Personal\" to activate'"
+            }, {
+              "set_variable" : {
+                "name" : "lctrl_4_twice",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "lctrl_4_twice",
+                "value" : 0
+              }
+            } ]
+          },
+          "parameters" : {
+            "basic.to_delayed_action_delay_milliseconds" : 200
+          },
           "from" : {
-            "key_code" : "0",
+            "key_code" : "4",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Google Chrome YouTube\" to activate'"
+            "set_variable" : {
+              "name" : "lctrl_4_twice",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "lctrl_4_twice",
+            "value" : 0,
+            "type" : "variable_if"
           } ],
           "type" : "basic"
         } ]
