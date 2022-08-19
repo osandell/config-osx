@@ -298,8 +298,8 @@
             :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]}
       {:des "Option + Shift + j/k to Shift + down/up arrow - To highlight lines more easily in combination with above hotkeys"
             :rules [[:!SOj :!Sdown_arrow] [:!SOk :!Sup_arrow]]}
-      {:des "Right Control + b to go to beginning of the content of the line"
-            :rules [[:!Wb :home]]}
+      {:des "Right Control + s to go to beginning of the content of the line"
+            :rules [[:!Ws :home]]}
       {:des "Right Control + e to go to end of the line"
             :rules [[:!We :end]]}
       {:des "Left Control + d to delete"

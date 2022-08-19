@@ -1879,10 +1879,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + b to go to beginning of the content of the line",
+        "description" : "Right Control + s to go to beginning of the content of the line",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "b",
+            "key_code" : "s",
             "modifiers" : {
               "mandatory" : [ "right_control" ]
             }
