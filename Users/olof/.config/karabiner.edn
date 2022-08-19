@@ -20,7 +20,7 @@
 ;;       :rules [
 ;;             [:##escape [:caps_lock  ["escape_twice" 0]] ["escape_twice" 1]]
 ;;             [:##escape ["escape_twice" 1] ["escape_twice" 0]
-;;             {:delayed {:invoked :escape ["escape_twice" 0]] :canceled ["escape_twice" 0]} :params {:delay 400} }]]}
+;;             {:delayed {:invoked [:escape ["escape_twice" 0]] :canceled ["escape_twice" 0]} :params {:delay 400} }]]}
 
 ;; Define different kinds of keyboards
 {
@@ -256,8 +256,11 @@
       {:des "Left Control + 3 to activate Google Chrome Dev"
             :rules [[:!T3 "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
 
-      {:des "Left Control + 4 to activate Slack"
-            :rules [[:!T4 "osascript -e 'tell application \"Slack\" to activate'"]]}
+      {:des "Left Control + 4 ALONE: activate Google Chrome Dev | DOUBLE: activate Slack"
+            :rules [
+            [:!T4 ["osascript -e 'tell application \"Slack\" to activate'" ["lctrl_3_twice" 0]] ["lctrl_3_twice" 1]]
+            [:!T4 ["lctrl_3_twice" 1] ["lctrl_3_twice" 0]
+            {:delayed {:invoked ["osascript -e 'tell application \"Google Chrome Personal\" to activate'" ["lctrl_3_twice" 0]] :canceled ["lctrl_3_twice" 0]} :params {:delay 200} }]]}
 
       {:des "Left Control + 5 to activate Fork"
             :rules [[:!T5 "osascript -e 'tell application \"Fork\" to activate'"]]}
@@ -265,8 +268,6 @@
       {:des "Left Control + 8 to activate iTerm"
             :rules [[:!T8 "osascript -e 'tell application \"iTerm\" to activate'"]]}
 
-      {:des "Left Control + 9 to activate Google Chrome Personal"
-            :rules [[:!T9 "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]]}
 
       {:des "Left Control + 0 to activate Google Chrome YouTube"
             :rules [[:!T0 "osascript -e 'tell application \"Google Chrome YouTube\" to activate'"]]}
