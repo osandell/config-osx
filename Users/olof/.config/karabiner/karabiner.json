@@ -2441,12 +2441,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Function + m to minimize window",
+        "description" : "Left Control + M to minimize window",
         "manipulators" : [ {
           "from" : {
             "key_code" : "m",
             "modifiers" : {
-              "mandatory" : [ "fn" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
