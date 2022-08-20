@@ -248,16 +248,7 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; iTerm
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + - to console log with variable"
-            :rules [:iterm[:return_or_enter [:return_or_enter "
-                  osascript -e 'delay 1\n
-                  tell application \"Fork\" to activate\n
-                  tell application \"iTerm\" to activate\n
-                  delay 0.6\n
-                  tell application \"Fork\" to activate\n
-                  tell application \"System Events\" to keystroke \"0\" using command down\n
-                  tell application \"iTerm\" to activate'
-                  "]]]}
+ 
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching
