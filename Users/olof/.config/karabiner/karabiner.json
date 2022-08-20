@@ -1242,7 +1242,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + Up / Down to focus split pane above / below",
+        "description" : "Left Control + K / J to focus split pane above / below",
         "manipulators" : [ {
           "from" : {
             "key_code" : "k",
@@ -1273,6 +1273,52 @@
           "conditions" : [ {
             "type" : "frontmost_application_if",
             "bundle_identifiers" : [ "com.googlecode.iterm2" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + H / L to focus tab to the left / right",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "keypad_7",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "grave_accent_and_tilde",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Keypad 7 to 7 in order for it to work as expected, given the Ukelele remap explained above",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "keypad_7"
+          },
+          "to" : [ {
+            "key_code" : "7"
           } ],
           "type" : "basic"
         } ]

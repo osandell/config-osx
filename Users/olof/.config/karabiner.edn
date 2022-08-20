@@ -190,7 +190,7 @@
       ;; This was tricky to do on a Swedish keyboard because there is no ],
       ;; which is required for switching to the next dev pane in Chrome. What I
       ;; did was to remap the < key to ] with Ukelele. After that I could use
-      ;; Karabiner to remap Left Control + Right Arrow to the newly mapped ] key. In
+      ;; Karabiner to remap Left Control + - to the newly mapped ] key. In
       ;; the future if I need to do something similar I have an idea to remap
       ;; the number keys on the keypad to missing keys with Ukelele. For example
       ;; mapping 1 to [. After that I can remap the numpad 1 key to the normal 1
@@ -251,8 +251,24 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; iTerm
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + Up / Down to focus split pane above / below"
+      {:des "Left Control + K / J to focus split pane above / below"
             :rules [:iterm[:!Tk :!OCup_arrow] [:!Tj :!OCdown_arrow]]}
+
+      ;; At first I remapped keypad 7 and 8 to [ and ] and remapped Left Control + H /
+      ;; L to keypad 7 and 8. It worked fine for iTerm, however for some strange
+      ;; reason I couln't get it to work in Chrome when focusing tabs in the dev tools
+      ;; pane to the left / right. I had to revert to remapping < key on the SE
+      ;; keyboard to ] again for it to work in Chrome. Not sure why that is. It's also
+      ;; strange that a reverse problem occurs in iTerm. Here I can't use the Å button
+      ;; on the SE keyboard for moving to the left in iTerm, despite this key
+      ;; registering as "open_bracket" in Karabiner Event Listener and it works as
+      ;; expected in Chrome. So what I've ended up with is a remap of the < key to ]
+      ;; for it to work in Chrome, and I've remapped keypad_7 to [ and keypad_8 to ]
+      ;; for it to work in iTerm. Not very consistent but at least it works.
+      {:des "Left Control + H / L to focus tab to the left / right"
+            :rules [:iterm[:!Th :!SCkeypad_7] [:!Tl :!SCgrave_accent_and_tilde]]}
+      {:des "Keypad 7 to 7 in order for it to work as expected, given the Ukelele remap explained above"
+            :rules [[:keypad_7 :7]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching
