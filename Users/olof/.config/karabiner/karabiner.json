@@ -745,6 +745,25 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Left Control + u to enter url in address bar",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "l",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Left Control + plus-key to duplicate tab",
         "manipulators" : [ {
           "from" : {
@@ -1329,7 +1348,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Fork\" to activate\ndelay 0.5\ntell application \"iTerm\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"
           }, {
             "set_variable" : {
               "name" : "lctrl_2_twice",

@@ -151,6 +151,9 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Google Chrome
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Left Control + u to enter url in address bar"
+            :rules [:chrome[:!Tu :!Cl]]}
+
       {:des "Left Control + plus-key to duplicate tab"
             :rules [:chrome[:!Thyphen "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.applescript"]]}
             
@@ -262,7 +265,7 @@
 
       {:des "Left Control + 2 ALONE: activate VSCode | DOUBLE: activate iTerm and Fork"
             :rules [
-            [:!T2 ["osascript -e 'tell application \"Fork\" to activate\ndelay 0.5\ntell application \"iTerm\" to activate'" ["lctrl_2_twice" 0]] ["lctrl_2_twice" 1]]
+            [:!T2 ["osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'" ["lctrl_2_twice" 0]] ["lctrl_2_twice" 1]]
             [:!T2 ["lctrl_2_twice" 1] ["lctrl_2_twice" 0]
             {:delayed {:invoked ["osascript -e 'tell application \"Code\" to activate'" ["lctrl_2_twice" 0]] :canceled ["lctrl_2_twice" 0]} :params {:delay 200} }]]}
 
