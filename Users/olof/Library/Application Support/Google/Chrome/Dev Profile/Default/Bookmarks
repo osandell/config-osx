@@ -1,5 +1,5 @@
 {
-   "checksum": "6d371e561f737949a64afa8bb0f2f3d0",
+   "checksum": "9dabaaabc09f40c48843bcd924743d21",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -58,13 +58,6 @@
             "name": "4",
             "type": "url",
             "url": "https://royalweb-dev-4.azurewebsites.net/"
-         }, {
-            "date_added": "13301499284000000",
-            "guid": "4af79f10-3b88-4f02-be34-2b0db45f20bd",
-            "id": "31",
-            "name": "RD7",
-            "type": "url",
-            "url": "https://royalweb-dev-7.azurewebsites.net/"
          }, {
             "date_added": "13301139323000000",
             "guid": "7881d6a0-21ce-4f5c-b0f1-fa6a974d8ff8",

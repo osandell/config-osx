@@ -187,17 +187,6 @@
       {:des "Left Control + . to switch to prev developer pane"
             :rules [:chrome[:!Tperiod :!Copen_bracket]]}
    
-      ;; This was tricky to do on a Swedish keyboard because there is no ],
-      ;; which is required for switching to the next dev pane in Chrome. What I
-      ;; did was to remap the < key to ] with Ukelele. After that I could use
-      ;; Karabiner to remap Left Control + - to the newly mapped ] key. In
-      ;; the future if I need to do something similar I have an idea to remap
-      ;; the number keys on the keypad to missing keys with Ukelele. For example
-      ;; mapping 1 to [. After that I can remap the numpad 1 key to the normal 1
-      ;; key in karabiner. And lastly I can map some hotkey of choice to the
-      ;; newly mapped [ key (previous numpad 1). This way I can still the numpad
-      ;; as normal and also get a set of missing keys for use with hotkey
-      ;; mappings.
       {:des "Left Control + - to switch to next developer pane"
             :rules [:chrome[:!Tslash :!Cgrave_accent_and_tilde]]}
 
