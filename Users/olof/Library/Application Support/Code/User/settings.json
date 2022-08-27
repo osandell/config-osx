@@ -144,6 +144,12 @@
       "commands": ["editor.action.revealDefinition"]
     },
 
+    // Shift + Y to yank until end of line
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    },
+
     // u / C-r will be same as ctrl-z / ctrl-y
     {
       "before": ["u"],
