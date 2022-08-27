@@ -288,13 +288,13 @@
 
     // Log to console without variable (javascript)
     {
-      "before": ["˝"],
+      "before": ["°"],
       "after": ["<Esc>", "d", "d", "O", "<Esc>", "o", "<Esc>"],
       "commands": [
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
+            "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m%c $TM_FILENAME $TM_LINE_INDEX \\n\", 'color: white; background: black; font-weight: bold', '');"
           }
         },
         {
@@ -302,15 +302,16 @@
         }
       ]
     },
+
     // Log to console with variable (javascript)
     {
-      "before": ["°"],
+      "before": ["˝"],
       "after": ["<Esc>", "d", "d", "O", "<Esc>", "o", "<Esc>"],
       "commands": [
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m\\n\", 'color: white; background: black; font-weight: bold');"
+            "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m%c $TM_FILENAME $TM_LINE_INDEX \\n\", 'color: white; background: black; font-weight: bold', '', $CLIPBOARD);"
           }
         },
         {
