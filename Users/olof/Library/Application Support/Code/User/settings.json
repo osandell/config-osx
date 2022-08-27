@@ -144,21 +144,17 @@
       "commands": ["editor.action.revealDefinition"]
     },
 
-    // Shift + Y to yank until end of line
+    // Shift + Y to yant until end of line
     {
       "before": ["Y"],
       "after": ["y", "$"]
     },
 
-    // u / C-r will be same as ctrl-z / ctrl-y
+    // u  will be same as ctrl-z
     {
       "before": ["u"],
       "commands": ["undo"]
     },
-    // {
-    //   "before": ["C-r"],
-    //   "commands": ["redo"]
-    // },
 
     // Log to console without variable (javascript)
     {
