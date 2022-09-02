@@ -36,6 +36,7 @@
 :applications {
       :chrome ["com.google.Chrome"]
       :edge ["com.microsoft.edgemac"]
+      :fork ["com.DanPristupov.Fork"]
       :iterm ["com.googlecode.iterm2"]
       :parallels ["com.parallels"]
       :remote-desktop ["com.microsoft.rdc.macos"]
@@ -240,8 +241,8 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; iTerm
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + K / J to focus split pane above / below"
-            :rules [:iterm[:!Tk :!OCup_arrow] [:!Tj :!OCdown_arrow]]}
+      {:des "Shift + Left Control + K / J to focus split pane above / below"
+            :rules [:iterm[:!STk :!OCup_arrow] [:!STj :!OCdown_arrow]]}
 
       ;; At first I remapped keypad 7 and 8 to [ and ] and remapped Left Control + H /
       ;; L to keypad 7 and 8. It worked fine for iTerm, however for some strange
@@ -267,6 +268,63 @@
             '"]]]}
       {:des "Keypad 7 to 7 in order for it to work as expected, given the Ukelele remap explained above"
             :rules [[:keypad_7 :7]]}
+      {:des "Left Control + J / K to move down / up in Fork"
+            :rules [:iterm [:!Tj "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 125
+            tell application \"iTerm\" to activate
+            '"] 
+            [:!Tk "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 126
+            tell application \"iTerm\" to activate
+            '"]]}
+      {:des "Right Shift + Right Option + I to view branch info in Fork"
+            :rules [:iterm[:!ERi "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 18 using {command down, option down}
+            tell application \"iTerm\" to activate
+            '"]]}
+      {:des "Right Shift + Right Option + C to view branch changes in Fork"
+            :rules [:iterm[:!ERc "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 19 using {command down, option down}
+            tell application \"iTerm\" to activate
+            '"]]}
+      {:des "Right Shift + Right Option + F to view branch file tree in Fork"
+            :rules [:iterm [:!ERf "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 20 using {command down, option down}
+            tell application \"iTerm\" to activate
+            '"]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Fork
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Left Control + H / L to focus tab to the left / right"
+            :rules [:fork [:!Th [:!STtab "osascript -e '
+            tell application \"iTerm\" to activate
+            tell application \"System Events\" to key code 89 using {command down, shift down}
+            tell application \"Fork\" to activate
+            '"]] 
+            [:!Tl [:!Ttab "osascript -e '
+            tell application \"iTerm\" to activate
+            tell application \"System Events\" to key code 50 using {command down, shift down}
+            tell application \"Fork\" to activate
+            '"]]]}
+      {:des "Left Control + J / K to move down / up"
+            :rules [:fork [:!Tj [:down_arrow "osascript -e '
+            tell application \"iTerm\" to activate
+            '"]] 
+            [:!Tk [:up_arrow "osascript -e '
+            tell application \"iTerm\" to activate
+            '"]]]}
+      {:des "Right Shift + Right Option + I to view branch info"
+            :rules [:fork [:!ERi :!CO1]]}
+      {:des "Right Shift + Right Option + C to view branch changes"
+            :rules [:fork [:!ERc :!CO2]]}
+      {:des "Right Shift + Right Option + F to view branch file tree"
+            :rules [:fork [:!ERf :!CO3]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching
