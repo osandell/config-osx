@@ -1623,6 +1623,71 @@
             }
           } ],
           "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          }, {
+            "name" : "lctrl_2_twice",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "shell_command" : "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"
+            }, {
+              "set_variable" : {
+                "name" : "lctrl_2_twice",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "lctrl_2_twice",
+                "value" : 0
+              }
+            } ]
+          },
+          "parameters" : {
+            "basic.to_delayed_action_delay_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "lctrl_2_twice",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          }, {
+            "name" : "lctrl_2_twice",
+            "value" : 0,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"
+          }, {
+            "set_variable" : {
+              "name" : "lctrl_2_twice",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
             "name" : "lctrl_2_twice",
             "value" : 1,
             "type" : "variable_if"
