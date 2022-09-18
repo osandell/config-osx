@@ -1,5 +1,5 @@
 {
-   "checksum": "759f439eac52077d5992a251b7767b64",
+   "checksum": "5c485633de3f831a16b242dcf4e5b627",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -8,7 +8,7 @@
             "id": "33",
             "name": "",
             "type": "url",
-            "url": "https://track.toggl.com/6691403/settings/general"
+            "url": "https://track.toggl.com/timer"
          }, {
             "date_added": "13307131128233410",
             "guid": "04e76c23-a959-4550-94d9-e5524c8efb99",
