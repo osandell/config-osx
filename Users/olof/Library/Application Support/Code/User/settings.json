@@ -333,5 +333,6 @@
   },
   "git.enableSmartCommit": true,
   "editor.inlineSuggest.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "javascript.preferences.importModuleSpecifier": "non-relative"
 }
