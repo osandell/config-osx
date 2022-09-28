@@ -16,3 +16,6 @@ alias pip="$(pyenv which pip)"
 
 export PATH="/usr/local/Cellar/php@8.0/8.0.21/sbin:$PATH"
 export PATH="/usr/local/Cellar/php@8.0/8.0.21/bin:$PATH"
+
+# Ruby
+eval "$(rbenv init -)"
