@@ -1,5 +1,5 @@
 {
-   "checksum": "5c485633de3f831a16b242dcf4e5b627",
+   "checksum": "35124500794a05f03d9e96a39567f7fc",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -121,9 +121,16 @@
             "name": "home/karabiner.edn at 0a2fe2e4a9ffbc2bb548ce63b9bb53e1f5be7d96 · weavver/home",
             "type": "url",
             "url": "https://github.com/weavver/home/blob/0a2fe2e4a9ffbc2bb548ce63b9bb53e1f5be7d96/.vscode/karabiner.edn"
+         }, {
+            "date_added": "13309135682128018",
+            "guid": "442c739a-8199-4244-ac99-b52abd833f3a",
+            "id": "35",
+            "name": "elf",
+            "type": "url",
+            "url": "https://github.com/bkerler/edl/issues/109"
          } ],
          "date_added": "13292242355522980",
-         "date_modified": "13307378202186147",
+         "date_modified": "13309135682128018",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
