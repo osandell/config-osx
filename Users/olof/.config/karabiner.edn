@@ -15,12 +15,18 @@
 ;; R  | right_shift
 ;; P  | caps_lock
 ;; 
-;; Example how to map both ALONE and DOUBLE to the same button with custom delay setting:
-;;   {:des "Esc to ALONE: Esc | DOUBLE: Caps Lock"
-;;       :rules [
-;;             [:##escape [:caps_lock  ["escape_twice" 0]] ["escape_twice" 1]]
-;;             [:##escape ["escape_twice" 1] ["escape_twice" 0]
-;;             {:delayed {:invoked [:escape ["escape_twice" 0]] :canceled ["escape_twice" 0]} :params {:delay 400} }]]}
+;; Example how to map both ALONE and DOUBLE to the same button with custom delay setting. In the example we can also alternate between two apps when single pressing:
+;;  {:des "Left Control + 2 ALONE: activate VSCode | DOUBLE: activate iTerm and Fork"
+;;             :rules [:vscode
+;;             [:!T2 ["osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'" ["lctrl_2_twice" 0]] ["lctrl_2_twice" 1]]
+;;             [:!T2 ["lctrl_2_twice" 1] ["lctrl_2_twice" 0]
+;;             {:delayed {:invoked ["osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'" ["lctrl_2_twice" 0]] :canceled ["lctrl_2_twice" 0]} :params {:delay 200} }]]}
+;; 
+;;    {:des "Left Control + 2 ALONE: activate VSCode | DOUBLE: activate iTerm and Fork"
+;;             :rules [
+;;             [:!T2 ["osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'" ["lctrl_2_twice" 0]] ["lctrl_2_twice" 1]]
+;;             [:!T2 ["lctrl_2_twice" 1] ["lctrl_2_twice" 0]
+;;             {:delayed {:invoked ["osascript -e 'tell application \"Code\" to activate'" ["lctrl_2_twice" 0]] :canceled ["lctrl_2_twice" 0]} :params {:delay 200} }]]}
 
 ;; Define different kinds of keyboards
 {
@@ -158,8 +164,8 @@
       {:des "Left Control + plus-key to duplicate tab"
             :rules [:chrome[:!Thyphen "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.applescript"]]}
             
-      {:des "Left Control + e to mark text (only useful in Notion)"
-            :rules [:chrome[:!Te :!Ce]]}
+      {:des "Right Control + e to highlight text (only useful in Notion)"
+            :rules [:chrome[:!Wh :!Ce]]}
             
       {:des "Left Control + r to hard reload"
             :rules [:chrome[:!Tr :!CSr]]}
@@ -329,35 +335,20 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-       {:des "Left Control + 1 ALONE: activate Google Chrome Grebban | DOUBLE: activate Google Chrome YouTube"
-            :rules [
-            [:!T1 ["osascript -e 'tell application \"Google Chrome YouTube\" to activate'" ["lctrl_1_twice" 0]] ["lctrl_1_twice" 1]]
-            [:!T1 ["lctrl_1_twice" 1] ["lctrl_1_twice" 0]
-            {:delayed {:invoked ["osascript -e 'tell application \"Google Chrome Grebban\" to activate'" ["lctrl_1_twice" 0]] :canceled ["lctrl_3_twice" 0]} :params {:delay 200} }]]}
-
-      {:des "Left Control + 2 ALONE: activate VSCode | DOUBLE: activate iTerm and Fork"
-            :rules [:vscode
-            [:!T2 ["osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'" ["lctrl_2_twice" 0]] ["lctrl_2_twice" 1]]
-            [:!T2 ["lctrl_2_twice" 1] ["lctrl_2_twice" 0]
-            {:delayed {:invoked ["osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'" ["lctrl_2_twice" 0]] :canceled ["lctrl_2_twice" 0]} :params {:delay 200} }]]}
-
-      {:des "Left Control + 2 ALONE: activate VSCode | DOUBLE: activate iTerm and Fork"
-            :rules [
-            [:!T2 ["osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'" ["lctrl_2_twice" 0]] ["lctrl_2_twice" 1]]
-            [:!T2 ["lctrl_2_twice" 1] ["lctrl_2_twice" 0]
-            {:delayed {:invoked ["osascript -e 'tell application \"Code\" to activate'" ["lctrl_2_twice" 0]] :canceled ["lctrl_2_twice" 0]} :params {:delay 200} }]]}
-
-      {:des "Left Control + 3 ALONE: activate Google Chrome Dev | DOUBLE: activate Google Chrome Personal"
-            :rules [
-            [:!T3 ["osascript -e 'tell application \"Google Chrome Personal\" to activate'" ["lctrl_3_twice" 0]] ["lctrl_3_twice" 1]]
-            [:!T3 ["lctrl_3_twice" 1] ["lctrl_3_twice" 0]
-            {:delayed {:invoked ["osascript -e 'tell application \"Google Chrome Dev\" to activate'" ["lctrl_3_twice" 0]] :canceled ["lctrl_3_twice" 0]} :params {:delay 200} }]]}
-
-      {:des "Left Control + 4 ALONE: activate Slack | DOUBLE: activate Google Chrome Music"
-            :rules [
-            [:!T4 ["osascript -e 'tell application \"Google Chrome Music\" to activate'" ["lctrl_4_twice" 0]] ["lctrl_4_twice" 1]]
-            [:!T4 ["lctrl_4_twice" 1] ["lctrl_4_twice" 0]
-            {:delayed {:invoked ["osascript -e 'tell application \"Slack\" to activate'" ["lctrl_4_twice" 0]] :canceled ["lctrl_4_twice" 0]} :params {:delay 200} }]]}
+      {:des "Left Control + Q: activate Google Chrome Grebban"
+            :rules [[:!Tq "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"]]}
+      {:des "Left Control + 1: activate Slack"
+            :rules [[:!T1 "osascript -e 'tell application \"Slack\" to activate'"]]}
+      {:des "Left Control + w: activate VSCode"
+            :rules [[:!Tw "osascript -e 'tell application \"Code\" to activate'"]]}
+      {:des "Left Control + 2: activate iTerm + Fork"
+            :rules [[:!T2 "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"]]}
+      {:des "Left Control + e: activate Google Chrome Dev"
+            :rules [[:!Te "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
+      {:des "Left Control + 3: activate Google Chrome Personal"
+            :rules [[:!T3 "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]]}
+      {:des "Left Control + 4: activate Google Chrome YouTube"
+            :rules [[:!T4"osascript -e 'tell application \"Google Chrome YouTube\" to activate'"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Window positioning
@@ -432,8 +423,8 @@
             :rules [[:!Th :!COleft_arrow], [:!Tl :!COright_arrow]]}
       {:des "New tab with Left Control + t"
             :rules [[:!Tt :!Ct]]}
-      {:des "Close tab with Left Control + w"
-            :rules [[:!Tw :!Cw]]}
+      {:des "Close tab with Shift Left Control + w"
+            :rules [[:!STw :!Cw]]}
       {:des "Left Shift + Left Option + d to print today's date" :rules
             [[:!SOd "osascript -e '
             set {year:yr, month:mn, day:dy} to (current date)
