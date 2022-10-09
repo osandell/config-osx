@@ -360,6 +360,20 @@
             {:delayed {:invoked ["osascript -e 'tell application \"Slack\" to activate'" ["lctrl_4_twice" 0]] :canceled ["lctrl_4_twice" 0]} :params {:delay 200} }]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Window positioning
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Left Command + Shift + Return: Maximize window"
+            :rules [[:!CSreturn_or_enter "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current maximized auto"]]} 
+      {:des "Left Command + Shift + Arrow Up: Maximize window with no space around"
+            :rules [[:!CSup_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current maximized false"]]}  
+      {:des "Left Command + Shift + Arrow Left: Position window to left half"
+            :rules [[:!CSleft_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current left-half auto"]]}  
+      {:des "Left Command + Shift + Arrow Right: Position window to right half"
+            :rules [[:!CSright_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current right-half auto"]]}  
+      {:des "Left Command + Shift + Arrow Down: Position windows"
+            :rules [[:!CSdown_arrow "'/Users/olof/Library/Application Scripts/net.mousedown.EventScripts/position-windows.sh'"]]} 
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Right Command to Right Option"
