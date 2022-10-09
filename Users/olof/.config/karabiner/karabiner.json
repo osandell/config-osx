@@ -2741,6 +2741,20 @@
           } ],
           "type" : "basic"
         } ]
+      }, {
+        "description" : "Left Control + Shift + G: Check if we have synced all repos to GitHub",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "'/Users/olof/Library/Application Scripts/net.mousedown.EventScripts/on-screen-password-locked.sh'"
+          } ],
+          "type" : "basic"
+        } ]
       } ]
     },
     "devices" : [ {
