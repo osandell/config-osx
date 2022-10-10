@@ -31,7 +31,7 @@ fUpdateMove() {
         tell application "System Events" to key code 125
         delay 0.01
     end repeat
-    repeat 20 times
+    repeat 40 times
         tell application "System Events" to key code 126
         delay 0.01
     end repeat
