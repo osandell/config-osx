@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# OBS! Since Mac OS prevents screen sharing for the Chrome instances started
+# with a custom launcher I've decided to use Google Chrome Grebban as my screen
+# sharing profile used for Google Meet etc. I've thus made "Grebban" the
+# standard profile for Chrome and then I launch "Google Chrome Grebban.app"
+# directly instead of via my custom launcher. I've also turned on syncing via
+# Google for this particular profile so we don't need to include it here.
 hasBookmarksOnlyBeenModified () {
   CHROME_INSTANCES=( Dev Personal YouTube Music Incognito )
   for i in "${CHROME_INSTANCES[@]}"
