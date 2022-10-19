@@ -1086,12 +1086,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + Tab to alternate between 2 tabs (need Recent Tabs extension)",
+        "description" : "Left Option + Tab to alternate between 2 tabs (need Recent Tabs extension)",
         "manipulators" : [ {
           "from" : {
             "key_code" : "tab",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "left_option" ]
             }
           },
           "to" : [ {
@@ -1235,6 +1235,25 @@
           "to" : [ {
             "key_code" : "w",
             "modifiers" : [ "left_shift", "right_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Option + tab to alternate between the 2 most recent tabs",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "tab",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "tab",
+            "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -2385,10 +2404,7 @@
         "description" : "App switching",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "tab",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
+            "key_code" : "tab"
           },
           "to" : [ {
             "key_code" : "tab",

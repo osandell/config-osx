@@ -212,8 +212,8 @@
       {:des "Right Option + Right Shift + v to focus viewport"
             :rules [:chrome[:!ERv [:!Cl :!COdown_arrow]]]}
 
-      {:des "Left Control + Tab to alternate between 2 tabs (need Recent Tabs extension)"
-            :rules [:chrome[:!Ttab :!Tq]]}
+      {:des "Left Option + Tab to alternate between 2 tabs (need Recent Tabs extension)"
+            :rules [:chrome[:!Otab :!Tq]]}
 
       {:des "Left Command + Left Shift + J to switch javascrtipt on / off"
             :rules [:chrome[:!SCj [:!SO1 :!Cr]]]}
@@ -243,6 +243,8 @@
             :rules [:vscode[:!Tperiod :!SEq]]}
       {:des "Left Control + - to console log with variable"
             :rules [:vscode[:!Tslash :!SEw]]}
+      {:des "Left Option + tab to alternate between the 2 most recent tabs"
+            :rules [:vscode[:!Otab :!Ttab]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; iTerm
@@ -410,7 +412,7 @@
       {:des "Windows style redo"
             :rules [[:!Cy :!SCz]]}
       {:des "App switching"
-            :rules [[:##tab :!Ctab]]}
+            :rules [[:tab :!Ctab]]}
       {:des "Within app window switching with Function + Tab"
             :rules [[:!Ftab :!SOWtab]]}
       {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)"
