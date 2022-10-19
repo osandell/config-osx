@@ -2401,14 +2401,17 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "App switching",
+        "description" : "Tab to Left Command / App Switching if pressed alone",
         "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "tab",
+            "modifiers" : [ "left_command" ]
+          } ],
           "from" : {
             "key_code" : "tab"
           },
           "to" : [ {
-            "key_code" : "tab",
-            "modifiers" : [ "left_command" ]
+            "key_code" : "left_command"
           } ],
           "type" : "basic"
         } ]

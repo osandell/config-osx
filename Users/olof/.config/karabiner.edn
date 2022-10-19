@@ -411,8 +411,8 @@
             :rules [[:##non_us_backslash :delete_forward]]}
       {:des "Windows style redo"
             :rules [[:!Cy :!SCz]]}
-      {:des "App switching"
-            :rules [[:tab :!Ctab]]}
+       {:des "Tab to Left Command / App Switching if pressed alone"
+            :rules [[:tab :left_command nil {:alone :!Ctab}]]}
       {:des "Within app window switching with Function + Tab"
             :rules [[:!Ftab :!SOWtab]]}
       {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)"
