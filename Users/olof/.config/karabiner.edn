@@ -409,8 +409,8 @@
             :rules [[:##non_us_backslash :delete_forward]]}
       {:des "Windows style redo"
             :rules [[:!Cy :!SCz]]}
-      {:des "Windows style alt-tab app switching"
-            :rules [[:!O##tab :!Ctab]]}
+      {:des "App switching"
+            :rules [[:##tab :!Ctab]]}
       {:des "Within app window switching with Function + Tab"
             :rules [[:!Ftab :!SOWtab]]}
       {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)"

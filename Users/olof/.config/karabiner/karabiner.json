@@ -2382,12 +2382,11 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Windows style alt-tab app switching",
+        "description" : "App switching",
         "manipulators" : [ {
           "from" : {
             "key_code" : "tab",
             "modifiers" : {
-              "mandatory" : [ "left_option" ],
               "optional" : [ "any" ]
             }
           },
