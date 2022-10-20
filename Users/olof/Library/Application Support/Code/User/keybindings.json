@@ -339,5 +339,12 @@
     "key": "ctrl+r",
     "command": "redo",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": ["workbench.view.scm", "list.focusFirst", "list.select"]
+    }
   }
 ]
