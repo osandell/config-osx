@@ -333,6 +333,8 @@
             :rules [:fork [:!ERc :!CO2]]}
       {:des "Right Shift + Right Option + F to view branch file tree"
             :rules [:fork [:!ERf :!CO3]]}
+      {:des "Left Control + O to open file in VSCode"
+            :rules [:fork [:!To :!SOCo]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching

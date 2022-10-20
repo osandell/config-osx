@@ -1564,6 +1564,25 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Left Control + O to open file in VSCode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "o",
+            "modifiers" : [ "left_command", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.DanPristupov.Fork" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Left Control + Q: activate Google Chrome Grebban",
         "manipulators" : [ {
           "from" : {
