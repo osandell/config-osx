@@ -1,5 +1,5 @@
 {
-   "checksum": "b4b18e0da5a4d36fe90828bc25472008",
+   "checksum": "a25103bbd52738135ee5011e40739bee",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -7,7 +7,7 @@
             "date_last_used": "13310468008409515",
             "guid": "050f38b0-389d-43d6-9328-1ef5d55bac62",
             "id": "26",
-            "name": "localhost:3000",
+            "name": "3000",
             "type": "url",
             "url": "http://localhost:3000/"
          }, {
@@ -15,7 +15,7 @@
             "date_last_used": "0",
             "guid": "5059754b-9f22-4d11-86d7-b9aec4a3e5f6",
             "id": "27",
-            "name": "localhost:3001",
+            "name": "3001",
             "type": "url",
             "url": "http://localhost:3001/"
          }, {
@@ -35,14 +35,6 @@
             "type": "url",
             "url": "https://www.rum21.se/"
          }, {
-            "date_added": "13301138077000000",
-            "date_last_used": "0",
-            "guid": "4c0cbba0-9ac7-4568-a9d3-c0e89316e8ab",
-            "id": "30",
-            "name": "RD5",
-            "type": "url",
-            "url": "https://royalweb-dev-5.azurewebsites.net/"
-         }, {
             "date_added": "13305138081143053",
             "date_last_used": "0",
             "guid": "50b96949-6825-4b3a-af3d-b9c29fea5ca2",
@@ -58,6 +50,14 @@
             "name": "2",
             "type": "url",
             "url": "https://royalweb-dev-2.azurewebsites.net/"
+         }, {
+            "date_added": "13310745213360441",
+            "date_last_used": "0",
+            "guid": "66a865f4-08de-4025-8102-70d1ff072ec5",
+            "id": "67",
+            "name": "3",
+            "type": "url",
+            "url": "https://royalweb-dev-3.azurewebsites.net/"
          }, {
             "date_added": "13305757649177384",
             "date_last_used": "0",
@@ -75,45 +75,13 @@
             "type": "url",
             "url": "https://royalweb-se-stage.azurewebsites.net/"
          }, {
-            "date_added": "13301151336000000",
+            "date_added": "13310745406772821",
             "date_last_used": "0",
-            "guid": "025ca211-615d-4776-85ac-6346635ee212",
-            "id": "33",
-            "name": "RD-SE",
+            "guid": "2c88df94-a20b-42ff-ac39-e7d62c696554",
+            "id": "68",
+            "name": "R21 Stage SE",
             "type": "url",
-            "url": "https://royalweb-se-prod-deploy.azurewebsites.net/"
-         }, {
-            "date_added": "13302894803000000",
-            "date_last_used": "0",
-            "guid": "0a42252f-d2c9-46e4-9f27-742c01998f87",
-            "id": "34",
-            "name": "RD-DK",
-            "type": "url",
-            "url": "https://royalweb-dk-prod-deploy.azurewebsites.net/"
-         }, {
-            "date_added": "13301151495000000",
-            "date_last_used": "0",
-            "guid": "ccc1e041-43a1-4d0f-acc2-3bb99bd5588d",
-            "id": "35",
-            "name": "R21-SE",
-            "type": "url",
-            "url": "https://r21web-se-prod-deploy.azurewebsites.net/"
-         }, {
-            "date_added": "13301414960000000",
-            "date_last_used": "0",
-            "guid": "a891d56d-1d0b-43a1-8e16-ff64e96f22e3",
-            "id": "36",
-            "name": "R21-DK",
-            "type": "url",
-            "url": "https://r21web-dk-prod-deploy.azurewebsites.net/"
-         }, {
-            "date_added": "13304887271323578",
-            "date_last_used": "0",
-            "guid": "26ad8539-e175-4eb3-a538-0555f723fa3c",
-            "id": "38",
-            "name": "Emotion – Styled Components",
-            "type": "url",
-            "url": "https://emotion.sh/docs/styled"
+            "url": "https://r21web-se-stage.azurewebsites.net/"
          }, {
             "children": [ {
                "date_added": "13310145267660866",
@@ -279,7 +247,7 @@
          } ],
          "date_added": "13304357303342643",
          "date_last_used": "0",
-         "date_modified": "13310145350523551",
+         "date_modified": "13310745406772824",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
