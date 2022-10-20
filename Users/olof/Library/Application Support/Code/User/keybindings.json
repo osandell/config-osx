@@ -81,7 +81,16 @@
   },
   {
     "key": "shift+alt+s",
-    "command": "workbench.view.scm"
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.view.scm",
+        "list.focusFirst",
+        "list.focusDown",
+        "list.focusDown",
+        "list.focusDown"
+      ]
+    }
   },
   {
     "key": "ctrl+shift+t",
