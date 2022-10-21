@@ -4,6 +4,7 @@
       "bookmark_bar": {
          "children": [ {
             "date_added": "13307378202186147",
+            "date_last_used": "0",
             "guid": "bf21d0d8-c34e-4ebd-80b0-34469f3ea8ff",
             "id": "33",
             "name": "",
@@ -11,6 +12,7 @@
             "url": "https://track.toggl.com/timer"
          }, {
             "date_added": "13307131128233410",
+            "date_last_used": "0",
             "guid": "04e76c23-a959-4550-94d9-e5524c8efb99",
             "id": "32",
             "name": "Simple Swipe with Vanilla JavaScript | CSS-Tricks - CSS-Tricks",
@@ -18,6 +20,7 @@
             "url": "https://css-tricks.com/simple-swipe-with-vanilla-javascript/"
          }, {
             "date_added": "13292243473417673",
+            "date_last_used": "0",
             "guid": "e543fb00-c30a-485d-a74c-8d4d80749f08",
             "id": "5",
             "name": "Google",
@@ -25,6 +28,7 @@
             "url": "http://www.google.se/"
          }, {
             "date_added": "13301005628018652",
+            "date_last_used": "0",
             "guid": "e832961f-64e4-4c28-9765-4612158a9970",
             "id": "23",
             "name": "Serenity",
@@ -32,6 +36,7 @@
             "url": "https://learn.adafruit.com/serenityos-build-and-run-keep-the-90s-dream-alive/build-macos-linux"
          }, {
             "date_added": "13292243894274034",
+            "date_last_used": "13310919506009344",
             "guid": "b7601168-534c-4f1f-834f-3544b7cf5276",
             "id": "7",
             "name": "Memos",
@@ -39,6 +44,7 @@
             "url": "https://www.notion.so/Memos-8019da73bfc84815abe478a87707d84c"
          }, {
             "date_added": "13292243906460421",
+            "date_last_used": "0",
             "guid": "b91f1312-ce8c-4cae-97b2-25c78ef65f39",
             "id": "8",
             "name": "GitHub",
@@ -46,6 +52,7 @@
             "url": "https://github.com/"
          }, {
             "date_added": "13292243983983423",
+            "date_last_used": "0",
             "guid": "d8111bf3-9bf7-4137-999b-66cc3df8d88d",
             "id": "9",
             "name": "Proton",
@@ -53,6 +60,7 @@
             "url": "https://protonmail.com/"
          }, {
             "date_added": "13292244004608319",
+            "date_last_used": "0",
             "guid": "d81aae27-5337-467d-bd48-85e115ed557d",
             "id": "10",
             "name": "Summary",
@@ -60,6 +68,7 @@
             "url": "https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/cheatsheet/"
          }, {
             "date_added": "13292244021943999",
+            "date_last_used": "0",
             "guid": "28f0bbfc-f35a-4e16-b3c9-cbf023fe80c3",
             "id": "11",
             "name": "TOC",
@@ -67,6 +76,7 @@
             "url": "https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/table-of-contents/"
          }, {
             "date_added": "13292244135600850",
+            "date_last_used": "0",
             "guid": "7ed42f60-1ef9-45bb-9454-17cc33eaed4f",
             "id": "12",
             "name": "A typical workflow",
@@ -74,6 +84,7 @@
             "url": "https://www.notion.so/A-typical-workflow-7598f7c274fe445da3c37914a91d4c2e"
          }, {
             "date_added": "13292244158901904",
+            "date_last_used": "0",
             "guid": "7cd1094a-a87e-4585-8a9d-48be6fcd8d10",
             "id": "14",
             "name": "Server Side Rendering with React and Redux | Udemy",
@@ -81,6 +92,7 @@
             "url": "https://www.udemy.com/course/server-side-rendering-with-react-and-redux/learn/lecture/8202272#overview"
          }, {
             "date_added": "13292244188145788",
+            "date_last_used": "0",
             "guid": "176b7f86-8989-4eb3-ae6c-31edefea0125",
             "id": "15",
             "name": "SSR Course Files",
@@ -88,6 +100,7 @@
             "url": "https://github.com/StephenGrider/ReactSSRCasts"
          }, {
             "date_added": "13294182022250032",
+            "date_last_used": "0",
             "guid": "f019344b-d135-4ed2-83aa-c8b96588f4e6",
             "id": "17",
             "name": "React setup with Typescript, Webpack 5, SSR, Code Splitting, and HMR. | by Chiragkataria | Deutsche Telekom Digital Labs Gurgaon | Medium",
@@ -95,6 +108,7 @@
             "url": "https://medium.com/deutsche-telekom-gurgaon/react-setup-with-typescript-webpack-5-ssr-code-splitting-and-hmr-e6c8a576fde4"
          }, {
             "date_added": "13296343397619956",
+            "date_last_used": "0",
             "guid": "603f5b53-e0e9-418a-815c-1c5446793b11",
             "id": "19",
             "name": "React Optimization Cookbook | egghead.io",
@@ -102,6 +116,7 @@
             "url": "https://egghead.io/courses/react-optimization-cookbook-d67d54ba"
          }, {
             "date_added": "13296344291730792",
+            "date_last_used": "0",
             "guid": "b7f8a36e-d540-4a7e-8dc0-bcf4d5abfd1f",
             "id": "20",
             "name": "21 Performance Optimization Techniques for React Apps",
@@ -109,6 +124,7 @@
             "url": "https://www.codementor.io/blog/react-optimization-5wiwjnf9hj"
          }, {
             "date_added": "13296344384345059",
+            "date_last_used": "0",
             "guid": "d62a95e2-2811-462d-a60a-3e6b5a2e3979",
             "id": "21",
             "name": "How to optimize a React JS app bundle performance to load under 3s | Code splitting | Lazy loading - YouTube",
@@ -116,6 +132,7 @@
             "url": "https://www.youtube.com/watch?v=j8NJc60H294"
          }, {
             "date_added": "13301280177317606",
+            "date_last_used": "0",
             "guid": "756d44a4-b36e-4303-9b23-10d45ee5a159",
             "id": "25",
             "name": "home/karabiner.edn at 0a2fe2e4a9ffbc2bb548ce63b9bb53e1f5be7d96 · weavver/home",
@@ -123,6 +140,7 @@
             "url": "https://github.com/weavver/home/blob/0a2fe2e4a9ffbc2bb548ce63b9bb53e1f5be7d96/.vscode/karabiner.edn"
          }, {
             "date_added": "13309135682128018",
+            "date_last_used": "0",
             "guid": "442c739a-8199-4244-ac99-b52abd833f3a",
             "id": "35",
             "name": "elf",
@@ -130,6 +148,7 @@
             "url": "https://github.com/bkerler/edl/issues/109"
          } ],
          "date_added": "13292242355522980",
+         "date_last_used": "0",
          "date_modified": "13309135682128018",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
@@ -139,6 +158,7 @@
       "other": {
          "children": [  ],
          "date_added": "13292242355522982",
+         "date_last_used": "0",
          "date_modified": "0",
          "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
          "id": "2",
@@ -148,6 +168,7 @@
       "synced": {
          "children": [  ],
          "date_added": "13292242355522984",
+         "date_last_used": "0",
          "date_modified": "0",
          "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
          "id": "3",

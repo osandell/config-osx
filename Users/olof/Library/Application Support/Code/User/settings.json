@@ -336,5 +336,31 @@
   "editor.inlineSuggest.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "javascript.preferences.importModuleSpecifier": "non-relative",
-  "workbench.panel.defaultLocation": "left"
+  "workbench.panel.defaultLocation": "left",
+  "colorTabs.config": [
+    {
+      "regex": "Users/olof/Library/Application Support/Code/User/*",
+      "color": "#049",
+      "label": "COLOR TEST"
+    },
+    {
+      "regex": "packages/royaldesign/*",
+      "color": "#C67178",
+      "label": "ROYAL DESIGN"
+    },
+    {
+      "regex": "packages/r21/*",
+      "color": "#2a2a2a",
+      "label": "RUM21"
+    },
+    {
+      "regex": "packages/core-web/*",
+      "color": "#049",
+      "label": "CORE-WEB"
+    }
+  ],
+  "colorTabs.statusBarBackground": false,
+  "colorTabs.titleBackground": true,
+  "colorTabs.tabBorder": false,
+  "colorTabs.ignoreCase": true
 }

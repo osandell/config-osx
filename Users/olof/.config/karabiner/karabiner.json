@@ -2303,10 +2303,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + s to go to beginning of the content of the line",
+        "description" : "Right Control + d to go to beginning of the content of the line",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "s",
+            "key_code" : "d",
             "modifiers" : {
               "mandatory" : [ "right_control" ]
             }
@@ -2317,10 +2317,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + d to go to end of the line",
+        "description" : "Right Control + f to go to end of the line",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "d",
+            "key_code" : "f",
             "modifiers" : {
               "mandatory" : [ "right_control" ]
             }
