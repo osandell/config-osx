@@ -458,8 +458,6 @@
                   end tell
             end tell
             '"]]}
-      {:des "Left Control + Left Shift + h / l to move between screens"
-            :rules [[:!TSh :!Cleft_arrow] [:!TSl :!Cright_arrow]]}
       {:des "Option + å to Shift + '+' key in order for ? hotkey to work in Vimium"
             :rules [[:!Oopen_bracket :!Shyphen] [:!Eopen_bracket :!Shyphen]]}
       {:des "¨ to Shift + '7' key in order for / hotkey to work in Vimium"
