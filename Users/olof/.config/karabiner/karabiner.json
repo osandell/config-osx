@@ -2317,10 +2317,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + e to go to end of the line",
+        "description" : "Right Control + d to go to end of the line",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "e",
+            "key_code" : "d",
             "modifiers" : {
               "mandatory" : [ "right_control" ]
             }

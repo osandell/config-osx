@@ -397,8 +397,8 @@
             :rules [[:!SOj :!Sdown_arrow] [:!SOk :!Sup_arrow]]}
       {:des "Right Control + s to go to beginning of the content of the line"
             :rules [[:!Ws :home]]}
-      {:des "Right Control + e to go to end of the line"
-            :rules [[:!We :end]]}
+      {:des "Right Control + d to go to end of the line"
+            :rules [[:!Wd :end]]}
       {:des "Left Control + d to delete"
             :rules [[:!Td :delete_forward]]}
       {:des "Left Control + y to copy"
