@@ -50,12 +50,12 @@
   {
     "key": "ctrl+shift+j",
     "command": "search.action.focusNextSearchResult",
-    "when": "searchViewletVisible && !terminalFocus"
+    "when": "searchViewletFocus || searchViewletVisible && !terminalFocus && !textCompareEditorVisible"
   },
   {
     "key": "ctrl+shift+k",
     "command": "search.action.focusPreviousSearchResult",
-    "when": "searchViewletVisible && !terminalFocus"
+    "when": "searchViewletFocus || searchViewletVisible && !terminalFocus && !textCompareEditorVisible"
   },
   {
     "key": "ctrl+n",
@@ -369,5 +369,95 @@
   {
     "key": "ctrl+shift+r",
     "command": "git.clean"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "gitlens.diffWithPrevious",
+    "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+  },
+  {
+    "key": "alt+cmd+g [Comma]",
+    "command": "-gitlens.diffWithPrevious",
+    "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "gitlens.diffWithPreviousInDiffLeft",
+    "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+  },
+  {
+    "key": "alt+cmd+g [Comma]",
+    "command": "-gitlens.diffWithPreviousInDiffLeft",
+    "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "gitlens.diffWithPreviousInDiffRight",
+    "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+  },
+  {
+    "key": "alt+cmd+g [Comma]",
+    "command": "-gitlens.diffWithPreviousInDiffRight",
+    "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "gitlens.diffWithNext",
+    "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+  },
+  {
+    "key": "alt+cmd+g [Period]",
+    "command": "-gitlens.diffWithNext",
+    "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "gitlens.diffWithNextInDiffLeft",
+    "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+  },
+  {
+    "key": "alt+cmd+g [Period]",
+    "command": "-gitlens.diffWithNextInDiffLeft",
+    "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "gitlens.diffWithNextInDiffRight",
+    "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+  },
+  {
+    "key": "alt+cmd+g [Period]",
+    "command": "-gitlens.diffWithNextInDiffRight",
+    "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible && !searchViewletFocus"
+  },
+  {
+    "key": "alt+f5",
+    "command": "-workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorVisible && !searchViewletFocus"
+  },
+  {
+    "key": "shift+alt+f5",
+    "command": "-workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "key": "ctrl+shift+alt+h",
+    "command": "gitlens.diffLineWithPrevious",
+    "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+  },
+  {
+    "key": "alt+cmd+g ctrl+alt+f",
+    "command": "-gitlens.diffLineWithPrevious",
+    "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
   }
 ]
