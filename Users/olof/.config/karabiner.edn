@@ -390,7 +390,9 @@
       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
             :rules [:!parallels[:##caps_lock :left_control nil {:alone :escape}]]}
       {:des "Esc to Caps Lock"
-            :rules [[:##escape :caps_lock]]}
+            :rules [[:##escape :right_control nil {:alone :caps_lock}]]}
+      {:des "Right Control + 1, q and 2 to copy, cut, and paste (used with esc as modifier)"
+            :rules [[:!W1 :!Cc] [:!Wq :!Cx] [:!W2 :!Cv]]}
       {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"
             :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]}
       {:des "Option + Shift + j/k to Shift + down/up arrow - To highlight lines more easily in combination with above hotkeys"
