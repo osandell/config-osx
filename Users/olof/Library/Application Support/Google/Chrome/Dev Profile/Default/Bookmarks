@@ -1,5 +1,5 @@
 {
-   "checksum": "a25103bbd52738135ee5011e40739bee",
+   "checksum": "b2dcd3447a3c3f208e2ef8e535296a54",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -18,22 +18,6 @@
             "name": "3001",
             "type": "url",
             "url": "http://localhost:3001/"
-         }, {
-            "date_added": "13301419648000000",
-            "date_last_used": "0",
-            "guid": "af441f35-8a8f-44a1-84a6-5ab5e7f150ed",
-            "id": "28",
-            "name": "RD",
-            "type": "url",
-            "url": "https://royaldesign.se/"
-         }, {
-            "date_added": "13301174697000000",
-            "date_last_used": "0",
-            "guid": "02bcec24-8c99-430a-a418-fc827e5465c3",
-            "id": "29",
-            "name": "R21",
-            "type": "url",
-            "url": "https://www.rum21.se/"
          }, {
             "date_added": "13305138081143053",
             "date_last_used": "0",
@@ -244,10 +228,26 @@
             "id": "54",
             "name": "R21 Test",
             "type": "folder"
+         }, {
+            "date_added": "13301419648000000",
+            "date_last_used": "0",
+            "guid": "af441f35-8a8f-44a1-84a6-5ab5e7f150ed",
+            "id": "28",
+            "name": "RD",
+            "type": "url",
+            "url": "https://royaldesign.se/"
+         }, {
+            "date_added": "13301174697000000",
+            "date_last_used": "0",
+            "guid": "02bcec24-8c99-430a-a418-fc827e5465c3",
+            "id": "29",
+            "name": "R21",
+            "type": "url",
+            "url": "https://www.rum21.se/"
          } ],
          "date_added": "13304357303342643",
          "date_last_used": "0",
-         "date_modified": "13310745406772824",
+         "date_modified": "13310949901165160",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
