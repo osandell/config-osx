@@ -392,9 +392,9 @@
       {:des "Esc to Caps Lock"
             :rules [[:##escape :right_control nil {:alone :caps_lock}]]}
       {:des "Right Control + 1, q and 2 to copy, cut, and paste (used with esc as modifier)"
-            :rules [[:!W1 :!Cc] [:!Wq :!Cx] [:!W2 :!Cv]]}
+            :rules [[:!W1 :!Cc] [:!Wq :!Cx] [:!W2 :!Cv] [:!Wnon_us_backslash :!Cs]]}
       {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"
-            :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]}
+            :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]} 
       {:des "Option + Shift + j/k to Shift + down/up arrow - To highlight lines more easily in combination with above hotkeys"
             :rules [[:!SOj :!Sdown_arrow] [:!SOk :!Sup_arrow]]}
       {:des "Right Control + d to go to beginning of the content of the line"
@@ -402,7 +402,7 @@
       {:des "Right Control + f to go to end of the line"
             :rules [[:!Wf :end]]}
       {:des "Left Control + d to delete"
-            :rules [[:!Td :delete_forward]]}
+            :rules [[:!Td :delete_forward]]} 
       {:des "Left Control + y to copy"
             :rules [[:!Ty :!Cc]]}
       {:des "Left Control + z to undo"
