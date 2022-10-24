@@ -1,5 +1,5 @@
 {
-   "checksum": "0d4232d81f0abb22cb562d051c8aa90a",
+   "checksum": "7a9a6a42a0d146f615652376744eb17b",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -250,7 +250,7 @@
                "date_last_used": "0",
                "guid": "74255eda-ec52-4b49-b531-a4c5c9d0152c",
                "id": "76",
-               "name": "RoyalDesign.no - Design, møbler og hjemmeinnredning på nettet",
+               "name": "NO",
                "type": "url",
                "url": "https://royaldesign.no/"
             }, {
@@ -258,7 +258,7 @@
                "date_last_used": "0",
                "guid": "1e1dbe47-bfe3-4904-b6f4-498888373318",
                "id": "77",
-               "name": "RoyalDesign.dk - Design, møbler og interiør online",
+               "name": "DK",
                "type": "url",
                "url": "https://royaldesign.dk/"
             }, {
@@ -266,13 +266,77 @@
                "date_last_used": "0",
                "guid": "aa1a2dfa-5f6b-4263-ad9a-b97b8f08985a",
                "id": "78",
-               "name": "RoyalDesign.de - Design, Möbel und Interieur online - zum richtigen Preis!",
+               "name": "DE",
                "type": "url",
                "url": "https://royaldesign.de/"
+            }, {
+               "date_added": "13311152234043467",
+               "date_last_used": "0",
+               "guid": "a4e74bc1-8859-4b77-a23e-835f25042284",
+               "id": "80",
+               "name": "JP",
+               "type": "url",
+               "url": "https://royaldesign.jp/"
+            }, {
+               "date_added": "13311152264715036",
+               "date_last_used": "0",
+               "guid": "3252ffea-7d3f-46d4-a8db-aee9b7d0b875",
+               "id": "81",
+               "name": "UK",
+               "type": "url",
+               "url": "https://royaldesign.co.uk/"
+            }, {
+               "date_added": "13311152316269841",
+               "date_last_used": "0",
+               "guid": "5f872db0-c426-4cb1-9eff-0e742ea92fe5",
+               "id": "82",
+               "name": "KR",
+               "type": "url",
+               "url": "https://royaldesign.kr/"
+            }, {
+               "date_added": "13311152517282790",
+               "date_last_used": "0",
+               "guid": "2cff2b46-c68d-405a-a35d-48ba1abdcb0a",
+               "id": "83",
+               "name": "CH",
+               "type": "url",
+               "url": "https://royaldesign.com/ch/"
+            }, {
+               "date_added": "13311152547567947",
+               "date_last_used": "0",
+               "guid": "e240219d-7a2a-42dd-92b6-d3857594ba3e",
+               "id": "84",
+               "name": "US",
+               "type": "url",
+               "url": "https://royaldesign.com/us/"
+            }, {
+               "date_added": "13311152586070036",
+               "date_last_used": "0",
+               "guid": "e076bb72-f837-4ed3-b493-fdda1c8d4e38",
+               "id": "85",
+               "name": "AU",
+               "type": "url",
+               "url": "https://royaldesign.com/au/"
+            }, {
+               "date_added": "13311152614826701",
+               "date_last_used": "0",
+               "guid": "eeeadd69-911c-417a-9d93-43c159f0c0d8",
+               "id": "86",
+               "name": "AT",
+               "type": "url",
+               "url": "https://royaldesign.com/at/"
+            }, {
+               "date_added": "13311152655656615",
+               "date_last_used": "0",
+               "guid": "5c765d30-d4a3-432c-91fd-b79e3334be99",
+               "id": "87",
+               "name": "NL",
+               "type": "url",
+               "url": "https://royaldesign.com/nl/"
             } ],
             "date_added": "13311074964338755",
             "date_last_used": "0",
-            "date_modified": "13311076573050062",
+            "date_modified": "13311152655656616",
             "guid": "dda554df-b776-4ba3-a04a-d07d25bf9e83",
             "id": "70",
             "name": "RD Prod",
@@ -321,7 +385,7 @@
          } ],
          "date_added": "13304357303342643",
          "date_last_used": "0",
-         "date_modified": "13311088656971789",
+         "date_modified": "13311187790384717",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",

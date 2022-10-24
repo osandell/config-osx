@@ -201,7 +201,7 @@
             :rules [:chrome[:!Ti :!CEi]]}
 
       {:des "Left Control + m to toggle desktop / mobile"
-            :rules [:chrome[:!Tm :!CSm]]}
+            :rules [:chrome[:!Tm [:!CSc :!CSc :!CSm]]]}
 
       {:des "Left Control + c to toggle element inspector"
             :rules [:chrome[:!Tc :!CSc]]}
