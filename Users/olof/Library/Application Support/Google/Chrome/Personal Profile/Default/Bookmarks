@@ -1,5 +1,5 @@
 {
-   "checksum": "35124500794a05f03d9e96a39567f7fc",
+   "checksum": "ecfb2ecf21e59698ac8c276886b9e9ab",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -19,6 +19,14 @@
             "type": "url",
             "url": "https://css-tricks.com/simple-swipe-with-vanilla-javascript/"
          }, {
+            "date_added": "13311544864665599",
+            "date_last_used": "0",
+            "guid": "83ab11eb-904d-4970-9357-6c2ff17146eb",
+            "id": "37",
+            "name": "The Proper Way to root your S10 (10+,10e) Device and get it Right! Tipps & Tricks | XDA Forums",
+            "type": "url",
+            "url": "https://forum.xda-developers.com/t/the-proper-way-to-root-your-s10-10-10e-device-and-get-it-right-tipps-tricks.4015813/"
+         }, {
             "date_added": "13292243473417673",
             "date_last_used": "0",
             "guid": "e543fb00-c30a-485d-a74c-8d4d80749f08",
@@ -36,7 +44,7 @@
             "url": "https://learn.adafruit.com/serenityos-build-and-run-keep-the-90s-dream-alive/build-macos-linux"
          }, {
             "date_added": "13292243894274034",
-            "date_last_used": "13310919506009344",
+            "date_last_used": "13311548819552719",
             "guid": "b7601168-534c-4f1f-834f-3544b7cf5276",
             "id": "7",
             "name": "Memos",
@@ -149,7 +157,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13309135682128018",
+         "date_modified": "13311544864665605",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
