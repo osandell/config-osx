@@ -1,5 +1,5 @@
 {
-   "checksum": "6095e37cb763156c52d5390bdc2ec49f",
+   "checksum": "8963856a12b4ca0d3c92c412decc1c44",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -390,10 +390,18 @@
             "name": "Lookbook-test | Björn Borg",
             "type": "url",
             "url": "http://localhost:8001/lookbook-test"
+         }, {
+            "date_added": "13312296722021322",
+            "date_last_used": "0",
+            "guid": "2035788a-a37c-4027-8323-e86c3e392eaa",
+            "id": "90",
+            "name": "\u003Ctime",
+            "type": "url",
+            "url": "https://www.arclab.com/en/kb/htmlcss/display-date-time-javascript-php-ssi.html"
          } ],
          "date_added": "13304357303342643",
          "date_last_used": "0",
-         "date_modified": "13312278647707764",
+         "date_modified": "13312296722021322",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
