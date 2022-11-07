@@ -1,5 +1,5 @@
 {
-   "checksum": "cbf49f940f4087eb21b624cafd046694",
+   "checksum": "6095e37cb763156c52d5390bdc2ec49f",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -383,20 +383,17 @@
             "name": "R21 Prod",
             "type": "folder"
          }, {
-            "date_added": "13311794254229621",
+            "date_added": "13312278647707736",
             "date_last_used": "0",
-            "guid": "f74dadee-21cd-43ad-91e1-52ac9a93807d",
+            "guid": "c51bee19-c2de-4c37-a2f5-6aa4366a672b",
             "id": "89",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "CSS cursor property",
+            "name": "Lookbook-test | Björn Borg",
             "type": "url",
-            "url": "https://www.w3schools.com/cssref/pr_class_cursor.php"
+            "url": "http://localhost:8001/lookbook-test"
          } ],
          "date_added": "13304357303342643",
          "date_last_used": "0",
-         "date_modified": "13311794254229621",
+         "date_modified": "13312278647707764",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
