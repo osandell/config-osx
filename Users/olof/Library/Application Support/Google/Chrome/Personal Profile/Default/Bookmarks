@@ -1,5 +1,5 @@
 {
-   "checksum": "8ee67f49c69b81b60707eff854371d8d",
+   "checksum": "824c144b96e60db144ae53fa7b67b485",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -20,20 +20,12 @@
             "url": "https://www.google.se/"
          }, {
             "date_added": "13307131128233410",
-            "date_last_used": "0",
+            "date_last_used": "13312924599649960",
             "guid": "04e76c23-a959-4550-94d9-e5524c8efb99",
             "id": "32",
             "name": "Simple Swipe with Vanilla JavaScript | CSS-Tricks - CSS-Tricks",
             "type": "url",
             "url": "https://css-tricks.com/simple-swipe-with-vanilla-javascript/"
-         }, {
-            "date_added": "13311544864665599",
-            "date_last_used": "0",
-            "guid": "83ab11eb-904d-4970-9357-6c2ff17146eb",
-            "id": "37",
-            "name": "The Proper Way to root your S10 (10+,10e) Device and get it Right! Tipps & Tricks | XDA Forums",
-            "type": "url",
-            "url": "https://forum.xda-developers.com/t/the-proper-way-to-root-your-s10-10-10e-device-and-get-it-right-tipps-tricks.4015813/"
          }, {
             "date_added": "13311553843639359",
             "date_last_used": "0",
@@ -100,7 +92,7 @@
             "url": "https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/table-of-contents/"
          }, {
             "date_added": "13292244135600850",
-            "date_last_used": "0",
+            "date_last_used": "13312924463170351",
             "guid": "7ed42f60-1ef9-45bb-9454-17cc33eaed4f",
             "id": "12",
             "name": "A typical workflow",
