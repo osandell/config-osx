@@ -480,5 +480,5 @@
       {:des "Left Control + Backspace to delete a word at a time instead of Option + Backspace"
             :rules [[:!Tdelete_or_backspace :!Odelete_or_backspace] [:!Odelete_or_backspace :delete_or_backspace]]}
       {:des "Left Control + Shift + G: Check if we have synced all repos to GitHub"
-            :rules [[:!TSg "'/Users/olof/Library/Application Scripts/net.mousedown.EventScripts/on-screen-password-locked.sh'"]]} 
+            :rules [[:!TSg "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"]]} 
 ]}

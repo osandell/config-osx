@@ -2821,7 +2821,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "'/Users/olof/Library/Application Scripts/net.mousedown.EventScripts/on-screen-password-locked.sh'"
+            "shell_command" : "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"
           } ],
           "type" : "basic"
         } ]
