@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Test sleeping 5s so we hopefully get internet
-sleep 5
+# Test sleeping 20s so we hopefully get internet
+osascript -e "say 'sleeping 20 seconds'"
+sleep 20
+osascript -e "say 'sleep is done'"
 
 ########################################################################
 # Pull any changes to git repos
