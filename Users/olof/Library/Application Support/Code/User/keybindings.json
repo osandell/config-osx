@@ -459,5 +459,10 @@
     "key": "alt+cmd+g ctrl+alt+f",
     "command": "-gitlens.diffLineWithPrevious",
     "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "git.commit",
+    "when": "scmRepository"
   }
 ]

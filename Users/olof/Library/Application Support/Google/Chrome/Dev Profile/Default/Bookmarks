@@ -1,5 +1,5 @@
 {
-   "checksum": "8963856a12b4ca0d3c92c412decc1c44",
+   "checksum": "7a9a6a42a0d146f615652376744eb17b",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -382,22 +382,6 @@
             "id": "71",
             "name": "R21 Prod",
             "type": "folder"
-         }, {
-            "date_added": "13312278647707736",
-            "date_last_used": "0",
-            "guid": "c51bee19-c2de-4c37-a2f5-6aa4366a672b",
-            "id": "89",
-            "name": "Lookbook-test | Björn Borg",
-            "type": "url",
-            "url": "http://localhost:8001/lookbook-test"
-         }, {
-            "date_added": "13312296722021322",
-            "date_last_used": "0",
-            "guid": "2035788a-a37c-4027-8323-e86c3e392eaa",
-            "id": "90",
-            "name": "\u003Ctime",
-            "type": "url",
-            "url": "https://www.arclab.com/en/kb/htmlcss/display-date-time-javascript-php-ssi.html"
          } ],
          "date_added": "13304357303342643",
          "date_last_used": "0",
