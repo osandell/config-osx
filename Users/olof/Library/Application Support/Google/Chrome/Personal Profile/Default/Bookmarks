@@ -4,7 +4,7 @@
       "bookmark_bar": {
          "children": [ {
             "date_added": "13307378202186147",
-            "date_last_used": "0",
+            "date_last_used": "13313576276791132",
             "guid": "bf21d0d8-c34e-4ebd-80b0-34469f3ea8ff",
             "id": "33",
             "name": "",
@@ -52,7 +52,7 @@
             "url": "https://learn.adafruit.com/serenityos-build-and-run-keep-the-90s-dream-alive/build-macos-linux"
          }, {
             "date_added": "13292243894274034",
-            "date_last_used": "13313006136301062",
+            "date_last_used": "13313576299569804",
             "guid": "b7601168-534c-4f1f-834f-3544b7cf5276",
             "id": "7",
             "name": "Memos",
