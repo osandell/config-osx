@@ -1,5 +1,5 @@
 {
-   "checksum": "824c144b96e60db144ae53fa7b67b485",
+   "checksum": "f142d1480d81fa8c32519039c9939b4f",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -12,7 +12,7 @@
             "url": "https://track.toggl.com/timer"
          }, {
             "date_added": "13312032085225535",
-            "date_last_used": "13313624685775253",
+            "date_last_used": "13313885372493317",
             "guid": "a28c8779-d38a-424e-b446-922278756f60",
             "id": "40",
             "name": "Google",
@@ -68,7 +68,7 @@
             "url": "https://github.com/"
          }, {
             "date_added": "13292243983983423",
-            "date_last_used": "13313290716106964",
+            "date_last_used": "13313780140280396",
             "guid": "d8111bf3-9bf7-4137-999b-66cc3df8d88d",
             "id": "9",
             "name": "Proton",
@@ -98,6 +98,17 @@
             "name": "A typical workflow",
             "type": "url",
             "url": "https://www.notion.so/A-typical-workflow-7598f7c274fe445da3c37914a91d4c2e"
+         }, {
+            "date_added": "13313885780064390",
+            "date_last_used": "0",
+            "guid": "43882d30-2e72-4af8-bc9b-851bfb7512b8",
+            "id": "42",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "edX | Free Online Courses by Harvard, MIT, & more | edX",
+            "type": "url",
+            "url": "https://www.edx.org/"
          }, {
             "date_added": "13292244158901904",
             "date_last_used": "0",
@@ -165,7 +176,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13312032085225535",
+         "date_modified": "13313885780064393",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
