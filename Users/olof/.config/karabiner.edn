@@ -252,8 +252,8 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; iTerm
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Shift + Left Control + K / J to focus split pane above / below"
-            :rules [:iterm[:!STk :!OCup_arrow] [:!STj :!OCdown_arrow]]}
+      {:des "Right Control + K / J to focus split pane above / below"
+            :rules [:iterm[:!Tk :!OCup_arrow] [:!Tj :!OCdown_arrow]]}
 
       ;; At first I remapped keypad 7 and 8 to [ and ] and remapped Left Control + H /
       ;; L to keypad 7 and 8. It worked fine for iTerm, however for some strange

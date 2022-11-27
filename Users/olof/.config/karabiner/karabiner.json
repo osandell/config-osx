@@ -1245,12 +1245,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Shift + Left Control + K / J to focus split pane above / below",
+        "description" : "Right Control + K / J to focus split pane above / below",
         "manipulators" : [ {
           "from" : {
             "key_code" : "k",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -1266,7 +1266,7 @@
           "from" : {
             "key_code" : "j",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
