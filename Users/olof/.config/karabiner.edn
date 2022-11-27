@@ -80,16 +80,14 @@
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Left Control + Left to rewind media" :rules
-            [[:!Tleft_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.applescript"]
-            [:!TWh "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.applescript"]]
+            [[:!Rleft_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.applescript"]]
       }
       {:des "Left Control + right to fast forward media" :rules
-            [[:!Tright_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.applescript"]
-            [:!TWl "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.applescript"]]
+            [[:!Rright_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.applescript"]]
       }
 
-      {:des "Right Shift + Caps Lock to play / pause media"
-      :rules [[:!Rcaps_lock "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.applescript"]]}
+      {:des "Right Shift + - to play / pause media"
+      :rules [[:!Rslash "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.applescript"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Focus To-Do

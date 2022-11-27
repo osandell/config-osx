@@ -161,18 +161,7 @@
           "from" : {
             "key_code" : "left_arrow",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.applescript"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "h",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "right_control" ]
+              "mandatory" : [ "right_shift" ]
             }
           },
           "to" : [ {
@@ -186,18 +175,7 @@
           "from" : {
             "key_code" : "right_arrow",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.applescript"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "right_control" ]
+              "mandatory" : [ "right_shift" ]
             }
           },
           "to" : [ {
@@ -206,10 +184,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Shift + Caps Lock to play / pause media",
+        "description" : "Right Shift + - to play / pause media",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "caps_lock",
+            "key_code" : "slash",
             "modifiers" : {
               "mandatory" : [ "right_shift" ]
             }
