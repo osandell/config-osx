@@ -1317,6 +1317,42 @@
             "bundle_identifiers" : [ "com.googlecode.iterm2" ]
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "tab",
+            "modifiers" : [ "left_control", "left_shift" ]
+          }, {
+            "shell_command" : "osascript -e '\n            tell application \"iTerm\" to activate\n            tell application \"System Events\" to key code 89 using {command down, shift down}\n            tell application \"Fork\" to activate\n            '"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.DanPristupov.Fork" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "tab",
+            "modifiers" : [ "left_control" ]
+          }, {
+            "shell_command" : "osascript -e '\n            tell application \"iTerm\" to activate\n            tell application \"System Events\" to key code 50 using {command down, shift down}\n            tell application \"Fork\" to activate\n            '"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.DanPristupov.Fork" ]
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Keypad 7 to 7 in order for it to work as expected, given the Ukelele remap explained above",
@@ -1413,45 +1449,6 @@
           "conditions" : [ {
             "type" : "frontmost_application_if",
             "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Control + Shift + H / L to focus tab to the left / right",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "h",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "tab",
-            "modifiers" : [ "left_control", "left_shift" ]
-          }, {
-            "shell_command" : "osascript -e '\n            tell application \"iTerm\" to activate\n            tell application \"System Events\" to key code 89 using {command down, shift down}\n            tell application \"Fork\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.DanPristupov.Fork" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "tab",
-            "modifiers" : [ "left_control" ]
-          }, {
-            "shell_command" : "osascript -e '\n            tell application \"iTerm\" to activate\n            tell application \"System Events\" to key code 50 using {command down, shift down}\n            tell application \"Fork\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.DanPristupov.Fork" ]
           } ],
           "type" : "basic"
         } ]
@@ -2252,8 +2249,20 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + 1, q and 2 to copy, cut, and paste (used with esc as modifier)",
+        "description" : "Right Control + q, 1, § and 2 to mark all, copy, cut, paste, and save (used with esc as modifier)",
         "manipulators" : [ {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "a",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        }, {
           "from" : {
             "key_code" : "1",
             "modifiers" : {
@@ -2267,7 +2276,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "q",
+            "key_code" : "non_us_backslash",
             "modifiers" : {
               "mandatory" : [ "right_control" ]
             }
@@ -2291,7 +2300,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "non_us_backslash",
+            "key_code" : "w",
             "modifiers" : {
               "mandatory" : [ "right_control" ]
             }

@@ -312,7 +312,7 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Fork
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Right Control + Shift + H / L to focus tab to the left / right"
+      {:des "Right Control + H / L to focus tab to the left / right"
             :rules [:fork [:!Th [:!STtab "osascript -e '
             tell application \"iTerm\" to activate
             tell application \"System Events\" to key code 89 using {command down, shift down}
@@ -396,8 +396,8 @@
             :rules [:!parallels[:##caps_lock :left_control nil {:alone :escape}]]}
       {:des "Esc to Right Control when holding, Caps Lock when tapped"
             :rules [[:##escape :right_control nil {:alone :caps_lock}]]}
-      {:des "Right Control + 1, q and 2 to copy, cut, and paste (used with esc as modifier)"
-            :rules [[:!W1 :!Cc] [:!Wq :!Cx] [:!W2 :!Cv] [:!Wnon_us_backslash :!Cs]]}
+      {:des "Right Control + q, 1, § and 2 to mark all, copy, cut, paste, and save (used with esc as modifier)"
+            :rules [[:!Wq :!Ca] [:!W1 :!Cc] [:!Wnon_us_backslash  :!Cx] [:!W2 :!Cv] [:!Ww :!Cs]]}
       {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"
             :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]} 
       {:des "Option + Shift + j/k to Shift + down/up arrow - To highlight lines more easily in combination with above hotkeys"
