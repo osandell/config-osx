@@ -248,6 +248,9 @@
             :rules [:vscode[:!Ta [:!Ck :!COs]]]}
       {:des "Left Shift + Left Control + a to revert selected changes"
             :rules [:vscode[:!STa [:!Ck :!Cr]]]}
+      {:des "Right Control + w to Close all tab if held / Close current tab if tapped"
+            :rules [:vscode[:!Ww nil nil {:alone :!Cw
+            :held [:!Ck :!Cw]}]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; iTerm
