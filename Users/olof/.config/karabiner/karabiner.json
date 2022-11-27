@@ -1123,7 +1123,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + r to run last used terminal command",
+        "description" : "Left Control + r to run last used terminal command",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.applescript"
@@ -1134,7 +1134,7 @@
           "from" : {
             "key_code" : "r",
             "modifiers" : {
-              "mandatory" : [ "right_control" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "conditions" : [ {
