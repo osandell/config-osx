@@ -652,7 +652,64 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + m to highlight text (only useful in Notion)",
+        "description" : "Right Control + b to make text bold",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "b",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Control + i to make text italic",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "i",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Control + u to underline text",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "u",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Control + m to highlight text",
         "manipulators" : [ {
           "from" : {
             "key_code" : "m",
@@ -663,6 +720,35 @@
           "to" : [ {
             "key_code" : "e",
             "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Control + c to create code block",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "c"
+          }, {
+            "key_code" : "o"
+          }, {
+            "key_code" : "d"
+          }, {
+            "key_code" : "e"
+          }, {
+            "key_code" : "return_or_enter"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",

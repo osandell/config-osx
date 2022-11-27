@@ -156,8 +156,17 @@
       {:des "Right Control + plus-key to duplicate tab"
             :rules [:chrome[:!Whyphen "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.applescript"]]}
             
-      {:des "Right Control + m to highlight text (only useful in Notion)"
+      ;; For notion.so
+      {:des "Right Control + b to make text bold"
+            :rules [:chrome[:!Wb :!Cb]]}
+      {:des "Right Control + i to make text italic"
+            :rules [:chrome[:!Wi :!Ci]]}
+      {:des "Right Control + u to underline text"
+            :rules [:chrome[:!Wu :!Cu]]}
+      {:des "Right Control + m to highlight text"
             :rules [:chrome[:!Wm :!Ce]]}
+      {:des "Right Control + c to create code block"
+            :rules [:chrome[:!Wc [:!S7 :c :o :d :e :return_or_enter ]]]}
             
       {:des "Left Control + r to hard reload"
             :rules [:chrome[:!Tr :!CSr]]}
