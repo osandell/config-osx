@@ -220,11 +220,11 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Slack
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Right Option + Right Shift + g to open Grebban workspace"
-            :rules [:slack[:!ERg :!C1]]}
+      {:des "Right Control + K to open Grebban workspace"
+            :rules [:slack[:!Tk :!C1]]}
 
-      {:des "Right Option + Right Shift + r to open Royal workspace"
-            :rules [:slack[:!ERr :!C2]]}
+      {:des "Right Control + J to open Royal workspace"
+            :rules [:slack[:!Tj :!C2]]}
 
       {:des "Right Option + Right Shift + f to find thread"
             :rules [:slack[:!ERf :!Ck]]}

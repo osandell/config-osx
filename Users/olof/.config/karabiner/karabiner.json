@@ -1066,12 +1066,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Option + Right Shift + g to open Grebban workspace",
+        "description" : "Right Control + K to open Grebban workspace",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "g",
+            "key_code" : "k",
             "modifiers" : {
-              "mandatory" : [ "right_option", "right_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -1085,12 +1085,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Option + Right Shift + r to open Royal workspace",
+        "description" : "Right Control + J to open Royal workspace",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "r",
+            "key_code" : "j",
             "modifiers" : {
-              "mandatory" : [ "right_option", "right_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
