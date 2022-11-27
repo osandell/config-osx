@@ -396,31 +396,29 @@
             :rules [:!parallels[:##caps_lock :left_control nil {:alone :escape}]]}
       {:des "Esc to Right Control when holding, Caps Lock when tapped"
             :rules [[:##escape :right_control nil {:alone :caps_lock}]]}
-      {:des "Right Control + q, 1, § and 2 to mark all, copy, cut, paste, and save (used with esc as modifier)"
-            :rules [[:!Wq :!Ca] [:!W1 :!Cc] [:!Wnon_us_backslash  :!Cx] [:!W2 :!Cv] [:!Ww :!Cs]]}
+      {:des "Right Control + q, 1, §, 2 and to mark all, copy, cut, paste, and save (used with esc as modifier)"
+            :rules [[:!Wq :!Ca] [:!W1 :!Cc] [:!Wnon_us_backslash  :!Cx] [:!W2 :!Cv] [:!W3 :!Cs]]}
       {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"
             :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]} 
-      {:des "Option + Shift + j/k to Shift + down/up arrow - To highlight lines more easily in combination with above hotkeys"
-            :rules [[:!SOj :!Sdown_arrow] [:!SOk :!Sup_arrow]]}
-      {:des "Right Control + d to go to beginning of the content of the line"
-            :rules [[:!Wd :home]]}
-      {:des "Right Control + f to go to end of the line"
-            :rules [[:!Wf :end]]}
+      {:des "Left Control + d to go to beginning of the content of the line"
+            :rules [[:!Td :home]]}
+      {:des "Left Control + f to go to end of the line"
+            :rules [[:!Tf :end]]}
       {:des "Left Control + d to delete"
             :rules [[:!Td :delete_forward]]} 
       {:des "Left Control + y to copy"
             :rules [[:!Ty :!Cc]]}
       {:des "Left Control + u to undo"
             :rules [[:!Tz :!Cz]]}
-      {:des "Left Control + i to redo"
-            :rules [[:!Ti :!SCz]]}      
+      {:des "Left Control + i / Left Command + y to redo"
+            :rules [[:!Ti :!SCz] [:!Cy :!SCz]]}      
       {:des "Left Control + Space to step to the right"
             :rules [[:!Tspacebar :right_arrow]]}
       {:des "Left Control + Left Shift + Space to add a space to the right of the cursor"
             :rules [[:!STspacebar [:spacebar :left_arrow]]]}
       {:des "§ to Delete"
             :rules [[:##non_us_backslash :delete_forward]]}
-       {:des "Tab to Right Control / App Switching if pressed alone"
+      {:des "Tab to Right Control if held App Switching if tapped"
             :rules [[:tab :right_control nil {:alone :!Ctab}]]}
       {:des "Within app window switching with Function + Tab"
             :rules [[:!Ftab :!SOWtab]]}
@@ -428,8 +426,6 @@
             :rules [[:!SOslash :slash]]}
       {:des "Make enter unblocked when holding Left Shift + Left Option"
             :rules [[:!SOreturn_or_enter :return_or_enter]]}
-      {:des "Show Launchpad with Command-Tab"
-            :rules [[:!C##tab :!Otab]]}
       {:des "Move tabs left / right with Right Control + h / l"
             :rules [[:!Wh :!COleft_arrow], [:!Wl :!COright_arrow]]}
       {:des "New tab with Right Control + t"
@@ -453,8 +449,8 @@
             :rules [[:!T##h :left_arrow] [:!T##j :down_arrow] [:!T##k :up_arrow] [:!T##l :right_arrow]]}
       {:des "Left Control + M to minimize window"
             :rules [[:!Tm :!Cm]]}
-      {:des "Function + f to go to fullscreen"
-            :rules [[:!Ff "osascript -e '
+      {:des "Right Control + f to go to fullscreen"
+            :rules [[:!Wf "osascript -e '
             tell application \"System Events\"
                   tell (first process where it is frontmost)
                         if value of attribute \"AXFullScreen\" of window 1 = false then

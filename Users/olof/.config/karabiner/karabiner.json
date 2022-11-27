@@ -2249,7 +2249,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + q, 1, § and 2 to mark all, copy, cut, paste, and save (used with esc as modifier)",
+        "description" : "Right Control + q, 1, §, 2 and to mark all, copy, cut, paste, and save (used with esc as modifier)",
         "manipulators" : [ {
           "from" : {
             "key_code" : "q",
@@ -2300,7 +2300,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "w",
+            "key_code" : "3",
             "modifiers" : {
               "mandatory" : [ "right_control" ]
             }
@@ -2339,39 +2339,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Option + Shift + j/k to Shift + down/up arrow - To highlight lines more easily in combination with above hotkeys",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Control + d to go to beginning of the content of the line",
+        "description" : "Left Control + d to go to beginning of the content of the line",
         "manipulators" : [ {
           "from" : {
             "key_code" : "d",
             "modifiers" : {
-              "mandatory" : [ "right_control" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -2380,12 +2353,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + f to go to end of the line",
+        "description" : "Left Control + f to go to end of the line",
         "manipulators" : [ {
           "from" : {
             "key_code" : "f",
             "modifiers" : {
-              "mandatory" : [ "right_control" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -2424,12 +2397,24 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + i to redo",
+        "description" : "Left Control + i / Left Command + y to redo",
         "manipulators" : [ {
           "from" : {
             "key_code" : "i",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "z",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
             }
           },
           "to" : [ {
@@ -2483,7 +2468,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Tab to Right Control / App Switching if pressed alone",
+        "description" : "Tab to Right Control if held App Switching if tapped",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "key_code" : "tab",
@@ -2537,22 +2522,6 @@
           },
           "to" : [ {
             "key_code" : "return_or_enter"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Show Launchpad with Command-Tab",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "tab",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ],
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "tab",
-            "modifiers" : [ "left_option" ]
           } ],
           "type" : "basic"
         } ]
@@ -2694,12 +2663,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Function + f to go to fullscreen",
+        "description" : "Right Control + f to go to fullscreen",
         "manipulators" : [ {
           "from" : {
             "key_code" : "f",
             "modifiers" : {
-              "mandatory" : [ "fn" ]
+              "mandatory" : [ "right_control" ]
             }
           },
           "to" : [ {
