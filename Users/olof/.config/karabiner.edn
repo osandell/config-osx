@@ -410,16 +410,16 @@
             :rules [[:!Td :delete_forward]]} 
       {:des "Left Control + y to copy"
             :rules [[:!Ty :!Cc]]}
-      {:des "Left Control + z to undo"
+      {:des "Left Control + u to undo"
             :rules [[:!Tz :!Cz]]}
+      {:des "Left Control + i to redo"
+            :rules [[:!Ti :!SCz]]}      
       {:des "Left Control + Space to step to the right"
             :rules [[:!Tspacebar :right_arrow]]}
-      {:des "Right Control to add a space to the right of the cursor"
-            :rules [[:!Wspacebar [:spacebar :left_arrow]]]}
+      {:des "Left Control + Left Shift + Space to add a space to the right of the cursor"
+            :rules [[:!STspacebar [:spacebar :left_arrow]]]}
       {:des "§ to Delete"
             :rules [[:##non_us_backslash :delete_forward]]}
-      {:des "Windows style redo"
-            :rules [[:!Cy :!SCz]]}
        {:des "Tab to Right Control / App Switching if pressed alone"
             :rules [[:tab :right_control nil {:alone :!Ctab}]]}
       {:des "Within app window switching with Function + Tab"

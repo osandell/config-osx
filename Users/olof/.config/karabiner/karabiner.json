@@ -2409,7 +2409,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + z to undo",
+        "description" : "Left Control + u to undo",
         "manipulators" : [ {
           "from" : {
             "key_code" : "z",
@@ -2420,6 +2420,21 @@
           "to" : [ {
             "key_code" : "z",
             "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + i to redo",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "z",
+            "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "type" : "basic"
         } ]
@@ -2438,12 +2453,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control to add a space to the right of the cursor",
+        "description" : "Left Control + Left Shift + Space to add a space to the right of the cursor",
         "manipulators" : [ {
           "from" : {
             "key_code" : "spacebar",
             "modifiers" : {
-              "mandatory" : [ "right_control" ]
+              "mandatory" : [ "left_control", "left_shift" ]
             }
           },
           "to" : [ {
@@ -2464,21 +2479,6 @@
           },
           "to" : [ {
             "key_code" : "delete_forward"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Windows style redo",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "y",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "z",
-            "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "type" : "basic"
         } ]
