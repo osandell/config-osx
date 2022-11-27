@@ -156,8 +156,8 @@
       {:des "Right Control + plus-key to duplicate tab"
             :rules [:chrome[:!Whyphen "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.applescript"]]}
             
-      {:des "Right Control + e to highlight text (only useful in Notion)"
-            :rules [:chrome[:!Wh :!Ce]]}
+      {:des "Right Control + m to highlight text (only useful in Notion)"
+            :rules [:chrome[:!Wm :!Ce]]}
             
       {:des "Left Control + r to hard reload"
             :rules [:chrome[:!Tr :!CSr]]}
@@ -259,13 +259,13 @@
       ;; expected in Chrome. So what I've ended up with is a remap of the < key to ]
       ;; for it to work in Chrome, and I've remapped keypad_7 to [ and keypad_8 to ]
       ;; for it to work in iTerm. Not very consistent but at least it works.
-      {:des "Left Command + Left Control + H / L to focus tab to the left / right"
-            :rules [:iterm[:!CTh [:!SCkeypad_7 "osascript -e '
+      {:des "Right Control + H / L to focus tab to the left / right"
+            :rules [:iterm[:!Th [:!SCkeypad_7 "osascript -e '
             tell application \"Fork\" to activate
             tell application \"System Events\" to key code 48 using {control down, shift down}
             tell application \"iTerm\" to activate
             '"]] 
-            [:!CTl [:!SCgrave_accent_and_tilde "osascript -e '
+            [:!Tl [:!SCgrave_accent_and_tilde "osascript -e '
             tell application \"Fork\" to activate
             tell application \"System Events\" to key code 48 using control down
             tell application \"iTerm\" to activate
@@ -305,13 +305,13 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Fork
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + Shift + H / L to focus tab to the left / right"
-            :rules [:fork [:!TSh [:!STtab "osascript -e '
+      {:des "Right Control + Shift + H / L to focus tab to the left / right"
+            :rules [:fork [:!Th [:!STtab "osascript -e '
             tell application \"iTerm\" to activate
             tell application \"System Events\" to key code 89 using {command down, shift down}
             tell application \"Fork\" to activate
             '"]] 
-            [:!TSl [:!Ttab "osascript -e '
+            [:!Tl [:!Ttab "osascript -e '
             tell application \"iTerm\" to activate
             tell application \"System Events\" to key code 50 using {command down, shift down}
             tell application \"Fork\" to activate

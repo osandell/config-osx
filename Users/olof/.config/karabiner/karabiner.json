@@ -652,10 +652,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + e to highlight text (only useful in Notion)",
+        "description" : "Right Control + m to highlight text (only useful in Notion)",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "h",
+            "key_code" : "m",
             "modifiers" : {
               "mandatory" : [ "right_control" ]
             }
@@ -1216,12 +1216,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Command + Left Control + H / L to focus tab to the left / right",
+        "description" : "Right Control + H / L to focus tab to the left / right",
         "manipulators" : [ {
           "from" : {
             "key_code" : "h",
             "modifiers" : {
-              "mandatory" : [ "left_command", "left_control" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -1239,7 +1239,7 @@
           "from" : {
             "key_code" : "l",
             "modifiers" : {
-              "mandatory" : [ "left_command", "left_control" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -1353,12 +1353,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + Shift + H / L to focus tab to the left / right",
+        "description" : "Right Control + Shift + H / L to focus tab to the left / right",
         "manipulators" : [ {
           "from" : {
             "key_code" : "h",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -1376,7 +1376,7 @@
           "from" : {
             "key_code" : "l",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
