@@ -476,5 +476,9 @@
   {
     "key": "cmd+n",
     "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "toggleVim"
   }
 ]
