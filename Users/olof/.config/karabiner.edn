@@ -231,10 +231,10 @@
 
       ; For the following 2 definitions to work I've also mapped ° and ˝ to
       ; melodies in VSCode VIM.
-      {:des "Left Control + . to console log without variable"
-            :rules [:vscode[:!Tperiod :!SEq]]}
-      {:des "Left Control + - to console log with variable"
-            :rules [:vscode[:!Tslash :!SEw]]}
+      {:des "Left Control + , to console log without variable"
+            :rules [:vscode[:!Tcomma :!SEq]]}
+      {:des "Left Control + . to console log with variable"
+            :rules [:vscode[:!Tperiod :!SEw]]}
       {:des "Left Option + tab to alternate between the 2 most recent tabs"
             :rules [:vscode[:!Otab :!Ttab]]}
 
@@ -458,7 +458,7 @@
             :rules [[:!Oopen_bracket :!Shyphen] [:!Eopen_bracket :!Shyphen]]}
       {:des "¨ to Shift + '7' key in order for / hotkey to work in Vimium"
             :rules [[:close_bracket :!S7]]}
-      {:des "Left Control + Dash / Ö / Å / Ä to select all / copy / cut / paste"
+      {:des "Left Control + - / Ö / Å / Ä to select all / copy / cut / paste"
             :rules [[:!Tslash :!Ca] [:!Tsemicolon :!Cc] [:!Topen_bracket :!Cx] [:!Tquote :!Cv]]}
       {:des "Left Command + m to click minimize button (fix: normal hotkey doesn't work with every app, for example VSCode)"
             :rules [[:!Cm "osascript -e '

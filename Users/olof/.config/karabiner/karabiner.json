@@ -1080,10 +1080,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + . to console log without variable",
+        "description" : "Left Control + , to console log without variable",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "period",
+            "key_code" : "comma",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
@@ -1099,10 +1099,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + - to console log with variable",
+        "description" : "Left Control + . to console log with variable",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "slash",
+            "key_code" : "period",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
@@ -2630,7 +2630,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + Dash / Ö / Å / Ä to select all / copy / cut / paste",
+        "description" : "Left Control + - / Ö / Å / Ä to select all / copy / cut / paste",
         "manipulators" : [ {
           "from" : {
             "key_code" : "slash",
