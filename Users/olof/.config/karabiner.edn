@@ -237,6 +237,10 @@
             :rules [:vscode[:!Tperiod :!SEw]]}
       {:des "Left Option + tab to alternate between the 2 most recent tabs"
             :rules [:vscode[:!Otab :!Ttab]]}
+      {:des "Left Control + a to stage selected area"
+            :rules [:vscode[:!Ta [:!Ck :!COs]]]}
+      {:des "Left Shift + Left Control + a to revert selected changes"
+            :rules [:vscode[:!STa [:!Ck :!Cr]]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; iTerm
