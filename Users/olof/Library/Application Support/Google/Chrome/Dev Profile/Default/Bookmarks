@@ -1,5 +1,5 @@
 {
-   "checksum": "7a9a6a42a0d146f615652376744eb17b",
+   "checksum": "29d197906e7829a3b05292c0fe3fbecf",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -382,10 +382,21 @@
             "id": "71",
             "name": "R21 Prod",
             "type": "folder"
+         }, {
+            "date_added": "13314176322090356",
+            "date_last_used": "0",
+            "guid": "4b2b55b6-098b-4deb-9baa-65aee6331a0a",
+            "id": "89",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "GitHub - kumar303/default-opener: Browser extension to open links in your default browser",
+            "type": "url",
+            "url": "https://github.com/kumar303/default-opener"
          } ],
          "date_added": "13304357303342643",
          "date_last_used": "0",
-         "date_modified": "13312296722021322",
+         "date_modified": "13314176322090360",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",

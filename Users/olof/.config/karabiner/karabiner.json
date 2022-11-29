@@ -156,7 +156,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + Left to rewind media",
+        "description" : "Right Shift + Left to rewind media",
         "manipulators" : [ {
           "from" : {
             "key_code" : "left_arrow",
@@ -170,7 +170,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + right to fast forward media",
+        "description" : "Right Shift + Right to fast forward media",
         "manipulators" : [ {
           "from" : {
             "key_code" : "right_arrow",
@@ -180,6 +180,34 @@
           },
           "to" : [ {
             "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.applescript"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Shift + Up to raise volume",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "up_arrow",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "consumer_key_code" : "volume_increment"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Shift + Down to lower volume",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "down_arrow",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "consumer_key_code" : "volume_decrement"
           } ],
           "type" : "basic"
         } ]
@@ -194,6 +222,34 @@
           },
           "to" : [ {
             "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.applescript"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Shift + Up to increase brighness",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "up_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "consumer_key_code" : "display_brightness_increment"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Shift + Down to decrease brightness",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "down_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "consumer_key_code" : "display_brightness_decrement"
           } ],
           "type" : "basic"
         } ]
