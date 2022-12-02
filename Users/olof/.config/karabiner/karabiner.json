@@ -2971,6 +2971,21 @@
           } ],
           "type" : "basic"
         } ]
+      }, {
+        "description" : "Right Control + Space: Spotlight",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
       } ]
     },
     "devices" : [ {

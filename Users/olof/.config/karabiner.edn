@@ -498,5 +498,7 @@
             :rules [[:!TSg "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"]]} 
       {:des "Fn + ´ to switch to stock Mac keyboard mapping"
             :rules [[:!Cequal_sign "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-stock-keyboard-mapping.sh"]]}      
+      {:des "Right Control + Space: Spotlight"
+            :rules [[:!Wspacebar :!Cspacebar]]} 
 ]}
 
