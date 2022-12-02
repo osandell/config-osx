@@ -320,6 +320,10 @@
             tell application \"System Events\" to key code 20 using {command down, option down}
             tell application \"iTerm\" to activate
             '"]]}
+      {:des "Right Control + - to split horizontally"
+            :rules [:iterm[:!Wslash :!SCd]]}
+      {:des "Right Control + t to open new tab and split horizontally"
+            :rules [:iterm[:!Wt [:!Ct :!SCd]]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Fork

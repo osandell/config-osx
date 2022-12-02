@@ -1535,6 +1535,47 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Right Control + - to split horizontally",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "d",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Control + t to open new tab and split horizontally",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "t",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "d",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Left Control + J / K to move down / up",
         "manipulators" : [ {
           "from" : {
