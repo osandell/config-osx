@@ -1367,7 +1367,7 @@
           "from" : {
             "key_code" : "h",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "right_control" ]
             }
           },
           "to" : [ {
@@ -1385,7 +1385,7 @@
           "from" : {
             "key_code" : "l",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "right_control" ]
             }
           },
           "to" : [ {

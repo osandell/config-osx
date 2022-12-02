@@ -279,12 +279,12 @@
       ;; for it to work in Chrome, and I've remapped keypad_7 to [ and keypad_8 to ]
       ;; for it to work in iTerm. Not very consistent but at least it works.
       {:des "Right Control + H / L to focus tab to the left / right"
-            :rules [:iterm[:!Th [:!SCkeypad_7 "osascript -e '
+            :rules [:iterm[:!Wh [:!SCkeypad_7 "osascript -e '
             tell application \"Fork\" to activate
             tell application \"System Events\" to key code 48 using {control down, shift down}
             tell application \"iTerm\" to activate
             '"]] 
-            [:!Tl [:!SCgrave_accent_and_tilde "osascript -e '
+            [:!Wl [:!SCgrave_accent_and_tilde "osascript -e '
             tell application \"Fork\" to activate
             tell application \"System Events\" to key code 48 using control down
             tell application \"iTerm\" to activate
