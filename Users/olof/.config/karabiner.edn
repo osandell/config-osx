@@ -360,16 +360,16 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Left Control + Q: activate Google Chrome Grebban"
             :rules [[:!Tq "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"]]}
-      {:des "Left Control + 1: activate Slack"
-            :rules [[:!T1 "osascript -e 'tell application \"Slack\" to activate'"]]}
+      {:des "Left Control + 1: activate Google Chrome Personal"
+            :rules [[:!T1 "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]]}
       {:des "Left Control + w: activate VSCode"
             :rules [[:!Tw "osascript -e 'tell application \"Code\" to activate'"]]}
       {:des "Left Control + 2: activate iTerm + Fork"
             :rules [[:!T2 "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"]]}
       {:des "Left Control + e: activate Google Chrome Dev"
             :rules [[:!Te "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
-      {:des "Left Control + 3: activate Google Chrome Personal"
-            :rules [[:!T3 "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]]}
+      {:des "Left Control + 3: activate Slack"
+            :rules [[:!T3 "osascript -e 'tell application \"Slack\" to activate'"]]}
       {:des "Left Control + 4: activate Google Chrome YouTube"
             :rules [[:!T4"osascript -e 'tell application \"Google Chrome YouTube\" to activate'"]]}
 
