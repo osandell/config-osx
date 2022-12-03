@@ -547,17 +547,6 @@
             "bundle_identifiers" : [ "com.parallels" ]
           } ],
           "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "d",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "delete_forward"
-          } ],
-          "type" : "basic"
         } ]
       }, {
         "description" : "Tweak VSCode Command Palette hotkey not to trigger project screen hotkey",
@@ -2490,6 +2479,20 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Left Control + m to delete",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_forward"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Left Control + y to copy",
         "manipulators" : [ {
           "from" : {
@@ -2767,21 +2770,6 @@
           },
           "to" : [ {
             "key_code" : "right_arrow"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Control + M to minimize window",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "m",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "m",
-            "modifiers" : [ "left_command" ]
           } ],
           "type" : "basic"
         } ]
