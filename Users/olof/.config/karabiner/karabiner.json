@@ -2774,6 +2774,21 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Right Control + M to minimize window",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "m",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Right Control + f to go to fullscreen",
         "manipulators" : [ {
           "from" : {

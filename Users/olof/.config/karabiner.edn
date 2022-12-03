@@ -463,6 +463,8 @@
             '"]]}
       {:des "Left Control + h / j / k / l to arrow keys"
             :rules [[:!T##h :left_arrow] [:!T##j :down_arrow] [:!T##k :up_arrow] [:!T##l :right_arrow]]}
+      {:des "Right Control + M to minimize window"
+            :rules [[:!Wm :!Cm]]}
       {:des "Right Control + f to go to fullscreen"
             :rules [[:!Wf "osascript -e '
             tell application \"System Events\"
