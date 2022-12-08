@@ -416,12 +416,12 @@
             :rules [[:!Wq :!Ca] [:!W1 :!Cc] [:!Wnon_us_backslash  :!Cx] [:!W2 :!Cv] [:!W3 :!Cs]]}
       {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"
             :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]} 
-      {:des "Left Control + d to go to beginning of the content of the line"
-            :rules [[:!Td :home]]}
-      {:des "Left Control + f to go to end of the line"
-            :rules [[:!Tf :end]]}
-      {:des "Left Control + m to delete"
-            :rules [[:!Tm :delete_forward]]} 
+      {:des "Left Control + n to go to beginning of the content of the line"
+            :rules [[:!Tn :home]]}
+      {:des "Left Control + m to go to end of the line"
+            :rules [[:!Tm :end]]}
+      {:des "Left Control + d to delete"
+            :rules [[:!Td :delete_forward]]} 
       {:des "Left Control + y to copy"
             :rules [[:!Ty :!Cc]]}
       {:des "Left Control + u to undo"

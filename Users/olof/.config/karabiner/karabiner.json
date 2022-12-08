@@ -547,6 +547,17 @@
             "bundle_identifiers" : [ "com.parallels" ]
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_forward"
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Tweak VSCode Command Palette hotkey not to trigger project screen hotkey",
@@ -2451,10 +2462,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + d to go to beginning of the content of the line",
+        "description" : "Left Control + n to go to beginning of the content of the line",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "d",
+            "key_code" : "n",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
@@ -2465,21 +2476,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + f to go to end of the line",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "f",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "end"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Control + m to delete",
+        "description" : "Left Control + m to go to end of the line",
         "manipulators" : [ {
           "from" : {
             "key_code" : "m",
@@ -2488,7 +2485,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "delete_forward"
+            "key_code" : "end"
           } ],
           "type" : "basic"
         } ]
