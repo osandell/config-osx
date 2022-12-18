@@ -102,7 +102,7 @@
       ;; Focus To-Do
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Left Control + Left Shift + p to play / pause | skip in Focus-to-do"
-            :rules [[:!TSp nil nil {:alone "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.applescript"
+            :rules [:!parallels[:!TSp nil nil {:alone "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.applescript"
             :held "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.applescript"}]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -123,36 +123,31 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Tweak modifier keys to work smoothly on Window"
             :rules [:parallels[:left_option :left_command] 
-                   [:##fn :left_control]
-                   [:left_command :right_option]
-                   [:##Rright_command :!Sleft_control]
+                   [:fn :left_control]
+                   [:left_command :right_option nil {:alone :left_option}]
+                   [:right_command :right_option]
                    ]}
 
-      {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
-            :rules [:parallels[:##caps_lock :!Tleft_command nil {:alone :escape}]]}
+      {:des "Caps Lock to Right Command (WIN in Windows)"
+            :rules [:parallels[:caps_lock :right_control]]}
+      
+      {:des "Make Left Alt act as Left Alt (not Right Alt) when pressing up/down key to be able to map it in VSCode"
+            :rules [:parallels[:!Eup_arrow :!Oup_arrow] [:!Edown_arrow :!Odown_arrow] 
+            [:!ESup_arrow :!OSup_arrow] [:!ESdown_arrow [:!OSdown_arrow ]]]}
 
-      {:des "Left Control + A / Ö / Å / Ä to select all / copy / cut / paste"
-            :rules [:parallels [:!TCa :!Ta] 
-                  [:!TCsemicolon :!Tc] 
-                  [:!TCopen_bracket :!Tx]
-                  [:!TCquote :!Tv]]}
-
-      {:des "Left Control + S to Control + S"
-            :rules [:parallels [:!TCs :!Ts] [:!TCSs :!TSs]]}
-
-      {:des "Left Control + d to delete"
-            :rules [:parallels[:!TCd :delete_forward][:!TSCd :!Sdelete_forward]]}
-
-      {:des "Tweak VSCode Command Palette hotkey not to trigger project screen hotkey"
-            :rules [:parallels[:!TCp :!TSCp]]}
-
-      ; For some reason this was unusually tricky, not sure why I had to
-      ; split it in 2 different rules.
-      {:des "Left Shift + Left Command to Shift + Ctrl + Command (Win)"
-            :rules [:parallels [:!Eleft_shift :!SCleft_control] [:!Sleft_command :!SCleft_control]]}
-
-      {:des "Left Command + up / down to Left Ctrl + Command (Win) + Up / Down"
-            :rules [:parallels [:!Eup_arrow :!CTup_arrow] [:!Edown_arrow :!CTdown_arrow]]}
+      ;; This way we can use Caps Lock + e.g E to get to the Mac Dev Browser 
+      {:des "Left Control + Q: activate Google Chrome Grebban"
+            :rules [:parallels[:!Wq "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"]]}
+      {:des "Left Control + 1: activate Google Chrome Personal"
+            :rules [:parallels[:!W1 "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]]}
+      {:des "Left Control + 2: activate iTerm + Fork"
+            :rules [:parallels[:!W2 "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"]]}
+      {:des "Left Control + e: activate Google Chrome Dev"
+            :rules [:parallels[:!We "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
+      {:des "Left Control + 3: activate Slack"
+            :rules [:parallels[:!W3 "osascript -e 'tell application \"Slack\" to activate'"]]}
+      {:des "Left Control + 4: activate Google Chrome YouTube"
+            :rules [:parallels[:!W4"osascript -e 'tell application \"Google Chrome YouTube\" to activate'"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Google Chrome
@@ -363,7 +358,7 @@
       {:des "Left Control + 1: activate Google Chrome Personal"
             :rules [[:!T1 "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]]}
       {:des "Left Control + w: activate VSCode"
-            :rules [[:!Tw "osascript -e 'tell application \"Code\" to activate'"]]}
+            :rules [[:!Tw "osascript ~/dev/osandell/scripts-osx/keyboard-mapping/launch_vscode_or_visual_studio.applescript"]]}
       {:des "Left Control + 2: activate iTerm + Fork"
             :rules [[:!T2 "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"]]}
       {:des "Left Control + e: activate Google Chrome Dev"
@@ -377,15 +372,15 @@
       ;; Window positioning
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Left Command + Shift + Return: Maximize window"
-            :rules [[:!CSreturn_or_enter "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current maximized auto"]]} 
+            :rules [:!parallels[:!CSreturn_or_enter "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current maximized auto"]]} 
       {:des "Left Command + Shift + Arrow Up: Maximize window with no space around"
-            :rules [[:!CSup_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current maximized false"]]}  
+            :rules [:!parallels[:!CSup_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current maximized false"]]}  
       {:des "Left Command + Shift + Arrow Left: Position window to left half"
-            :rules [[:!CSleft_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current left-half auto"]]}  
+            :rules [:!parallels[:!CSleft_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current left-half auto"]]}  
       {:des "Left Command + Shift + Arrow Right: Position window to right half"
-            :rules [[:!CSright_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current right-half auto"]]}  
+            :rules [:!parallels[:!CSright_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current right-half auto"]]}  
       {:des "Left Command + Shift + Arrow Down: Position windows"
-            :rules [[:!CSdown_arrow "'/Users/olof/Library/Application Scripts/net.mousedown.EventScripts/position-windows.sh'"]]} 
+            :rules [:!parallels[:!CSdown_arrow "'/Users/olof/Library/Application Scripts/net.mousedown.EventScripts/position-windows.sh'"]]} 
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
@@ -411,9 +406,9 @@
       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
             :rules [:!parallels[:##caps_lock :left_control nil {:alone :escape}]]}
       {:des "Esc to Right Control when holding, Caps Lock when tapped"
-            :rules [[:##escape :right_control nil {:alone :caps_lock}]]}
+            :rules [:!parallels[:##escape :right_control nil {:alone :caps_lock}]]}
       {:des "Right Control + q, 1, §, 2 and to mark all, copy, cut, paste, and save (used with esc as modifier)"
-            :rules [[:!Wq :!Ca] [:!W1 :!Cc] [:!Wnon_us_backslash  :!Cx] [:!W2 :!Cv] [:!W3 :!Cs]]}
+            :rules [:!parallels[:!Wq :!Ca] [:!W1 :!Cc] [:!Wnon_us_backslash  :!Cx] [:!W2 :!Cv] [:!W3 :!Cs]]}
       {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"
             :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]} 
       {:des "Left Control + n to go to beginning of the content of the line"
@@ -443,11 +438,11 @@
       {:des "Make enter unblocked when holding Left Shift + Left Option"
             :rules [[:!SOreturn_or_enter :return_or_enter]]}
       {:des "Move tabs left / right with Right Control + h / l"
-            :rules [[:!Wh :!COleft_arrow], [:!Wl :!COright_arrow]]}
+            :rules [:!parallels[:!Wh :!COleft_arrow], [:!Wl :!COright_arrow]]}
       {:des "New tab with Right Control + t"
-            :rules [[:!Wt :!Ct]]}
+            :rules [:!parallels[:!Wt :!Ct]]}
       {:des "Close tab with Right Control + w"
-            :rules [[:!Ww :!Cw]]}
+            :rules [:!parallels[:!Ww :!Cw]]}
       {:des "Left Shift + Left Option + d to print today's date" :rules
             [[:!SOd "osascript -e '
             set {year:yr, month:mn, day:dy} to (current date)
@@ -464,9 +459,9 @@
       {:des "Left Control + h / j / k / l to arrow keys"
             :rules [[:!T##h :left_arrow] [:!T##j :down_arrow] [:!T##k :up_arrow] [:!T##l :right_arrow]]}
       {:des "Right Control + M to minimize window"
-            :rules [[:!Wm :!Cm]]}
+            :rules [:!parallels[:!Wm :!Cm]]}
       {:des "Right Control + f to go to fullscreen"
-            :rules [[:!Wf "osascript -e '
+            :rules [:!parallels[:!Wf "osascript -e '
             tell application \"System Events\"
                   tell (first process where it is frontmost)
                         if value of attribute \"AXFullScreen\" of window 1 = false then
@@ -493,12 +488,12 @@
             :rules [[:!TSdelete_or_backspace nil nil {
             :held "osascript -e 'tell application \"Finder\" to empty trash'"}]]}
       {:des "Left Control + Backspace to delete a word at a time instead of Option + Backspace"
-            :rules [[:!Tdelete_or_backspace :!Odelete_or_backspace] [:!Odelete_or_backspace :delete_or_backspace]]}
+            :rules [:!parallels [:!Tdelete_or_backspace :!Odelete_or_backspace] [:!Odelete_or_backspace :delete_or_backspace]]}
       {:des "Left Control + Shift + G: Check if we have synced all repos to GitHub"
             :rules [[:!TSg "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"]]} 
       {:des "Fn + ´ to switch to stock Mac keyboard mapping"
             :rules [[:!Cequal_sign "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-stock-keyboard-mapping.sh"]]}      
       {:des "Right Control + Space: Spotlight"
-            :rules [[:!Wspacebar :!Cspacebar]]} 
+            :rules [:!parallels[:!Wspacebar :!Cspacebar]]} 
 ]}
 
