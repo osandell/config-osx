@@ -480,5 +480,14 @@
   {
     "key": "ctrl+shift+v",
     "command": "toggleVim"
+  },
+  {
+    "key": "shift+alt+t",
+    "command": "workbench.action.togglePanel",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
   }
 ]
