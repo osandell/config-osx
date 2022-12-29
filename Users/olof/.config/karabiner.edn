@@ -254,7 +254,7 @@
             :rules [:vscode[:!STa [:!Ck :!Cr]]]}
       {:des "Right Control + w to Close all tab if held / Close current tab if tapped"
             :rules [:vscode[:!Ww nil nil {:alone :!Cw
-            :held [:!Ck :!Cw]}]]}
+            :held [:!ERe :!Ck :!Cw]}]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; iTerm

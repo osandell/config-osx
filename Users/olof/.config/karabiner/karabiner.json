@@ -1288,6 +1288,9 @@
             "modifiers" : [ "left_command" ]
           } ],
           "to_if_held_down" : [ {
+            "key_code" : "e",
+            "modifiers" : [ "right_option", "right_shift" ]
+          }, {
             "key_code" : "k",
             "modifiers" : [ "left_command" ]
           }, {
