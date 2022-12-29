@@ -1,5 +1,5 @@
 {
-   "checksum": "78b2fb59cd9c4bb0404f9e02e0053a7c",
+   "checksum": "c25e2ba7230cbd3c20770ca53b2ba401",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -21,6 +21,17 @@
             "name": "Deep dive into the new Suspense Server-side Rendering ( SSR ) architecture in React 18 | Saeloun Blog",
             "type": "url",
             "url": "https://blog.saeloun.com/2022/01/20/new-suspense-ssr-architecture-in-react-18.html"
+         }, {
+            "date_added": "13316829966419870",
+            "date_last_used": "0",
+            "guid": "030bb735-cb4f-412c-b6a7-996893c5fbe2",
+            "id": "46",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "The future of rendering in React",
+            "type": "url",
+            "url": "https://prateeksurana.me/blog/future-of-rendering-in-react/"
          }, {
             "date_added": "13316806164896013",
             "date_last_used": "0",
@@ -198,7 +209,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13316806164896020",
+         "date_modified": "13316829966419880",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
