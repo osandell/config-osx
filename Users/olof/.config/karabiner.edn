@@ -80,10 +80,10 @@
       ;; Media + Brighness Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Right Shift + Left to rewind media" :rules
-            [[:!Rleft_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.applescript"]]
+            [[:!Rleft_arrow "osascript ~/dev/osandell/scripts-osx/media-playback-control/rewind.applescript"]]
       }
       {:des "Right Shift + Right to fast forward media" :rules
-            [[:!Rright_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.applescript"]]
+            [[:!Rright_arrow "osascript ~/dev/osandell/scripts-osx/media-playback-control/forward.applescript"]]
       }
       {:des "Right Shift + Up to raise volume" 
             :rules [[:!Rup_arrow :volume_increment]]}
@@ -91,7 +91,7 @@
             :rules [[:!Rdown_arrow :volume_decrement]]
       }
       {:des "Right Shift + - to play / pause media"
-            :rules [[:!Rslash "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.applescript"]]}
+            :rules [[:!Rslash "osascript ~/dev/osandell/scripts-osx/media-playback-control/play_pause.applescript"]]}
       {:des "Left Shift + Up to increase brighness"
             :rules [[:!Sup_arrow :display_brightness_increment]]}
       {:des "Left Shift + Down to decrease brightness" 

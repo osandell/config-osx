@@ -165,7 +165,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.applescript"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/media-playback-control/rewind.applescript"
           } ],
           "type" : "basic"
         } ]
@@ -179,7 +179,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.applescript"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/media-playback-control/forward.applescript"
           } ],
           "type" : "basic"
         } ]
@@ -221,7 +221,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.applescript"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/media-playback-control/play_pause.applescript"
           } ],
           "type" : "basic"
         } ]
