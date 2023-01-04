@@ -1310,6 +1310,40 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Right Control + - to split horizontally",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n            tell application \"System Events\" to key code 8 using control down\n            tell application \"System Events\" to key code 8 using control down\n            tell application \"System Events\" to key code 36\n            '"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "d",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Right Control + K / J to focus split pane above / below",
         "manipulators" : [ {
           "from" : {
@@ -1510,25 +1544,6 @@
           },
           "to" : [ {
             "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 20 using {command down, option down}\n            tell application \"iTerm\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Control + - to split horizontally",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "slash",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "d",
-            "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",

@@ -255,6 +255,12 @@
       {:des "Right Control + w to Close all tab if held / Close current tab if tapped"
             :rules [:vscode[:!Ww nil nil {:alone :!Cw
             :held [:!ERe :!Ck :!Cw]}]]}
+      {:des "Right Control + - to split horizontally"
+            :rules [:vscode[:!Tc "osascript -e '
+            tell application \"System Events\" to key code 8 using control down
+            tell application \"System Events\" to key code 8 using control down
+            tell application \"System Events\" to key code 36
+            '"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; iTerm
