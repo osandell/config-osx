@@ -260,7 +260,7 @@
       ;; iTerm
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Right Control + K / J to focus split pane above / below"
-            :rules [:iterm[:!Tk :!OCup_arrow] [:!Tj :!OCdown_arrow]]}
+            :rules [:iterm[:!Wk :!OCup_arrow] [:!Wj :!OCdown_arrow]]}
 
       ;; At first I remapped keypad 7 and 8 to [ and ] and remapped Left Control + H /
       ;; L to keypad 7 and 8. It worked fine for iTerm, however for some strange
@@ -318,7 +318,9 @@
       {:des "Right Control + - to split horizontally"
             :rules [:iterm[:!Wslash :!SCd]]}
       {:des "Right Control + t to open new tab and split horizontally"
-            :rules [:iterm[:!Wt [:!Ct :!SCd]]]}
+            :rules [:iterm[:!Wt [:!Ct :!SCd "osascript -e '
+           tell application \"System Events\" to key code 126 using {command down, option down}
+            '"]]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Fork

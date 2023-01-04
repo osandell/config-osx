@@ -1315,7 +1315,7 @@
           "from" : {
             "key_code" : "k",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "right_control" ]
             }
           },
           "to" : [ {
@@ -1331,7 +1331,7 @@
           "from" : {
             "key_code" : "j",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "right_control" ]
             }
           },
           "to" : [ {
@@ -1551,6 +1551,8 @@
           }, {
             "key_code" : "d",
             "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "shell_command" : "osascript -e '\n           tell application \"System Events\" to key code 126 using {command down, option down}\n            '"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
