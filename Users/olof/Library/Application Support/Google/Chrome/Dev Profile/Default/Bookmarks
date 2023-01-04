@@ -1,5 +1,5 @@
 {
-   "checksum": "3eed63cf08474f3f15ac45a19527a309",
+   "checksum": "a6e275f05af9d297f8348d59b92f87d5",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -21,7 +21,7 @@
             "meta_info": {
                "power_bookmark_meta": ""
             },
-            "name": "Johaug QA",
+            "name": "8000",
             "type": "url",
             "url": "http://localhost:8000/"
          }, {
