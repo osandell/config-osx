@@ -1,19 +1,8 @@
 {
-   "checksum": "a6e275f05af9d297f8348d59b92f87d5",
+   "checksum": "7aa286706f18eeb3cfac90de1e21a64e",
    "roots": {
       "bookmark_bar": {
          "children": [ {
-            "date_added": "13315948446339539",
-            "date_last_used": "13316083784056790",
-            "guid": "a3bc5ada-d905-4841-ba33-4d3b4d59b35e",
-            "id": "95",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "Vite + React",
-            "type": "url",
-            "url": "http://localhost:5173/"
-         }, {
             "date_added": "13315310274466943",
             "date_last_used": "13316011203133086",
             "guid": "2747b0b1-3a68-480a-88b9-14d411320021",
@@ -25,17 +14,6 @@
             "type": "url",
             "url": "http://localhost:8000/"
          }, {
-            "date_added": "13316219422760637",
-            "date_last_used": "0",
-            "guid": "82cdb343-f67a-4cd0-bae0-bc5e5d596dce",
-            "id": "99",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "Module System",
-            "type": "url",
-            "url": "https://johaug.qa.grebban.com/en/module-system/"
-         }, {
             "date_added": "13316195137501699",
             "date_last_used": "0",
             "guid": "12041209-29b9-4e54-a3ae-43f92a821a72",
@@ -46,6 +24,17 @@
             "name": "Johaug QA",
             "type": "url",
             "url": "https://johaug.qa.grebban.com/se/sv/"
+         }, {
+            "date_added": "13317396714615967",
+            "date_last_used": "0",
+            "guid": "c469cf79-2d80-45a9-92cb-91591f8edced",
+            "id": "101",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Djerf QA",
+            "type": "url",
+            "url": "https://djerf.qa.grebban.com/en-us/"
          }, {
             "date_added": "13301097428000000",
             "date_last_used": "13310468008409515",
@@ -440,7 +429,7 @@
          } ],
          "date_added": "13304357303342643",
          "date_last_used": "0",
-         "date_modified": "13316219422760639",
+         "date_modified": "13317396714615970",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
