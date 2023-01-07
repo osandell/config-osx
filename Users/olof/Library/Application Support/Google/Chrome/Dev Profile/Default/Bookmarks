@@ -1,8 +1,19 @@
 {
-   "checksum": "7aa286706f18eeb3cfac90de1e21a64e",
+   "checksum": "8b63c4c7ca4f4392728695885934d040",
    "roots": {
       "bookmark_bar": {
          "children": [ {
+            "date_added": "13317584950849092",
+            "date_last_used": "0",
+            "guid": "ffd8c3c1-c52b-4f93-ad13-3f43dfafe622",
+            "id": "103",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Vite + React",
+            "type": "url",
+            "url": "http://127.0.0.1:5173/"
+         }, {
             "date_added": "13315310274466943",
             "date_last_used": "13316011203133086",
             "guid": "2747b0b1-3a68-480a-88b9-14d411320021",
@@ -429,7 +440,7 @@
          } ],
          "date_added": "13304357303342643",
          "date_last_used": "0",
-         "date_modified": "13317396714615970",
+         "date_modified": "13317584950849094",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",

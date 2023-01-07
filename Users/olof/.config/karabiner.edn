@@ -242,10 +242,10 @@
 
       ; For the following 2 definitions to work I've also mapped ° and ˝ to
       ; melodies in VSCode VIM.
-      {:des "Left Control + . to console log without variable"
-            :rules [:vscode[:!Tperiod :!SEq]]}
-      {:des "Left Control + , to console log with variable"
-            :rules [:vscode[:!Tcomma :!SEw]]}
+      {:des "Left Control + , to console log without variable"
+            :rules [:vscode[:!Tcomma :!SEq]]}
+      {:des "Left Control + m to console log with variable"
+            :rules [:vscode[:!Tm :!SEw]]}
       {:des "Left Option + tab to alternate between the 2 most recent tabs"
             :rules [:vscode[:!Otab :!Ttab]]}
       {:des "Left Control + a to stage selected area"
@@ -348,7 +348,7 @@
             '"]] 
             [:!Tk [:up_arrow "osascript -e '
             tell application \"iTerm\" to activate
-            '"]]]}
+            '"]]]} 
       {:des "Right Shift + Right Option + I to view branch info"
             :rules [:fork [:!ERi :!CO1]]}
       {:des "Right Shift + Right Option + C to view branch changes"
@@ -421,8 +421,8 @@
             :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]} 
       {:des "Left Control + n to go to beginning of the content of the line"
             :rules [[:!Tn :home]]}
-      {:des "Left Control + m to go to end of the line"
-            :rules [[:!Tm :end]]}
+      {:des "Left Control + . to go to end of the line"
+            :rules [[:!Tperiod :end]]}
       {:des "Left Control + d to delete"
             :rules [[:!Td :delete_forward]]} 
       {:des "Left Control + y to copy"
@@ -480,8 +480,8 @@
                   end tell
             end tell
             '"]]}
-      {:des "Option + å to Shift + '+' key in order for ? hotkey to work in Vimium"
-            :rules [[:!Oopen_bracket :!Shyphen] [:!Eopen_bracket :!Shyphen]]}
+      {:des "Option + ä to Shift + '+' key in order for ? hotkey to work in Vimium"
+            :rules [[:!Oquote :!Shyphen] [:!Equote :!Shyphen]]}
       {:des "¨ to Shift + '7' key in order for / hotkey to work in Vimium"
             :rules [[:close_bracket :!S7]]}
       {:des "Left Control + - / Ö / Å / Ä to select all / copy / cut / paste"

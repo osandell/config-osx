@@ -1180,10 +1180,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + . to console log without variable",
+        "description" : "Left Control + , to console log without variable",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "period",
+            "key_code" : "comma",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
@@ -1199,10 +1199,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + , to console log with variable",
+        "description" : "Left Control + m to console log with variable",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "comma",
+            "key_code" : "m",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
@@ -2457,10 +2457,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + m to go to end of the line",
+        "description" : "Left Control + . to go to end of the line",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "m",
+            "key_code" : "period",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
@@ -2819,10 +2819,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Option + å to Shift + '+' key in order for ? hotkey to work in Vimium",
+        "description" : "Option + ä to Shift + '+' key in order for ? hotkey to work in Vimium",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "open_bracket",
+            "key_code" : "quote",
             "modifiers" : {
               "mandatory" : [ "left_option" ]
             }
@@ -2834,7 +2834,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "open_bracket",
+            "key_code" : "quote",
             "modifiers" : {
               "mandatory" : [ "right_option" ]
             }
