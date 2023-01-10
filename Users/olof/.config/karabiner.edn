@@ -194,11 +194,11 @@
       {:des "Right Option + Right Shift + m to open mail tab"
             :rules [:chrome[:!ERm "osascript ~/dev/osandell/scripts-osx/chrome/mail.applescript"]]}
 
-      {:des "Left Control + . to switch to prev developer pane"
-            :rules [:chrome[:!Tperiod :!Copen_bracket]]}
+      {:des "Right Control + n to switch to prev developer pane"
+            :rules [:chrome[:!Wn :!Copen_bracket]]}
    
-      {:des "Left Control + - to switch to next developer pane"
-            :rules [:chrome[:!Tslash :!Cgrave_accent_and_tilde]]}
+      {:des "Right Control + . to switch to next developer pane"
+            :rules [:chrome[:!Wperiod :!Cgrave_accent_and_tilde]]}
 
       {:des "Left Control + i to toggle inspector"
             :rules [:chrome[:!Ti :!CEi]]}
@@ -255,11 +255,11 @@
       {:des "Right Control + w to Close all tab if held / Close current tab if tapped"
             :rules [:vscode[:!Ww nil nil {:alone :!Cw
             :held [:!ERe :!Ck :!Cw]}]]}
-      {:des "Right Control + - to split horizontally"
+      {:des "Left Control + c to terminate process"
             :rules [:vscode[:!Tc "osascript -e '
             tell application \"System Events\" to key code 8 using control down
+            delay 0.5
             tell application \"System Events\" to key code 8 using control down
-            tell application \"System Events\" to key code 36
             '"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -292,13 +292,13 @@
             '"]]]}
       {:des "Keypad 7 to 7 in order for it to work as expected, given the Ukelele remap explained above"
             :rules [[:keypad_7 :7]]}
-      {:des "Left Control + J / K to move down / up in Fork"
-            :rules [:iterm [:!Tj "osascript -e '
+      {:des "Left Control + Shift + J / K to move down / up in Fork"
+            :rules [:iterm [:!TSj "osascript -e '
             tell application \"Fork\" to activate
             tell application \"System Events\" to key code 125
             tell application \"iTerm\" to activate
             '"] 
-            [:!Tk "osascript -e '
+            [:!TSk "osascript -e '
             tell application \"Fork\" to activate
             tell application \"System Events\" to key code 126
             tell application \"iTerm\" to activate

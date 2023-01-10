@@ -916,12 +916,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + . to switch to prev developer pane",
+        "description" : "Right Control + n to switch to prev developer pane",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "period",
+            "key_code" : "n",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "right_control" ]
             }
           },
           "to" : [ {
@@ -935,12 +935,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + - to switch to next developer pane",
+        "description" : "Right Control + . to switch to next developer pane",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "slash",
+            "key_code" : "period",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "right_control" ]
             }
           },
           "to" : [ {
@@ -1310,7 +1310,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + - to split horizontally",
+        "description" : "Left Control + c to terminate process",
         "manipulators" : [ {
           "from" : {
             "key_code" : "c",
@@ -1319,27 +1319,11 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"System Events\" to key code 8 using control down\n            tell application \"System Events\" to key code 8 using control down\n            tell application \"System Events\" to key code 36\n            '"
+            "shell_command" : "osascript -e '\n            tell application \"System Events\" to key code 8 using control down\n            delay 0.5\n            tell application \"System Events\" to key code 8 using control down\n            '"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
             "bundle_identifiers" : [ "com.microsoft.VSCode" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "slash",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "d",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
           } ],
           "type" : "basic"
         } ]
@@ -1465,12 +1449,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + J / K to move down / up in Fork",
+        "description" : "Left Control + Shift + J / K to move down / up in Fork",
         "manipulators" : [ {
           "from" : {
             "key_code" : "j",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "left_control", "left_shift" ]
             }
           },
           "to" : [ {
@@ -1485,7 +1469,7 @@
           "from" : {
             "key_code" : "k",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "left_control", "left_shift" ]
             }
           },
           "to" : [ {
@@ -1544,6 +1528,25 @@
           },
           "to" : [ {
             "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 20 using {command down, option down}\n            tell application \"iTerm\" to activate\n            '"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Control + - to split horizontally",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "d",
+            "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
