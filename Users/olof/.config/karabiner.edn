@@ -327,6 +327,12 @@
             :rules [:iterm[:!Wt [:!Ct :!SCd "osascript -e '
            tell application \"System Events\" to key code 126 using {command down, option down}
             '"]]]}
+      {:des "Right Control + w to close tab group"
+            :rules [:iterm[:!Ww [:!Cw :!Cw "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 13 using {command down}
+            tell application \"iTerm\" to activate
+            '"]]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Fork

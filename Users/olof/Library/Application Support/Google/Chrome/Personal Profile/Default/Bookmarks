@@ -1,5 +1,5 @@
 {
-   "checksum": "c25e2ba7230cbd3c20770ca53b2ba401",
+   "checksum": "908be74aa1ea419e4c7141ca265b5d24",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -206,10 +206,21 @@
             "name": "elf",
             "type": "url",
             "url": "https://github.com/bkerler/edl/issues/109"
+         }, {
+            "date_added": "13317849754052494",
+            "date_last_used": "0",
+            "guid": "287b129a-b057-40a3-b04f-9167b204ffb1",
+            "id": "48",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Fork - a fast and friendly git client for Mac and Windows",
+            "type": "url",
+            "url": "https://git-fork.com/"
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13316829966419880",
+         "date_modified": "13317849754052494",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
