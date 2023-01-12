@@ -50,6 +50,8 @@ END
 repo() {
     REPO_PATH=""
     case "$1" in
+        ab)
+            REPO_PATH="~/dev/olofgrebban/active-brands-frontend" ;;
         rd)
             REPO_PATH="~/dev/olofgrebban/royal-web" ;;
         rd2)
@@ -91,4 +93,4 @@ repo() {
         ' "$REPO_PATH"
     fi        
 }
-complete -W "rd rd2 rd3 djerf scripts-osx default-browser-launcher" repo
+complete -W "ab rd rd2 rd3 djerf scripts-osx default-browser-launcher" repo
