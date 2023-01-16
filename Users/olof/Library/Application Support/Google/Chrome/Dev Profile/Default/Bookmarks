@@ -1,5 +1,5 @@
 {
-   "checksum": "8b63c4c7ca4f4392728695885934d040",
+   "checksum": "7c24dfdc7abe8d1517dbe125fd4a7078",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -426,17 +426,6 @@
             "id": "71",
             "name": "R21 Prod",
             "type": "folder"
-         }, {
-            "date_added": "13314176322090356",
-            "date_last_used": "13314285871943375",
-            "guid": "4b2b55b6-098b-4deb-9baa-65aee6331a0a",
-            "id": "89",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "GitHub - kumar303/default-opener: Browser extension to open links in your default browser",
-            "type": "url",
-            "url": "https://github.com/kumar303/default-opener"
          } ],
          "date_added": "13304357303342643",
          "date_last_used": "0",
