@@ -50,6 +50,7 @@ END
 repo() {
     REPO_PATH=""
     case "$1" in
+        # Work
         ab)
             REPO_PATH="~/dev/olofgrebban/active-brands-frontend" ;;
         rd)
@@ -60,10 +61,14 @@ repo() {
             REPO_PATH="~/dev/olofgrebban/royal-web-3" ;;
         djerf)
             REPO_PATH="~/dev/olofgrebban/djerf-frontend" ;;
-        scripts-osx)
-            REPO_PATH="~/dev/osandell/scripts-osx" ;;
+
+        # Personal
         default-browser-launcher)
             REPO_PATH="~/dev/osandell/default-browser-launcher" ;;
+        scripts-osx)
+            REPO_PATH="~/dev/osandell/scripts-osx" ;;
+        set-window-boundaries)
+            REPO_PATH="~/dev/osandell/set-window-boundaries" ;;
         *)
             echo $"Usage: $0 {name of repo}\n\nPress tab to see available repos"
     esac
@@ -93,4 +98,4 @@ repo() {
         ' "$REPO_PATH"
     fi        
 }
-complete -W "ab rd rd2 rd3 djerf scripts-osx default-browser-launcher" repo
+complete -W "ab rd rd2 rd3 default-browser-launcher djerf scripts-osx set-window-boundaries" repo

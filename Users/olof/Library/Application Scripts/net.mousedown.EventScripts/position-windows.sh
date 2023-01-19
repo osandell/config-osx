@@ -1,7 +1,7 @@
 #!/bin/bash
 
 osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript "Google Chrome Music" primary maximized auto
-osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript "Google Chrome Personal" secondary maximized auto
+osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript "Google Chrome Personal" primary maximized auto
 osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript Slack primary maximized auto
 osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript "Google Chrome Grebban" primary maximized auto
 osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript "Google Chrome Dev" secondary maximized auto
