@@ -236,9 +236,17 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; VSCode
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + r to run last used terminal command"
-            :rules [:vscode[:!Tr nil nil {:alone "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.applescript"
+      {:des "Left Control + Left Shift + r to run last used terminal command"
+            :rules [:vscode[:!TSr nil nil {:alone "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.applescript"
             :held "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.applescript"}]]}
+      {:des "Left Control + r to reload Chrome Dev"
+            :rules [:vscode[:!Tr "osascript -e '
+            tell application \"Google Chrome Dev\" to activate
+            delay 0.5
+            tell application \"System Events\" to key code 15 using {command down, shift down}
+            tell application \"Code\" to activate
+            '"]]}
+
 
       ; For the following 2 definitions to work I've also mapped ° and ˝ to
       ; melodies in VSCode VIM.

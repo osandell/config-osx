@@ -1159,7 +1159,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + r to run last used terminal command",
+        "description" : "Left Control + Left Shift + r to run last used terminal command",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.applescript"
@@ -1170,9 +1170,27 @@
           "from" : {
             "key_code" : "r",
             "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + r to reload Chrome Dev",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
           },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n            tell application \"Google Chrome Dev\" to activate\n            delay 0.5\n            tell application \"System Events\" to key code 15 using {command down, shift down}\n            tell application \"Code\" to activate\n            '"
+          } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
             "bundle_identifiers" : [ "com.microsoft.VSCode" ]
