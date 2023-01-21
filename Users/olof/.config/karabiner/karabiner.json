@@ -1335,111 +1335,8 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Control + K / J to focus split pane above / below",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_command", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_command", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_command", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_command", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "Right Control + H / L to focus tab to the left / right",
         "manipulators" : [ {
-          "from" : {
-            "key_code" : "h",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "keypad_7",
-            "modifiers" : [ "left_command", "left_shift" ]
-          }, {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 48 using {control down, shift down}\n            tell application \"iTerm\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "grave_accent_and_tilde",
-            "modifiers" : [ "left_command", "left_shift" ]
-          }, {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 48 using control down\n            tell application \"iTerm\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
           "from" : {
             "key_code" : "h",
             "modifiers" : {
@@ -1483,7 +1380,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "left_arrow",
+            "key_code" : "tab",
             "modifiers" : [ "left_control", "left_shift" ]
           }, {
             "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 48 using {control down, shift down}\n            tell application \"Warp\" to activate\n            '"
@@ -1501,316 +1398,10 @@
             }
           },
           "to" : [ {
-            "key_code" : "right_arrow",
-            "modifiers" : [ "left_control", "left_shift" ]
+            "key_code" : "tab",
+            "modifiers" : [ "left_control" ]
           }, {
             "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 48 using control down\n            tell application \"Warp\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Keypad 7 to 7 in order for it to work as expected, given the Ukelele remap explained above",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "keypad_7"
-          },
-          "to" : [ {
-            "key_code" : "7"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "keypad_7"
-          },
-          "to" : [ {
-            "key_code" : "7"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Control + Shift + J / K to move down / up in Fork",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 125\n            tell application \"iTerm\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 126\n            tell application \"iTerm\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 125\n            tell application \"Warp\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 126\n            tell application \"Warp\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Shift + Right Option + I to view branch info in Fork",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "i",
-            "modifiers" : {
-              "mandatory" : [ "right_option", "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 18 using {command down, option down}\n            tell application \"iTerm\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "i",
-            "modifiers" : {
-              "mandatory" : [ "right_option", "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 18 using {command down, option down}\n            tell application \"Warp\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Shift + Right Option + C to view branch changes in Fork",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "c",
-            "modifiers" : {
-              "mandatory" : [ "right_option", "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 19 using {command down, option down}\n            tell application \"iTerm\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "c",
-            "modifiers" : {
-              "mandatory" : [ "right_option", "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 19 using {command down, option down}\n            tell application \"Warp\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Shift + Right Option + F to view branch file tree in Fork",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "f",
-            "modifiers" : {
-              "mandatory" : [ "right_option", "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 20 using {command down, option down}\n            tell application \"iTerm\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "f",
-            "modifiers" : {
-              "mandatory" : [ "right_option", "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 20 using {command down, option down}\n            tell application \"Warp\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Control + - to split horizontally",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "slash",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "d",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "slash",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "d",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Control + t to open new tab and split horizontally",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "t",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "t",
-            "modifiers" : [ "left_command" ]
-          }, {
-            "key_code" : "d",
-            "modifiers" : [ "left_command", "left_shift" ]
-          }, {
-            "shell_command" : "osascript -e '\n           tell application \"System Events\" to key code 126 using {command down, option down}\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "t",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "t",
-            "modifiers" : [ "left_command" ]
-          }, {
-            "key_code" : "d",
-            "modifiers" : [ "left_command", "left_shift" ]
-          }, {
-            "shell_command" : "osascript -e '\n           tell application \"System Events\" to key code 126 using {command down, option down}\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Control + w to close tab group",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "w",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "w",
-            "modifiers" : [ "left_command" ]
-          }, {
-            "key_code" : "w",
-            "modifiers" : [ "left_command" ]
-          }, {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 13 using {command down}\n            tell application \"iTerm\" to activate\n            '"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.googlecode.iterm2" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "w",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "w",
-            "modifiers" : [ "left_command" ]
-          }, {
-            "key_code" : "w",
-            "modifiers" : [ "left_command" ]
-          }, {
-            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 13 using {command down}\n            tell application \"Warp\" to activate\n            '"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -1932,6 +1523,176 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Right Control + K / J to focus split pane above / below",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_command", "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_command", "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + Shift + J / K to move down / up in Fork",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 125\n            tell application \"Warp\" to activate\n            '"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 126\n            tell application \"Warp\" to activate\n            '"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Shift + Right Option + I to view branch info in Fork",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 18 using {command down, option down}\n            tell application \"Warp\" to activate\n            '"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Shift + Right Option + C to view branch changes in Fork",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 19 using {command down, option down}\n            tell application \"Warp\" to activate\n            '"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Shift + Right Option + F to view branch file tree in Fork",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 20 using {command down, option down}\n            tell application \"Warp\" to activate\n            '"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Control + t to open new tab and split horizontally",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "t",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "d",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "shell_command" : "osascript -e '\n           tell application \"System Events\" to key code 126 using {command down, option down}\n            '"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Control + w to close tab group",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "w",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "w",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "shell_command" : "osascript -e '\n            tell application \"Fork\" to activate\n            tell application \"System Events\" to key code 13 using {command down}\n            tell application \"Warp\" to activate\n            '"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.warp.Warp-Stable" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "< to Left Shift if holding, to autocomplete when pressed alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
@@ -1953,10 +1714,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + l to bring up autocomplete menu",
+        "description" : "Left Control + comma to bring up autocomplete menu",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "l",
+            "key_code" : "comma",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
