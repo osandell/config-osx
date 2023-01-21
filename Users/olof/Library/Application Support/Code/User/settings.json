@@ -362,5 +362,8 @@
   "colorTabs.statusBarBackground": false,
   "colorTabs.titleBackground": true,
   "colorTabs.tabBorder": false,
-  "colorTabs.ignoreCase": true
+  "colorTabs.ignoreCase": true,
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }
