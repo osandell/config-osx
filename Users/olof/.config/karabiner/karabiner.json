@@ -1793,7 +1793,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Warp\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"Warp\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Fork\" to activate\ntell application \"Warp\" to activate'"
           } ],
           "type" : "basic"
         } ]
@@ -1879,7 +1879,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "'/Users/olof/Library/Application Scripts/net.mousedown.EventScripts/position-windows.sh'"
+            "shell_command" : "/Users/olof/dev/osandell/scripts-osx/eventscripts-helper/position-all-windows.sh"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_unless",

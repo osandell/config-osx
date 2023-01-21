@@ -376,7 +376,7 @@
       {:des "Left Control + w: activate VSCode"
             :rules [[:!Tw "osascript ~/dev/osandell/scripts-osx/keyboard-mapping/launch_vscode_or_visual_studio.applescript"]]}
       {:des "Left Control + 2: activate Warp + Fork"
-            :rules [[:!T2 "osascript -e 'tell application \"Warp\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"Warp\" to activate'"]]}
+            :rules [[:!T2 "osascript -e 'tell application \"Fork\" to activate\ntell application \"Warp\" to activate'"]]}
       {:des "Left Control + e: activate Google Chrome Dev"
             :rules [[:!Te "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
       {:des "Left Control + 3: activate Slack"
@@ -396,7 +396,7 @@
       {:des "Left Command + Shift + Arrow Right: Position window to right half"
             :rules [:!parallels[:!CSright_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current right-half auto"]]}  
       {:des "Left Command + Shift + Arrow Down: Position windows"
-            :rules [:!parallels[:!CSdown_arrow "'/Users/olof/Library/Application Scripts/net.mousedown.EventScripts/position-windows.sh'"]]} 
+            :rules [:!parallels[:!CSdown_arrow "/Users/olof/dev/osandell/scripts-osx/eventscripts-helper/position-all-windows.sh"]]} 
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
