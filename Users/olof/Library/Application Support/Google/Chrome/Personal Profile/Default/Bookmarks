@@ -1,5 +1,5 @@
 {
-   "checksum": "a49421732625a70f8978205c6274d6c2",
+   "checksum": "5c6fe76d42a8e0de2ce8af14b9948b22",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -102,10 +102,43 @@
             "name": "edX | Free Online Courses by Harvard, MIT, & more | edX",
             "type": "url",
             "url": "https://www.edx.org/"
+         }, {
+            "date_added": "13318769069400854",
+            "date_last_used": "0",
+            "guid": "3072f701-f8cc-4467-b9f5-776db791589e",
+            "id": "48",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Google Style Guides | styleguide",
+            "type": "url",
+            "url": "https://google.github.io/styleguide/"
+         }, {
+            "date_added": "13318785582473472",
+            "date_last_used": "0",
+            "guid": "26b19774-ef38-40f4-bcdb-3a851b550b63",
+            "id": "49",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "serenity/CodingStyle.md at master · SerenityOS/serenity · GitHub",
+            "type": "url",
+            "url": "https://github.com/SerenityOS/serenity/blob/master/Documentation/CodingStyle.md"
+         }, {
+            "date_added": "13318788530822140",
+            "date_last_used": "0",
+            "guid": "d108c808-cc09-4858-bbbc-7fb9136a7cd0",
+            "id": "50",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "How do I escape characters in GitHub code search? - Stack Overflow",
+            "type": "url",
+            "url": "https://stackoverflow.com/questions/34242460/how-do-i-escape-characters-in-github-code-search"
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13318024621291292",
+         "date_modified": "13318788530822146",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
