@@ -50,36 +50,45 @@ END
 repo() {
     REPO_PATH=""
     case "$1" in
-        # Work
-        ab)
-            REPO_PATH="~/dev/olofgrebban/active-brands-frontend" ;;
-        rd)
-            REPO_PATH="~/dev/olofgrebban/royal-web" ;;
-        rd2)
-            REPO_PATH="~/dev/olofgrebban/royal-web-2" ;;
-        rd3)
-            REPO_PATH="~/dev/olofgrebban/royal-web-3" ;;
-        djerf)
-            REPO_PATH="~/dev/olofgrebban/djerf-frontend" ;;
+    # Work
+    ab)
+        REPO_PATH="~/dev/olofgrebban/active-brands-frontend"
+        ;;
+    rd)
+        REPO_PATH="~/dev/olofgrebban/royal-web"
+        ;;
+    rd2)
+        REPO_PATH="~/dev/olofgrebban/royal-web-2"
+        ;;
+    rd3)
+        REPO_PATH="~/dev/olofgrebban/royal-web-3"
+        ;;
+    djerf)
+        REPO_PATH="~/dev/olofgrebban/djerf-frontend"
+        ;;
 
-        # Personal
-        default-browser-launcher)
-            REPO_PATH="~/dev/osandell/default-browser-launcher" ;;
-        scripts-osx)
-            REPO_PATH="~/dev/osandell/scripts-osx" ;;
-        set-window-boundaries)
-            REPO_PATH="~/dev/osandell/set-window-boundaries" ;;
-        *)
-            echo $"Usage: $0 {name of repo}\n\nPress tab to see available repos"
+    # Personal
+    default-browser-launcher)
+        REPO_PATH="~/dev/osandell/default-browser-launcher"
+        ;;
+    scripts-osx)
+        REPO_PATH="~/dev/osandell/scripts-osx"
+        ;;
+    set-window-boundaries)
+        REPO_PATH="~/dev/osandell/set-window-boundaries"
+        ;;
+    *)
+        echo $"Usage: $0 {name of repo}\n\nPress tab to see available repos"
+        ;;
     esac
 
     if [[ "$REPO_PATH" != "" ]]; then
-    osascript -e '
+        osascript -e '
         on run repoPath
             tell application "System Events"
                 key code 17 using {command down}
                 key code 2 using {command down, shift down}
-                delay 0.5
+                delay 2
                 key code 126 using {command down, option down}
                 keystroke repoPath
                 key code 36
@@ -96,6 +105,6 @@ repo() {
             end tell
         end run
         ' "$REPO_PATH"
-    fi        
+    fi
 }
 complete -W "ab rd rd2 rd3 default-browser-launcher djerf scripts-osx set-window-boundaries" repo
