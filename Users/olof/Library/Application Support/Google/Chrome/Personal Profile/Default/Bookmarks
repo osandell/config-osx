@@ -1,5 +1,5 @@
 {
-   "checksum": "5c6fe76d42a8e0de2ce8af14b9948b22",
+   "checksum": "70cae42b8cc6d4dfa3e51b736f61cdd6",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -135,10 +135,21 @@
             "name": "How do I escape characters in GitHub code search? - Stack Overflow",
             "type": "url",
             "url": "https://stackoverflow.com/questions/34242460/how-do-i-escape-characters-in-github-code-search"
+         }, {
+            "date_added": "13318909636623317",
+            "date_last_used": "0",
+            "guid": "84c66a45-ffea-47a8-96f9-d788628dc0db",
+            "id": "52",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "DivineEssentia/Archinstall-for-MacbookPro-16-1: A tutorial for installing Arch Linux on MacbookPro 16,1",
+            "type": "url",
+            "url": "https://github.com/DivineEssentia/Archinstall-for-MacbookPro-16-1"
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13318788530822146",
+         "date_modified": "13318909636623322",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
