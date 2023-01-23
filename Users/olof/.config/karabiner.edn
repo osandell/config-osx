@@ -48,7 +48,7 @@
       :remote-desktop ["com.microsoft.rdc.macos"]
       :slack ["com.tinyspeck.slackmacgap"]
       :vscode ["com.microsoft.VSCode"]
-      :warp ["dev.warp.Warp-Stable"]
+
 }
 
 :profiles  {:Default {:default true :sim 50 :delay 500 :alone 500 :held 500}}
@@ -272,6 +272,78 @@
             '"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; iTerm
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Right Control + K / J to focus split pane above / below"
+            :rules [:iterm[:!Wk :!OCup_arrow] [:!Wj :!OCdown_arrow]]}
+
+      ;; At first I remapped keypad 7 and 8 to [ and ] and remapped Left Control + H /
+      ;; L to keypad 7 and 8. It worked fine for iTerm, however for some strange
+      ;; reason I couln't get it to work in Chrome when focusing tabs in the dev tools
+      ;; pane to the left / right. I had to revert to remapping < key on the SE
+      ;; keyboard to ] again for it to work in Chrome. Not sure why that is. It's also
+      ;; strange that a reverse problem occurs in iTerm. Here I can't use the Å button
+      ;; on the SE keyboard for moving to the left in iTerm, despite this key
+      ;; registering as "open_bracket" in Karabiner Event Listener and it works as
+      ;; expected in Chrome. So what I've ended up with is a remap of the < key to ]
+      ;; for it to work in Chrome, and I've remapped keypad_7 to [ and keypad_8 to ]
+      ;; for it to work in iTerm. Not very consistent but at least it works.
+      {:des "Right Control + H / L to focus tab to the left / right"
+            :rules [:iterm[:!Wh [:!SCkeypad_7 "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 48 using {control down, shift down}
+            tell application \"iTerm\" to activate
+            '"]] 
+            [:!Wl [:!SCgrave_accent_and_tilde "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 48 using control down
+            tell application \"iTerm\" to activate
+            '"]]]}
+      {:des "Keypad 7 to 7 in order for it to work as expected, given the Ukelele remap explained above"
+            :rules [[:keypad_7 :7]]}
+      {:des "Left Control + Shift + J / K to move down / up in Fork"
+            :rules [:iterm [:!TSj "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 125
+            tell application \"iTerm\" to activate
+            '"] 
+            [:!TSk "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 126
+            tell application \"iTerm\" to activate
+            '"]]}
+      {:des "Right Shift + Right Option + I to view branch info in Fork"
+            :rules [:iterm[:!ERi "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 18 using {command down, option down}
+            tell application \"iTerm\" to activate
+            '"]]}
+      {:des "Right Shift + Right Option + C to view branch changes in Fork"
+            :rules [:iterm[:!ERc "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 19 using {command down, option down}
+            tell application \"iTerm\" to activate
+            '"]]}
+      {:des "Right Shift + Right Option + F to view branch file tree in Fork"
+            :rules [:iterm [:!ERf "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 20 using {command down, option down}
+            tell application \"iTerm\" to activate
+            '"]]}
+      {:des "Right Control + - to split horizontally"
+            :rules [:iterm[:!Wslash :!SCd]]}
+      {:des "Right Control + t to open new tab and split horizontally"
+            :rules [:iterm[:!Wt [:!Ct :!SCd "osascript -e '
+           tell application \"System Events\" to key code 126 using {command down, option down}
+            '"]]]}
+      {:des "Right Control + w to close tab group"
+            :rules [:iterm[:!Ww [:!Cw :!Cw "osascript -e '
+            tell application \"Fork\" to activate
+            tell application \"System Events\" to key code 13 using {command down}
+            tell application \"iTerm\" to activate
+            '"]]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Fork
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Right Control + H / L to focus tab to the left / right"
@@ -301,70 +373,85 @@
       {:des "Left Control + O to open file in VSCode"
             :rules [:fork [:!To :!SOCo]]}
 
-      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      ;; Warp
-      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Right Control + K / J to focus split pane above / below"
-            :rules [:warp[:!Wk :!OCup_arrow] [:!Wj :!OCdown_arrow]]}
-    
-      {:des "Right Control + H / L to focus tab to the left / right"
-            :rules [:warp[:!Wh [:!TStab "osascript -e '
-            tell application \"Fork\" to activate
-            tell application \"System Events\" to key code 48 using {control down, shift down}
-            tell application \"Warp\" to activate
-            '"]] 
-            [:!Wl [:!Ttab "osascript -e '
-            tell application \"Fork\" to activate
-            tell application \"System Events\" to key code 48 using control down
-            tell application \"Warp\" to activate
-            '"]]]}
-      {:des "Left Control + Shift + J / K to move down / up in Fork"
-            :rules [:warp [:!TSj "osascript -e '
-            tell application \"Fork\" to activate
-            tell application \"System Events\" to key code 125
-            tell application \"Warp\" to activate
-            '"] 
-            [:!TSk "osascript -e '
-            tell application \"Fork\" to activate
-            tell application \"System Events\" to key code 126
-            tell application \"Warp\" to activate
-            '"]]}
-      {:des "Right Shift + Right Option + I to view branch info in Fork"
-            :rules [:warp[:!ERi "osascript -e '
-            tell application \"Fork\" to activate
-            tell application \"System Events\" to key code 18 using {command down, option down}
-            tell application \"Warp\" to activate
-            '"]]}
-      {:des "Right Shift + Right Option + C to view branch changes in Fork"
-            :rules [:warp[:!ERc "osascript -e '
-            tell application \"Fork\" to activate
-            tell application \"System Events\" to key code 19 using {command down, option down}
-            tell application \"Warp\" to activate
-            '"]]}
-      {:des "Right Shift + Right Option + F to view branch file tree in Fork"
-            :rules [:warp [:!ERf "osascript -e '
-            tell application \"Fork\" to activate
-            tell application \"System Events\" to key code 20 using {command down, option down}
-            tell application \"Warp\" to activate
-            '"]]}
-      {:des "Right Control + t to open new tab and split horizontally"
-            :rules [:warp[:!Wt [:!Ct :!SCd "osascript -e '
-           tell application \"System Events\" to key code 126 using {command down, option down}
-            '"]]]}
-      {:des "Right Control + w to close tab group"
-            :rules [:warp[:!Ww [:!Cw :!Cw "osascript -e '
-            tell application \"Fork\" to activate
-            tell application \"System Events\" to key code 13 using {command down}
-            tell application \"Warp\" to activate
-            '"]]]}
-      {:des "< to Left Shift if holding, to autocomplete when pressed alone"
-            :rules [:warp[:##grave_accent_and_tilde :left_shift nil {:alone :right_arrow}]]}
-      {:des "Left Control + comma to bring up autocomplete menu"
-            :rules [:warp[:!Tcomma :tab]]}
-      {:des "Left Control + m to maximize current pane"
-            :rules [:warp[:!Tm :!CSreturn_or_enter]]}
-      {:des "Left Control + f to find"
-            :rules [:warp[:!Tf :!Cf]]}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching
@@ -375,8 +462,8 @@
             :rules [[:!T1 "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]]}
       {:des "Left Control + w: activate VSCode"
             :rules [[:!Tw "osascript ~/dev/osandell/scripts-osx/keyboard-mapping/launch_vscode_or_visual_studio.applescript"]]}
-      {:des "Left Control + 2: activate Warp + Fork"
-            :rules [[:!T2 "osascript -e 'tell application \"Fork\" to activate\ntell application \"Warp\" to activate'"]]}
+      {:des "Left Control + 2: activate iTerm + Fork"
+            :rules [[:!T2 "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"]]}
       {:des "Left Control + e: activate Google Chrome Dev"
             :rules [[:!Te "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
       {:des "Left Control + 3: activate Slack"

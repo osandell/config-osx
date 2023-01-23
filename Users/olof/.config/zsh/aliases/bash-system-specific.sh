@@ -90,7 +90,7 @@ repo() {
             tell application "System Events"
                 key code 17 using {command down}
                 key code 2 using {command down, shift down}
-                delay 2.5
+                delay 0.5
                 key code 126 using {command down, option down}
                 keystroke repoPath
                 key code 36
