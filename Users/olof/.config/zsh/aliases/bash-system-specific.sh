@@ -84,29 +84,40 @@ repo() {
         ;;
     esac
 
+    bar="Fork"
     if [[ "$REPO_PATH" != "" ]]; then
         osascript -e '
         on run repoPath
             tell application "System Events"
-                key code 17 using {command down}
-                key code 2 using {command down, shift down}
-                delay 0.5
-                key code 126 using {command down, option down}
-                keystroke repoPath
-                key code 36
-                delay 2
-                keystroke "open -a Fork ."
-                key code 36
-                delay 0.5
-                key code 48 using {command down}
-                delay 1
-                keystroke "gu"
-                key code 36
-                delay 5
-                key code 40 using {command down}
+                keystroke "open -a Fork " & repoPath
+                key code 36                                       # 36 = enter
             end tell
         end run
-        ' "$REPO_PATH"
+        ' "$REPO_PATH" &
+        osascript -e '
+        on run repoPath
+            delay 0.3
+            tell application "iTerm"
+                activate
+            end tell
+            # delay 0.3
+            tell application "System Events"
+                key code 17 using {command down}                # 17 = t
+                key code 2 using {command down, shift down}     # 2 = n
+                delay 0.5
+                key code 126 using {command down, option down}  # 126 = up arrow
+                keystroke repoPath
+                key code 36                                     # 36 = enter
+            end tell
+            tell application "fork"
+                activate
+            end tell
+            # delay 0.3
+            tell application "iTerm"
+                activate
+            end tell
+         end run
+        ' "$REPO_PATH" &
     fi
 }
 complete -W "ab rd rd2 rd3 default-browser-launcher djerf scripts-osx set-window-boundaries" repo
