@@ -1,5 +1,5 @@
 {
-   "checksum": "70cae42b8cc6d4dfa3e51b736f61cdd6",
+   "checksum": "de66ccfc38c5a322f5d647ab90f9436b",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -36,15 +36,37 @@
             "url": "https://www.notion.so/Memos-8019da73bfc84815abe478a87707d84c"
          }, {
             "date_added": "13292243983983423",
-            "date_last_used": "13318710145454800",
+            "date_last_used": "13319321963686894",
             "guid": "d8111bf3-9bf7-4137-999b-66cc3df8d88d",
             "id": "9",
             "name": "",
             "type": "url",
             "url": "https://protonmail.com/"
          }, {
+            "date_added": "13319281782242746",
+            "date_last_used": "13319285185912859",
+            "guid": "6dea3bfb-2f89-4744-a49f-e79f0303638c",
+            "id": "54",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "herbstluftwm",
+            "type": "url",
+            "url": "https://herbstluftwm.org/"
+         }, {
+            "date_added": "13319281902846799",
+            "date_last_used": "13319285190451538",
+            "guid": "d2703a03-f022-4b12-9f82-403305d010a5",
+            "id": "55",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "My Dotfiles - HLWM Polybar Arch - YouTube",
+            "type": "url",
+            "url": "https://www.youtube.com/watch?v=MOHx2dXb-uk"
+         }, {
             "date_added": "13316804041095032",
-            "date_last_used": "13318024624862823",
+            "date_last_used": "13319285203632289",
             "guid": "b55b3d70-ab83-41df-9b65-4c3bfaa8e6fa",
             "id": "44",
             "meta_info": {
@@ -137,7 +159,7 @@
             "url": "https://stackoverflow.com/questions/34242460/how-do-i-escape-characters-in-github-code-search"
          }, {
             "date_added": "13318909636623317",
-            "date_last_used": "0",
+            "date_last_used": "13319180576912510",
             "guid": "84c66a45-ffea-47a8-96f9-d788628dc0db",
             "id": "52",
             "meta_info": {
@@ -149,7 +171,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13318909636623322",
+         "date_modified": "13319281902846802",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
