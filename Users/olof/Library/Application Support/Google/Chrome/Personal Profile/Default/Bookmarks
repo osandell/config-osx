@@ -1,5 +1,5 @@
 {
-   "checksum": "de66ccfc38c5a322f5d647ab90f9436b",
+   "checksum": "d06927416df4d51e5f09cc301d1b3ea2",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -43,6 +43,39 @@
             "type": "url",
             "url": "https://protonmail.com/"
          }, {
+            "date_added": "13319980105239621",
+            "date_last_used": "0",
+            "guid": "bb3ad03c-d705-405b-8b7b-91dfe33de250",
+            "id": "59",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Libraries with invalid ESM | vite-plugin-ssr",
+            "type": "url",
+            "url": "https://vite-plugin-ssr.com/invalid-esm"
+         }, {
+            "date_added": "13319945215985434",
+            "date_last_used": "0",
+            "guid": "b584cbc9-acb3-441e-a0eb-09203c618dfe",
+            "id": "57",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "esm import cjs in third-party-package will get exports.default instead of module.exports · Issue #1719 · evanw/esbuild",
+            "type": "url",
+            "url": "https://github.com/evanw/esbuild/issues/1719"
+         }, {
+            "date_added": "13319945918632407",
+            "date_last_used": "0",
+            "guid": "7556b0a3-4e1c-4aae-9c31-b9b426c59a5c",
+            "id": "58",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Configuring CommonJS & ES Modules for Node.js - DEV Community 👩‍💻👨‍💻",
+            "type": "url",
+            "url": "https://dev.to/jakobjingleheimer/configuring-commonjs-es-modules-for-nodejs-12ed"
+         }, {
             "date_added": "13319281782242746",
             "date_last_used": "13319285185912859",
             "guid": "6dea3bfb-2f89-4744-a49f-e79f0303638c",
@@ -55,7 +88,7 @@
             "url": "https://herbstluftwm.org/"
          }, {
             "date_added": "13319281902846799",
-            "date_last_used": "13319285190451538",
+            "date_last_used": "13319832338287572",
             "guid": "d2703a03-f022-4b12-9f82-403305d010a5",
             "id": "55",
             "meta_info": {
@@ -171,7 +204,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13319281902846802",
+         "date_modified": "13319980105239626",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",

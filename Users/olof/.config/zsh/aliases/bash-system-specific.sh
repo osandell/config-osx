@@ -59,6 +59,9 @@ repo() {
     bb)
         REPO_PATH="~/dev/olofgrebban/bjorn-borg-frontend"
         ;;
+    djerf)
+        REPO_PATH="~/dev/olofgrebban/djerf-frontend"
+        ;;
     rd)
         REPO_PATH="~/dev/olofgrebban/royal-web"
         ;;
@@ -68,8 +71,8 @@ repo() {
     rd3)
         REPO_PATH="~/dev/olofgrebban/royal-web-3"
         ;;
-    djerf)
-        REPO_PATH="~/dev/olofgrebban/djerf-frontend"
+    zoo)
+        REPO_PATH="~/dev/olofgrebban/zoo-frontend"
         ;;
 
     # Personal
@@ -123,4 +126,4 @@ repo() {
         ' "$REPO_PATH" &
     fi
 }
-complete -W "ab bb rd rd2 rd3 default-browser-launcher djerf scripts-osx set-window-boundaries" repo
+complete -W "ab bb rd rd2 rd3 default-browser-launcher djerf zoo scripts-osx set-window-boundaries" repo
