@@ -1,5 +1,5 @@
 {
-   "checksum": "d06927416df4d51e5f09cc301d1b3ea2",
+   "checksum": "c879c7a7d32312e611504bd21a44e46d",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -42,6 +42,17 @@
             "name": "",
             "type": "url",
             "url": "https://protonmail.com/"
+         }, {
+            "date_added": "13320263382345820",
+            "date_last_used": "0",
+            "guid": "1cc12ab3-d791-415e-a9a4-70ab7dda23ef",
+            "id": "63",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Pre-soldered Wireless Dao Choc BLE Keyboard Low Profile - Etsy Sweden",
+            "type": "url",
+            "url": "https://www.etsy.com/se-en/listing/1324499072/pre-soldered-wireless-dao-choc-ble?click_key=6dd4a84360e425303bc86255ae73cfbc0a735cf2%3A1324499072&click_sum=e09400c9&ref=related-4&frs=1&sts=1"
          }, {
             "date_added": "13319980105239621",
             "date_last_used": "0",
@@ -88,7 +99,7 @@
             "url": "https://herbstluftwm.org/"
          }, {
             "date_added": "13319281902846799",
-            "date_last_used": "13319832338287572",
+            "date_last_used": "13320272114300345",
             "guid": "d2703a03-f022-4b12-9f82-403305d010a5",
             "id": "55",
             "meta_info": {
@@ -204,7 +215,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13319980105239626",
+         "date_modified": "13320263382345823",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
