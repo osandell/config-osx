@@ -1,5 +1,5 @@
 {
-   "checksum": "c879c7a7d32312e611504bd21a44e46d",
+   "checksum": "57bf5268028815f7f8afc0badedb84ae",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -42,6 +42,17 @@
             "name": "",
             "type": "url",
             "url": "https://protonmail.com/"
+         }, {
+            "date_added": "13320362027680956",
+            "date_last_used": "0",
+            "guid": "05c73952-e90b-457a-bb17-9917a73a9352",
+            "id": "64",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Jonas Hietala: The T-34 keyboard layout",
+            "type": "url",
+            "url": "https://www.jonashietala.se/blog/2021/06/03/the-t-34-keyboard-layout/"
          }, {
             "date_added": "13320263382345820",
             "date_last_used": "0",
@@ -215,7 +226,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13320263382345823",
+         "date_modified": "13320362027680964",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
