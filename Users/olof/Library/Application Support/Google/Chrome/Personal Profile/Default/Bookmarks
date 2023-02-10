@@ -1,10 +1,10 @@
 {
-   "checksum": "57bf5268028815f7f8afc0badedb84ae",
+   "checksum": "d47a8d58abbc2b742068a8efab0453da",
    "roots": {
       "bookmark_bar": {
          "children": [ {
             "date_added": "13307378202186147",
-            "date_last_used": "13317689283350708",
+            "date_last_used": "13320528902489341",
             "guid": "bf21d0d8-c34e-4ebd-80b0-34469f3ea8ff",
             "id": "33",
             "name": "",
@@ -36,7 +36,7 @@
             "url": "https://www.notion.so/Memos-8019da73bfc84815abe478a87707d84c"
          }, {
             "date_added": "13292243983983423",
-            "date_last_used": "13320413951110170",
+            "date_last_used": "13320544570378018",
             "guid": "d8111bf3-9bf7-4137-999b-66cc3df8d88d",
             "id": "9",
             "name": "",
@@ -44,7 +44,7 @@
             "url": "https://protonmail.com/"
          }, {
             "date_added": "13320362027680956",
-            "date_last_used": "0",
+            "date_last_used": "13320542124422360",
             "guid": "05c73952-e90b-457a-bb17-9917a73a9352",
             "id": "64",
             "meta_info": {
@@ -53,17 +53,6 @@
             "name": "Jonas Hietala: The T-34 keyboard layout",
             "type": "url",
             "url": "https://www.jonashietala.se/blog/2021/06/03/the-t-34-keyboard-layout/"
-         }, {
-            "date_added": "13320263382345820",
-            "date_last_used": "0",
-            "guid": "1cc12ab3-d791-415e-a9a4-70ab7dda23ef",
-            "id": "63",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "Pre-soldered Wireless Dao Choc BLE Keyboard Low Profile - Etsy Sweden",
-            "type": "url",
-            "url": "https://www.etsy.com/se-en/listing/1324499072/pre-soldered-wireless-dao-choc-ble?click_key=6dd4a84360e425303bc86255ae73cfbc0a735cf2%3A1324499072&click_sum=e09400c9&ref=related-4&frs=1&sts=1"
          }, {
             "date_added": "13319980105239621",
             "date_last_used": "0",
