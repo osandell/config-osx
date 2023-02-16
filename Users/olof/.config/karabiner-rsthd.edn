@@ -572,25 +572,29 @@
       {:des "Left Command + Shift + Arrow Left: Position window to left half"
             :rules [:!parallels[:!CSleft_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current left-half auto"]]}  
       {:des "Left Command + Shift + Arrow Right: Position window to right half"
-            :rules [:!parallels[:!CSright_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current right-half auto"]]}  
+            :rules [:!parppallels[:!CSright_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current right-half auto"]]}  
       {:des "Left Command + Shift + Arrow Down: Position windows"
             :rules [:!parallels[:!CSdown_arrow "/Users/olof/dev/osandell/scripts-osx/eventscripts-helper/position-all-windows.sh"]]} 
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Right Command to Right Option"
-            :rules [[:##right_command :right_option]]}
-      {:des "Left Command to Left Option"
-            :rules [:!parallels[:##left_command :left_option]]}
+    ;;   {:des "Right Command to Right Option"
+    ;;         :rules [[:##right_command :right_option]]}
+      {:des "Right Command to E"
+            :rules [[:##right_command :b]]}
+    ;;   {:des "Left Command to Left Option"
+    ;;         :rules [:!parallels[:##left_command :left_option]]}
+      {:des "Left Command to Shift if holding, to Spacebar if pressed alone"
+            :rules [:!parallels[:##left_command :left_shift nil {:alone :spacebar}]]}
       {:des "Left Option to FN if holding, to Spotlight Search if pressed alone"
             :rules [:!parallels[:##left_option :fn nil {:alone :!Cspacebar}]]}
       {:des "Right Option to Right Command"
             :rules[[:##right_option :right_command]]}
-      {:des "< to Left Shift if holding, to tab when pressed alone"
-            :rules [[:##grave_accent_and_tilde :left_shift nil {:alone :tab}]]}
-      {:des "Dash to Right Shift when holding, dash when tapping"
-            :rules [[:slash :right_shift nil {:alone :slash}]]}
+    ;;   {:des "< to Left Shift if holding, to tab when pressed alone"
+    ;;         :rules [[:##grave_accent_and_tilde :left_shift nil {:alone :tab}]]}
+    ;;   {:des "Dash to Right Shift when holding, dash when tapping"
+    ;;         :rules [[:slash :right_shift nil {:alone :slash}]]}
       ;; {:des "F to Left Shift if holding, to F when pressed alone"
       ;;       :rules [[:##f :left_shift nil {:alone :f}]]}   f
       ;; {:des "F to Left Shift if holding, to F when pressed alone"
@@ -603,9 +607,10 @@
             [:!P7 :f7] [:!O7 :f7] [:!E7 :f7] [:!P8 :f8] [:!O8 :f8] [:!E8 :f8] [:!P9 :f9] [:!O9 :f9] [:!E9 :f9]
             [:!P0 :f10] [:!O0 :f10] [:!E0 :f10] [:!Phyphen :f11] [:!Ohyphen :f11] [:!Ehyphen :f11]
             [:!Pequal_sign :f12] [:!Oequal_sign :f12] [:!Eequal_sign :f12]]}
-       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
-             :rules [:!parallels[:##caps_lock :left_control nil {:alone :escape}]]}
-
+    ;;   {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
+    ;;         :rules [:!parallels[:##caps_lock :left_control nil {:alone :escape}]]}
+      {:des "Caps Lock to G"  
+            :rules [:!parallels[:##caps_lock :g]]}
       {:des "Esc to Right Control when holding, Caps Lock when tapped"
             :rules [:!parallels[:##escape :right_control nil {:alone :caps_lock}]]}
       {:des "Right Control + q, 1, §, 2 and to mark all, copy, cut, paste, and save (used with esc as modifier)"
@@ -630,8 +635,14 @@
             :rules [[:!STspacebar [:spacebar :left_arrow]]]}
       {:des "§ to Delete"
             :rules [[:##non_us_backslash :delete_forward]]}
-      {:des "Tab to Right Control if held App Switching if tapped"
-            :rules [[:tab :right_control nil {:alone :!Ctab}]]}
+    ;;   {:des "Tab to Right Control if held App Switching if tapped"
+    ;;         :rules [[:tab :right_control nil {:alone :!Ctab}]]}
+      {:des "Tab to T"
+            :rules [[:##tab :t]]}
+      {:des "Left Shift to V"
+            :rules [[:##left_shift :v]]}
+      {:des "Right Shift to N"
+            :rules [[:##right_shift :n]]}
       {:des "Within app window switching with Function + Tab"
             :rules [[:!Ftab :!SOWtab]]}
       {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)"
@@ -681,7 +692,7 @@
             :rules [[:!Tslash :!Ca] [:!Tsemicolon :!Cc] [:!Topen_bracket :!Cx] [:!Tquote :!Cv]]}
       {:des "Left Command + m to click minimize button (fix: normal hotkey doesn't work with every app, for example VSCode)"
             :rules [[:!Cm "osascript -e '
-            tell application \"System Events\"
+            tell application p\"System Events\"
                   click (first button whose subrole is \"AXMinimizeButton\") of (first window whose subrole is \"AXStandardWindow\") of (first process whose frontmost is true)
             end tell
             '"]]}
@@ -692,8 +703,8 @@
             :rules [:!parallels [:!Tdelete_or_backspace :!Odelete_or_backspace] [:!Odelete_or_backspace :delete_or_backspace]]}
       {:des "Left Control + Shift + G: Check if we have synced all repos to GitHub"
             :rules [[:!TSg "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"]]} 
-      {:des "Fn + ´ to switch to rsthd keyboard mapping"
-            :rules [[:!Cequal_sign "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-rsthd.sh"]]}      
+      {:des "Fn + ´ to switch to qwerty keyboard mapping"
+            :rules [[:!Cequal_sign "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-qwerty.sh"]]}      
       {:des "Right Control + Space: Spotlight"
             :rules [:!parallels[:!Wspacebar :!Cspacebar]]} 
 ]}
