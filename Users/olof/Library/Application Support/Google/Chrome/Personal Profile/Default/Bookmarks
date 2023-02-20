@@ -1,5 +1,5 @@
 {
-   "checksum": "adf360c441253bb3b391670a18e300af",
+   "checksum": "dc100094b8e5a6971b90e2913cb7c612",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -42,6 +42,17 @@
             "name": "",
             "type": "url",
             "url": "https://protonmail.com/"
+         }, {
+            "date_added": "13321401083962624",
+            "date_last_used": "0",
+            "guid": "0b572938-ccf3-4d20-997f-8247b1240834",
+            "id": "77",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "How to build speedy sites with Vite + partial hydration",
+            "type": "url",
+            "url": "https://www.netlify.com/blog/2021/11/12/ship-javascript-where-it-counts-with-vite-partial-hydration/"
          }, {
             "date_added": "13320960509482283",
             "date_last_used": "0",
@@ -301,7 +312,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13321138771724797",
+         "date_modified": "13321401083962631",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
