@@ -572,129 +572,153 @@
       {:des "Left Command + Shift + Arrow Left: Position window to left half"
             :rules [:!parallels[:!CSleft_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current left-half auto"]]}  
       {:des "Left Command + Shift + Arrow Right: Position window to right half"
-            :rules [:!parallels[:!CSright_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current right-half auto"]]}  
+            :rules [:!parppallels[:!CSright_arrow "osascript ~/dev/osandell/set-window-boundaries/set-window-boundaries.applescript frontmost current right-half auto"]]}  
       {:des "Left Command + Shift + Arrow Down: Position windows"
             :rules [:!parallels[:!CSdown_arrow "/Users/olof/dev/osandell/scripts-osx/eventscripts-helper/position-all-windows.sh"]]} 
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Right Command to Right Option"
-            :rules [[:##right_command :right_option]]}
-      {:des "Left Command to Left Option"
-            :rules [:!parallels[:##left_command :left_option]]}
-      {:des "Left Option to FN if holding, to Spotlight Search if pressed alone"
-            :rules [:!parallels[:##left_option :fn nil {:alone :!Cspacebar}]]}
-      {:des "Right Option to Right Command"
-            :rules[[:##right_option :right_command]]}
-      {:des "< to Left Shift if holding, to tab when pressed alone"
-            :rules [[:##grave_accent_and_tilde :left_shift nil {:alone :tab}]]}
-      {:des "Dash to Right Shift when holding, dash when tapping"
-            :rules [[:slash :right_shift nil {:alone :slash}]]}
+                {:des "Right Option to E" 
+            :rules [[:right_option :delete_or_backspace]]} 
+                {:des "Left Shift to Right Control if holding, to Tab if pressed alone"
+           :rules[[:left_shift :right_control nil {:alone :tab}]]}
+      ;; {:des "Right Command to Right Option" 
+    ;;         :rules [[:##right_command :right_option]]}
+                    {:des "Right Command to E"        
+            :rules [[:right_command :b]]}  
+    ;;   {:des "Left Command to Left Option"
+    ;;         :rules [:!parallels[:##left_command :left_option]]}
+      {:des "Left Command to Shift if holding, to Spacebar if pressed alone"
+            :rules [:!parallels[:left_command :left_shift nil {:alone :spacebar}]]}
+      {:des "Left Option to Left Control if holding, to Escape if pressed alone"
+            :rules [:!parallels[:left_option :left_control nil {:alone :escape}]]}
+            ;; {:des "Right Option to Right Command"  
+      ;;       :rules[[:##right_option :right_command]]}
+      {:des "Right Shift to AltGr if holding, to Enter if pressed alone"
+            :rules[[:##right_shift :right_option nil {:alone :return_or_enter}]]}
+            {:des "Left Command + Right Command to E"
+             :rules [[:!Sright_command :!Sb]]}          
+       {:des "Left Command + Right Command to E"
+             :rules [[:!Sleft_option :left_command] [:!Tleft_command :left_command]]}       
+
+    ;;   {:des "< to Left Shift if holding, to tab when pressed alone"
+    ;;         :rules [[:##grave_accent_and_tilde :left_shift nil {:alone :tab}]]}
+    ;;   {:des "Dash to Right Shift when holding, dash when tapping"
+    ;;         :rules [[:slash :right_shift nil {:alone :slash}]]}
       ;; {:des "F to Left Shift if holding, to F when pressed alone"
       ;;       :rules [[:##f :left_shift nil {:alone :f}]]}   f
       ;; {:des "F to Left Shift if holding, to F when pressed alone"
       ;;       :rules[[:jf :f]]}
       ;; {:des "J to Left Shift if holding, to J when pressed alone"
       ;;       :rules [[:##j :right_shift nil {:alone :j}]]}
-      {:des "Map the number keys to F1, F2, etc.. when Caps Lock is active or Option is pressed"
-            :rules [[:!P1 :f1] [:!O1 :f1] [:!E1 :f1] [:!P2 :f2] [:!O2 :f2] [:!E2 :f2] [:!P3 :f3] [:!O3 :f3] [:!E3 :f3]
-            [:!P4 :f4] [:!O4 :f4] [:!E4 :f4] [:!P5 :f5] [:!O5 :f5] [:!E5 :f5] [:!P6 :f6] [:!O6 :f6] [:!E6 :f6]
-            [:!P7 :f7] [:!O7 :f7] [:!E7 :f7] [:!P8 :f8] [:!O8 :f8] [:!E8 :f8] [:!P9 :f9] [:!O9 :f9] [:!E9 :f9]
-            [:!P0 :f10] [:!O0 :f10] [:!E0 :f10] [:!Phyphen :f11] [:!Ohyphen :f11] [:!Ehyphen :f11]
-            [:!Pequal_sign :f12] [:!Oequal_sign :f12] [:!Eequal_sign :f12]]}
-       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
-             :rules [:!parallels[:##caps_lock :left_control nil {:alone :escape}]]}
+      ;; {:des "Map the number keys to F1, F2, etc.. when Caps Lock is active or Option is pressed"
+      ;;       :rules [[:!P1 :f1] [:!O1 :f1] [:!E1 :f1] [:!P2 :f2] [:!O2 :f2] [:!E2 :f2] [:!P3 :f3] [:!O3 :f3] [:!E3 :f3]
+      ;;       [:!P4 :f4] [:!O4 :f4] [:!E4 :f4] [:!P5 :f5] [:!O5 :f5] [:!E5 :f5] [:!P6 :f6] [:!O6 :f6] [:!E6 :f6]
+      ;;       [:!P7 :f7] [:!O7 :f7] [:!E7 :f7] [:!P8 :f8] [:!O8 :f8] [:!E8 :f8] [:!P9 :f9] [:!O9 :f9] [:!E9 :f9]
+      ;;       [:!P0 :f10] [:!O0 :f10] [:!E0 :f10] [:!Phyphen :f11] [:!Ohyphen :f11] [:!Ehyphen :f11]
+      ;;       [:!Pequal_sign :f12] [:!Oequal_sign :f12] [:!Eequal_sign :f12]]}
+    ;;   {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
+    ;;         :rules [:!parallels[:##caps_lock :left_control nil {:alone :escape}]]}
+      {:des "Caps Lock to G"  
+            :rules [:!parallels[:##caps_lock :g]]}
+      ;; {:des "Esc to Right Control when holding, Caps Lock when tapped"
+      ;;       :rules [:!parallels[:##escape :right_control nil {:alone :caps_lock}]]}
+      ;; {:des "Right Control + q, 1, §, 2 and to mark all, copy, cut, paste, and save (used with esc as modifier)"
+      ;;       :rules [:!parallels[:!Wq :!Ca] [:!W1 :!Cc] [:!Wnon_us_backslash  :!Cx] [:!W2 :!Cv] [:!W3 :!Cs]]}
+      ;; {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"
+      ;;       :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]} 
+      ;; {:des "Left Control + n to go to beginning of the content of the line"
+      ;;       :rules [[:!Tn :home]]}
+      ;; {:des "Left Control + . to go to end of the line"
+      ;;       :rules [[:!Tperiod :end]]}
+      ;; {:des "Left Control + d to delete"
+      ;;       :rules [[:!Td :delete_forward]]} 
+      ;; {:des "Left Control + y to copy"
+      ;;       :rules [[:!Ty :!Cc]]}
+      ;; {:des "Left Control + u to undo"
+      ;;       :rules [[:!Tz :!Cz]]}
+      ;; {:des "Left Control + i / Left Command + y to redo"
+      ;;       :rules [[:!Ti :!SCz] [:!Cy :!SCz]]}      
+      ;; {:des "Left Control + Space to step to the right"
+      ;;       :rules [[:!Tspacebar :right_arrow]]}
+      ;; {:des "Left Control + Left Shift + Space to add a space to the right of the cursor"
+      ;;       :rules [[:!STspacebar [:spacebar :left_arrow]]]}
+      ;; {:des "§ to Delete"
+      ;;       :rules [[:##non_us_backslash :delete_forward]]}
+    ;;   {:des "Tab to Right Control if held App Switching if tapped"
+    ;;         :rules [[:tab :right_control nil {:alone :!Ctab}]]}
+      {:des "Tab to T"
+            :rules [[:##tab :t]]}
+      ;; {:des "Left Shift to V"
+      ;;       :rules [[:##left_shift :v]]}
+      ;; {:des "Right Shift to N"
+      ;;       :rules [[:##right_shift :n]]}
+      ;; {:des "Within app window switching with Function + Tab"
+      ;;       :rules [[:!Ftab :!SOWtab]]}
+      ;; {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)"
+      ;;       :rules [[:!SOslash :slash]]}
+      ;; {:des "Make enter unblocked when holding Left Shift + Left Option"
+      ;;       :rules [[:!SOreturn_or_enter :return_or_enter]]}
+      ;; {:des "Move tabs left / right with Right Control + h / l"
+      ;;       :rules [:!parallels[:!Wh :!COleft_arrow], [:!Wl :!COright_arrow]]}
+      ;; {:des "New tab with Right Control + t"
+      ;;       :rules [:!parallels[:!Wt :!Ct]]}
+      ;; {:des "Close tab with Right Control + w"
+      ;;       :rules [:!parallels[:!Ww :!Cw]]}
+      ;; {:des "Left Shift + Left Option + d to print today's date" :rules
+      ;;       [[:!SOd "osascript -e '
+      ;;       set {year:yr, month:mn, day:dy} to (current date)
+      ;;       set dateString to (yr as text) & \"-\" & pad(mn as integer) & \"-\" & pad(dy)
 
-      {:des "Esc to Right Control when holding, Caps Lock when tapped"
-            :rules [:!parallels[:##escape :right_control nil {:alone :caps_lock}]]}
-      {:des "Right Control + q, 1, §, 2 and to mark all, copy, cut, paste, and save (used with esc as modifier)"
-            :rules [:!parallels[:!Wq :!Ca] [:!W1 :!Cc] [:!Wnon_us_backslash  :!Cx] [:!W2 :!Cv] [:!W3 :!Cs]]}
-      {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"
-            :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]} 
-      {:des "Left Control + n to go to beginning of the content of the line"
-            :rules [[:!Tn :home]]}
-      {:des "Left Control + . to go to end of the line"
-            :rules [[:!Tperiod :end]]}
-      {:des "Left Control + d to delete"
-            :rules [[:!Td :delete_forward]]} 
-      {:des "Left Control + y to copy"
-            :rules [[:!Ty :!Cc]]}
-      {:des "Left Control + u to undo"
-            :rules [[:!Tz :!Cz]]}
-      {:des "Left Control + i / Left Command + y to redo"
-            :rules [[:!Ti :!SCz] [:!Cy :!SCz]]}      
-      {:des "Left Control + Space to step to the right"
-            :rules [[:!Tspacebar :right_arrow]]}
-      {:des "Left Control + Left Shift + Space to add a space to the right of the cursor"
-            :rules [[:!STspacebar [:spacebar :left_arrow]]]}
-      {:des "§ to Delete"
-            :rules [[:##non_us_backslash :delete_forward]]}
-      {:des "Tab to Right Control if held App Switching if tapped"
-            :rules [[:tab :right_control nil {:alone :!Ctab}]]}
-      {:des "Within app window switching with Function + Tab"
-            :rules [[:!Ftab :!SOWtab]]}
-      {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)"
-            :rules [[:!SOslash :slash]]}
-      {:des "Make enter unblocked when holding Left Shift + Left Option"
-            :rules [[:!SOreturn_or_enter :return_or_enter]]}
-      {:des "Move tabs left / right with Right Control + h / l"
-            :rules [:!parallels[:!Wh :!COleft_arrow], [:!Wl :!COright_arrow]]}
-      {:des "New tab with Right Control + t"
-            :rules [:!parallels[:!Wt :!Ct]]}
-      {:des "Close tab with Right Control + w"
-            :rules [:!parallels[:!Ww :!Cw]]}
-      {:des "Left Shift + Left Option + d to print today's date" :rules
-            [[:!SOd "osascript -e '
-            set {year:yr, month:mn, day:dy} to (current date)
-            set dateString to (yr as text) & \"-\" & pad(mn as integer) & \"-\" & pad(dy)
+      ;;       on pad(v)
+      ;;             return text -2 thru -1 of ((v + 100) as text)
+      ;;       end pad
 
-            on pad(v)
-                  return text -2 thru -1 of ((v + 100) as text)
-            end pad
 
-            tell application \"System Events\"
-                  keystroke dateString
-            end tell
-            '"]]}
+      ;;       tell application \"System Events\"
+      ;;             keystroke dateString
+      ;;       end tell
+      ;;       '"]]}
       {:des "Left Control + h / j / k / l to arrow keys"
-            :rules [[:!T##h :left_arrow] [:!T##j :down_arrow] [:!T##k :up_arrow] [:!T##l :right_arrow]]}
-      {:des "Right Control + M to minimize window"
-            :rules [:!parallels[:!Wm :!Cm]]}
-      {:des "Right Control + f to go to fullscreen"
-            :rules [:!parallels[:!Wf "osascript -e '
-            tell application \"System Events\"
-                  tell (first process where it is frontmost)
-                        if value of attribute \"AXFullScreen\" of window 1 = false then
-                              set value of attribute \"AXFullScreen\" of window 1 to true
-                        else
-                              set value of attribute \"AXFullScreen\" of window 1 to false
-                        end if
-                  end tell
-            end tell
-            '"]]}
-      {:des "Option + ä to Shift + '+' key in order for ? hotkey to work in Vimium"
-            :rules [[:!Oquote :!Shyphen] [:!Equote :!Shyphen]]}
-      {:des "¨ to Shift + '7' key in order for / hotkey to work in Vimium"
-            :rules [[:close_bracket :!S7]]}
-      {:des "Left Control + - / Ö / Å / Ä to select all / copy / cut / paste"
-            :rules [[:!Tslash :!Ca] [:!Tsemicolon :!Cc] [:!Topen_bracket :!Cx] [:!Tquote :!Cv]]}
-      {:des "Left Command + m to click minimize button (fix: normal hotkey doesn't work with every app, for example VSCode)"
-            :rules [[:!Cm "osascript -e '
-            tell application \"System Events\"
-                  click (first button whose subrole is \"AXMinimizeButton\") of (first window whose subrole is \"AXStandardWindow\") of (first process whose frontmost is true)
-            end tell
-            '"]]}
-      {:des "long press Left Control + Left Shift + Backspace to empty recycle bin"
-            :rules [[:!TSdelete_or_backspace nil nil {
-            :held "osascript -e 'tell application \"Finder\" to empty trash'"}]]}
-      {:des "Left Control + Backspace to delete a word at a time instead of Option + Backspace"
-            :rules [:!parallels [:!Tdelete_or_backspace :!Odelete_or_backspace] [:!Odelete_or_backspace :delete_or_backspace]]}
-      {:des "Left Control + Shift + G: Check if we have synced all repos to GitHub"
-            :rules [[:!TSg "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"]]} 
-      {:des "´ to switch to rsthd keyboard mapping"
-            :rules [[:equal_sign "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-rsthd.sh"]]}      
-      {:des "Right Control + Space: Spotlight"
-            :rules [:!parallels[:!Wspacebar :!Cspacebar]]} 
+            :rules [[:!T##j :left_arrow] [:!T##k :down_arrow] [:!T##l :up_arrow] [:!T##semicolon :right_arrow]]}
+      ;; {:des "Right Control + M to minimize window"
+      ;;       :rules [:!parallels[:!Wm :!Cm]]}
+      ;; {:des "Right Control + f to go to fullscreen"
+      ;;       :rules [:!parallels[:!Wf "osascript -e '
+      ;;       tell application \"System Events\"
+      ;;             tell (first process where it is frontmost)
+      ;;                   if value of attribute \"AXFullScreen\" of window 1 = false then
+      ;;                         set value of attribute \"AXFullScreen\" of window 1 to true
+      ;;                   else
+      ;;                         set value 
+      ;;                         of attribute \"AXFullScreen\" of window 1 to false
+      ;;                   end if
+      ;;             end tell
+      ;;       end tell
+      ;;       '"]]}
+;;       {:des "Option + ä to Shift + '+' key in order for ? hotkey to work in Vimium"
+;;             :rules [[:!Oquote :!Shyphen] [:!Equote :!Shyphen]]}
+;;       {:des "¨ to Shift + '7' key in order for / hotkey to work in Vimium"
+;;             :rules [[:close_bracket :!S7]]}
+;;      ; {:des "Left Control + - / Ö / Å / Ä to select all / copy / cut / paste"
+;;      ;       :rules [[:!Tslash :!Ca] [:!Tsemicolon :!Cc] [:!Topen_bracket :!Cx] [:!Tquote :!Cv]]}
+;;       {:des "Left Command + m to click minimize button (fix: normal hotkey doesn't work with every app, for example VSCode)"
+;;             :rules [[:!Cm "osascript -e '
+;;             tell application p\"System Events\"
+;;                   click (first button whose subrole is \"AXMinimizeButton\") of (first window whose subrole is \"AXStandardWindow\") of (first process whose frontmost is true)
+;;             end tell
+;;             '"]]}
+;;       {:des "long press Left Control + Left Shift + Backspace to empty recycle bin"
+;;             :rules [[:!TSdelete_or_backspace nil nil {
+;;             :held "osascript -e 'tell application \"Finder\" to empty trash'"}]]}
+;;       {:des "Left Control + Backspace to delete a word at a time instead of Option + Backspace"
+;;             :rules [:!parallels [:!Tdelete_or_backspace :!Odelete_or_backspace] [:!Odelete_or_backspace :delete_or_backspace]]}
+;;       {:des "Left Control + Shift + G: Check if we have synced all repos to GitHub"
+;;             :rules [[:!TSg "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"]]} 
+      {:des "´ to switch to qwerty keyboard mapping"
+            :rules [[:equal_sign "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-qwerty.sh"]]}      
+;;       {:des "Right Control + Space: Spotlight"
+;;             :rules [:!parallels[:!Wspacebar :!Cspacebar]]} 
 ]}
 
