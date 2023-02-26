@@ -1,5 +1,5 @@
 {
-   "checksum": "dc100094b8e5a6971b90e2913cb7c612",
+   "checksum": "e461e291fc6cdc25f7d3894eb02b4e3c",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -36,12 +36,34 @@
             "url": "https://www.notion.so/Memos-8019da73bfc84815abe478a87707d84c"
          }, {
             "date_added": "13292243983983423",
-            "date_last_used": "13321646528981407",
+            "date_last_used": "13321848414077194",
             "guid": "d8111bf3-9bf7-4137-999b-66cc3df8d88d",
             "id": "9",
             "name": "",
             "type": "url",
             "url": "https://protonmail.com/"
+         }, {
+            "date_added": "13321830486898006",
+            "date_last_used": "0",
+            "guid": "0ba8f6f6-1b15-4756-9c3e-15c2ab36468b",
+            "id": "79",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Awesome Vite (vitejs/awesome-vite) Overview - Track Awesome List",
+            "type": "url",
+            "url": "https://www.trackawesomelist.com/vitejs/awesome-vite/readme/"
+         }, {
+            "date_added": "13321796245608865",
+            "date_last_used": "0",
+            "guid": "57ffabae-22de-4f71-9e6c-52c2895e14e2",
+            "id": "78",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Vite code splitting that just works | Sambit Sahoo",
+            "type": "url",
+            "url": "https://sambitsahoo.com/blog/vite-code-splitting-that-works.html"
          }, {
             "date_added": "13321401083962624",
             "date_last_used": "0",
@@ -312,7 +334,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13321401083962631",
+         "date_modified": "13321830486898008",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
