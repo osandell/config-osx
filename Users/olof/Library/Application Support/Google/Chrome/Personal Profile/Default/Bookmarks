@@ -4,6 +4,7 @@
       "bookmark_bar": {
          "children": [ {
             "date_added": "13292243473417673",
+            "date_last_used": "0",
             "guid": "e543fb00-c30a-485d-a74c-8d4d80749f08",
             "id": "5",
             "name": "",
@@ -11,6 +12,7 @@
             "url": "http://www.google.se/"
          }, {
             "date_added": "13307378202186147",
+            "date_last_used": "0",
             "guid": "bf21d0d8-c34e-4ebd-80b0-34469f3ea8ff",
             "id": "33",
             "name": "",
@@ -18,6 +20,7 @@
             "url": "https://track.toggl.com/timer"
          }, {
             "date_added": "13292243906460421",
+            "date_last_used": "0",
             "guid": "b91f1312-ce8c-4cae-97b2-25c78ef65f39",
             "id": "8",
             "name": "",
@@ -25,6 +28,7 @@
             "url": "https://github.com/"
          }, {
             "date_added": "13292243894274034",
+            "date_last_used": "0",
             "guid": "b7601168-534c-4f1f-834f-3544b7cf5276",
             "id": "7",
             "name": "",
@@ -32,6 +36,7 @@
             "url": "https://www.notion.so/Memos-8019da73bfc84815abe478a87707d84c"
          }, {
             "date_added": "13292243983983423",
+            "date_last_used": "13322858193682201",
             "guid": "d8111bf3-9bf7-4137-999b-66cc3df8d88d",
             "id": "9",
             "name": "",
@@ -39,6 +44,7 @@
             "url": "https://protonmail.com/"
          }, {
             "date_added": "13322564917850857",
+            "date_last_used": "0",
             "guid": "8f038b90-597a-4b31-a113-a27f159e1b33",
             "id": "82",
             "name": "Vite: Render Template for Return.",
@@ -46,6 +52,7 @@
             "url": "https://chat.openai.com/chat/0e65f8db-9486-46f6-a3cf-8792462981f7"
          }, {
             "date_added": "13321917275146112",
+            "date_last_used": "0",
             "guid": "14b4a2ab-8db3-40dc-acc2-832cfc6080be",
             "id": "80",
             "meta_info": {
@@ -56,6 +63,7 @@
             "url": "https://javascript.plainenglish.io/what-about-vite-ssr-ef7ccdf58b5"
          }, {
             "date_added": "13321830486898006",
+            "date_last_used": "0",
             "guid": "0ba8f6f6-1b15-4756-9c3e-15c2ab36468b",
             "id": "79",
             "meta_info": {
@@ -66,6 +74,7 @@
             "url": "https://www.trackawesomelist.com/vitejs/awesome-vite/readme/"
          }, {
             "date_added": "13321796245608865",
+            "date_last_used": "0",
             "guid": "57ffabae-22de-4f71-9e6c-52c2895e14e2",
             "id": "78",
             "meta_info": {
@@ -76,6 +85,7 @@
             "url": "https://sambitsahoo.com/blog/vite-code-splitting-that-works.html"
          }, {
             "date_added": "13321401083962624",
+            "date_last_used": "0",
             "guid": "0b572938-ccf3-4d20-997f-8247b1240834",
             "id": "77",
             "meta_info": {
@@ -86,6 +96,7 @@
             "url": "https://www.netlify.com/blog/2021/11/12/ship-javascript-where-it-counts-with-vite-partial-hydration/"
          }, {
             "date_added": "13320960509482283",
+            "date_last_used": "0",
             "guid": "ebf69d73-87a5-48b8-962a-ef3d6ec2245d",
             "id": "72",
             "meta_info": {
@@ -97,6 +108,7 @@
          }, {
             "children": [ {
                "date_added": "13320624460261006",
+               "date_last_used": "0",
                "guid": "0e895e66-d0c2-4ead-bb73-689a10380df1",
                "id": "65",
                "meta_info": {
@@ -107,6 +119,7 @@
                "url": "https://www.youtube.com/watch?v=unMXQTSQEak"
             }, {
                "date_added": "13320362027680956",
+               "date_last_used": "0",
                "guid": "05c73952-e90b-457a-bb17-9917a73a9352",
                "id": "64",
                "meta_info": {
@@ -117,6 +130,7 @@
                "url": "https://www.jonashietala.se/blog/2021/06/03/the-t-34-keyboard-layout/"
             }, {
                "date_added": "13320807471860272",
+               "date_last_used": "0",
                "guid": "8a921e52-dcf3-4c02-9cb7-6c4285f5acb6",
                "id": "68",
                "meta_info": {
@@ -127,6 +141,7 @@
                "url": "https://precondition.github.io/home-row-mods#rolled-modifiers-cancellation"
             }, {
                "date_added": "13320807757812934",
+               "date_last_used": "0",
                "guid": "00a3fda2-c5fe-4476-95f5-622ca6b5cffe",
                "id": "69",
                "meta_info": {
@@ -137,6 +152,7 @@
                "url": "https://precondition.github.io/home-row-mods"
             }, {
                "date_added": "13320855105975147",
+               "date_last_used": "0",
                "guid": "b56ebaa7-3421-42a1-a101-f1b10f358a9b",
                "id": "71",
                "meta_info": {
@@ -147,6 +163,7 @@
                "url": "https://www.reddit.com/r/KeyboardLayouts/comments/plsawa/a_problem_solved_with_hands_down_platinum_neulx/"
             } ],
             "date_added": "13320624472283625",
+            "date_last_used": "0",
             "date_modified": "13320855105975152",
             "guid": "144e4171-c21d-4b01-b523-56d8d70fdd9e",
             "id": "66",
@@ -154,6 +171,7 @@
             "type": "folder"
          }, {
             "date_added": "13319980105239621",
+            "date_last_used": "0",
             "guid": "bb3ad03c-d705-405b-8b7b-91dfe33de250",
             "id": "59",
             "meta_info": {
@@ -164,6 +182,7 @@
             "url": "https://vite-plugin-ssr.com/invalid-esm"
          }, {
             "date_added": "13319945215985434",
+            "date_last_used": "0",
             "guid": "b584cbc9-acb3-441e-a0eb-09203c618dfe",
             "id": "57",
             "meta_info": {
@@ -174,6 +193,7 @@
             "url": "https://github.com/evanw/esbuild/issues/1719"
          }, {
             "date_added": "13319945918632407",
+            "date_last_used": "0",
             "guid": "7556b0a3-4e1c-4aae-9c31-b9b426c59a5c",
             "id": "58",
             "meta_info": {
@@ -184,6 +204,7 @@
             "url": "https://dev.to/jakobjingleheimer/configuring-commonjs-es-modules-for-nodejs-12ed"
          }, {
             "date_added": "13319281782242746",
+            "date_last_used": "0",
             "guid": "6dea3bfb-2f89-4744-a49f-e79f0303638c",
             "id": "54",
             "meta_info": {
@@ -194,6 +215,7 @@
             "url": "https://herbstluftwm.org/"
          }, {
             "date_added": "13319281902846799",
+            "date_last_used": "0",
             "guid": "d2703a03-f022-4b12-9f82-403305d010a5",
             "id": "55",
             "meta_info": {
@@ -204,6 +226,7 @@
             "url": "https://www.youtube.com/watch?v=MOHx2dXb-uk"
          }, {
             "date_added": "13316804041095032",
+            "date_last_used": "0",
             "guid": "b55b3d70-ab83-41df-9b65-4c3bfaa8e6fa",
             "id": "44",
             "meta_info": {
@@ -214,6 +237,7 @@
             "url": "https://blog.saeloun.com/2022/01/20/new-suspense-ssr-architecture-in-react-18.html"
          }, {
             "date_added": "13316829966419870",
+            "date_last_used": "0",
             "guid": "030bb735-cb4f-412c-b6a7-996893c5fbe2",
             "id": "46",
             "meta_info": {
@@ -224,6 +248,7 @@
             "url": "https://prateeksurana.me/blog/future-of-rendering-in-react/"
          }, {
             "date_added": "13316806164896013",
+            "date_last_used": "0",
             "guid": "17ecf266-2946-4877-88e0-321b58ed9459",
             "id": "45",
             "meta_info": {
@@ -234,6 +259,7 @@
             "url": "https://github.com/reactwg/react-18/discussions/114"
          }, {
             "date_added": "13307131128233410",
+            "date_last_used": "0",
             "guid": "04e76c23-a959-4550-94d9-e5524c8efb99",
             "id": "32",
             "name": "Simple Swipe with Vanilla JavaScript | CSS-Tricks - CSS-Tricks",
@@ -241,6 +267,7 @@
             "url": "https://css-tricks.com/simple-swipe-with-vanilla-javascript/"
          }, {
             "date_added": "13301005628018652",
+            "date_last_used": "0",
             "guid": "e832961f-64e4-4c28-9765-4612158a9970",
             "id": "23",
             "name": "Serenity",
@@ -248,6 +275,7 @@
             "url": "https://learn.adafruit.com/serenityos-build-and-run-keep-the-90s-dream-alive/build-macos-linux"
          }, {
             "date_added": "13313885780064390",
+            "date_last_used": "0",
             "guid": "43882d30-2e72-4af8-bc9b-851bfb7512b8",
             "id": "42",
             "meta_info": {
@@ -258,6 +286,7 @@
             "url": "https://www.edx.org/"
          }, {
             "date_added": "13318769069400854",
+            "date_last_used": "0",
             "guid": "3072f701-f8cc-4467-b9f5-776db791589e",
             "id": "48",
             "meta_info": {
@@ -268,6 +297,7 @@
             "url": "https://google.github.io/styleguide/"
          }, {
             "date_added": "13318785582473472",
+            "date_last_used": "0",
             "guid": "26b19774-ef38-40f4-bcdb-3a851b550b63",
             "id": "49",
             "meta_info": {
@@ -278,6 +308,7 @@
             "url": "https://github.com/SerenityOS/serenity/blob/master/Documentation/CodingStyle.md"
          }, {
             "date_added": "13318788530822140",
+            "date_last_used": "0",
             "guid": "d108c808-cc09-4858-bbbc-7fb9136a7cd0",
             "id": "50",
             "meta_info": {
@@ -288,6 +319,7 @@
             "url": "https://stackoverflow.com/questions/34242460/how-do-i-escape-characters-in-github-code-search"
          }, {
             "date_added": "13318909636623317",
+            "date_last_used": "0",
             "guid": "84c66a45-ffea-47a8-96f9-d788628dc0db",
             "id": "52",
             "meta_info": {
@@ -298,6 +330,7 @@
             "url": "https://github.com/DivineEssentia/Archinstall-for-MacbookPro-16-1"
          }, {
             "date_added": "13320962510224177",
+            "date_last_used": "0",
             "guid": "f4de3220-692c-40eb-b633-9f82f0cfc0f8",
             "id": "73",
             "meta_info": {
@@ -308,6 +341,7 @@
             "url": "https://github.com/geoffder/dometyl-keyboard/tree/main/things/dartyl_choc"
          }, {
             "date_added": "13321138771724797",
+            "date_last_used": "0",
             "guid": "494f79d9-9e72-441a-93eb-0d7603f4ea13",
             "id": "75",
             "meta_info": {
@@ -318,6 +352,7 @@
             "url": "https://support.google.com/chrome/?p=help&ctx=menu#topic=7439538"
          } ],
          "date_added": "13292242355522980",
+         "date_last_used": "0",
          "date_modified": "13322564917850857",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
@@ -327,6 +362,7 @@
       "other": {
          "children": [  ],
          "date_added": "13292242355522982",
+         "date_last_used": "0",
          "date_modified": "0",
          "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
          "id": "2",
@@ -336,6 +372,7 @@
       "synced": {
          "children": [  ],
          "date_added": "13292242355522984",
+         "date_last_used": "0",
          "date_modified": "0",
          "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
          "id": "3",
