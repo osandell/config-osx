@@ -1,99 +1,439 @@
 {
-   "checksum": "8f524e87b8e6f83695ddca88232b911f",
+   "checksum": "43e65181840127a3947f463f8248976b",
    "roots": {
       "bookmark_bar": {
          "children": [ {
-            "date_added": "13301097428404410",
-            "date_last_used": "13322481607273543",
-            "guid": "5b3e176e-6900-4a5c-9769-e90f52139628",
-            "id": "5",
-            "name": "localhost:3000",
+            "date_added": "13317584950000000",
+            "date_last_used": "0",
+            "guid": "067d1f97-29f1-4a75-8beb-b77df15e5053",
+            "id": "83",
+            "name": "Vite + React",
+            "type": "url",
+            "url": "http://127.0.0.1:5173/"
+         }, {
+            "date_added": "13315310274000000",
+            "date_last_used": "13322911127273309",
+            "guid": "91154407-4c28-415e-9b3d-33a912f4de99",
+            "id": "84",
+            "name": "8000",
+            "type": "url",
+            "url": "http://localhost:8000/"
+         }, {
+            "date_added": "13316195137000000",
+            "date_last_used": "0",
+            "guid": "db220356-bbe3-4985-87fe-53aef25b4e80",
+            "id": "85",
+            "name": "Johaug QA",
+            "type": "url",
+            "url": "https://johaug.qa.grebban.com/se/sv/"
+         }, {
+            "date_added": "13317396714000000",
+            "date_last_used": "0",
+            "guid": "1c3ff207-9120-4e57-8fb2-a852ed318b66",
+            "id": "86",
+            "name": "Djerf QA",
+            "type": "url",
+            "url": "https://djerf.qa.grebban.com/en-us/"
+         }, {
+            "date_added": "13301097428000000",
+            "date_last_used": "0",
+            "guid": "b34e88db-df7e-42de-bfd5-7599bb530edb",
+            "id": "87",
+            "name": "3000",
             "type": "url",
             "url": "http://localhost:3000/"
          }, {
-            "date_added": "13301139953667670",
+            "date_added": "13301139953000000",
             "date_last_used": "0",
-            "guid": "1006a498-dba5-4525-8ae5-045fd970e125",
-            "id": "9",
-            "name": "localhost:3001",
+            "guid": "6d2d6669-ef74-4a7b-87ac-7d55ec6ca542",
+            "id": "88",
+            "name": "3001",
             "type": "url",
             "url": "http://localhost:3001/"
          }, {
-            "date_added": "13301419648969576",
+            "date_added": "13305138081000000",
             "date_last_used": "0",
-            "guid": "e95fe7f6-6fcf-4954-85d0-39c6158f2cd0",
-            "id": "20",
-            "name": "RD",
+            "guid": "532a9199-ad21-4c65-b5e1-e7ac5367a8f5",
+            "id": "89",
+            "name": "1",
             "type": "url",
-            "url": "https://royaldesign.se/"
+            "url": "https://royalweb-dev-1.azurewebsites.net/"
          }, {
-            "date_added": "13301174697827874",
+            "date_added": "13305138758000000",
             "date_last_used": "0",
-            "guid": "15e91c52-f5c7-4fb6-97a1-58d70801751f",
-            "id": "16",
-            "name": "R21",
+            "guid": "4b9d60af-1b18-43b8-a0f0-c2fffe15daa7",
+            "id": "90",
+            "name": "2",
             "type": "url",
-            "url": "https://www.rum21.se/"
+            "url": "https://royalweb-dev-2.azurewebsites.net/"
          }, {
-            "date_added": "13301138077255097",
+            "date_added": "13310745213000000",
             "date_last_used": "0",
-            "guid": "f8449455-4d24-4368-ae48-09a1d0a3b44c",
-            "id": "7",
-            "name": "RD5",
+            "guid": "d7ccbcfa-d8ad-4b95-b789-6c376ab5f5f2",
+            "id": "91",
+            "name": "3",
             "type": "url",
-            "url": "https://royalweb-dev-5.azurewebsites.net/"
+            "url": "https://royalweb-dev-3.azurewebsites.net/"
          }, {
-            "date_added": "13301499284281121",
+            "date_added": "13305757649000000",
             "date_last_used": "0",
-            "guid": "490ae919-8b3b-43ac-ab71-0f261c5f483c",
-            "id": "22",
-            "name": "RD7",
+            "guid": "ee007a3a-e3de-4e6b-95c8-2d0c2caefc18",
+            "id": "92",
+            "name": "4",
             "type": "url",
-            "url": "https://royalweb-dev-7.azurewebsites.net/"
+            "url": "https://royalweb-dev-4.azurewebsites.net/"
          }, {
-            "date_added": "13301139323032434",
+            "date_added": "13320875445000000",
             "date_last_used": "0",
-            "guid": "acec4fcf-ad36-4e4f-8687-b27422e2075f",
-            "id": "8",
+            "guid": "9b481336-aa5b-4d64-966e-053a844c077e",
+            "id": "93",
+            "name": "9",
+            "type": "url",
+            "url": "https://royalweb-dev-9.azurewebsites.net/"
+         }, {
+            "date_added": "13301139323000000",
+            "date_last_used": "0",
+            "guid": "5a4c9055-3f8f-452b-870a-04b694ccce28",
+            "id": "94",
             "name": "RD Stage SE",
             "type": "url",
             "url": "https://royalweb-se-stage.azurewebsites.net/"
          }, {
-            "date_added": "13301151336634512",
+            "date_added": "13310745406000000",
             "date_last_used": "0",
-            "guid": "b73b67c9-3573-41a7-918a-992f397fbc63",
-            "id": "11",
-            "name": "RD-SE",
+            "guid": "e79c40f1-72d1-4c59-bf21-4aa1f39ddc88",
+            "id": "95",
+            "name": "R21 Stage SE",
             "type": "url",
-            "url": "https://royalweb-se-prod-deploy.azurewebsites.net/"
+            "url": "https://r21web-se-stage.azurewebsites.net/"
          }, {
-            "date_added": "13302894803644559",
+            "children": [ {
+               "date_added": "13310145267000000",
+               "date_last_used": "0",
+               "guid": "3a67b2e2-72f5-4c5f-a808-ecfa30b27ad6",
+               "id": "97",
+               "name": "SE",
+               "type": "url",
+               "url": "https://royalweb-se-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145282000000",
+               "date_last_used": "0",
+               "guid": "a9a56b29-879e-4cc0-9dba-b721cec4f507",
+               "id": "98",
+               "name": "FI",
+               "type": "url",
+               "url": "https://royalweb-fi-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145289000000",
+               "date_last_used": "0",
+               "guid": "153d0039-1488-4460-8104-5689c156738b",
+               "id": "99",
+               "name": "NO",
+               "type": "url",
+               "url": "https://royalweb-no-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145294000000",
+               "date_last_used": "0",
+               "guid": "3ac78458-018e-4724-8f59-f79f09f6622d",
+               "id": "100",
+               "name": "DK",
+               "type": "url",
+               "url": "https://royalweb-dk-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145300000000",
+               "date_last_used": "0",
+               "guid": "17c7e2f0-d7dd-4a0d-a0ea-11bd3a437bce",
+               "id": "101",
+               "name": "DE",
+               "type": "url",
+               "url": "https://royalweb-de-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145305000000",
+               "date_last_used": "0",
+               "guid": "3f1c5d2a-8009-4b6f-8664-6d1e2474789a",
+               "id": "102",
+               "name": "JP",
+               "type": "url",
+               "url": "https://royalweb-jp-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145312000000",
+               "date_last_used": "0",
+               "guid": "090dadaf-8c3b-48de-bb46-c5e29a13a2fe",
+               "id": "103",
+               "name": "UK",
+               "type": "url",
+               "url": "https://royalweb-uk-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145657000000",
+               "date_last_used": "0",
+               "guid": "3aa3b54f-6016-4993-83c9-cf9ad645d57b",
+               "id": "104",
+               "name": "US",
+               "type": "url",
+               "url": "https://royalweb-us-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145317000000",
+               "date_last_used": "0",
+               "guid": "20885628-1832-4839-8a92-6535b6225e75",
+               "id": "105",
+               "name": "KR",
+               "type": "url",
+               "url": "https://royalweb-kr-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145464000000",
+               "date_last_used": "0",
+               "guid": "bd6986fb-d4da-49a7-aeb3-f15c29b925ad",
+               "id": "106",
+               "name": "CH",
+               "type": "url",
+               "url": "https://royalweb-ch-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145497000000",
+               "date_last_used": "0",
+               "guid": "788aadc0-3bc1-48a3-9c8a-0b180b9e6738",
+               "id": "107",
+               "name": "EU",
+               "type": "url",
+               "url": "https://royalweb-eu-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145519000000",
+               "date_last_used": "0",
+               "guid": "db05a7b6-6a83-4724-bce9-91c188b19e44",
+               "id": "108",
+               "name": "AU",
+               "type": "url",
+               "url": "https://royalweb-au-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145542000000",
+               "date_last_used": "0",
+               "guid": "8776a410-5e97-44a8-9b30-0d127b95439f",
+               "id": "109",
+               "name": "AT",
+               "type": "url",
+               "url": "https://royalweb-at-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145548000000",
+               "date_last_used": "0",
+               "guid": "5c77b5fd-c21f-49bb-b5b7-ae7deea6ccda",
+               "id": "110",
+               "name": "NL",
+               "type": "url",
+               "url": "https://royalweb-nl-prod-royalweb-nl-prod-deploy.azurewebsites.net/"
+            } ],
+            "date_added": "13322911115200991",
             "date_last_used": "0",
-            "guid": "2f57cbe5-a4f5-469f-8bab-884933c1eb90",
-            "id": "26",
-            "name": "RD-DK",
-            "type": "url",
-            "url": "https://royalweb-dk-prod-deploy.azurewebsites.net/"
+            "date_modified": "0",
+            "guid": "31049ace-56f2-44ec-a704-74fc99ee0532",
+            "id": "96",
+            "name": "RD Swap",
+            "type": "folder"
          }, {
-            "date_added": "13301151495204395",
+            "children": [ {
+               "date_added": "13310145572000000",
+               "date_last_used": "0",
+               "guid": "35e4ee46-8ca4-4839-a5e9-ab5c905b5a8e",
+               "id": "112",
+               "name": "SE",
+               "type": "url",
+               "url": "https://r21web-se-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145586000000",
+               "date_last_used": "0",
+               "guid": "af75f7bc-0412-4d3e-a7e5-50dfac8eac0d",
+               "id": "113",
+               "name": "FI",
+               "type": "url",
+               "url": "https://r21web-fi-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145597000000",
+               "date_last_used": "0",
+               "guid": "ab2d27a6-d59d-48ac-93b5-85b43a0664f4",
+               "id": "114",
+               "name": "DK",
+               "type": "url",
+               "url": "https://r21web-dk-prod-deploy.azurewebsites.net/"
+            }, {
+               "date_added": "13310145611000000",
+               "date_last_used": "0",
+               "guid": "d2a880a4-2ce5-448a-960c-67ef86546472",
+               "id": "115",
+               "name": "NO",
+               "type": "url",
+               "url": "https://r21web-no-prod-deploy.azurewebsites.net/"
+            } ],
+            "date_added": "13322911115201717",
             "date_last_used": "0",
-            "guid": "03dcd54e-0091-4fa4-97e9-670a233dbe0a",
-            "id": "12",
-            "name": "R21-SE",
-            "type": "url",
-            "url": "https://r21web-se-prod-deploy.azurewebsites.net/"
+            "date_modified": "0",
+            "guid": "8874d3fd-9362-45dd-8256-642377b3f0aa",
+            "id": "111",
+            "name": "R21 Swap",
+            "type": "folder"
          }, {
-            "date_added": "13301414960074842",
+            "date_added": "13301419648000000",
             "date_last_used": "0",
-            "guid": "596f2cb3-c799-4d1e-9461-16735fba40c4",
-            "id": "18",
-            "name": "R21-DK",
+            "guid": "cb6fb173-962e-47a6-b1c7-95df49d0e0f6",
+            "id": "116",
+            "name": "RD Prod SE",
             "type": "url",
-            "url": "https://r21web-dk-prod-deploy.azurewebsites.net/"
+            "url": "https://royaldesign.se/"
+         }, {
+            "children": [ {
+               "date_added": "13311075027000000",
+               "date_last_used": "0",
+               "guid": "784b0bfe-2317-46b1-a94b-b662f7448e34",
+               "id": "118",
+               "name": "FI",
+               "type": "url",
+               "url": "https://royaldesign.fi/"
+            }, {
+               "date_added": "13311076562000000",
+               "date_last_used": "0",
+               "guid": "c25241d6-1f59-487a-94f7-d66bb7931760",
+               "id": "119",
+               "name": "NO",
+               "type": "url",
+               "url": "https://royaldesign.no/"
+            }, {
+               "date_added": "13311076568000000",
+               "date_last_used": "0",
+               "guid": "bdce246e-88cf-4571-aa11-701f5dfcc035",
+               "id": "120",
+               "name": "DK",
+               "type": "url",
+               "url": "https://royaldesign.dk/"
+            }, {
+               "date_added": "13311076573000000",
+               "date_last_used": "0",
+               "guid": "2f8930dd-51ca-4898-a06f-d3f657661aee",
+               "id": "121",
+               "name": "DE",
+               "type": "url",
+               "url": "https://royaldesign.de/"
+            }, {
+               "date_added": "13311152234000000",
+               "date_last_used": "0",
+               "guid": "2b93c9b9-ca1a-4a08-bde6-564820174293",
+               "id": "122",
+               "name": "JP",
+               "type": "url",
+               "url": "https://royaldesign.jp/"
+            }, {
+               "date_added": "13311152264000000",
+               "date_last_used": "0",
+               "guid": "aac6327f-9dd3-4233-8618-1423f488a92e",
+               "id": "123",
+               "name": "UK",
+               "type": "url",
+               "url": "https://royaldesign.co.uk/"
+            }, {
+               "date_added": "13311152316000000",
+               "date_last_used": "0",
+               "guid": "2f2777a2-be97-4177-8fb9-4fbbbc903dad",
+               "id": "124",
+               "name": "KR",
+               "type": "url",
+               "url": "https://royaldesign.kr/"
+            }, {
+               "date_added": "13311152517000000",
+               "date_last_used": "0",
+               "guid": "b6a1c046-90e8-4e0d-9f2e-2ef58b54b0d0",
+               "id": "125",
+               "name": "CH",
+               "type": "url",
+               "url": "https://royaldesign.com/ch/"
+            }, {
+               "date_added": "13311152547000000",
+               "date_last_used": "0",
+               "guid": "032025fc-87c0-4512-87d2-da4a2089a3a1",
+               "id": "126",
+               "name": "US",
+               "type": "url",
+               "url": "https://royaldesign.com/us/"
+            }, {
+               "date_added": "13311152586000000",
+               "date_last_used": "0",
+               "guid": "febb295e-158f-41de-a666-4a6472938311",
+               "id": "127",
+               "name": "AU",
+               "type": "url",
+               "url": "https://royaldesign.com/au/"
+            }, {
+               "date_added": "13311152614000000",
+               "date_last_used": "0",
+               "guid": "1cec05da-6edb-4ec7-b3a7-0690d1b99730",
+               "id": "128",
+               "name": "AT",
+               "type": "url",
+               "url": "https://royaldesign.com/at/"
+            }, {
+               "date_added": "13311152655000000",
+               "date_last_used": "0",
+               "guid": "781f665c-7edb-4fa3-9a23-d2406a464491",
+               "id": "129",
+               "name": "NL",
+               "type": "url",
+               "url": "https://royaldesign.com/nl/"
+            } ],
+            "date_added": "13322911115202311",
+            "date_last_used": "0",
+            "date_modified": "0",
+            "guid": "ec9e3dc0-94e1-4204-9c84-28a1235c3797",
+            "id": "117",
+            "name": "RD Prod",
+            "type": "folder"
+         }, {
+            "date_added": "13301174697000000",
+            "date_last_used": "0",
+            "guid": "a153596e-1287-47aa-b008-0221ffa49fff",
+            "id": "130",
+            "name": "R21 Prod SE",
+            "type": "url",
+            "url": "https://www.rum21.se/"
+         }, {
+            "children": [ {
+               "date_added": "13311075097000000",
+               "date_last_used": "0",
+               "guid": "ae598cd7-c354-4db3-a7a2-f1c3921ed45f",
+               "id": "132",
+               "name": "FI",
+               "type": "url",
+               "url": "https://www.rum21.fi/"
+            }, {
+               "date_added": "13311075103000000",
+               "date_last_used": "0",
+               "guid": "6ad56de3-eb94-4326-8856-5f26ba3913de",
+               "id": "133",
+               "name": "DK",
+               "type": "url",
+               "url": "https://www.rum21.dk/"
+            }, {
+               "date_added": "13311075108000000",
+               "date_last_used": "0",
+               "guid": "9cb421ea-fad5-4a59-b4b2-13b921457f33",
+               "id": "134",
+               "name": "NO",
+               "type": "url",
+               "url": "https://www.rum21.no/"
+            } ],
+            "date_added": "13322911115203161",
+            "date_last_used": "0",
+            "date_modified": "0",
+            "guid": "59c1081f-7d89-408d-b958-2c2640d9c0e7",
+            "id": "131",
+            "name": "R21 Prod",
+            "type": "folder"
+         }, {
+            "date_added": "13322251344000000",
+            "date_last_used": "0",
+            "guid": "372ed2f1-b26d-4f82-aeec-06f8f50895e3",
+            "id": "135",
+            "name": "canoni",
+            "type": "url",
+            "url": "view-source:http://localhost:3000/sasong/pask"
          } ],
          "date_added": "13301097411053792",
          "date_last_used": "0",
-         "date_modified": "13302894803644559",
+         "date_modified": "0",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
