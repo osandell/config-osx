@@ -1,5 +1,5 @@
 {
-   "checksum": "48df5c66fc29b61cb9eb0f1e7bc72fe4",
+   "checksum": "fb2a85de27af88b8b9adbc5ea660f7fa",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -10,6 +10,14 @@
             "name": "",
             "type": "url",
             "url": "http://www.google.se/"
+         }, {
+            "date_added": "13323629785658429",
+            "date_last_used": "0",
+            "guid": "e9cd6467-fb21-4007-86d2-143d48622329",
+            "id": "84",
+            "name": "Messages",
+            "type": "url",
+            "url": "https://www.etsy.com/messages/1200602188"
          }, {
             "date_added": "13307378202186147",
             "date_last_used": "0",
@@ -36,7 +44,7 @@
             "url": "https://www.notion.so/Memos-8019da73bfc84815abe478a87707d84c"
          }, {
             "date_added": "13292243983983423",
-            "date_last_used": "13323349678629889",
+            "date_last_used": "13323628871451936",
             "guid": "d8111bf3-9bf7-4137-999b-66cc3df8d88d",
             "id": "9",
             "name": "",
@@ -353,7 +361,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13322564917850857",
+         "date_modified": "13323629785658429",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
