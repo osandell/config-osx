@@ -374,8 +374,5 @@
   },
   "[python]": {
     "editor.formatOnType": true
-  },
-  "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
   }
 }
