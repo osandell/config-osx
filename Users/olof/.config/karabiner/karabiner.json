@@ -3030,10 +3030,13 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "´ to switch to rsthd keyboard mapping",
+        "description" : "Shift + ´ to switch to rsthd keyboard mapping",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "equal_sign"
+            "key_code" : "equal_sign",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
           },
           "to" : [ {
             "shell_command" : "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-rsthd.sh"

@@ -716,8 +716,8 @@
 ;;             :rules [:!parallels [:!Tdelete_or_backspace :!Odelete_or_backspace] [:!Odelete_or_backspace :delete_or_backspace]]}
 ;;       {:des "Left Control + Shift + G: Check if we have synced all repos to GitHub"
 ;;             :rules [[:!TSg "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"]]} 
-      {:des "´ to switch to qwerty keyboard mapping"
-            :rules [[:equal_sign "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-qwerty.sh"]]}      
+      {:des "Shift + ´ to switch to qwerty keyboard mapping"
+            :rules [[:!Sequal_sign "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-qwerty.sh"]]}      
 ;;       {:des "Right Control + Space: Spotlight"
 ;;             :rules [:!parallels[:!Wspacebar :!Cspacebar]]} 
 ]}
