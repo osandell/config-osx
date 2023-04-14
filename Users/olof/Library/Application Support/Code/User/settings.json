@@ -374,5 +374,7 @@
   },
   "[python]": {
     "editor.formatOnType": true
-  }
+  },
+  "easycode.userEmail": "olof.sandell@protonmail.com",
+  "easycode.model": "gpt-4"
 }
