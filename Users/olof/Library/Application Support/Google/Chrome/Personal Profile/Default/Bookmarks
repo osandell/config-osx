@@ -1,5 +1,5 @@
 {
-   "checksum": "6c541acec6b6ba5ee95297a493f6f938",
+   "checksum": "f3e1a1634569e4c7055bd406157859a6",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -85,6 +85,14 @@
             "name": "What About Vite SSR?. This article will bring you a deeper… | by Yeyan | JavaScript in Plain English",
             "type": "url",
             "url": "https://javascript.plainenglish.io/what-about-vite-ssr-ef7ccdf58b5"
+         }, {
+            "date_added": "13327613950322667",
+            "date_last_used": "0",
+            "guid": "70def654-6f79-4b48-b8ed-0c3170ec5e43",
+            "id": "90",
+            "name": "Allsvenskan",
+            "type": "url",
+            "url": "https://hesgoaltv.co/gol-tv/"
          }, {
             "date_added": "13321830486898006",
             "date_last_used": "0",
@@ -377,7 +385,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13327150736613258",
+         "date_modified": "13327613950322667",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
