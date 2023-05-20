@@ -1,5 +1,5 @@
 {
-   "checksum": "a75c6b27946147956e56b853e3bce59f",
+   "checksum": "4fdbc2fbd8dc260e59183d6748bda781",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -32,9 +32,9 @@
                "date_last_used": "0",
                "guid": "be97285c-f62a-42bc-ba5a-6ef0233b7630",
                "id": "141",
-               "name": "rd-local-stage.se:3000",
+               "name": "rd-local-dev.se:3000",
                "type": "url",
-               "url": "http://rd-local-stage.se:3000/"
+               "url": "http://rd-local-dev.se:3000/"
             }, {
                "date_added": "13328898502989479",
                "date_last_used": "0",
