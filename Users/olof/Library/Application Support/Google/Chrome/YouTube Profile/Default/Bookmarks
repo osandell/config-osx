@@ -1,5 +1,5 @@
 {
-   "checksum": "4fc00bd5aa72372a3c2cff799da72922",
+   "checksum": "622dfecbb865d420978af1623fda02d8",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -10,10 +10,21 @@
             "name": "",
             "type": "url",
             "url": "https://www.youtube.com/feed/subscriptions"
+         }, {
+            "date_added": "13329736307413951",
+            "date_last_used": "0",
+            "guid": "976d2d73-5788-432a-b0ea-45c244631e29",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "",
+            "type": "url",
+            "url": "https://www.youtube.com/watch?v=a3Lth3k00N4"
          } ],
          "date_added": "13302523554648182",
          "date_last_used": "0",
-         "date_modified": "13302524148606835",
+         "date_modified": "13329736307413951",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
