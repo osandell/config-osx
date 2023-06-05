@@ -2968,7 +2968,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "long press Left Control + Left Shift + Backspace to empty recycle bin",
+        "description" : "Long press Left Control + Left Shift + Backspace to empty recycle bin",
         "manipulators" : [ {
           "to_if_held_down" : [ {
             "shell_command" : "osascript -e 'tell application \"Finder\" to empty trash'"
@@ -3030,17 +3030,31 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Shift + ´ to switch to rsthd keyboard mapping",
+        "description" : "Long press Left Control + Left Shift +  to switch to colemak dh keyboard mapping",
         "manipulators" : [ {
-          "from" : {
-            "key_code" : "equal_sign",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-rsthd.sh"
+          "to_if_alone" : [ {
+            "key_code" : "6"
           } ],
+          "to_if_held_down" : [ {
+            "shell_command" : "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-colemak-dh.sh"
+          } ],
+          "from" : {
+            "key_code" : "6"
+          },
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Long press 7 to switch to new qwerty keyboard mapping",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "7"
+          } ],
+          "to_if_held_down" : [ {
+            "shell_command" : "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-qwerty.sh"
+          } ],
+          "from" : {
+            "key_code" : "7"
+          },
           "type" : "basic"
         } ]
       }, {

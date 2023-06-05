@@ -685,15 +685,21 @@
                   click (first button whose subrole is \"AXMinimizeButton\") of (first window whose subrole is \"AXStandardWindow\") of (first process whose frontmost is true)
             end tell
             '"]]}
-      {:des "long press Left Control + Left Shift + Backspace to empty recycle bin"
+      {:des "Long press Left Control + Left Shift + Backspace to empty recycle bin"
             :rules [[:!TSdelete_or_backspace nil nil {
             :held "osascript -e 'tell application \"Finder\" to empty trash'"}]]}
       {:des "Left Control + Backspace to delete a word at a time instead of Option + Backspace"
             :rules [:!parallels [:!Tdelete_or_backspace :!Odelete_or_backspace] [:!Odelete_or_backspace :delete_or_backspace]]}
       {:des "Left Control + Shift + G: Check if we have synced all repos to GitHub"
             :rules [[:!TSg "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"]]} 
-      {:des "Shift + ´ to switch to rsthd keyboard mapping"
-            :rules [[:!Sequal_sign "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-rsthd.sh"]]}      
+      {:des "Long press Left Control + Left Shift +  to switch to colemak dh keyboard mapping"
+            :rules [[:6 nil nil {
+            :alone :6
+            :held "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-colemak-dh.sh"}]]}
+      {:des "Long press 7 to switch to new qwerty keyboard mapping"
+            :rules [[:7 nil nil {
+            :alone :7
+            :held "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-qwerty.sh"}]]}
       {:des "Right Control + Space: Spotlight"
             :rules [:!parallels[:!Wspacebar :!Cspacebar]]} 
 ]}

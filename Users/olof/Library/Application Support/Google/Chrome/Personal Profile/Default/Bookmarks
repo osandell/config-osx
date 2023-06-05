@@ -1,10 +1,10 @@
 {
-   "checksum": "74c47dd391c6529180680b54b7c9207d",
+   "checksum": "69c5cd6aa4850dc14aa4c8a879d66034",
    "roots": {
       "bookmark_bar": {
          "children": [ {
             "date_added": "13292243473417673",
-            "date_last_used": "0",
+            "date_last_used": "13330354701437672",
             "guid": "e543fb00-c30a-485d-a74c-8d4d80749f08",
             "id": "5",
             "name": "",
@@ -18,125 +18,6 @@
             "name": "gpt",
             "type": "url",
             "url": "https://chat.openai.com/?model=gpt-4"
-         }, {
-            "date_added": "13325976493761138",
-            "date_last_used": "0",
-            "guid": "dfd89015-8b72-4e98-9ae5-0f662edd8d80",
-            "id": "86",
-            "name": "How to avoid hydration errors in Gatsby with React.lazy",
-            "type": "url",
-            "url": "https://www.codeandweb.com/tutorials/gatsby-lazy-loading-with-react-lazy"
-         }, {
-            "date_added": "13323629785658429",
-            "date_last_used": "13328396303747589",
-            "guid": "e9cd6467-fb21-4007-86d2-143d48622329",
-            "id": "84",
-            "name": "Messages",
-            "type": "url",
-            "url": "https://www.etsy.com/messages/1200602188"
-         }, {
-            "date_added": "13307378202186147",
-            "date_last_used": "13323807431275044",
-            "guid": "bf21d0d8-c34e-4ebd-80b0-34469f3ea8ff",
-            "id": "33",
-            "name": "",
-            "type": "url",
-            "url": "https://track.toggl.com/timer"
-         }, {
-            "date_added": "13292243906460421",
-            "date_last_used": "13328275532763771",
-            "guid": "b91f1312-ce8c-4cae-97b2-25c78ef65f39",
-            "id": "8",
-            "name": "",
-            "type": "url",
-            "url": "https://github.com/"
-         }, {
-            "date_added": "13292243894274034",
-            "date_last_used": "0",
-            "guid": "b7601168-534c-4f1f-834f-3544b7cf5276",
-            "id": "7",
-            "name": "",
-            "type": "url",
-            "url": "https://www.notion.so/Memos-8019da73bfc84815abe478a87707d84c"
-         }, {
-            "date_added": "13292243983983423",
-            "date_last_used": "13329351871134790",
-            "guid": "d8111bf3-9bf7-4137-999b-66cc3df8d88d",
-            "id": "9",
-            "name": "",
-            "type": "url",
-            "url": "https://protonmail.com/"
-         }, {
-            "date_added": "13322564917850857",
-            "date_last_used": "0",
-            "guid": "8f038b90-597a-4b31-a113-a27f159e1b33",
-            "id": "82",
-            "name": "Vite: Render Template for Return.",
-            "type": "url",
-            "url": "https://chat.openai.com/chat/0e65f8db-9486-46f6-a3cf-8792462981f7"
-         }, {
-            "date_added": "13321917275146112",
-            "date_last_used": "0",
-            "guid": "14b4a2ab-8db3-40dc-acc2-832cfc6080be",
-            "id": "80",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "What About Vite SSR?. This article will bring you a deeper… | by Yeyan | JavaScript in Plain English",
-            "type": "url",
-            "url": "https://javascript.plainenglish.io/what-about-vite-ssr-ef7ccdf58b5"
-         }, {
-            "date_added": "13328455918319193",
-            "date_last_used": "13328457876418896",
-            "guid": "88324a5b-fe55-4989-a060-4ef6abd2738b",
-            "id": "92",
-            "name": "Allsvenskan",
-            "type": "url",
-            "url": "http://fawanews.com/Hacken%20vs%20Degerfors.html"
-         }, {
-            "date_added": "13321830486898006",
-            "date_last_used": "13328457875349645",
-            "guid": "0ba8f6f6-1b15-4756-9c3e-15c2ab36468b",
-            "id": "79",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "Awesome Vite (vitejs/awesome-vite) Overview - Track Awesome List",
-            "type": "url",
-            "url": "https://www.trackawesomelist.com/vitejs/awesome-vite/readme/"
-         }, {
-            "date_added": "13321796245608865",
-            "date_last_used": "0",
-            "guid": "57ffabae-22de-4f71-9e6c-52c2895e14e2",
-            "id": "78",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "Vite code splitting that just works | Sambit Sahoo",
-            "type": "url",
-            "url": "https://sambitsahoo.com/blog/vite-code-splitting-that-works.html"
-         }, {
-            "date_added": "13321401083962624",
-            "date_last_used": "13328567143018320",
-            "guid": "0b572938-ccf3-4d20-997f-8247b1240834",
-            "id": "77",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "How to build speedy sites with Vite + partial hydration",
-            "type": "url",
-            "url": "https://www.netlify.com/blog/2021/11/12/ship-javascript-where-it-counts-with-vite-partial-hydration/"
-         }, {
-            "date_added": "13320960509482283",
-            "date_last_used": "0",
-            "guid": "ebf69d73-87a5-48b8-962a-ef3d6ec2245d",
-            "id": "72",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "Keyboard Layout Editor",
-            "type": "url",
-            "url": "http://www.keyboard-layout-editor.com/#/gists/334117a5742d662c1e0fbf286095e6be"
          }, {
             "children": [ {
                "date_added": "13320624460261006",
@@ -225,14 +106,149 @@
                "name": "(10) Neovim — Mapping your way to productivity (NeovimConf.live talk) - YouTube",
                "type": "url",
                "url": "https://www.youtube.com/watch?v=XyCRvk-VcXU"
+            }, {
+               "date_added": "13320960509482283",
+               "date_last_used": "0",
+               "guid": "ebf69d73-87a5-48b8-962a-ef3d6ec2245d",
+               "id": "72",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Keyboard Layout Editor",
+               "type": "url",
+               "url": "http://www.keyboard-layout-editor.com/#/gists/334117a5742d662c1e0fbf286095e6be"
+            }, {
+               "date_added": "13330344558834231",
+               "date_last_used": "0",
+               "guid": "5cacd961-9703-4525-9fc7-d2a82c1cad8c",
+               "id": "100",
+               "name": "Workman Keyboard Layout",
+               "type": "url",
+               "url": "https://workmanlayout.org/#the-problem-with-colemak"
             } ],
             "date_added": "13320624472283625",
             "date_last_used": "0",
-            "date_modified": "13328572085548113",
+            "date_modified": "13330344558834231",
             "guid": "144e4171-c21d-4b01-b523-56d8d70fdd9e",
             "id": "66",
             "name": "Keyboards",
             "type": "folder"
+         }, {
+            "date_added": "13329749355899098",
+            "date_last_used": "13330255703574616",
+            "guid": "81a578fd-11fa-446d-8922-ff49aac73b65",
+            "id": "98",
+            "name": "Allt I Ett Paket Spårning | 17TRACK",
+            "type": "url",
+            "url": "https://t.17track.net/sv#nums=YT2313821266044022"
+         }, {
+            "date_added": "13325976493761138",
+            "date_last_used": "0",
+            "guid": "dfd89015-8b72-4e98-9ae5-0f662edd8d80",
+            "id": "86",
+            "name": "How to avoid hydration errors in Gatsby with React.lazy",
+            "type": "url",
+            "url": "https://www.codeandweb.com/tutorials/gatsby-lazy-loading-with-react-lazy"
+         }, {
+            "date_added": "13323629785658429",
+            "date_last_used": "13329774668439728",
+            "guid": "e9cd6467-fb21-4007-86d2-143d48622329",
+            "id": "84",
+            "name": "Messages",
+            "type": "url",
+            "url": "https://www.etsy.com/messages/1200602188"
+         }, {
+            "date_added": "13307378202186147",
+            "date_last_used": "13323807431275044",
+            "guid": "bf21d0d8-c34e-4ebd-80b0-34469f3ea8ff",
+            "id": "33",
+            "name": "",
+            "type": "url",
+            "url": "https://track.toggl.com/timer"
+         }, {
+            "date_added": "13292243906460421",
+            "date_last_used": "13328275532763771",
+            "guid": "b91f1312-ce8c-4cae-97b2-25c78ef65f39",
+            "id": "8",
+            "name": "",
+            "type": "url",
+            "url": "https://github.com/"
+         }, {
+            "date_added": "13292243894274034",
+            "date_last_used": "0",
+            "guid": "b7601168-534c-4f1f-834f-3544b7cf5276",
+            "id": "7",
+            "name": "",
+            "type": "url",
+            "url": "https://www.notion.so/Memos-8019da73bfc84815abe478a87707d84c"
+         }, {
+            "date_added": "13292243983983423",
+            "date_last_used": "13330255720621197",
+            "guid": "d8111bf3-9bf7-4137-999b-66cc3df8d88d",
+            "id": "9",
+            "name": "",
+            "type": "url",
+            "url": "https://protonmail.com/"
+         }, {
+            "date_added": "13322564917850857",
+            "date_last_used": "0",
+            "guid": "8f038b90-597a-4b31-a113-a27f159e1b33",
+            "id": "82",
+            "name": "Vite: Render Template for Return.",
+            "type": "url",
+            "url": "https://chat.openai.com/chat/0e65f8db-9486-46f6-a3cf-8792462981f7"
+         }, {
+            "date_added": "13321917275146112",
+            "date_last_used": "0",
+            "guid": "14b4a2ab-8db3-40dc-acc2-832cfc6080be",
+            "id": "80",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "What About Vite SSR?. This article will bring you a deeper… | by Yeyan | JavaScript in Plain English",
+            "type": "url",
+            "url": "https://javascript.plainenglish.io/what-about-vite-ssr-ef7ccdf58b5"
+         }, {
+            "date_added": "13328455918319193",
+            "date_last_used": "13329781826905544",
+            "guid": "88324a5b-fe55-4989-a060-4ef6abd2738b",
+            "id": "92",
+            "name": "Allsvenskan",
+            "type": "url",
+            "url": "http://fawanews.com/Hacken%20vs%20Degerfors.html"
+         }, {
+            "date_added": "13321830486898006",
+            "date_last_used": "13328457875349645",
+            "guid": "0ba8f6f6-1b15-4756-9c3e-15c2ab36468b",
+            "id": "79",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Awesome Vite (vitejs/awesome-vite) Overview - Track Awesome List",
+            "type": "url",
+            "url": "https://www.trackawesomelist.com/vitejs/awesome-vite/readme/"
+         }, {
+            "date_added": "13321796245608865",
+            "date_last_used": "0",
+            "guid": "57ffabae-22de-4f71-9e6c-52c2895e14e2",
+            "id": "78",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Vite code splitting that just works | Sambit Sahoo",
+            "type": "url",
+            "url": "https://sambitsahoo.com/blog/vite-code-splitting-that-works.html"
+         }, {
+            "date_added": "13321401083962624",
+            "date_last_used": "13328567143018320",
+            "guid": "0b572938-ccf3-4d20-997f-8247b1240834",
+            "id": "77",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "How to build speedy sites with Vite + partial hydration",
+            "type": "url",
+            "url": "https://www.netlify.com/blog/2021/11/12/ship-javascript-where-it-counts-with-vite-partial-hydration/"
          }, {
             "date_added": "13319980105239621",
             "date_last_used": "0",
@@ -417,7 +433,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13328455918319193",
+         "date_modified": "13330344553841961",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
