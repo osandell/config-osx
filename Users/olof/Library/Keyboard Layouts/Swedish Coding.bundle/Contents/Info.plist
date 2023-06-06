@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>org.sil.ukelele.keyboardlayout.swedish-coding</string>
+	<key>CFBundleName</key>
+	<string>Swedish Coding</string>
+	<key>CFBundleVersion</key>
+	<string></string>
+	<key>KLInfo_Colemak DH</key>
+	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
+		<key>TISInputSourceID</key>
+		<string>org.sil.ukelele.keyboardlayout.swedish-coding.colemakdh</string>
+		<key>TISIntendedLanguage</key>
+		<string>sv</string>
+	</dict>
+	<key>KLInfo_QWERTY</key>
+	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
+		<key>TISInputSourceID</key>
+		<string>org.sil.ukelele.keyboardlayout.swedish-coding.qwerty</string>
+		<key>TISIntendedLanguage</key>
+		<string>sv</string>
+	</dict>
+	<key>KLInfo_QWERTY Old</key>
+	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
+		<key>TISInputSourceID</key>
+		<string>org.sil.ukelele.keyboardlayout.swedish-coding.qwertyold</string>
+		<key>TISIntendedLanguage</key>
+		<string>sv</string>
+	</dict>
+</dict>
+</plist>

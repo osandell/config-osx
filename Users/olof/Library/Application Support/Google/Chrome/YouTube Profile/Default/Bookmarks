@@ -1,5 +1,5 @@
 {
-   "checksum": "622dfecbb865d420978af1623fda02d8",
+   "checksum": "94d1bd6660cc98b0fa18a4485d090f89",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -21,10 +21,18 @@
             "name": "",
             "type": "url",
             "url": "https://www.youtube.com/watch?v=a3Lth3k00N4"
+         }, {
+            "date_added": "13330563036253749",
+            "date_last_used": "0",
+            "guid": "9e8d51ab-0477-4926-9d95-fbb919c7af1f",
+            "id": "9",
+            "name": "Why I Prefer Emacs Over VSCode and vim - YouTube",
+            "type": "url",
+            "url": "https://www.youtube.com/watch?v=cxoE2FhOIgI"
          } ],
          "date_added": "13302523554648182",
          "date_last_used": "0",
-         "date_modified": "13329736307413951",
+         "date_modified": "13330563036254022",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",
