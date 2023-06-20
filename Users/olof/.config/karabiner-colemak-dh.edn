@@ -54,12 +54,13 @@
 :profiles  {:Default {:default true :sim 50 :delay 500 :alone 500 :held 500}}
 
 
-;; :layers {
-;;       :f-mode {:key :f :condi [["d-mode" 0] ["j-mode" 0] ["k-mode" 0]]} 
-;;       :j-mode {:key :j :condi [["d-mode" 0] ["f-mode" 0] ["k-mode" 0]]} 
-;;       :d-mode {:key :d :condi [["f-mode" 0] ["j-mode" 0] ["k-mode" 0]]} 
-;;       :k-mode {:key :k :condi [["d-mode" 0] ["f-mode" 0] ["j-mode" 0]]} 
-;; }
+:layers {
+      :q-mode {:key :q} 
+      ;; :f-mode {:key :f :condi [["d-mode" 0] ["j-mode" 0] ["k-mode" 0]]} 
+      ;; :j-mode {:key :j :condi [["d-mode" 0] ["f-mode" 0] ["k-mode" 0]]} 
+      ;; :d-mode {:key :d :condi [["f-mode" 0] ["j-mode" 0] ["k-mode" 0]]} 
+      ;; :k-mode {:key :k :condi [["d-mode" 0] ["f-mode" 0] ["j-mode" 0]]} 
+}
 
 
 
@@ -69,6 +70,8 @@
 
 
 :main [
+           
+
 ;;       {:des "Hold D to simulate shift"
 ;;             :rules [:d-mode 
 ;;                   [:q :!Sq]     
@@ -150,23 +153,23 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
       ; MacBook Pro internal keyboard    
-      {:des "Function + ^ to Page Up"
-            :rules[:kb-macbook[:!F##close_bracket :page_up]]}
-      {:des "Function + ' to Page Down"
-            :rules[:kb-macbook[:!F##backslash :page_down]]}
-      {:des "FN to Left Command"
-            :rules [:kb-macbook :!parallels[:##fn :left_command]]}
-      {:des "Left Command to FN"
-            :rules [:kb-macbook[:##left_control :fn]]}
+      {:des "Fn to Left Command"
+            :rules [:kb-macbook :!parallels[:fn :left_command]]}
+      {:des "Fn + Left Control to Fn"
+              :rules[:kb-macbook[:!Cleft_control :fn]]}
+      {:des "Fn + Left Control to Fn"
+              :rules[:kb-macbook[:!Tfn :fn]]}
+      {:des "Left Control to Enter"
+             :rules [:kb-macbook[:left_control :left_control nil {:alone :return_or_enter}]]}
 
       ; Logitech K860
-      {:des "Media key with 3 squares to mission control"
-            :rules[:kb-logitech-k860[:!Cup_arrow :!Tup_arrow]]}
-      {:des "Show desktop media key (require changing hotkey in mac system settings). Not supposed to work when
-            Caps Lock is active so that we can use the f11 key in Chrome debug tool."
-            :rules[:kb-logitech-k860[:f11 :!TSOd]]}
-      {:des "Left Command to Left Command"
-            :rules [:kb-logitech-k860 :!parallels[:##left_control :left_command]]}
+      ;; {:des "Media key with 3 squares to mission control"
+      ;;       :rules[:kb-logitech-k860[:!Cup_arrow :!Tup_arrow]]}
+      ;; {:des "Show desktop media key (require changing hotkey in mac system settings). Not supposed to work when
+      ;;       Caps Lock is active so that we can use the f11 key in Chrome debug tool."
+      ;;       :rules[:kb-logitech-k860[:f11 :!TSOd]]}
+      ;; {:des "Left Command to Left Command"
+      ;;       :rules [:kb-logitech-k860 [:##left_control :left_command]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Media + Brighness Control
@@ -317,23 +320,23 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Slack
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Tab + K to open Grebban workspace"
-            :rules [:slack[:!Tk :!C1]]}
+      {:des "Right Command + F to open Grebban workspace"
+            :rules [:slack[:!CTOf :!C1]]}
 
-      {:des "Tab + J to open Royal workspace"
-            :rules [:slack[:!Tj :!C2]]}
+      {:des "Right Command + A to open Royal workspace"
+            :rules [:slack[:!CTOa :!C2]]}
 
-      {:des "Right Option + Right Shift + f to find thread"
-            :rules [:slack[:!ERw :!Cf]]}
+      {:des "Right Command + S to open SEO workspace"
+            :rules [:slack[:!CTOs :!C3]]}
+
+      {:des "Left Command + Tab to find channel"
+            :rules [:slack[:!Ttab :!Ck]]}
 
         
-            
-
-
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; VSCode
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Command + Caps Lock + c to run last used terminal command"
+      {:des "Left Command + Caps Lock + x to run last used terminal command"
             :rules [:vscode[:!TOx nil nil {:alone "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.applescript"
             :held "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.applescript"}]]}
       {:des "Left Command + x to reload Chrome Dev"
@@ -341,31 +344,21 @@
             tell application \"Google Chrome Dev\" to activate
             delay 0.5
             tell application \"System Events\" to key code 15 using {command down, shift down}
-            tell application \"Code\" to activate
             '"]]}
 
+      {:des "Tab + w / e to Switch tab"
+            :rules [:vscode[:!Ww :!COleft_arrow] :vscode[:!We :!COright_arrow]]} 
 
       ; For the following 2 definitions to work I've also mapped ° and ˝ to
       ; melodies in VSCode VIM.
-      {:des "Left Command + , to console log without variable"
-            :rules [:vscode[:!Tcomma :!SEq]]}
-      {:des "Left Command + m to console log with variable"
-            :rules [:vscode[:!Tm :!SEw]]}
-      ;; {:des "Left Command + Caps Lock to alternate between the 2 most recent tabs"
-      ;;       :rules [:vscode[:!Wq :!Ttab]]}         
-
- {:des "Left Command + Caps Lock to Left Control + Left Option, to alternate between the 2 most recent tabs if pressed alone"                           
-:rules [[:!Tcaps_lock :!Oleft_control nil {:alone :!Ttab}]]} 
-
-      {:des "Left Command + m to console log with variable"
-            :rules [:vscode[:!OTw :!CTOa] :vscode[:!OTe :!CTOs]]}
-
-
-
-      ;; {:des "Left Command + a to stage selected area"
-            ;; :rules [:vscode[:!Ta [:!Ck :!COs]]]}
-      {:des "Left Shift + Left Command + a to revert selected changes"
-            :rules [:vscode[:!STa [:!Ck :!Cr]]]}
+      {:des "Left Command + . to console log without variable"
+            :rules [:vscode[:!Tperiod :!SEq]]}
+      {:des "Left Command + , to console log with variable"
+            :rules [:vscode[:!Tcomma :!SEw]]}
+      {:des "Right Command + s to stage selected area"
+            :rules [:vscode[:!CTOs [:!Cm :!COs]]]}
+      {:des "Right Command + r to revert selected changes"
+            :rules [:vscode[:!CTOa [:!Cm :!Ca]]]}
       {:des "Left Command + 2 to Close all tab if held / Close current tab if tapped"
             :rules [:vscode[:!T2 nil nil {:alone :!Cq
             :held [ :!Cm :!Cq]}]]}
@@ -375,15 +368,9 @@
             delay 0.5
             tell application \"System Events\" to key code 6 using control down
             '"]]}
-
-      {:des "Left Command + O to searh for file"
-:rules [:vscode[:!To :!Tquote]]} 
-
-{:des "Left Command + P to open command palette"
-:rules [:vscode[:!Tp :!Te]]} 
-
-
-
+      {:des "Right Command + ä to searh for file"
+            :rules [:vscode[:!CTOquote :!Tquote]]} 
+  
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; iTerm
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -569,20 +556,124 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Tab + Q: activate Google Chrome Grebban"
-            :rules [[:!Wq "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"]]}
-      {:des "Tab + 1: activate Google Chrome Personal"
-            :rules [[:!W1 "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]]}
-      {:des "Tab + w: activate VSCode"
-            :rules [[:!Ww "osascript ~/dev/osandell/scripts-osx/keyboard-mapping/launch_vscode_or_visual_studio.applescript"]]}
-      {:des "Tab + 2: activate iTerm + Fork"
-            :rules [[:!W2 "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"]]}
-      {:des "Tab + e: activate Google Chrome Dev"
-            :rules [[:!We "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
-      {:des "Tab + Tab: activate Slack"
-            :rules [[:!W3 "osascript -e 'tell application \"Slack\" to activate'"]]}
-      {:des "Tab + 4: activate Google Chrome YouTube"
-            :rules [[:!T4"osascript -e 'tell application \"Google Chrome YouTube\" to activate'"]]}
+      {:des "Q + {key} to shift application"
+      :rules [:q-mode 
+      ;Google Chrome Grebban
+            [:e "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"]   
+      ;Google Google Chrome Personal
+            [:x "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]
+      ;Google VSCode
+            [:w "osascript ~/dev/osandell/scripts-osx/keyboard-mapping/launch_vscode_or_visual_studio.applescript"]
+      ;Google Fork
+            [:left_command "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"]
+      ;Google Dev
+            [:d "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]
+      ;Google activate Slack
+            [:caps_lock "osascript -e 'tell application \"Slack\" to activate'"]
+      ;Google activate Google Chrome YouTube
+            [:s "osascript -e 'tell application \"Google Chrome YouTube\" to activate'"]
+    ]}
+
+      {:des "Press J / K / L / Ö to enter arrow mode"
+      :rules [
+            [:j nil ["arrow-mode" 0] {
+                  :held  [["arrow-mode" 1] :left_arrow] :alone :j :params{:alone 200 :held 200}}]
+            [:k nil ["arrow-mode" 0] {
+                  :held  [["arrow-mode" 1] :down_arrow] :alone :k :params{:alone 200 :held 200}}]
+            [:l nil ["arrow-mode" 0] {
+                  :held  [["arrow-mode" 1] :up_arrow] :alone :l :params{:alone 200 :held 200}}]
+            [:semicolon nil ["arrow-mode" 0] {
+                  :held  [["arrow-mode" 1] :right_arrow] :alone :semicolon :params{:alone 200 :held 200}}]      
+      :arrow-mode
+            [:j :left_arrow]
+            [:k :down_arrow]
+            [:l :up_arrow]
+            [:semicolon :right_arrow]
+            [:!Rj :!Rleft_arrow]
+            [:!Rk :!Rdown_arrow]
+            [:!Rl :!Rup_arrow]
+            [:!Rsemicolon :!Rright_arrow]
+            [:!CTOj :!Oleft_arrow]
+            [:!CTOk [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow]]
+            [:!CTOl [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow]]
+            [:!CTOsemicolon :!Oright_arrow]
+            [:!Oj :home]
+            [:!Ok :page_down]
+            [:!Ol :page_up]
+            [:!Osemicolon :end]
+            [:q [:q ["arrow-mode" 0]]]
+            [:w [:w ["arrow-mode" 0]]]
+            [:e [:e ["arrow-mode" 0]]]
+            [:r [:r ["arrow-mode" 0]]]
+            [:t [:t ["arrow-mode" 0]]]
+            [:y [:y ["arrow-mode" 0]]]
+            [:u [:u ["arrow-mode" 0]]]
+            [:i [:i ["arrow-mode" 0]]]
+            [:o [:o ["arrow-mode" 0]]]
+            [:p [:p ["arrow-mode" 0]]]
+            [:a [:a ["arrow-mode" 0]]]
+            [:s [:s ["arrow-mode" 0]]]
+            [:d [:d ["arrow-mode" 0]]]
+            [:f [:f ["arrow-mode" 0]]]
+            [:g [:g ["arrow-mode" 0]]]
+            [:h [:h ["arrow-mode" 0]]]
+            [:z [:z ["arrow-mode" 0]]]
+            [:x [:x ["arrow-mode" 0]]]
+            [:c [:c ["arrow-mode" 0]]]
+            [:v [:v ["arrow-mode" 0]]]
+            [:b [:b ["arrow-mode" 0]]]
+            [:n [:n ["arrow-mode" 0]]]
+            [:m [:m ["arrow-mode" 0]]]
+            [:0 [:0 ["arrow-mode" 0]]]
+            [:1 [:1 ["arrow-mode" 0]]]
+            [:2 [:2 ["arrow-mode" 0]]]
+            [:3 [:3 ["arrow-mode" 0]]]
+            [:4 [:4 ["arrow-mode" 0]]]
+            [:5 [:5 ["arrow-mode" 0]]]
+            [:6 [:6 ["arrow-mode" 0]]]
+            [:7 [:7 ["arrow-mode" 0]]]
+            [:8 [:8 ["arrow-mode" 0]]]
+            [:9 [:9 ["arrow-mode" 0]]]
+            [:left_arrow [:left_arrow ["arrow-mode" 0]]]
+            [:right_arrow [:right_arrow ["arrow-mode" 0]]]
+            [:up_arrow [:up_arrow ["arrow-mode" 0]]]
+            [:down_arrow [:down_arrow ["arrow-mode" 0]]]
+            [:left_command [ ["arrow-mode" 0] :left_control] nil {:alone [:escape ["arrow-mode" 0]]}]
+            [:left_option [:delete_forward ["arrow-mode" 0]]]
+            [:right_option [:delete_or_backspace ["arrow-mode" 0]]]
+            [:left_control [:left_control ["arrow-mode" 0]]]
+            [:right_control [:right_control ["arrow-mode" 0]]]
+            [:comma [:comma ["arrow-mode" 0]]]
+            [:period [:period ["arrow-mode" 0]]]
+            [:quote [:quote ["arrow-mode" 0]]]
+            [:open_bracket [:open_bracket ["arrow-mode" 0]]]
+            [:close_bracket [:close_bracket ["arrow-mode" 0]]]
+            [:slash [:slash ["arrow-mode" 0]]]
+            [:backslash [:backslash ["arrow-mode" 0]]]
+            [:hyphen [:hyphen ["arrow-mode" 0]]]
+            [:equal_sign [:equal_sign ["arrow-mode" 0]]]
+            [:grave_accent_and_tilde [:grave_accent_and_tilde ["arrow-mode" 0]]]
+            [:return_or_enter [:return_or_enter ["arrow-mode" 0]]]
+            [:tab [:tab ["arrow-mode" 0]]]
+            [:delete_or_backspace [:delete_or_backspace ["arrow-mode" 0]]]
+            [:caps_lock [:caps_lock ["arrow-mode" 0]]]
+            [:escape [:escape ["arrow-mode" 0]]]
+            [:right_shift :right_shift]
+      ]}
+
+
+                               ;;       {:des "long press Left Command + Left Shift + Backspace to empty recycle bin"
+;;              :rules [[:!TSdelete_or_backspace nil nil {
+;;             :held "osascript -e 'tell application \"Finder\" to empty trash'"}]]}
+
+;;     {:des   "Press right_shift twice to enter double shift mode, press right_shift once to leave it"
+;;                        :rules [[:right_shift ["double-right-shift-mode" 1] ["shift-pressed-once" 1]]
+;;                                [:right_shift [:right_shift ["shift-pressed-once" 1]] ["double-right-shift-mode" 0] {:delayed {:invoked ["shift-pressed-once" 0] :canceled ["shift-pressed-once" 0]}}]
+;;                                :double-right-shift-mode
+;;                                [:right_shift ["double-right-shift-mode" 0]]
+;;                                [:a "say 'know we are in double shift mode'"]]}
+
+  
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Window positioning
@@ -599,63 +690,69 @@
             :rules [:!parallels[:!CSdown_arrow "/Users/olof/dev/osandell/scripts-osx/eventscripts-helper/position-all-windows.sh"]]} 
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Misc          
+      ;; Misc          
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-                {:des "Right Option to Backspace"
-               :rules[[:right_option :delete_or_backspace]]}
-                {:des "Left Option to Delete"
-               :rules[[:left_option :delete_forward]]}
+      {:des "Right Option to Backspace"
+            :rules[[:right_option :delete_or_backspace] [:!Tright_option :!Odelete_or_backspace]]}
+      {:des "Left Command + Backspace to Left Option + Backspace"
+            :rules[[:!Tdelete_or_backspace :!Odelete_or_backspace]]}
+      {:des "Left Option to Delete"
+            :rules[[:left_option :delete_forward]]}
+      {:des "Caps Lock to Left Control + Shift if holding, to a if pressed alone"
+            :rules[[:caps_lock :!SCOleft_control nil {:alone :g}]]}
+      {:des "Caps Lock + Left Option to Shift + Left Control + d"
+            :rules[[:!TCOSleft_option :!TSx]]}
+      {:des "Left Command + Caps Lock to Left Control + Left Option, to alternate between the 2 most recent tabs if pressed alone"                           
+            :rules [[:!Tcaps_lock :!Oleft_control nil {:alone :!Ttab}]]} 
+      {:des "Caps Lock + Left Command to Left Control + Left Option"
+            :rules[[:!TCOSleft_command :!Oleft_control]]}
+      {:des "Caps Lock + Left Command to Left Control + Left Option"
+            :rules[[:!TCOSleft_command :!Oleft_control]]}    
+      {:des "Caps Lock + a to a, r"
+            :rules[ [:!TCOSa [:g :a]] [:!TCOSs [:g :s]] [:!TCOSd [:g :d]] [:!TCOSf [:g :f]] 
+            [:!TCOSj [:g :j]] [:!TCOSk [:g :k]] [:!TCOSl [:g :l]] [:!TCOSsemicolon [:g :semicolon]] [:!TCOSquote [:g :quote]]
+            [:!TCOSq [:g :q]] [:!TCOSw [:g :w]] [:!TCOSe [:g :e]] [:!TCOSr [:g :r]] 
+            [:!TCOSu [:g :u]] [:!TCOSi [:g :i]] [:!TCOSo [:g :o]] [:!TCOSp [:g :p]] [:!TCOSopen_bracket [:g :open_bracket]]
+            [:!TCOSz [:g :z]] [:!TCOSx [:g :x]] [:!TCOSc [:g :c]] [:!TCOSv [:g :v]] 
+            [:!TCOSm [:g :m]] [:!TCOScomma [:g :comma]] [:!TCOSperiod [:g :period]] [:!TCOSslash [:g :slash]] [:!TCOSright_shift [:g :n]]
+      ]}
+      {:des "Esc to Caps Lock"
+            :rules[[:##escape :caps_lock]]}
       {:des "Shift + Left Option to delete row"
-           :rules[[:!Sleft_option :!STx]]}
-             {:des "Left Shift to Left Shift if holdeing, to ä if pressed alone"
-               :rules[[:left_shift :left_shift nil {:alone :b}]]}
-              {:des "Right Shift to Right Shift if holding, to - if pressed alone"
-               :rules[[:right_shift :right_shift nil {:alone :n}]]}
-              {:des "Left Shift + Right Shift to Ä"
-               :rules[[:!Sright_shift :!Sn]]}
-          {:des "Right Shift + Left Shift to _"
-               :rules[[:!Rleft_shift :!Sb]]}
-
- {:des "Tab to Right Control if holding, to T if pressed alone"
-               :rules[[:tab :right_control nil {:alone :t}]  [:!Stab :!St] [:!Rtab :!St]]}
-
-
-              
-
-               {:des "Right Command to Left Control, to Spacebar if pressed alone"
+            :rules[[:!Sleft_option :!STx]]}
+            {:des "Left Shift to Left Shift if holdeing, to ä if pressed alone"
+            :rules[[:left_shift :left_shift nil {:alone :b}]]}
+            {:des "Right Shift to Right Shift if holding, to - if pressed alone"
+            :rules[[:right_shift :right_shift nil {:alone :n}]]}
+            {:des "Left Shift + Right Shift to Ä"
+            :rules[[:!Sright_shift :!Sn]]}
+      {:des "Right Shift + Left Shift to _"
+            :rules[[:!Rleft_shift :!Sb]]}
+      {:des "Tab to Right Control if holding, to q if pressed alone"
+            :rules[[:tab :right_control nil {:alone :t}]  [:!Stab :!St] [:!Rtab :!St]]}
+      {:des "Right Command to Left Command + Left Option + Left Control, to Spacebar if pressed alone"
             :rules [[:right_command :!COleft_control nil {:alone :spacebar}]]}
+      {:des "Left Command + Right Command to Special 1, to Open command palette if pressed alone"
+            :rules [[:!Tright_command :!COleft_control nil {:alone :!Te}]]}
+      {:des "Spacebar to Special 3 (WE) if holding, to Tab if pressed alone"    
+               :rules[[:!Ttab :!Eright_control nil {:alone :!Ttab}]]}
+        
 
-              {:des "Left Command + Right Command to Special 1, to Open command palette if pressed alone"
-            :rules [[:!Tright_command :!COleft_control nil {:alone :!Cspacebar}]]}
-              
-  {:des "Left Command + Spacebar to Special 2, to Spacebar if pressed alone"
-            :rules [[:!Tspacebar :!COleft_shift nil {:alone :spacebar}]]}
-  
 
+      {:des "Left Command + Spacebar to Special 2, to open spotlight if pressed alone"
+            :rules [[:!Tspacebar :!COleft_shift nil {:alone  :!Cspacebar}]]}
       {:des "Left Command to Left Control, to Escape if pressed alone"
             :rules [:!parallels[:left_command :left_control nil {:alone :escape}]]}
-
-
-  
-        {:des "Spacebar to Left Option if holding, to Tab if pressed alone"    
+      {:des "Spacebar to Left Option if holding, to Tab if pressed alone"    
                :rules[[:spacebar :left_option nil {:alone :tab}]]}
-
-
-     {:des "Right Command to Spacebar"        
+      {:des "Right Command to Spacebar"        
             :rules [[:!Oleft_shift :!Ov]]} 
-
-
-                {:des "Tab + Caps Lock to Right Control + Left Shift"        
+      {:des "Tab + Caps Lock to Right Control + Left Shift"        
             :rules [[:!Wcaps_lock :!Wleft_shift]]} 
-            
-      ;;       {:des "Left Command + Caps Lock to Save"
-      ;;   :rules [[:!Tgrave_accent_and_tilde :!Cs]]} 
-      
-                    {:des "Left Command + S to Copy"
-:rules [[:!Ts :!Cz]]} 
-
-    {:des "Left Command + D to Paste"
-:rules [[:!Td :!Cc]]} 
+      {:des "Left Command + S to Copy"
+            :rules [[:!Ts :!Cz]]} 
+      {:des "Left Command + D to Paste"
+            :rules [[:!Td :!Cc]]} 
 
  {:des "Left Command + A to Cut"
 :rules [[:!Ta :!Chyphen]]} 
@@ -671,7 +768,11 @@
 :rules [[:!Te :!CSequal_sign]]}   
 
  {:des "Left Command + F to Find"
-:rules [[:!Tf :!Cw]]} 
+:rules [[:!CTOw :!Cw]]} 
+
+
+      {:des "Q to App Switcher Hotkey, to Q if pressed alone"    
+               :rules[[:q :!WEright_shift nil {:alone :q}]]}
 
       {:des "Left Command + h / j / k / l to arrow keys"
             :rules [[:!T##j :left_arrow] [:!Tk :down_arrow] [:!Tl :up_arrow] [:!T##semicolon :right_arrow]]} 
@@ -679,11 +780,48 @@
  {:des "Left Command + h / j / k / l + Caps Lock 5x to arrow keys"
             :rules [[:!TOk [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow] ] [:!TOl [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow]] ]} 
 
+ {:des "Left Command + h / j / k / l + Caps Lock + Shift + to 25x Shift + Arrow keys"
+            :rules [[:!WEk  [
+            :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow
+            :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow
+            :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow
+            :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow
+            :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow
+            ] ] 
+            [:!WEl [
+                  :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow
+                  :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow
+                  :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow
+                  :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow
+                  :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow
+            ]] 
+            ]} 
+
  {:des "Left Command + h / j / k / l + Caps Lock + Shift + to 5x Shift + Arrow keys"
             :rules [[:!TROk [:!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow] ] [:!TROl [:!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow]] ]} 
 
+
+ {:des "Left Command + h / j / k / l + Caps Lock + Shift + to 25x Shift + Arrow keys"
+            :rules [[:!WREk  [
+            :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow
+            :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow
+            :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow
+            :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow
+            :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow
+            ] ] 
+            [:!WREl [
+                  :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow
+                  :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow
+                  :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow
+                  :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow
+                  :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow
+            ]] 
+            ]} 
+
  {:des "Left Command + h / j / k / l + Shift to Shift + Arrow keys"
             :rules [[:!TRk [:!Sdown_arrow ] ] [:!TRl [:!Sup_arrow ]] [:!TSk [:!Sdown_arrow ] ] [:!TSl [:!Sup_arrow ]]]} 
+
+
 
 
 
@@ -716,6 +854,9 @@
 
 {:des "Left Command + 2 to Close tab"
 :rules [[:!T2 :!Cq]]} 
+
+
+
 
     ;;   {:des "< to Left Shift if holding, to ab when pressed alone"
     ;;         :rules [[:##grave_accent_and_tilde :left_shift nil {:alone :tab}]]}
@@ -824,9 +965,17 @@
 ;;             :held "osascript -e 'tell application \"Finder\" to empty trash'"}]]}
 ;;       {:des "Left Command + Backspace to delete a word at a time instead of Option + Backspace"
 ;;             :rules [:!parallels [:!Tdelete_or_backspace :!Odelete_or_backspace] [:!Odelete_or_backspace :delete_or_backspace]]}
-;;       {:des "Left Command + Shift + G: Check if we have synced all repos to GitHub"
-;;             :rules [[:!TSg "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"]]} 
-   {:des "Long press Left Command + Left Shift +  to switch to colemak dh keyboard mapping"
+      
+      
+      ; Global letter hotkeys
+      {:des "Left Command + O to Open"
+            :rules [[:!Rright_command :!CTOright_shift]]} 
+      {:des "Left Command + Shift + F: Check if we have synced all repos to GitHub"
+            :rules [[:!CTORf "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"]]} 
+
+
+
+      {:des "Long press Left Command + Left Shift +  to switch to colemak dh keyboard mapping"
             :rules [[:6 nil nil {
             :alone :6
             :held "~/dev/osandell/scripts-osx/keyboard-mapping/switch-to-colemak-dh.sh"}]]}

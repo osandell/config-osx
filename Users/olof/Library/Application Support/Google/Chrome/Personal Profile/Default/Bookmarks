@@ -1,10 +1,10 @@
 {
-   "checksum": "45afc1a61aaab9fc90967c2ace1d73a4",
+   "checksum": "04c8d813ebdf62938ccc593830529595",
    "roots": {
       "bookmark_bar": {
          "children": [ {
             "date_added": "13292243473417673",
-            "date_last_used": "13330354701437672",
+            "date_last_used": "13332167650126903",
             "guid": "e543fb00-c30a-485d-a74c-8d4d80749f08",
             "id": "5",
             "name": "",
@@ -12,12 +12,20 @@
             "url": "http://www.google.se/"
          }, {
             "date_added": "13326107846827263",
-            "date_last_used": "13327408956939923",
+            "date_last_used": "13332269964731657",
             "guid": "f49b1571-bad1-4e0b-b8ef-ee2c73998d39",
             "id": "87",
             "name": "gpt",
             "type": "url",
             "url": "https://chat.openai.com/?model=gpt-4"
+         }, {
+            "date_added": "13332159919434585",
+            "date_last_used": "0",
+            "guid": "9f7abd08-826a-4172-a46a-75b9d2612e67",
+            "id": "104",
+            "name": "",
+            "type": "url",
+            "url": "https://ericmurphy.xyz/"
          }, {
             "date_added": "13330967159003595",
             "date_last_used": "13331235020409929",
@@ -191,7 +199,7 @@
             "url": "https://www.notion.so/Memos-8019da73bfc84815abe478a87707d84c"
          }, {
             "date_added": "13292243983983423",
-            "date_last_used": "13330255720621197",
+            "date_last_used": "13332500918870704",
             "guid": "d8111bf3-9bf7-4137-999b-66cc3df8d88d",
             "id": "9",
             "name": "",
@@ -218,7 +226,7 @@
             "url": "https://javascript.plainenglish.io/what-about-vite-ssr-ef7ccdf58b5"
          }, {
             "date_added": "13328455918319193",
-            "date_last_used": "13330974922764482",
+            "date_last_used": "13332267995337646",
             "guid": "88324a5b-fe55-4989-a060-4ef6abd2738b",
             "id": "92",
             "name": "Allsvenskan",
@@ -441,7 +449,7 @@
          } ],
          "date_added": "13292242355522980",
          "date_last_used": "0",
-         "date_modified": "13330967159003595",
+         "date_modified": "13332159919434586",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bokmärkesfältet",

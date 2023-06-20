@@ -49,26 +49,6 @@
   },
 
   "vim.normalModeKeyBindingsNonRecursive": [
-    // go up / down 5 lines
-    {
-      "before": ["<C-k>"],
-      "after": ["5", "k"]
-    },
-    {
-      "before": ["<C-j>"],
-      "after": ["5", "j"]
-    },
-
-    // go up / down half a page
-    {
-      "before": ["K"],
-      "after": ["<C-u>"]
-    },
-    {
-      "before": ["J"],
-      "after": ["<C-d>"]
-    },
-
     // Copy to the 0 registry instead of default clipboard when pressing d
     {
       "before": ["d"],
@@ -158,7 +138,7 @@
 
     // Log to console without variable (javascript)
     {
-      "before": ["˝"],
+      "before": ["°"],
       "after": ["d", "d", "O", "<Esc>", "o", "<Esc>"],
       "commands": [
         {
@@ -174,7 +154,7 @@
     },
     // Log to console with variable (javascript)
     {
-      "before": ["°"],
+      "before": ["˝"],
       "after": ["d", "d", "O", "<Esc>", "o", "<Esc>"],
       "commands": [
         {
@@ -276,16 +256,6 @@
   ],
 
   "vim.insertModeKeyBindingsNonRecursive": [
-    // go up / down 5 lines
-    {
-      "before": ["<C-k>"],
-      "after": ["<Esc>", "5", "k", "i"]
-    },
-    {
-      "before": ["<C-j>"],
-      "after": ["<Esc>", "5", "j", "i"]
-    },
-
     // Log to console without variable (javascript)
     {
       "before": ["°"],

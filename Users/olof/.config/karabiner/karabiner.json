@@ -14,57 +14,33 @@
         "basic.to_if_held_down_threshold_milliseconds" : 500
       },
       "rules" : [ {
-        "description" : "Function + ^ to Page Up",
+        "description" : "Auto generated layer conditions",
         "manipulators" : [ {
-          "from" : {
-            "key_code" : "close_bracket",
-            "modifiers" : {
-              "mandatory" : [ "fn" ],
-              "optional" : [ "any" ]
-            }
-          },
+          "type" : "basic",
           "to" : [ {
-            "key_code" : "page_up"
+            "set_variable" : {
+              "name" : "q-mode",
+              "value" : 1
+            }
           } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1452,
-              "product_id" : 832
-            } ],
-            "type" : "device_if"
+          "from" : {
+            "key_code" : "q"
+          },
+          "to_after_key_up" : [ {
+            "set_variable" : {
+              "name" : "q-mode",
+              "value" : 0
+            }
           } ],
-          "type" : "basic"
+          "to_if_alone" : [ {
+            "key_code" : "q"
+          } ]
         } ]
       }, {
-        "description" : "Function + ' to Page Down",
+        "description" : "Fn to Left Command",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "backslash",
-            "modifiers" : {
-              "mandatory" : [ "fn" ],
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "page_down"
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1452,
-              "product_id" : 832
-            } ],
-            "type" : "device_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "FN to Left Command",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "fn",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
+            "key_code" : "fn"
           },
           "to" : [ {
             "key_code" : "left_command"
@@ -76,12 +52,30 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Command to FN",
+        "description" : "Fn + Left Control to Fn",
         "manipulators" : [ {
           "from" : {
             "key_code" : "left_control",
             "modifiers" : {
-              "optional" : [ "any" ]
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "fn"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1452,
+              "product_id" : 832
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "fn",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -97,61 +91,23 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Media key with 3 squares to mission control",
+        "description" : "Left Control to Enter",
         "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "return_or_enter"
+          } ],
           "from" : {
-            "key_code" : "up_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ]
-            }
+            "key_code" : "left_control"
           },
           "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_control" ]
+            "key_code" : "left_control"
           } ],
           "conditions" : [ {
             "identifiers" : [ {
-              "vendor_id" : 1133,
-              "product_id" : 45913
+              "vendor_id" : 1452,
+              "product_id" : 832
             } ],
             "type" : "device_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Show desktop media key (require changing hotkey in mac system settings). Not supposed to work when\n            Caps Lock is active so that we can use the f11 key in Chrome debug tool.",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "f11"
-          },
-          "to" : [ {
-            "key_code" : "d",
-            "modifiers" : [ "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1133,
-              "product_id" : 45913
-            } ],
-            "type" : "device_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Command to Left Command",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "left_control",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "left_command"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_unless",
-            "bundle_identifiers" : [ "com.parallels" ]
           } ],
           "type" : "basic"
         } ]
@@ -1022,12 +978,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Tab + K to open Grebban workspace",
+        "description" : "Right Command + F to open Grebban workspace",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "k",
+            "key_code" : "f",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "left_command", "left_control", "left_option" ]
             }
           },
           "to" : [ {
@@ -1041,12 +997,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Tab + J to open Royal workspace",
+        "description" : "Right Command + A to open Royal workspace",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "j",
+            "key_code" : "a",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "left_command", "left_control", "left_option" ]
             }
           },
           "to" : [ {
@@ -1060,16 +1016,16 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Option + Right Shift + f to find thread",
+        "description" : "Right Command + S to open SEO workspace",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "w",
+            "key_code" : "s",
             "modifiers" : {
-              "mandatory" : [ "right_option", "right_shift" ]
+              "mandatory" : [ "left_command", "left_control", "left_option" ]
             }
           },
           "to" : [ {
-            "key_code" : "f",
+            "key_code" : "3",
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
@@ -1079,7 +1035,26 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Command + Caps Lock + c to run last used terminal command",
+        "description" : "Left Command + Tab to find channel",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "tab",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "k",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.tinyspeck.slackmacgap" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Command + Caps Lock + x to run last used terminal command",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.applescript"
@@ -1109,7 +1084,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"Google Chrome Dev\" to activate\n            delay 0.5\n            tell application \"System Events\" to key code 15 using {command down, shift down}\n            tell application \"Code\" to activate\n            '"
+            "shell_command" : "osascript -e '\n            tell application \"Google Chrome Dev\" to activate\n            delay 0.5\n            tell application \"System Events\" to key code 15 using {command down, shift down}\n            '"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -1118,10 +1093,45 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Command + , to console log without variable",
+        "description" : "Tab + w / e to Switch tab",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "comma",
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command", "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Command + . to console log without variable",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "period",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
@@ -1137,10 +1147,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Command + m to console log with variable",
+        "description" : "Left Command + , to console log with variable",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "m",
+            "key_code" : "comma",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
@@ -1154,72 +1164,43 @@
             "bundle_identifiers" : [ "com.microsoft.VSCode" ]
           } ],
           "type" : "basic"
-        }, {
+        } ]
+      }, {
+        "description" : "Right Command + s to stage selected area",
+        "manipulators" : [ {
           "from" : {
-            "key_code" : "w",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "left_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "a",
-            "modifiers" : [ "left_command", "left_control", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "e",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "left_option" ]
-            }
-          },
-          "to" : [ {
             "key_code" : "s",
-            "modifiers" : [ "left_command", "left_control", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Command + Caps Lock to Left Control + Left Option, to alternate between the 2 most recent tabs if pressed alone",
-        "manipulators" : [ {
-          "to_if_alone" : [ {
-            "key_code" : "tab",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "from" : {
-            "key_code" : "caps_lock",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "left_command", "left_control", "left_option" ]
             }
           },
           "to" : [ {
-            "key_code" : "left_control",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Shift + Left Command + a to revert selected changes",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "a",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "k",
+            "key_code" : "m",
             "modifiers" : [ "left_command" ]
           }, {
-            "key_code" : "r",
+            "key_code" : "s",
+            "modifiers" : [ "left_command", "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Command + r to revert selected changes",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "m",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "a",
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
@@ -1273,35 +1254,16 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Command + O to searh for file",
+        "description" : "Right Command + ä to searh for file",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "o",
+            "key_code" : "quote",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "left_command", "left_control", "left_option" ]
             }
           },
           "to" : [ {
             "key_code" : "quote",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Command + P to open command palette",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "p",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "e",
             "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
@@ -1699,100 +1661,1512 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Tab + Q: activate Google Chrome Grebban",
+        "description" : "Q + {key} to shift application",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "q",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
+            "key_code" : "e"
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"
           } ],
+          "conditions" : [ {
+            "name" : "q-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
           "type" : "basic"
-        } ]
-      }, {
-        "description" : "Tab + 1: activate Google Chrome Personal",
-        "manipulators" : [ {
+        }, {
           "from" : {
-            "key_code" : "1",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
+            "key_code" : "x"
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Google Chrome Personal\" to activate'"
           } ],
+          "conditions" : [ {
+            "name" : "q-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
           "type" : "basic"
-        } ]
-      }, {
-        "description" : "Tab + w: activate VSCode",
-        "manipulators" : [ {
+        }, {
           "from" : {
-            "key_code" : "w",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
+            "key_code" : "w"
           },
           "to" : [ {
             "shell_command" : "osascript ~/dev/osandell/scripts-osx/keyboard-mapping/launch_vscode_or_visual_studio.applescript"
           } ],
+          "conditions" : [ {
+            "name" : "q-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
           "type" : "basic"
-        } ]
-      }, {
-        "description" : "Tab + 2: activate iTerm + Fork",
-        "manipulators" : [ {
+        }, {
           "from" : {
-            "key_code" : "2",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
+            "key_code" : "left_command"
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"
           } ],
+          "conditions" : [ {
+            "name" : "q-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
           "type" : "basic"
-        } ]
-      }, {
-        "description" : "Tab + e: activate Google Chrome Dev",
-        "manipulators" : [ {
+        }, {
           "from" : {
-            "key_code" : "e",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
+            "key_code" : "d"
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Google Chrome Dev\" to activate'"
           } ],
+          "conditions" : [ {
+            "name" : "q-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
           "type" : "basic"
-        } ]
-      }, {
-        "description" : "Tab + Tab: activate Slack",
-        "manipulators" : [ {
+        }, {
           "from" : {
-            "key_code" : "3",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ]
-            }
+            "key_code" : "caps_lock"
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Slack\" to activate'"
           } ],
+          "conditions" : [ {
+            "name" : "q-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
           "type" : "basic"
-        } ]
-      }, {
-        "description" : "Tab + 4: activate Google Chrome YouTube",
-        "manipulators" : [ {
+        }, {
           "from" : {
-            "key_code" : "4",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
+            "key_code" : "s"
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Google Chrome YouTube\" to activate'"
+          } ],
+          "conditions" : [ {
+            "name" : "q-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Press J / K / L / Ö to enter arrow mode",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "j"
+          } ],
+          "to_if_held_down" : [ {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "left_arrow"
+          } ],
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 200,
+            "basic.to_if_held_down_threshold_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "j"
+          },
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 0,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "k"
+          } ],
+          "to_if_held_down" : [ {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "down_arrow"
+          } ],
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 200,
+            "basic.to_if_held_down_threshold_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "k"
+          },
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 0,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "l"
+          } ],
+          "to_if_held_down" : [ {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "up_arrow"
+          } ],
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 200,
+            "basic.to_if_held_down_threshold_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "l"
+          },
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 0,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "semicolon"
+          } ],
+          "to_if_held_down" : [ {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "right_arrow"
+          } ],
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 200,
+            "basic.to_if_held_down_threshold_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "semicolon"
+          },
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 0,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j"
+          },
+          "to" : [ {
+            "key_code" : "left_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k"
+          },
+          "to" : [ {
+            "key_code" : "down_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "key_code" : "up_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon"
+          },
+          "to" : [ {
+            "key_code" : "right_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "right_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "right_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "right_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "right_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "home"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "page_down"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "page_up"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "end"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q"
+          },
+          "to" : [ {
+            "key_code" : "q"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w"
+          },
+          "to" : [ {
+            "key_code" : "w"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e"
+          },
+          "to" : [ {
+            "key_code" : "e"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r"
+          },
+          "to" : [ {
+            "key_code" : "r"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t"
+          },
+          "to" : [ {
+            "key_code" : "t"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y"
+          },
+          "to" : [ {
+            "key_code" : "y"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u"
+          },
+          "to" : [ {
+            "key_code" : "u"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i"
+          },
+          "to" : [ {
+            "key_code" : "i"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o"
+          },
+          "to" : [ {
+            "key_code" : "o"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p"
+          },
+          "to" : [ {
+            "key_code" : "p"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a"
+          },
+          "to" : [ {
+            "key_code" : "a"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "key_code" : "s"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d"
+          },
+          "to" : [ {
+            "key_code" : "d"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f"
+          },
+          "to" : [ {
+            "key_code" : "f"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g"
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h"
+          },
+          "to" : [ {
+            "key_code" : "h"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z"
+          },
+          "to" : [ {
+            "key_code" : "z"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "x"
+          },
+          "to" : [ {
+            "key_code" : "x"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c"
+          },
+          "to" : [ {
+            "key_code" : "c"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v"
+          },
+          "to" : [ {
+            "key_code" : "v"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b"
+          },
+          "to" : [ {
+            "key_code" : "b"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n"
+          },
+          "to" : [ {
+            "key_code" : "n"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m"
+          },
+          "to" : [ {
+            "key_code" : "m"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "0"
+          },
+          "to" : [ {
+            "key_code" : "0"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1"
+          },
+          "to" : [ {
+            "key_code" : "1"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2"
+          },
+          "to" : [ {
+            "key_code" : "2"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3"
+          },
+          "to" : [ {
+            "key_code" : "3"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4"
+          },
+          "to" : [ {
+            "key_code" : "4"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5"
+          },
+          "to" : [ {
+            "key_code" : "5"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6"
+          },
+          "to" : [ {
+            "key_code" : "6"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7"
+          },
+          "to" : [ {
+            "key_code" : "7"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8"
+          },
+          "to" : [ {
+            "key_code" : "8"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9"
+          },
+          "to" : [ {
+            "key_code" : "9"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_arrow"
+          },
+          "to" : [ {
+            "key_code" : "left_arrow"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_arrow"
+          },
+          "to" : [ {
+            "key_code" : "right_arrow"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "up_arrow"
+          },
+          "to" : [ {
+            "key_code" : "up_arrow"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "down_arrow"
+          },
+          "to" : [ {
+            "key_code" : "down_arrow"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "escape"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "from" : {
+            "key_code" : "left_command"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "left_control"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_option"
+          },
+          "to" : [ {
+            "key_code" : "delete_forward"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_option"
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_control"
+          },
+          "to" : [ {
+            "key_code" : "left_control"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_control"
+          },
+          "to" : [ {
+            "key_code" : "right_control"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma"
+          },
+          "to" : [ {
+            "key_code" : "comma"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period"
+          },
+          "to" : [ {
+            "key_code" : "period"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote"
+          },
+          "to" : [ {
+            "key_code" : "quote"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "open_bracket"
+          },
+          "to" : [ {
+            "key_code" : "open_bracket"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "close_bracket"
+          },
+          "to" : [ {
+            "key_code" : "close_bracket"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash"
+          },
+          "to" : [ {
+            "key_code" : "slash"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "backslash"
+          },
+          "to" : [ {
+            "key_code" : "backslash"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "hyphen"
+          },
+          "to" : [ {
+            "key_code" : "hyphen"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "equal_sign"
+          },
+          "to" : [ {
+            "key_code" : "equal_sign"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "grave_accent_and_tilde"
+          },
+          "to" : [ {
+            "key_code" : "grave_accent_and_tilde"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter"
+          },
+          "to" : [ {
+            "key_code" : "return_or_enter"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "tab"
+          },
+          "to" : [ {
+            "key_code" : "tab"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "delete_or_backspace"
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "caps_lock"
+          },
+          "to" : [ {
+            "key_code" : "caps_lock"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "escape"
+          },
+          "to" : [ {
+            "key_code" : "escape"
+          }, {
+            "set_variable" : {
+              "name" : "arrow-mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_shift"
+          },
+          "to" : [ {
+            "key_code" : "right_shift"
+          } ],
+          "conditions" : [ {
+            "name" : "arrow-mode",
+            "value" : 1,
+            "type" : "variable_if"
           } ],
           "type" : "basic"
         } ]
@@ -1897,6 +3271,33 @@
             "key_code" : "delete_or_backspace"
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_option",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Command + Backspace to Left Option + Backspace",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "delete_or_backspace",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Left Option to Delete",
@@ -1906,6 +3307,450 @@
           },
           "to" : [ {
             "key_code" : "delete_forward"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Caps Lock to Left Control + Shift if holding, to a if pressed alone",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "g"
+          } ],
+          "from" : {
+            "key_code" : "caps_lock"
+          },
+          "to" : [ {
+            "key_code" : "left_control",
+            "modifiers" : [ "left_command", "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Caps Lock + Left Option to Shift + Left Control + d",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_option",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "x",
+            "modifiers" : [ "left_control", "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Command + Caps Lock to Left Control + Left Option, to alternate between the 2 most recent tabs if pressed alone",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "tab",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "from" : {
+            "key_code" : "caps_lock",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_control",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Caps Lock + Left Command to Left Control + Left Option",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_command",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_control",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_command",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_control",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Caps Lock + a to a, r",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "a"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "s"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "d"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "f"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "j"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "k"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "l"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "semicolon"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "quote"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "q"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "w"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "e"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "r"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "u"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "i"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "o"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "p"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "open_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "open_bracket"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "z"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "x",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "x"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "c"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "v"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "m"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "comma"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "period"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "slash"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_shift",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g"
+          }, {
+            "key_code" : "n"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Esc to Caps Lock",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "escape",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "caps_lock"
           } ],
           "type" : "basic"
         } ]
@@ -1983,7 +3828,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Tab to Right Control if holding, to T if pressed alone",
+        "description" : "Tab to Right Control if holding, to q if pressed alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "key_code" : "t"
@@ -2021,7 +3866,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Command to Left Control, to Spacebar if pressed alone",
+        "description" : "Right Command to Left Command + Left Option + Left Control, to Spacebar if pressed alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "key_code" : "spacebar"
@@ -2039,8 +3884,8 @@
         "description" : "Left Command + Right Command to Special 1, to Open command palette if pressed alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "spacebar",
-            "modifiers" : [ "left_command" ]
+            "key_code" : "e",
+            "modifiers" : [ "left_control" ]
           } ],
           "from" : {
             "key_code" : "right_command",
@@ -2055,10 +3900,30 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Command + Spacebar to Special 2, to Spacebar if pressed alone",
+        "description" : "Spacebar to Special 3 (WE) if holding, to Tab if pressed alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "spacebar"
+            "key_code" : "tab",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "from" : {
+            "key_code" : "tab",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_control",
+            "modifiers" : [ "right_option" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Command + Spacebar to Special 2, to open spotlight if pressed alone",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "spacebar",
+            "modifiers" : [ "left_command" ]
           } ],
           "from" : {
             "key_code" : "spacebar",
@@ -2228,14 +4093,29 @@
         "description" : "Left Command + F to Find",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "f",
+            "key_code" : "w",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "left_command", "left_control", "left_option" ]
             }
           },
           "to" : [ {
             "key_code" : "w",
             "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Q to App Switcher Hotkey, to Q if pressed alone",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "q"
+          } ],
+          "from" : {
+            "key_code" : "q"
+          },
+          "to" : [ {
+            "key_code" : "right_shift",
+            "modifiers" : [ "right_control", "right_option" ]
           } ],
           "type" : "basic"
         } ]
@@ -2326,6 +4206,295 @@
             "key_code" : "up_arrow"
           }, {
             "key_code" : "up_arrow"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Command + h / j / k / l + Caps Lock + Shift + to 25x Shift + Arrow keys",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          }, {
+            "key_code" : "down_arrow"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "up_arrow"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
           } ],
           "type" : "basic"
         } ]
@@ -2511,6 +4680,18 @@
             "modifiers" : [ "left_option" ]
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_command",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_shift",
+            "modifiers" : [ "left_command", "left_control", "left_option" ]
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "- to Right Option if holding, to . if pressed alone",
@@ -2591,6 +4772,20 @@
           "conditions" : [ {
             "type" : "frontmost_application_unless",
             "bundle_identifiers" : [ "com.parallels" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Command + Shift + F: Check if we have synced all repos to GitHub",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "~/dev/osandell/scripts-osx/git/check-if-repos-are-pushed.sh"
           } ],
           "type" : "basic"
         } ]
