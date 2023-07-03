@@ -1706,7 +1706,7 @@
             "key_code" : "left_command"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"GitKraken\" to activate\ntell application \"kitty\" to activate'"
           } ],
           "conditions" : [ {
             "name" : "q-mode",

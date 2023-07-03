@@ -565,7 +565,7 @@
       ;Google VSCode
             [:w "osascript ~/dev/osandell/scripts-osx/keyboard-mapping/launch_vscode_or_visual_studio.applescript"]
       ;Google Fork
-            [:left_command "osascript -e 'tell application \"iTerm\" to activate\ndelay 0.3\ntell application \"Fork\" to activate\ntell application \"iTerm\" to activate'"]
+            [:left_command "osascript -e 'tell application \"GitKraken\" to activate\ntell application \"kitty\" to activate'"]
       ;Google Dev
             [:d "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]
       ;Google activate Slack

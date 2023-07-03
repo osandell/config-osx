@@ -1,5 +1,5 @@
 {
-   "checksum": "04c8d813ebdf62938ccc593830529595",
+   "checksum": "f3c25bd814d6cf7200a917bde0fd5b5c",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -12,7 +12,7 @@
             "url": "http://www.google.se/"
          }, {
             "date_added": "13326107846827263",
-            "date_last_used": "13332269964731657",
+            "date_last_used": "13333014032892161",
             "guid": "f49b1571-bad1-4e0b-b8ef-ee2c73998d39",
             "id": "87",
             "name": "gpt",
@@ -165,14 +165,6 @@
             "name": "How to avoid hydration errors in Gatsby with React.lazy",
             "type": "url",
             "url": "https://www.codeandweb.com/tutorials/gatsby-lazy-loading-with-react-lazy"
-         }, {
-            "date_added": "13323629785658429",
-            "date_last_used": "13329774668439728",
-            "guid": "e9cd6467-fb21-4007-86d2-143d48622329",
-            "id": "84",
-            "name": "Messages",
-            "type": "url",
-            "url": "https://www.etsy.com/messages/1200602188"
          }, {
             "date_added": "13307378202186147",
             "date_last_used": "13323807431275044",
