@@ -1,0 +1,10 @@
+;; defcfg.part
+;; ----------------------------------------------------------------
+
+;; This is started via a launchdaemon: /Library/LaunchDaemons/com.olof.kmonad.plist
+
+(defcfg
+  input (iokit-name "Apple Internal Keyboard / Trackpad")
+  output (kext)
+  fallthrough true
+)
