@@ -8,8 +8,8 @@
     cmd-launcher (around lmet space)
     cmd-volume-up (cmd-button "pactl set-sink-volume 0 +5%")
     cmd-volume-down (cmd-button "pactl set-sink-volume 0 -5%")
-    cmd-bright-up (cmd-button "brightness +5")
-    cmd-bright-down (cmd-button "brightness -5")
+    cmd-bright-up (cmd-button "kmonad-helper increase-brightness")
+    cmd-bright-down (cmd-button "kmonad-helper decrease-brightness")
 
     cmd-cut (around lmet x)
     cmd-copy (around lmet c)
@@ -34,7 +34,7 @@
 
     ;; Left Meta
     cmd-workspace-1 (cmd-button "osascript -e \"tell application \\\"kitty\\\" to activate\" && osascript -e \"tell application \\\"GitKraken\\\" to activate\" && osascript -e \"tell application \\\"kitty\\\" to activate\"")
-    cmd-workspace-2 (cmd-button "osascript -e \"tell application \\\"VSCodium\\\" to activate\"")
+    cmd-workspace-2 (cmd-button "osascript -e \"tell application \\\"Visual Studio Code\\\" to activate\"")
     cmd-workspace-3 (cmd-button "osascript -e \"tell application \\\"Google Chrome Dev\\\" to activate\"")
     cmd-workspace-4 (cmd-button "osascript -e \"tell application \\\"FF Work\\\" to activate\"")
     cmd-workspace-5 (cmd-button "osascript -e \"tell application \\\"Slack\\\" to activate\"")
