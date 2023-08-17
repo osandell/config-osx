@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>org.sil.ukelele.keyboardlayout.</string>
+	<string>org.sil.ukelele.keyboardlayout.swedishpc</string>
 	<key>CFBundleName</key>
-	<string></string>
+	<string>Swedish PC</string>
 	<key>CFBundleVersion</key>
 	<string></string>
 	<key>KLInfo_Swedish PC</key>
@@ -13,7 +13,7 @@
 		<key>TICapsLockLanguageSwitchCapable</key>
 		<false/>
 		<key>TISInputSourceID</key>
-		<string>org.sil.ukelele.keyboardlayout..swedishpc</string>
+		<string>org.sil.ukelele.keyboardlayout.swedishpc.swedishpc</string>
 		<key>TISIntendedLanguage</key>
 		<string>sv</string>
 	</dict>

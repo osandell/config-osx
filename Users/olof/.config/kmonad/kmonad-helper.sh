@@ -1,5 +1,9 @@
 #!/bin/bash
 
+execute_script() {
+  sudo -u olof osascript -e "$1"
+}
+
 arg=$1
 
 case $arg in
@@ -11,13 +15,17 @@ tell application "System Events"
   set appID to bundle identifier of frontApp
   if appID is "net.kovidgoyal.kitty" or appID is "com.vscodium" or appID is "com.microsoft.vscode" then
       keystroke "f" using {control down}
+  else if appID is "com.tinyspeck.slackmacgap" or appID is "com.vscodium" or appID is "com.microsoft.vscode" then
+  	tell process "Slack"
+		  click menu item "Search" of menu "Edit" of menu bar 1
+	  end tell
   else
       keystroke "f" using {command down}
   end if
 end tell
 END
   )
-  osascript -e "$script"
+  execute_script "$script"
   ;;
 "find-secondary")
   script=$(
@@ -37,7 +45,7 @@ tell application "System Events"
 end tell
 END
   )
-  osascript -e "$script"
+  execute_script "$script"
   ;;
 "open")
   script=$(
@@ -54,7 +62,7 @@ tell application "System Events"
 end tell
 END
   )
-  osascript -e "$script"
+  execute_script "$script"
   ;;
 "close-tab")
   script=$(
@@ -66,7 +74,7 @@ tell application "System Events"
 end tell
 END
   )
-  osascript -e "$script"
+  execute_script "$script"
   ;;
 "command-palette")
   script=$(
@@ -80,7 +88,7 @@ tell application "System Events"
 end tell
 END
   )
-  osascript -e "$script"
+  execute_script "$script"
   ;;
 "rmeta-h")
   script=$(
@@ -91,13 +99,15 @@ tell application "System Events"
   if appID is "net.kovidgoyal.kitty" then
       -- open command history
       keystroke "r" using {control down}
+  else if appID is "com.vscodium" or appID is "com.microsoft.vscode" then
+      keystroke "r" using {control down}
   else
       keystroke "o" using {command down}
   end if
 end tell
 END
   )
-  osascript -e "$script"
+  execute_script "$script"
   ;;
 "increase-brightness")
   brightness $(echo "scale=2; ((64 * $(brightness -l | grep 'brightness' | awk '{print $4}')) + 6.4)/64" | bc)
@@ -106,39 +116,48 @@ END
   brightness $(echo "scale=2; ((64 * $(brightness -l | grep 'brightness' | awk '{print $4}')) - 6.4)/64" | bc)
   ;;
 "reload")
-  osascript -e "tell application \"kmonad\" to quit" && sleep 1 && open -a /Applications/Kmonad.app
+  sudo -u olof osascript -e "tell application \"kmonad\" to quit" && sleep 1 && open -a /Applications/Kmonad.app
   ;;
 "lmet-w")
+  sudo -u olof osascript -e "tell application \"System Events\" to keystroke \"s\" using {command down}"
+  ;;
+"lmet-z")
+  sudo -u olof osascript -e "tell application \"System Events\" to keystroke \"c\" using {control down}"
+  ;;
+"lmet-x")
+  script=$(
+    cat <<END
+    set originalApp to name of (info for (path to frontmost application) as alias)
+    tell application "Google Chrome" to activate
+    tell application "System Events"
+      keystroke "r" using {command down}
+    end tell
+    tell application originalApp to activate
+END
+  )
+  execute_script "$script"
+  ;;
+"lmet-c")
   script=$(
     cat <<END
     tell application "System Events"
-      keystroke "s" using {command down}
+      #  key code 26 using {shift down, option down}"   TODO: fix this
     end tell
 END
   )
-  osascript -e "$script"
+  execute_script "$script"
   ;;
-"cmd-delete") 
+"lmet-d")
   script=$(
     cat <<END
     tell application "System Events"
-      keystroke "s" using {command down}
+      keystroke "ä" using {command down}
     end tell
 END
   )
-  osascript -e "$script"
+  execute_script "$script"
   ;;
-"lmet-z") 
-  script=$(
-    cat <<END
-    tell application "System Events"
-      keystroke "c" using {control down}
-    end tell
-END
-  )
-  osascript -e "$script"
-  ;;
-"q-w") 
+"q-w")
   script=$(
     cat <<END
     tell application "System Events"
@@ -146,9 +165,9 @@ END
     end tell
 END
   )
-  osascript -e "$script"
+  execute_script "$script"
   ;;
-"toggle-window-in-app") 
+"toggle-window-in-app")
   script=$(
     cat <<END
     tell application "System Events"
@@ -157,9 +176,9 @@ END
     end tell
 END
   )
-  osascript -e "$script"
+  execute_script "$script"
   ;;
-"delete") 
+"delete")
   script=$(
     cat <<END
    tell application "System Events"
@@ -173,10 +192,38 @@ END
 end tell
 END
   )
-  osascript -e "$script"
+  execute_script "$script"
   ;;
+"to-internal-screen")
+  sudo -u olof /Users/olof/dev/osandell/scripts-osx/eventscripts-helper/position-all-windows.sh
+  /Users/olof/.config/kmonad/switch-to-internal-keyboard.sh
+  ;;
+"to-external-screen")
+  sudo -u olof /Users/olof/dev/osandell/scripts-osx/eventscripts-helper/position-all-windows.sh
+  /Users/olof/.config/kmonad/switch-to-external-keyboard.sh
+  ;;
+"screenshot")
+  script=$(
+    cat <<END
+   tell application "System Events"
+    key code 21 using {command down, shift down}
+   end tell
+END
+  )
+  execute_script "$script"
+  ;;
+"backslash")
+  script=$(
+    cat <<END
+  tell application "System Events"
+      key code 27 using {command down, shift down}
+  end tell
+END
+  )
+  execute_script "$script"
+  ;;
+
 *)
   echo "Invalid argument: $arg"
   ;;
 esac
-
