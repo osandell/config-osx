@@ -223,6 +223,10 @@ END
   execute_script "$script"
   ;;
 
+"toggle-notifications")
+  sudo -u olof touch /Users/olof/Library/Application\ Support/show-notification
+  ;;
+
 *)
   echo "Invalid argument: $arg"
   ;;
