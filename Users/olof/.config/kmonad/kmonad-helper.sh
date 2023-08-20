@@ -56,7 +56,6 @@ tell application "System Events"
   if appID is "com.vscodium" or appID is "com.microsoft.vscode" then
       keystroke "o" using {control down, option down}
   else
-  say appID
       keystroke "o" using {command down}
   end if
 end tell
@@ -118,12 +117,28 @@ END
 "reload")
   sudo -u olof osascript -e "tell application \"kmonad\" to quit" && sleep 1 && open -a /Applications/Kmonad.app
   ;;
+
 "lmet-w")
-  sudo -u olof osascript -e "tell application \"System Events\" to keystroke \"s\" using {command down}"
+  script=$(
+    cat <<END
+    tell application "System Events"
+      set frontApp to first application process whose frontmost is true
+      set appID to bundle identifier of frontApp
+      if appID is "com.google.Chrome" then 
+          keystroke "l" using {command down}
+      else
+          keystroke "s" using {command down}   
+      end if
+    end tell
+END
+  )
+  execute_script "$script"
   ;;
+
 "lmet-z")
   sudo -u olof osascript -e "tell application \"System Events\" to keystroke \"c\" using {control down}"
   ;;
+
 "lmet-x")
   script=$(
     cat <<END
@@ -137,42 +152,112 @@ END
   )
   execute_script "$script"
   ;;
+
 "lmet-c")
   script=$(
     cat <<END
     tell application "System Events"
-      #  key code 26 using {shift down, option down}"   TODO: fix this
+      set frontApp to first application process whose frontmost is true
+      set appID to bundle identifier of frontApp
+      if appID is "com.google.Chrome" or appID is "org.mozilla.firefox" then
+          keystroke "[" using {command down}
+      end if
     end tell
 END
   )
   execute_script "$script"
   ;;
+
 "lmet-d")
   script=$(
     cat <<END
     tell application "System Events"
-      keystroke "ä" using {command down}
+      set frontApp to first application process whose frontmost is true
+      set appID to bundle identifier of frontApp
+       if appID is "com.google.Chrome" or appID is "org.mozilla.firefox" then
+          keystroke "]" using {command down}
+      end if
     end tell
 END
   )
   execute_script "$script"
   ;;
-"q-w")
+
+"lmet-q-f")
+  script=$(
+    cat <<END
+tell application "System Events"
+  set frontApp to first application process whose frontmost is true
+  set appID to bundle identifier of frontApp
+  if appID is "com.google.Chrome" then
+        key code 33 using {command down} # å on swe, [ on eng
+  end if
+end tell
+END
+  )
+  execute_script "$script"
+  ;;
+
+"lmet-q-p")
   script=$(
     cat <<END
     tell application "System Events"
-      keystroke "t" using {command down}
+      set frontApp to first application process whose frontmost is true
+      set appID to bundle identifier of frontApp
+      if appID is "com.google.Chrome" or appID is "com.microsoft.vscode" then
+          keystroke "]" using {command down}
+      end if
     end tell
 END
   )
   execute_script "$script"
   ;;
+
+"new-tab")
+  script=$(
+    cat <<END
+tell application "System Events"
+  set frontApp to first application process whose frontmost is true
+  set appID to bundle identifier of frontApp
+  if appID is "com.microsoft.vscode" then
+       key code 45 using command down
+  else if appID is "com.google.Chrome" then
+      key code 41 using command down # ;
+  else if appID is "net.kovidgoyal.kitty" then
+      keystroke "t" using {control down, shift down} 
+  else
+      keystroke "t" using {command down} 
+  end if
+end tell
+END
+  )
+  execute_script "$script"
+  ;;
+
+"duplicate-tab")
+  script=$(
+    cat <<END
+tell application "System Events"
+  set frontApp to first application process whose frontmost is true
+  set appID to bundle identifier of frontApp
+  if appID is "com.google.Chrome" then
+     tell application "Google Chrome"
+         tell front window to make new tab with properties {URL:URL of active tab}
+     end tell
+  else if appID is "org.mozilla.firefox" then
+    keystroke "d" using {option down, shift down}   
+  end if
+end tell
+END
+  )
+  execute_script "$script"
+  ;;
+
 "toggle-window-in-app")
   script=$(
     cat <<END
     tell application "System Events"
-      keystroke tab using {command down, control down, shift down}    
-      
+      keystroke tab using {command down, control down, shift down}       
     end tell
 END
   )
@@ -225,6 +310,21 @@ END
 
 "toggle-notifications")
   sudo -u olof touch /Users/olof/Library/Application\ Support/show-notification
+  ;;
+
+"rmet-i")
+  script=$(
+    cat <<END
+tell application "System Events"
+  set frontApp to first application process whose frontmost is true
+  set appID to bundle identifier of frontApp
+  if appID is "com.google.Chrome" then
+      keystroke "i" using {option down, command down}
+  end if
+end tell
+END
+  )
+  execute_script "$script"
   ;;
 
 *)
