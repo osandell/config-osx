@@ -83,6 +83,8 @@ tell application "System Events"
   set appID to bundle identifier of frontApp
   if appID is "com.vscodium" or appID is "com.microsoft.vscode" then
       keystroke "p" using {control down}
+  else if appID is "com.google.Chrome" then
+      keystroke "p" using {command down, shift down}
   end if
 end tell
 END
@@ -322,6 +324,33 @@ tell application "System Events"
       keystroke "i" using {option down, command down}
   end if
 end tell
+END
+  )
+  execute_script "$script"
+  ;;
+
+"volume-up")
+  script=$(
+    cat <<END
+    tell application "Noteland" to volup
+END
+  )
+  execute_script "$script"
+  ;;
+
+"volume-down")
+  script=$(
+    cat <<END
+    tell application "Noteland" to voldown
+END
+  )
+  execute_script "$script"
+  ;;
+
+"mute")
+  script=$(
+    cat <<END
+    tell application "Noteland" to mute
 END
   )
   execute_script "$script"
