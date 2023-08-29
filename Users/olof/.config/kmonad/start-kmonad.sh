@@ -24,7 +24,6 @@
 #   sed -i -e "s|;; input (device-file \"$event_id\")|input (device-file \"$event_id\")|" -e 's/input (device-file "\/dev\/input\/by-id\/usb-Apple_Inc._Apple_Internal_Keyboard___Trackpad_FM710660210HYYKCP+RVZ-if01-event-kbd")/;; &/' $config_file
 #fi
 
-cat "/Users/olof/.config/kmonad/defcfg.part" "/Users/olof/.config/kmonad/system-specific.part" "/Users/olof/.config/kmonad/shared.part" > "/Users/olof/.config/kmonad/kmonad.kbd"
+#cat "/Users/olof/.config/kmonad/defcfg-mac.part" "/Users/olof/.config/kmonad/default-layer-mac.part" "/Users/olof/.config/kmonad/shared.part" >"/Users/olof/.config/kmonad/darwin/kmonad.kbd"
 
-
-/Users/olof/dev/osandell/kmonad/bin/kmonad "/Users/olof/.config/kmonad/kmonad.kbd"
+#/Users/olof/dev/osandell/kmonad/bin/kmonad "/Users/olof/.config/kmonad/darwin/kmonad.kbd"
